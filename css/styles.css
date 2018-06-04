@@ -1,0 +1,140 @@
+/* =========================================================== */
+/* ================= UNIVERSAL BASE STYLES =================== */
+
+*, *:before, *:after {box-sizing: border-box;} 
+/*Feature Query = Browser Support*/
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+/* Removes Browser Scroll + Gives Site an 'APP' */
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;               
+  background: transparent;  
+}
+/**/
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-size: calc(1.15em + 1.05vw); 
+	font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.8px;
+}
+h1, h2, h3 {
+  margin: 6px 0;
+  padding: 0 auto;
+  text-align: center;
+} /*for TOP Alignment */
+p {
+  margin: 8px 0; 
+  line-height: 1.5; 
+  font-size: 0.74em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {opacity: 0.7;}
+ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;
+}
+li > a {font-size: 0.79em;}
+li > a.active {
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  padding: 2px;
+}
+@media only screen and (min-width: 800px) {
+  p {text-align: justify; line-height: 1.339;}
+}
+/* <a> Links 'Arrow' Transform */
+span.read {font-weight: 900;}
+span.read {
+	position: relative;
+	transition: all 500ms ease; 
+	overflow:hidden;
+}
+span.read:before {
+	font-family: FontAwesome;
+	content:"\f101";
+	position: absolute;
+	left: 105px; /*Icon Position*/
+	transition: all 200ms ease;
+} 
+span.read:hover:before {left: 112px;}
+@media only screen and (min-width: 800px) {
+  span.read:before {left: 131px;}
+  span.read:hover:before {left: 140px;}
+}
+hr {border:none; border-top: 4px dotted grey;}
+/* =========================================================== */
+
+
+/* HEADER */
+header {margin: 0px;}
+span.title {
+  color: grey; 
+  float: right; 
+  font-size: 18px; 
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+/* NAVIGATION */
+.home, .about, .portfolio,  .email, .phone {transition: 0.3;}
+.home:hover, .about:hover, .portfolio:hover, .email:hover, .phone:hover {
+    border-bottom: dotted;
+    transition: 0.5;
+  }
+
+/* FOOTER */
+footer {text-align: center;}
+footer > a {font-size: 14px;}
+.fa-heart {
+  color: red;
+  animation: pulse 1.3s ease infinite;
+  padding-top: -50px;  /*Required for Heart Animation*/
+}
+@keyframes pulse {
+  0% {transform: scale(0.5);}
+  50% {transform: scale(0.7);}
+  100% {transform: scale(0.5);}
+}
+/* =========================================================== */
+
+
+
+/* ===================================== 
+   END of Main-Page Layout
+======================================== */
+/* ===================================== */
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+/* @MIN-Width: 768 *****************************************/
+@media screen and (min-width: 768px) {}
+/***********************************************************/
+
+
+/* @MIN-Width: 950 *****************************************/
+@media screen and (min-width: 950px) {}
+/***********************************************************/
+
+
+/* @MIN-Width: 1200 ****************************************/
+@media screen and (min-width: 1200px) {}
+/***********************************************************/
+
+
