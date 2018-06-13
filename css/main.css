@@ -101,6 +101,18 @@ p {
   color: #ff4d4d; 
   font-size: 2.42em;
 }
+.ribbon {
+  width: 500px;
+  background: #e43;
+  position: absolute;
+  top: 55px;
+  left: -150px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #fff;
+  transform: rotate(-45deg);
+}
 
 /* FOOTER */
 footer {text-align: center;}
