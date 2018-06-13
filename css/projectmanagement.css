@@ -1,0 +1,294 @@
+/* ========================================================= */
+/* ===================== GRID LAYOUTS ====================== */
+/*
+Styles for the 'Manage' Component of the GH-pages repo
+*/
+/* ********************************** */
+/* MAIN-TEMPLATE GRID */
+.grid {
+	margin: 0 6vw;
+  padding: 0 auto;
+	display: grid;
+	grid-template-rows: 8vmin 10px minmax(200px,auto) 35px;
+	grid-gap: 4px;
+}
+@media only screen and (min-width: 800px) {
+  header {grid-area: head; z-index: 1; background-color: red;}
+  nav {grid-area: nav; background-color: yellow;}
+  main {grid-area: main;}
+  footer {grid-area: foot; }
+  .grid {
+    height: auto; 
+    margin: 0 auto;
+    padding: 0 auto;
+    display: grid;
+  	grid-template-rows: 40px auto auto minmax(15px,40px);
+		grid-template-columns: 15% repeat(2, 1fr);
+		grid-template-areas: 
+    "head head head head" 
+    "nav  main main main" 
+    "nav  main main main" 
+    "nav foot foot foot";
+    grid-gap: 1vw;
+  }
+  
+}
+/* ********************************** */
+
+/* ********************************** */
+header > ul.headNav, ul.nav {margin: 0 8px;}
+/*Header-NAVIGATION Grid*/
+.home {grid-area: home;}
+.basics {grid-area: basics;}
+.css {grid-area: css;}
+.javascript {grid-area: javascript;}
+ul.headNav {
+  margin: 0 auto;
+  padding: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  grid-template-areas: 
+    "home basics css javascript";
+}
+.home {
+  text-transform: uppercase; 
+  font-weight: bold;
+}
+@media only screen and (min-width: 800px) {
+  ul.headNav {
+    margin: 0 auto;
+    padding: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr repeat(3, 1fr);
+    grid-template-areas: 
+      "home basics css javascript";
+  }
+  .home {justify-self: left;}
+}
+/**/
+/* Sidebar-NAVIGATION Grid */
+.snone {grid-area: snone;}
+.sntwo {grid-area: sntwo;}
+.snthree {grid-area: snthree;}
+.snfour {grid-area: snfour;}
+ul.nav {
+  display: none;
+  /*justify-content: center;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: grid;
+  grid-template-rows: 12px 8px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 0.79em;
+  grid-template-areas: 
+    "snone snone snone ";
+    " sntwo snthree snfour";*/
+}
+ul.nav {font-size: 0.88em;}
+@media only screen and (min-width: 800px) {
+  header {
+    width: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    display: block;
+    z-index: 1;
+  }
+  ul.nav {
+    position: fixed;
+    overflow-x: hidden;
+    display: inline-block;
+    justify-content: space-between;
+    /*grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+      "snone"
+      "sntwo"
+      "snthree"
+      "snfour";*/
+  }
+  li {
+    font-size: 1em;
+  }
+}
+/**/
+main {
+  max-width: 100%;
+  margin-right: 5vw;
+}
+
+
+/* ********************************** */
+/* ********************************** */
+/* ********************************** */
+/* ********************************** */
+
+
+/* ======================================================= */
+/* =============== UNIVERSAL BASE STYLES ================= */
+
+/* 
+REMOVE Browser Scroll + Gives Site an 'APP' 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;               
+  background: transparent;  
+}
+*/
+
+/**/
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-size: calc(1em + 1.05vw); 
+	font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.8px;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+	margin-bottom: 0.25em;
+} /*for TOP Alignment */
+/*h2.title, h3.title, h4.title, h5.title {
+  margin-top: 60px;
+}*/
+p {
+	margin: 0.25em;
+	text-align: justify;
+  line-height: 1.5; 
+  font-size: 0.74em;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {opacity: 0.7;}
+ul.nav >li > a:hover {
+  color: red;
+  transition: 0.3s;
+}
+ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;
+}
+li > a {font-size: 0.62em;}
+li > a.active {
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  padding: 2px;
+}
+
+/* <a> Links 'Arrow' Transform */
+span.read {font-weight: 900;}
+span.read {
+	position: relative;
+	transition: all 500ms ease; 
+	overflow:hidden;
+}
+span.read:before {
+	font-family: FontAwesome;
+	content:"\f101";
+	position: absolute;
+	left: 105px; /*Icon Position*/
+	transition: all 200ms ease;
+} 
+span.read:hover:before {left: 112px;}
+@media only screen and (min-width: 800px) {
+  span.read:before {left: 131px;}
+  span.read:hover:before {left: 140px;}
+}
+
+hr {
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0));
+  border: 0;
+  height: 1px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  overflow: visible;
+  text-align: center;
+}
+hr:after {
+  background: rgba(255, 0, 0, 0.2);
+  content: "§";
+  border: 1px dotted rgba(255, 0, 0, 0.8);
+  border-radius: 50%;
+  display: inline-block;
+  font: "BodoniXT" !important;
+  font-size: 0.9em;
+  padding: 0 0.6em;
+  position: relative;
+  top: -0.7em;
+}
+/* =========================================================== */
+
+
+/* HEADER */
+header {margin: 0px;}
+
+/* FOOTER */
+footer {text-align: center; font-size: 0.53em;}
+.fa-heart {
+  color: red;
+  animation: pulse 1.3s ease infinite;
+  padding-top: -50px;  /*Required for Heart Animation*/
+}
+@keyframes pulse {
+  0% {transform: scale(0.5);}
+  50% {transform: scale(0.7);}
+  100% {transform: scale(0.5);}
+}
+/* ======= END of Main-Page Layout
+/* =========================================================== */
+
+/*outside sources*/
+/* ======= Universal Styles ======= */
+
+.material-icons {
+  color: #ff4d4d; 
+  /*font-size: 1em;*/
+}
+/**/
+.intro {
+  margin: 1em auto;
+  width: 95%;
+  max-width: 1000px;
+}
+
+table {font-size: 0.62em;
+	table-layout: auto;
+	width: 100%;
+}
+th {text-align: left;}
+td.bold {
+	width: 250px;
+}
+.bold > span {text-decoration: underline;}
+.emphasize {font-style: italic;}
+span {margin: 0;}
+.small {font-size: 0.71em;}
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+/* @MIN-Width: 768 *****************************************/
+@media screen and (min-width: 768px) {}
+/***********************************************************/
+
+
+/* @MIN-Width: 950 *****************************************/
+@media screen and (min-width: 950px) {}
+/***********************************************************/
+
+
+/* @MIN-Width: 1200 ****************************************/
+@media screen and (min-width: 1200px) {}
+/***********************************************************/
+
+
+

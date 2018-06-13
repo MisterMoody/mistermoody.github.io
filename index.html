@@ -1,118 +1,63 @@
-<?php
-/* dateTime VAR*/
-$date = date_default_timezone_set('EST');
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MM Web Design Portfolio</title>
-    <meta name='description' content='CSS & JavaScript' />
-    <!-- Custom CSS Styles -->   
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Custom Fonts -->       
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Dev Resources</title>
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
-    <!-- FontAwesome CSS Fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet">
   </head>
-  <body>
-    <!-- ****** <MAIN-GRID>  ***** -->
-    <div class="grid">    
-      <!-- //HEADER -->
-      <header>
-        <ul class="headNav">
-          <li class="home">
-            <a class="" href="index.html">Web Design 101
-            <!--<i class="fa fa-user fa-2x" aria-hidden="true"></i>--></a>
-          </li>
-          <li class="basics">
-            <a class="active" href="index.html">Intro
-            <!--<i class="fa fa-user fa-2x" aria-hidden="true"></i>--></a>
-          </li>
-          <li class="css">
-            <a class="" href="css.html">CSS
-            <!--<i class="fa fa-css fa-2x" aria-hidden="true"></i>--></a>
-          </li>
-          <li class="javascript">
-            <a class="" href="javascript.html">JavaScript
-            <!--<i class="fa fa-javascript fa-2x" aria-hidden="true"></i>--></a>
-          </li>
-        </ul>
-      </header>
-      
-      <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
-      <nav>
-        <ul class="nav">
-          <li class="">
-            <a class="snone" href="#pg1">Intro</a>
-          </li>
-          <li class="">
-            <a class="sntwo" href="#wb">Web Dev Setup</a>
-          </li>
-          <li class="">
-            <a class="snthree" href="#hT">Coding 101</a>
-          </li>
-          <li class="">
-            <a class="snfour" href="#hs">HTML Snippets</a>
-          </li>
-        </ul>
-      </nav>
-      
-      <!-- //CONTENT -->
-      <main>
-        <h3 id="pg1">Intro to Web Design</h3>
-        <p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience.</p> 
-        <p>This project is a personal portfolio item that I am using to illustrate my knowledge in designing for the web. I have also given consideration to individuals who have no coding experience~ there has never been a better time to learn how to code! Enjoy the journey with.</p>
-        <p>Before diving in, lets ensure that our toolbox is properly equipped to handle the challenges ahead. This includes selecting a text editor, installing a local host and using a version control system to maintain code. Lets get started!</p>
-        <!-- -->
-        <hr id="wb">
-        <h4 class="title">Web Dev Setup</h4>
-        <p>Setting up a developer environment is a technical process, that when done right, will give you divine powers. And when done wrong, well....</p>
-        <p><b>Choosing a Text Editor</b> is a simple choice with huge ramifications depending on your coding objectives. Most IDEs are suitable for front-end coding projects (ie html, css, javascript). Like buying a car, research what the market has to offer, find what you like, download and install. Fortunately, you won't have to come out of pocket for an IDE as the majority are open-source.</p>
-        <p>With a text editor installed, you can properly code a web application using industry standard best practices. However, in order to view that which you code, it is imperative to <b>Install a Local Host</b>, which is software that runs locally on a computer and allows developers to test web applications before deployment. The best feature of a local host is that developers can code projects without internet access, yet, still view the results in real-time.</p>
-        <p>With these tools, you can start coding projects immediately, but having access to a <b>Version Control System</b> will be advantageous in your work as you can manage revisions made to a document throughout its existence, allowing developers to revert a document to a previous state. A VCS is rather complex and requires a bit of studying; and unlike IDE and Local Host software, sooner or later you may have to pay for such services. And it will be worth it!</p>
-        <!-- -->
-        <hr id="hT">
-        <h4 class="title">Coding 101</h4>
-        <p>Coding a web application is analogous to being a polyglot on tour: where you go depends on how well you speak the language. And ones fluency of multiple languages will ultimately dictate the overall experience. Every web developer begins their journey by learning two software programming languages: HTML and CSS.</p>
-        <p><b>HTML</b> is the standard markup language used when creating webites semantically. It is used specifically to embed content into a web page using nested <i>Elements</i>, where each element serves a purpose based on the design objective. Enhancement of any element is possible through manipulating <em>Attributes</em>, <em>Classes</em> and <em>Ids</em>. Learn everything you need to know about html <a target="_blank" href="https://www.w3schools.com/html/html_intro.asp">here</a>.</p>
-        <p><b>CSS</b> is the language used to describe the presentation (design) of a markup language document. This language empowers designers to target HTML Elements by styling the layout, adding color, improving accessibility and much more.</p>
-        <!-- 
-        Use this Res to discuss CSS
-        http://nimbupani.com/css-vocabulary.html
-        -->
-        <p>Quisque bibendum, est quis rutrum iaculis, ligula orci egestas libero, sit amet pharetra purus neque ac ante. Fusce laoreet quam eu magna rutrum vestibulum. Mauris eget porta velit. Quisque eu rutrum enim, nec gravida urna. Pellentesque tincidunt efficitur sem, ac porttitor felis scelerisque et.</p>
-        <p>Aliquam laoreet vestibulum ligula at consectetur. Proin vulputate a dui vel vestibulum. Aenean justo orci, dapibus vel enim sed, mattis maximus urna. Proin quis leo justo. Vivamus cursus ornare nulla, ac euismod lorem placerat at.</p>
-        <p>To conclude, I know a guy who put together an ultimate guide to using these languages and you can find his work <a target="_blank" href="https://learn.shayhowe.com/">here</a>.</p>
-        <!-- -->
-        <hr id="hs">
-        <h4 class="title">HTML Snippets</h4>
-        <p>Quisque bibendum, est quis rutrum iaculis, ligula orci egestas libero, sit amet pharetra purus neque ac ante. Fusce laoreet quam eu magna rutrum vestibulum. Mauris eget porta velit. Quisque eu rutrum enim, nec gravida urna. Pellentesque tincidunt efficitur sem, ac porttitor felis scelerisque et.</p>
-        <p>Aliquam laoreet vestibulum ligula at consectetur. Proin vulputate a dui vel vestibulum. Aenean justo orci, dapibus vel enim sed, mattis maximus urna. Proin quis leo justo. Vivamus cursus ornare nulla, ac euismod lorem placerat at.</p>
-        <!-- 
-        Use this Res to discuss HTML Snippets
-        https://www.w3schools.com/html/html_intro.asp
-        -->
-        <!-- <a href="#wb" class="arrow"></a> -->
-        <!-- -->
-        <!--<p style="text-align: center;">Blah, blah, blah, blah...<a href="portfolio.php"><br><span class="read">Learn More</span></a></p>-->
-      </main>  
-      
-      <!-- //FOOTER -->  
-      <footer>
-        <a class="credit"><small><span class=""><?php echo date('Y'); ?></span></small>&#32;&#32;
-        <span class=""> Made with <i class="fa fa-heart"></i> by </span> Mister Moody</a>
-      </footer> 
+  <body>  
+			<div class="intro">
+				<h1>Mister Moody's  Web Dev Resources</h1>
+        <p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience. This project is a personal portfolio item that I am using to illustrate my knowledge as a web designer. I have also given consideration to individuals who have no coding experience~ there has never been a better time to learn how to code! </p>
+			</div>
+      <!-- -->
+			<!-- -->			
+      <!-- -->
+			<!-- -->			
+    <div class="main-content"> 
+      <!-- -->
+			<!-- -->			
+      <div class="card"> 
+        <i class="material-icons">code</i>
+        <h1>HTML &amp; CSS</h1>
+        <p>Pellentesque luctus leo eu mattis posuere. Morbi congue eros vel nibh aliquet lacinia. Phasellus nec gravida purus. Interdum et.</p>
+        <a class="btn" href="coding101.html">Learn more</a>        
+      </div> 
+      <!-- -->
+			<!-- -->
+      <div class="card">
+        <i class="material-icons">terrain</i>
+        <h1>JavaScript</h1>
+        <p>Vivamus in massa enim. Donec vitae nibh elit. Integer vulputate tincidunt enim et vulputate. Aliquam a consectetur nisl.</p>
+        <a class="btn" href="coding102.html">Learn more</a>        
+      </div>
+      <!-- -->
+			<!-- -->      
+      <div class="card">
+        <i class="material-icons">extension</i>
+        <h1>PHP</h1>
+        <p>Duis dignissim tortor elementum, pharetra turpis tempus, tincidunt nisl. Ut semper sapien elit, ac ornare sapien semper non. Sed.</p>
+        <a class="btn" href="coding103.html">Learn more</a>        
+      </div>
+      <!-- -->
+			<!-- -->			  
+      <div class="card">
+        <i class="material-icons">equalizer</i>
+        <h1>Management</h1>
+        <p>Quisque facilisis non sapien nec venenatis. Aenean a maximus lectus. Etiam posuere quam magna, in viverra arcu dapibus.</p>
+        <a class="btn" href="projectmanagement.html">Learn more</a>
+      </div>
+      <!-- -->
+			<!-- -->
     </div>
-    <!-- ************************* -->
-    
-    <!-- *********************************************************************** -->
-    <!-- *********************************************************************** -->
-    <!-- ********************************************************************************* -->
-    
+          <!-- //FOOTER -->  
+      <footer>
+        <small><span><?php echo date('Y'); ?></span></small>&#32;&#32;
+        <span class=""> Made with <i class="fa fa-heart"></i> by </span> Mister Moody
+      </footer> 
+    <!-- ************************* --> 
   </body>
 </html>
