@@ -7,14 +7,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body>  
+  <body>
+		<!---->
+		<nav class="topnav" id="myTopnav">
+		<a href="#home" class="active">Coding 101</a>
+		<a href="#news">HTML</a>
+		<a href="#contact">CSS</a>
+		<a href="#about">Misc</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</nav>
+    <!---->	 
 		<div class="intro">
-			<h1>Using HTML &amp; CSS</h1>
+			<h1>Coding 101<span>: Using HTML &amp; CSS</span></h1>
 			<p>A collection of resources for designing a web application.</p>
 		</div>
-    <!-- -->
-		<!-- -->			
+    <!-- -->			
     <div class="sub-content"> 
 			
       <div class="card"> 
@@ -120,5 +131,23 @@
       <!-- -->
 			<!-- -->						
     </div>
+    <!-- -->
+    <!-- //FOOTER -->  
+    <footer>
+    	<a class="credit"><small><span class=""><?php echo date('Y'); ?></span></small>&#32;&#32;
+    	<span class=""> Made with <i class="fa fa-heart"></i> by </span> Mister Moody</a>
+  	</footer> 
+    <!-- -->
+    <!-- *****JS SCRIPTS***** -->
+    <!-- -----Navigation----- -->
+    <script>function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>    
   </body>
 </html>
