@@ -2,36 +2,28 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Managing Web Projects</title>
+    <title>Web Design 101</title>
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
-    <link href="css/projectmanagement.css" rel="stylesheet">
+    <link href="css/management.css" rel="stylesheet">
   </head>
-  <body>
+  <body>  
+    <!-- MAIN SITE NAVIGATION-->
+		<header class="topnav" id="myTopnav">
+      <a href="#" class="active">Web Design 101</a>
+      <a href="#">HTML</a>
+      <a href="#">CSS</a>
+      <a href="#">JavaScript</a>
+      <a href="#">Management</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
+    
+    
     <!-- ****** <MAIN-GRID>  ***** -->
-    <div class="grid">    
-      <!-- //HEADER -->
-      <header>
-        <ul class="headNav">
-          <li class="home">
-            <a class="" href="projectmanagement.html">Project Management 101</a>
-          </li>
-          <!--<li class="basics">
-            <a class="active" href="manage.html">aaaaa
-            <i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
-          </li>
-          <li class="css">
-            <a class="" href="#">bbbbbbbb
-            <i class="fa fa-css fa-2x" aria-hidden="true"></i></a>
-          </li>
-          <li class="javascript">
-            <a class="" href="#">ccccccc
-            <i class="fa fa-javascript fa-2x" aria-hidden="true"></i></a>
-          </li>-->
-        </ul>
-      </header>
-      
+    <div class="grid">  
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
       <nav>
         <ul class="nav">
@@ -52,16 +44,6 @@
       
       <!-- //CONTENT -->
       <main>
-        <h3 id="environ" class="title">My Dev Environ</h3>
-        <!--<p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience.</p> 
-        <p>This project is a personal portfolio item that I am using to illustrate my knowledge as a web designer. I have also given consideration to individuals who have no coding experience~ there has never been a better time to learn how to code! Enjoy the journey with.</p>-->
-        <p>Brackets gives me the power to do it.
-        <br>
-        Xampp gives me the power to see it.
-        <br>
-        Github gives me the power to keep it safe (forever).</p>
-        <!-- -->
-        <!-- -->
         <hr id="version">
 		<div class="intro">
 			<h4 class="title"><i class="material-icons">usb</i> Version Control &amp; Using Github</h4>
@@ -332,6 +314,17 @@
       <!-- -->
 			<!-- -->
       <!-- -->
+    <!-- *****JS SCRIPTS***** -->
+    <!-- -----Navigation----- -->
+    <script>function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>    
 			<!-- -->
     
     

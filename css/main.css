@@ -1,21 +1,10 @@
-/*  ==================================== 
-    Main GRID STYLES (layout.css)
-    ==================================== */
-
+/*  ========================================= 
+    Main GRID STYLES (layout.css) ======== */
 .main-content {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 100% auto;
 }
-@media screen and (min-width: 500px) {
-	.main-content {
-		display: grid;
-  	grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 100% auto;
-	}
-	.sub-content {margin: 0 2.5em;}
-}
-
 .sub-content {
 	margin: 0 1em;
 	display: grid;
@@ -23,7 +12,16 @@
   grid-template-rows:  auto;
   grid-gap: 10px;
 }
-
+@media screen and (min-width: 500px) {
+	/*.main-content {
+		display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 100% auto;
+	}*/
+	.sub-content {margin: 0 2.5em;}
+}
+/**/
+/**/
 table {
 	table-layout: auto;
 	width: 100%;
@@ -39,10 +37,8 @@ span {margin: 0;}
 .small {font-size: 0.71em;}
 
 
-/*  ==================================== 
-    UNIVERSAL BASE STYLES (pages.css)
-    ==================================== */
-
+/*  ========================================= 
+    UNIVERSAL BASE STYLES (pages.css) ==== */
 * {
 	box-sizing: border-box;
 }
@@ -59,7 +55,7 @@ h1, h2, h3, h4, h5, .card {
 	text-align: center;
 }
 a {
-  color: #ff4d4d;
+  color: rgba(10, 9, 9, 0.5);
   text-decoration: none;
 }
 p {
@@ -83,6 +79,10 @@ p {
 /*
 */
 .btn {
+  display: inline-block;
+  margin: 0;
+  width: 150px;
+  text-align: center;
   font-size: 0.85em;
   color: #fff;
   font-weight: bold;
@@ -90,7 +90,6 @@ p {
   padding: 0.75em 1.5em;
   background-color: #ff4d4d;
   border-radius: 0.35em;
-  display: block;
 }
 /*
 */
@@ -125,9 +124,31 @@ p {
   width: 95%;
   max-width: 1000px;
 }
-
-
-
+/*
+*/
+hr {
+  background-image: linear-gradient(to right, rgba(10, 9, 9, 0.0), rgba(10, 9, 9, 0.5), rgba(10, 9, 9, 0.0));
+  border: 0;
+  height: 1px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  overflow: visible;
+  text-align: center;
+}
+hr:after { /*rgba(255, 0, 0, 0.8)*/
+  background: rgba(192, 192, 192, 0.6);
+  content: ' \00A7';
+  border: 1px dotted rgba(10, 9, 9, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  font: "BodoniXT" !important;
+  font-size: 0.9em;
+  padding: 0 0.6em;
+  position: relative;
+  top: -0.7em;
+}
+/*
+*/
 /* FOOTER */
 footer {text-align: center;}
 .fa-heart {
