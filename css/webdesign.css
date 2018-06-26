@@ -60,13 +60,12 @@ header.topnav > .active {
 /* ========================================================= */
 /* ===================== GRID LAYOUTS ====================== */
 
-/* *********************** */
 /* SITE-TEMPLATE GRID */
 .grid {
 	margin: 0 2vw;
   padding: 0 ;
 	display: grid;
-	grid-template-rows: 8vmin minmax(200px,auto) 35px;
+	grid-template-rows: 4vmin minmax(200px,auto) 35px;
 	grid-gap: 4px;
 }
 @media only screen and (min-width: 800px) {
@@ -88,9 +87,7 @@ header.topnav > .active {
     grid-gap: 1vw;
   }
 }
-/* ********************************** */
 
-/* *********************** */
 /* SIDEBAR-NAVIGATION Grid */
 .snone {grid-area: snone;}
 .sntwo {grid-area: sntwo;}
@@ -128,10 +125,22 @@ ul.nav {font-size: 0.88em;}
   }
 }
 
-/* *********************** */
 /* MAIN-SECTION Grid */
 main {
   max-width: 100%;
+}
+
+/* FOOTER */
+footer {text-align: center; font-size: 0.53em;}
+.fa-heart {
+  color: red;
+  animation: pulse 1.3s ease infinite;
+  padding-top: -50px;  /*Required for Heart Animation*/
+}
+@keyframes pulse {
+  0% {transform: scale(0.5);}
+  50% {transform: scale(0.7);}
+  100% {transform: scale(0.5);}
 }
 
 
@@ -165,15 +174,18 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 	margin-bottom: 0.25em;
 } /*for TOP Alignment */
-/*h2.title, h3.title, h4.title, h5.title {
-  margin-top: 60px;
-}*/
 p {
 	margin: 0.25em;
 	text-align: justify;
   line-height: 1.5; 
   font-size: 0.74em;
 }
+/**/
+.material-icons {
+  color: #ff4d4d; 
+  /*font-size: 1em;*/
+}
+/**/
 a {
   text-decoration: none;
   color: #000;
@@ -196,27 +208,8 @@ li > a.active {
   padding: 2px;
 }
 /**/
-ol { 
-  font-size: 0.68em;}
-/* <a> Links 'Arrow' Transform */
-span.read {font-weight: 900;}
-span.read {
-	position: relative;
-	transition: all 500ms ease; 
-	overflow:hidden;
-}
-span.read:before {
-	font-family: FontAwesome;
-	content:"\f101";
-	position: absolute;
-	left: 105px; /*Icon Position*/
-	transition: all 200ms ease;
-} 
-span.read:hover:before {left: 112px;}
-@media only screen and (min-width: 800px) {
-  span.read:before {left: 131px;}
-  span.read:hover:before {left: 140px;}
-}
+ol {font-size: 0.68em;}
+ol.alpha {list-style-type: lower-alpha;}
 /**/
 hr {
   background-image: linear-gradient(to right, rgba(10, 9, 9, 0.0), rgba(10, 9, 9, 0.5), rgba(10, 9, 9, 0.0));
@@ -240,69 +233,63 @@ hr:after { /*rgba(255, 0, 0, 0.8)*/
   top: -0.7em;
 }
 /**/
-table {font-size: 0.62em;
+table {font-size: 0.68em;
 	table-layout: auto;
 	width: 100%;
 }
 th {text-align: left;}
 td.bold {
-	width: 250px;
+	width: 212px;
 }
-.bold > span {text-decoration: underline;}
-.emphasize {font-style: italic;}
+/**/
 span {margin: 0;}
-.small {font-size: 0.71em;}
+/*Hide on Mobile >> Display in Desktop*/
+span.hide {display: none;}
 /**/
-.material-icons {
-  color: #ff4d4d; 
-  /*font-size: 1em;*/
-}
-/**/
-.intro {
-  margin: 1em auto;
-  width: 95%;
-  max-width: 1000px;
+@media only screen and (min-width: 800px) {
+  .intro {
+    margin: 1em auto;
+    width: 95%;
+    max-width: 1000px;
+  }
+  span.hide {display: contents;}
 }
 /* =========================================================== */
 
 
-/* HEADER */
-header {margin: 0px;}
 
-/* FOOTER */
-footer {text-align: center; font-size: 0.53em;}
-.fa-heart {
-  color: red;
-  animation: pulse 1.3s ease infinite;
-  padding-top: -50px;  /*Required for Heart Animation*/
+/* IMAGES ================================ */
+/**/
+.imgL {
+  float: left;
+  margin: 8px 16px 0 0;
+  width: 38%;
+  height: 100px; 
+  border-radius: 8px;
+}  
+.imgR {
+  float: right;
+  margin: 8px 0 0 16px;
+  width: 35%;
+  height: 100px; 
+  border-radius: 8px;
+} 
+@media all and (min-width: 800px) {  
+  .imgL {
+    float: left;
+    margin: 5px 20px 0 0;
+    width: 38%;
+    height: auto; 
+    border-radius: 2px;
+  }
+  .imgR {
+    float: right;
+    margin: 8px 0 0 20px;
+    width: 32%;
+    height: auto; 
+    border-radius: 2px;
+  }
+  /**/
 }
-@keyframes pulse {
-  0% {transform: scale(0.5);}
-  50% {transform: scale(0.7);}
-  100% {transform: scale(0.5);}
-}
-/* ======= END of Main-Page Layout
-/* =========================================================== */
-
-
-
-
-
-
-/*MEDIA QUERIES*/
-/* @MIN-Width: 768 *****************************************/
-@media screen and (min-width: 768px) {}
-/***********************************************************/
-
-
-/* @MIN-Width: 950 *****************************************/
-@media screen and (min-width: 950px) {}
-/***********************************************************/
-
-
-/* @MIN-Width: 1200 ****************************************/
-@media screen and (min-width: 1200px) {}
-/***********************************************************/
-
-
+/**//*******************************//**/
 
