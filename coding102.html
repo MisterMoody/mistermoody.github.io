@@ -29,7 +29,7 @@
       <nav>
         <ul class="nav">
           <li>
-            <a class="snone" href="#introduction">Introduction</a>
+            <a class="snone" href="#environ">The Dev Environ</a>
           </li>
           <li>
             <a class="snone" href="#vernacular">HTML Vernacular</a>
@@ -49,32 +49,42 @@
           <li>
             <a class="snfour" href="#hs">HTML Snippets</a>
           </li>-->
+          <li>
+            <a class="snone" href="#xxx">xxx</a>
+          </li>
         </ul>
       </nav>
       
       <!-- //CONTENT -->
       <main>
         <div class="intro">
-          <h2 class="title"><i class="material-icons">code</i> Web Design 101</h2>
-          <p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience. This project offers a No-Frills Guide for learning the basics of designing web applications. There has never been a better time to learn how to code! </p>
-          <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nunc justo, blandit ut turpis non, cursus pretium est. Sed porttitor elit non fringilla blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla ultricies, odio a pretium faucibus, arcu odio maximus arcu, a condimentum nibh felis ac ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <h2><i class="material-icons">code</i> Web Design 101</h2>
+          <p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience. This project offers a No-Frills Guide for learning the basics of designing web applications.</p>
+          <p>Designed with novice designers in mind, this project will enable any newb to build a presentable website with only 8 hours of study.  I know, I know. You think that is impossible, but I assure you that with the resources provided in this application you too can jumpstart a career as a web designer.</p>
+          <p><b>Disclaimer:</b> This modest tutorial offers nothing more than a foundation for learning how to build a website.  Resources provided aim to help you acquire a solid foundation for understanding software programming languages and working within your environment to edit and load files to the internet. From there, it's all on you to make it happen. There has never been a better time to learn how to code!</p>
         </div>
         <!-- -->
         <hr>
-        <div id="introduction" class="intro">
-          <h4>Introduction</h4>
-          <p>Before diving into building your project, ensure that you have a proper developers environment set-up. Naturally, you will need a computer with internet access, but you will also need:</p>
-          <ol>
-            <li>an <em>IDE</em> text-editor to program your application</li>
-            <li>a <em>Local Host-Server</em> to work on a project in real-time offline</li>
+        <div id="environ" class="intro">
+          <h4>Setting Up your Dev Environment</h4>
+          <p>Aside from owning a computer and having access to the internet you will also need:</p>
+          <ol class="alpha">
+            <li>an <em>IDE</em> text-editor <span class="hide">to program your application</span></li>
+            <li>a <em>Local Host-Server</em> <span class="hide">to work on a project in real-time offline</span></li>
+            <li>a <em>Version Control System</em> <span class="hide">to manage your work</span></li>
           </ol>
-          <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. Mauris egestas finibus erat. Morbi placerat, urna dapibus interdum scelerisque, arcu justo gravida tortor, eget bibendum nibh mauris eu erat. Nullam iaculis sodales mauris, at eleifend erat tempor in. In eu nulla semper, sollicitudin odio at, euismod risus. Duis ligula quam, venenatis non accumsan id, mattis eu tortor. Quisque vitae iaculis dui, vel lobortis eros. Nulla pretium nibh sit amet risus imperdiet sodales.</p>
+          <p><img src="img/ide.jpg" class="imgR">An <em><b>Integrated Development Environment</b></em> is a software application that provides comprehensive facilities to computer programmers for software development. IDEs are designed to maximize programmer productivity by providing versitle components in a single program by which all development is done. In general, an IDE is a graphical user interface (GUI)-based workbench designed to aid a developer in building software applications with an integrated source-code editor combined with all the required (automation) tools at hand. This program typically provides many features for authoring, modifying, compiling, deploying and debugging software, which helps developers quickly execute actions without switching to other applications.<sup><a href="https://www.techopedia.com/definition/26860/integrated-development-environment-ide" target="_blank">[1]</a></sup> My IDE of choice is Brackets. It's really easy to use so I recommend checking it out.<sup><a href="https://github.com/adobe/brackets/wiki/How-to-Use-Brackets" target="_blank">[2]</a></sup>.</p>
+          <!-- -->
+          <p><img src="img/xampp.jpg" class="imgL">A <em><b>Local Host-Server</b></em> is a computer networking configuration that creates an online-like environment for developers to test applications without internet access. Specifically, localhost is the host name for your computer and uses the IP address 127.0.0.1 to act as a loopback mechanism used to run a network service on a host without requiring a physical network interface.<sup><a href="http://www.tech-faq.com/127-0-0-1.html" target="_blank">[3]</a></sup> Configuring a local host manually is beyond the scope of this project so I strongly suggest that you head over to Apache Friends and download their open source cross-platform web server-stack.<sup><a href="https://www.apachefriends.org/index.html" target="_blank">[4]</a></sup> <small><em>Note: Before downloading this program, research alternatives that are best suited for you. For example, I work within a Microsoft Windows Operating System and there is a WAMP server-stack designed specifically for Microsoft Windows OS. However, my preferred server-stack is XAMPP due to its versitility.</em></small></p>
+          <!-- -->
+          <p>A <em><b>Version Control System</b></em> is a software configuration that records changes to web files over time so that you can recall specific versions later. For all intents and purposes, a VCS is an online storage facility for your code, enabling dDevelopers with the ability to manage source-code, track all file versions (independent of network access) and coordinate a non-linear workflow in a team environment.<sup><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">[5]</a></sup> Github is my VCS of choice. Register to get started.<sup><a href="https://github.com" target="_blank">[6]</a></sup></p>
+          <p></p>
         </div>
         <!-- -->
         <hr>
         <div id="vernacular" class="intro">
           <h4>HTML Vernacular</h4>
+          <p>Learn about <a href="https://www.bitdegree.org/learn/what-is-html/">What is HTML?</a></p>
           <p>Mauris egestas finibus erat. Morbi placerat, urna dapibus interdum scelerisque, arcu justo gravida tortor, eget bibendum nibh mauris eu erat. Nullam iaculis sodales mauris, at eleifend erat tempor in. In eu nulla semper, sollicitudin odio at, euismod risus. Duis ligula quam, venenatis non accumsan id, mattis eu tortor. Quisque vitae iaculis dui, vel lobortis eros. Nulla pretium nibh sit amet risus imperdiet sodales.</p>
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
@@ -84,6 +94,13 @@
         <div id="template" class="intro">
           <h4>Starter Template</h4>
           <p>Mauris egestas finibus erat. Morbi placerat, urna dapibus interdum scelerisque, arcu justo gravida tortor, eget bibendum nibh mauris eu erat. Nullam iaculis sodales mauris, at eleifend erat tempor in. In eu nulla semper, sollicitudin odio at, euismod risus. Duis ligula quam, venenatis non accumsan id, mattis eu tortor. Quisque vitae iaculis dui, vel lobortis eros. Nulla pretium nibh sit amet risus imperdiet sodales.</p>
+          <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
+          <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
+        </div>
+        <!-- -->
+        <hr>
+        <div id="" class="intro">
+          <h5>xxx</h5>
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
         </div>
