@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Design 101</title>
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
@@ -29,19 +29,19 @@
       <nav>
         <ul class="nav">
           <li>
-            <a class="snone" href="#environ">The Dev Environ</a>
+            <a class="" href="#environ">The Dev Environ</a>
           </li>
           <li>
-            <a class="snone" href="#defineHTML">What is HTML?</a>
+            <a class="" href="#defineHTML">What is HTML?</a>
           </li>
           <li>
-            <a class="snone" href="#template">Required HTML</a>
+            <a class="" href="#template">Required HTML</a>
           </li>
           <li>
-            <a class="snone" href="#defineSec">Defining Sections</a>
+            <a class="" href="#defineSec">Defining Sections</a>
           </li>
           <li>
-            <a class="snone" href="#defineHead">Defining Headings</a>
+            <a class="" href="#defineContent">Defining Content</a>
           </li>
           <!--<li>
             <a class="snthree" href="#hT">Page Elements</a>
@@ -57,6 +57,9 @@
           </li>-->
           <li>
             <a class="snone" href="#xxx">xxx</a>
+          </li>
+          <li>
+            <a class="snone" href="#environ">Accessibility</a>
           </li>
         </ul>
       </nav>
@@ -90,13 +93,13 @@
         <hr>
         <div id="defineHTML" class="intro">
           <h4>What is HTML?</h4>
-          <p><em><b>HTML</b></em> is a markup language that defines the structure of the content on a webpage. Sections of markup are defined with <em>Elements</em>, which are used to carve out sections of the structure, HTML <em>Tags</em> are used to define those elements and Internet browsers read and displays the HTML content to the user. Tags have an opening and closing component, with a few exceptions. Moreover, we can add <em>Attributes</em> to a tag to specify how the content will display.<sup><a href="https://www.bitdegree.org/learn/what-is-html/" target="_blank">[7]</a></sup> Although this section provides only basic principles required of an HTML template, you can vist them good folks over at <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">Mozilla</a> to learn everything there is to know about web design and development.</p>
+          <p><em><b>HTML</b></em> is a markup language that defines the structure of the content on a webpage. Sections of markup are defined with <em>Elements</em>, which are used to carve out sections of the structure, HTML <em>Tags</em> are used to define those elements and Internet browsers read and displays the HTML content to the user. Tags have an opening and closing component, with a few exceptions. Moreover, we can add <em>Attributes</em> to a tag to specify how the content will display (explained later with CSS).<sup><a href="https://www.bitdegree.org/learn/what-is-html/" target="_blank">[7]</a></sup> Although this section provides only basic principles required of an HTML template, you can vist them good folks over at <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">Mozilla</a> to learn everything there is to know about web design and development. Better yet, check out the free HTML and CSS tutorial <a class="link" href="https://learn.shayhowe.com/">Shay Howe</a> put together: its perfect for an absolute beginner!</p>
         </div>
         <!-- -->
         <div id="template" class="intro">
           <h4>Required Elements for an HTML Template</h4>
           <p>Moving on, the structural requirements for an HTML template are as follow:</p>
-          <img src="img/requiredHTML.jpg" class=""> 
+          <img src="img/requiredHTML.jpg"> 
           <p>The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page. I do not know why.</p>
           <p>The <code>&lt;html&gt;</code> element (aka 'root') is on the second and final line of a page. This element is a wrapper for <em>everything</em> on the entire page: that which can be seen or not!</p>
           <p>The <code>&lt;head&gt;</code> element is the area consisting of that which you cannot see and is used to store pertinent data on a page. Within this area you can use <code>&lt;meta&gt;</code> <code>&lt;title&gt;</code> and <code>&lt;link&gt;</code> tags to make the page mobile-compatible, document the webpage in the browser and specify resources being used, respectively.</p>
@@ -104,15 +107,24 @@
         </div>
         <!-- -->
         <div id="defineSec" class="intro">
-          <h4>Defining Sections</h4>
-          <p>Content Areas</p>
-          <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
+          <h4>Defining Sections and Headings</h4>
+          <p>Inside of the body is where all the magic happens. It is here that you can outline information that you want displayed based on the type of information being offered. The most important HTML elements that you can use to section information are the <em>Header, Nav, Main, Section, Article, Aside and Footer</em>.<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">[8]</a></sup></p>
+          <img src="img/section.jpg"> 
+          <p>The <code>&lt;header&gt;</code> tag, when used, is the first section users encounter and <em>contains vital information related to the website</em> such as a logo, author or navigational aids. The <code>&lt;nav&gt;</code> tag can be used within the header or independently to help users navigate a webpage. A nav tag can <em>provide links within the current document or to other documents</em> with common examples including menus, tables of contents and indexes.</p>
+          <p>At the bottom of the page, before the closing <code>&lt;body&gt;</code> tag, you can use the <code>&lt;footer&gt;</code> tag to <em>highlight the page author, copyright data or social media links</em>.</p>
+          <p>The <code>&lt;main&gt;</code> and <code>&lt;section&gt;</code> tags can be a bit confusing because although they are semantically different (the <code>&lt;main&gt;</code> is actually a text content element), act nearly the same when used in the same situation. What is important here is to use the <code>&lt;section&gt;</code> tag as <em>the main container for a section</em> and use the <code>&lt;main&gt;</code> tag for the most important content of the body.</p>
+          <p>The <code>&lt;article&gt;</code> tag is used to <em>contain content intended to be independently distributabble</em> such as a magazine article or blog post.</p>
+          <p>The <code>&lt;aside&gt;</code> tag is used for <em>content that is indrectly related to the documents main content</em>.</p>
         </div>
         <!-- -->
-        <div id="defineHead" class="intro">
-          <h4>Defining Headings</h4>
-          <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-          <p>Accessibility</p>
+        <div id="defineContent" class="intro">
+          <h4>Defining Content</h4>
+          <p>Content elements are used to organize sections of content and are nested within any section element. There are dozens of elements that can be used to markup your content, but choosing the right element depends wholly on that which you are marking up. Aside from adding identifying sections of content with headings and adding text, you may want to include an list, a form, some sort of multimedia, a script, interactivity or a web component. There are dozens of elements at your disposal, but the only way you will understand them is to study them.<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Element" target="_blank">[9]</a></sup> <sup><a href="https://www.html-5-tutorial.com/all-html-tags.htm" target="_blank">[10]</a></sup> <sup><a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">[11]</a></sup></p>
+          <img src="img/content.jpg"> 
+          <p>In the example above, there are four kinds of tags used, all of which no project goes without.</p>
+          <p>The <code>&lt;h1&gt;</code> and <code>&lt;h4&gt;</code> tags illustrate a <em>Heading</em> that is used to define the title of any section. There are six heading levels <code>&lt;h1&gt; - &lt;h6&gt;</code> which decrease in size from 1 to 6.</p>
+          <p>The <code>&lt;p&gt;</code> tag represents a <em>paragraph of text</em>. The <code>&lt;a&gt;</code> tag is an inline-text semantic <em>creates a hyperlink to another webpage, file, or location within the same page</em>. This is an inline text semantic which helps define the meaning or purpose of a word, line or text.</p>
+          <p>The <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags are used in unison to <em>create an unordered list of items</em>, which will display as bullet points. You could also use the <code>&lt;ol&gt;</code> tag to create an <em>ordered list</em>, which will display an ascending counter.</p>
         </div>
         <!-- -->
         <hr>
