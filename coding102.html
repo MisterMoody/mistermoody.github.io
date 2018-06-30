@@ -43,6 +43,9 @@
           <li>
             <a class="" href="#defineContent">Defining Content</a>
           </li>
+          <li>
+            <a class="snone" href="#accessibility">Accessibility</a>
+          </li>
           <!--<li>
             <a class="snthree" href="#hT">Page Elements</a>
           </li>
@@ -57,9 +60,6 @@
           </li>-->
           <li>
             <a class="snone" href="#xxx">xxx</a>
-          </li>
-          <li>
-            <a class="snone" href="#environ">Accessibility</a>
           </li>
         </ul>
       </nav>
@@ -98,7 +98,7 @@
         <!-- -->
         <div id="template" class="intro">
           <h4>Required Elements for an HTML Template</h4>
-          <p>Moving on, the structural requirements for an HTML template are as follow:</p>
+          <p>The required structural elements for an HTML template are as follow:</p>
           <img src="img/requiredHTML.jpg"> 
           <p>The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page. I do not know why.</p>
           <p>The <code>&lt;html&gt;</code> element (aka 'root') is on the second and final line of a page. This element is a wrapper for <em>everything</em> on the entire page: that which can be seen or not!</p>
@@ -125,15 +125,39 @@
           <p>The <code>&lt;h1&gt;</code> and <code>&lt;h4&gt;</code> tags illustrate a <em>Heading</em> that is used to define the title of any section. There are six heading levels <code>&lt;h1&gt; - &lt;h6&gt;</code> which decrease in size from 1 to 6.</p>
           <p>The <code>&lt;p&gt;</code> tag represents a <em>paragraph of text</em>. The <code>&lt;a&gt;</code> tag is an inline-text semantic <em>creates a hyperlink to another webpage, file, or location within the same page</em>. This is an inline text semantic which helps define the meaning or purpose of a word, line or text.</p>
           <p>The <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags are used in unison to <em>create an unordered list of items</em>, which will display as bullet points. You could also use the <code>&lt;ol&gt;</code> tag to create an <em>ordered list</em>, which will display an ascending counter.</p>
-          <p>Clarification on how to define content can be found in this handy <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML Basics</a> tutorial. It is important to acknowledge <a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attributes</a> and how they can be used to manipulate the state of a particular element. An example is illustrated in the <code>&lt;img&gt;</code> tag where &lt;img <code>src="..."</code> references the <em>File Source</em> of an image. Wait for the <em>CSS</em> section to learn more.</p>
+          <p>By the way, the <code>src="..."</code> that you see in the <code>&lt;im /&gt;</code> is called an <a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attribute</a>, which is useful for manipulating the state of a particular element or referencing a source as illustrated. Although outside of the scope of our focus, keep in mind that attributes are used when making a website accessible and we will cover this below.</p>
+          <p>These days more and more developers are using <a href="https://staticsitegenerators.net" target="_blank"><b><u>Static Site Generators</u></b></a> to expedite the markup process.</p>
+          <p></p>
         </div>
         <!-- -->
         <hr>
+        <div id="accessibility" class="intro">
+          <h4>Accessibility</h4>
+          <p>In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[12]</a></sup> The <a href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank"><b><u>WC3</u></b></a> and <a href="https://a11yproject.com" target="_blank"><b><u>A11Y Project</u></b></a> are two major advocates for web accessibility and provide <a href="https://w3.org/TR/WCAG21"><b><u>guidelines</u></b></a>, patterns and checklist for developers to make their applications accessible. </p>
+          <p>Here is a short list of<a href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank"><b> <u>Accesibility Criteria</u></b></a> that every application should include:</p>
+          <ol>
+            <li>Add Contrasting Color</li>
+            <li>Design usable :Focus States</li>
+            <li>Use Lables with Form Fields &amp; Inputs</li>
+            <li>Write Alternative Text for Images</li>
+            <li>Use Proper Markup for Content</li>
+            <li>Support Keyboard Navigation</li>
+          </ol>
+          <p>The Color-Contrast Ration between text and its background should be at least 3/4.5 to 1 depending on the font boldness. The WebAIM group offers a <a href="https://webaim.org/resources/contrastchecker/" target="_blank"><b><u>Color Contrast Checker</u></b></a> that allows developers to calculate the score for <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head"><b><u>conformance levels</u></b></a> in real time. When using color as an indicator, be sure to pair it with an icon, a label or pattern. Charts and graphs are often difficult to read so using shapes and varying sizes can help enhance monochromatic vision. You can use the <a href="https://colororacle.org"><b><u>Color Oracle</u></b></a> to simulate what vision impaired folk see in real-time.</p>
+          <p>Adding a visual cue such as an underline text style will help an element stand out. <em>Focus Indicators</em> help people know which element has the keyboard focus and helps with navigating a website. Elements that should be focusable are <em>links, form fields, widgets, buttons and menu items.</em> Be sure to create a state that is highly visible, with good contrast to stand out from the rest.</p>
+          <p>People who use screen readers navigate form using the tab key and the <code>&lt;label&gt;</code> element is equipped to handle this action. Never use placeholder text for accessibility because it will be passed over during tabbing. There are plenty of resources for creating <a href="https://webaim.org/techniques/forms/" target="_blank"><b><u>Accessible Forms</u></b></a>.</p>
+          <p>Vision impaired users rely on screen readers to 'hear' what is being displayed and the <code>&lt;alt=""&gt;</code> attribute is used to convert text to speech. Simply describe the image or what is happening in the background.</p>
+          <p>Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.</p>
+          <p>Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly markedup; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from <em>left to right, top to bottom</em>. Test your website using the tab key.</p>
+          <p>When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <a href="https://axe-core.org/" target="_blank"><b><u>Check a Websites Accessibility</u></b></a>.</p>
+        </div>
+        <hr>
         <div id="" class="intro">
-          <h5>xxx</h5>
+          <h4>xxx</h4>
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
         </div>
+        <!-- -->
         <!-- -->
         <!-- HIDDEN RESOURCES -->
         <!-- 
