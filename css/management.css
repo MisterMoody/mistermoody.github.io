@@ -55,6 +55,19 @@ header.topnav > .active {
   }
 }
 /**/
+/*Settings for 'FIXED-Header/Nav' on 'Desktop ONLY'*/
+@media screen and (min-width: 800px) {
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    /*overflow-x: hidden;
+    display: block;*/
+  }
+  nav {margin-top: 69px;}
+  main {margin-top: 44px;}
+}
 /**/
 /* ========================================================= */
 /* ===================== GRID LAYOUTS ====================== */
