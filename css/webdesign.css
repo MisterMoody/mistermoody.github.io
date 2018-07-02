@@ -78,7 +78,6 @@ autoprefixer({grid: true})
 	grid-gap: 4px;
 }
 @media only screen and (min-width: 800px) {
-  nav, main, footer {border: 1px dotted #444;}
   nav {grid-area: nav;}
   main {grid-area: main;}
   footer {grid-area: foot; }
@@ -166,6 +165,9 @@ footer {text-align: center; font-size: 0.53em;}
   100% {transform: scale(0.5);}
 }
 
+/*Remove from Under Construction Pages Once Implemented*/
+footer {height: 10vh;}
+/************************************/
 
 
 
@@ -203,6 +205,8 @@ p {
 	text-align: justify;
   line-height: 1.5; 
   font-size: 0.74em;
+  /*font-size: 18px;
+  line-height: 1.5;*/
 }
 /**/
 .material-icons {
@@ -261,7 +265,13 @@ hr:after { /*rgba(255, 0, 0, 0.8)*/
   top: -0.7em;
 }
 /**/
-code {background: #ccc;}
+code {
+  background: #ccc; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: 14px;
+}
 
 
 
@@ -283,7 +293,6 @@ img {
   width: 100%; 
   height: auto;
 }
-
 .imgL {
   float: left;
   margin: 8px 16px 0 0;
@@ -299,12 +308,12 @@ img {
   border-radius: 8px;
 } 
 }
-@media all and (min-width: 600px) {  
+@media all and (min-width: 800px) {  
   img {
     display: block;
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
+    max-width: 80%;
   }
   .imgL {
     float: left;
