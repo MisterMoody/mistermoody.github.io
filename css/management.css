@@ -84,7 +84,6 @@ Styles for the 'Manage' Component of the GH-pages repo
 	grid-gap: 4px;
 }
 @media only screen and (min-width: 800px) {
-  nav, main, footer {border: 1px dotted #444;}
   nav {grid-area: nav;}
   main {grid-area: main;}
   footer {grid-area: foot; }
@@ -298,7 +297,7 @@ table {font-size: 0.62em;
 }
 th {text-align: left;}
 td.bold {
-	width: 250px;
+	width: 150px;
 }
 .bold > span {text-decoration: underline;}
 .emphasize {font-style: italic;}

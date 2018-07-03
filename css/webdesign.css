@@ -165,8 +165,6 @@ footer {text-align: center; font-size: 0.53em;}
   100% {transform: scale(0.5);}
 }
 
-/*Remove from Under Construction Pages Once Implemented*/
-footer {height: 10vh;}
 /************************************/
 
 
@@ -333,3 +331,28 @@ img {
 }
 /**//*******************************//**/
 
+
+
+
+
+/*
+Layout Issues with 'Tables' on both Desktop and Mobile
+Suggest Using a Collapsing Grid or the <detail> tag.
+*/
+
+table {font-size: 0.62em;
+	table-layout: auto;
+	width: 100%;
+}
+th {text-align: left;}
+td.bold {
+	width: 150px;
+}
+.bold > span {text-decoration: underline;}
+.emphasize {font-style: italic;}
+span {margin: 0;}
+.small {font-size: 0.71em;}
+
+@media all and (min-width: 800px) {
+  td.bold {width: 300px;}
+}
