@@ -202,14 +202,14 @@ p {
 	margin: 0.25em;
 	text-align: justify;
   line-height: 1.5; 
-  font-size: 0.74em;
+  font-size: 0.78em;
   /*font-size: 18px;
   line-height: 1.5;*/
 }
 /**/
 .material-icons {
   color: #ff4d4d; 
-  /*font-size: 1em;*/
+  font-size: 1em;
 }
 /**/
 a {
@@ -265,10 +265,10 @@ hr:after { /*rgba(255, 0, 0, 0.8)*/
 /**/
 code {
   background: #ccc; 
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   border-radius: 5px;
   padding: 3px 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
@@ -340,19 +340,48 @@ Layout Issues with 'Tables' on both Desktop and Mobile
 Suggest Using a Collapsing Grid or the <detail> tag.
 */
 
-table {font-size: 0.62em;
-	table-layout: auto;
+table {
+  font-size: 0.62em;
+  color: darkgoldenrod;
 	width: 100%;
 }
 th {text-align: left;}
 td.bold {
-	width: 150px;
+	width: 200px;
 }
 .bold > span {text-decoration: underline;}
 .emphasize {font-style: italic;}
 span {margin: 0;}
-.small {font-size: 0.71em;}
 
 @media all and (min-width: 800px) {
-  td.bold {width: 300px;}
+  td.bold {width: 15.4em;}
+}
+
+
+/* Mobile 'Table' */
+div > span {text-decoration: underline;}
+h3 > span {color: red;}
+.table > div {margin: 2px 6px;}
+@media all and (max-width: 500px) {
+  .table{
+    width: 100%;
+    font-size: 0.72em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(24px, auto));	grid-template-columns: 1fr;
+	}
+}
+/* Desktop 'Table' */
+@media all and (min-width: 500px) {
+	.table {
+    width: 100%;
+    font-size: 0.76em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, 24px);
+    grid-template-columns: 15.8em 1fr;
+    grid-gap: 2px;
+  }
 }

@@ -28,284 +28,158 @@
       <nav>
         <ul class="nav">
           <li>
-            <a class="snone" href="#environ">My Dev Environ</a>
+            <a class="" href="#version">Version Control</a>
           </li>
           <li>
-            <a class="sntwo" href="#version">Version Control</a>
+            <a class="" href="#"></a>
           </li>
           <li>
-            <a class="snthree" href="#hT">Coding 101</a>
-          </li>
-          <li>
-            <a class="snfour" href="#hs">HTML Snippets</a>
+            <a class="" href="#"></a>
           </li>
         </ul>
       </nav>
       
       <!-- //CONTENT -->
       <main>
-        <hr id="version">
-		<div class="intro">
-			<h4 class="title"><i class="material-icons">usb</i> Version Control &amp; Using Github</h4>
-			<p><b>Git</b> is a distributed version control system that helps developers control the different versions of the files in a project. In a distributed system, you can copy a complete repository with the full project history to every developer's machine.</p>
-			<p>Developers utilize <b>Git</b> via commands are delivered via console that can access the collection of older versions of  project's which is called a <b>repository</b>. You can edit your files, then run Git commands to store your changes. Each time you complete a change to a project file, Git records a snapshot of their current contents. These snapshots are known as <b>commits</b>.</p>
-			<!-- -->
-			<!-- -->
-			<h4 class="title">List of Git Commands and Descriptions</h4>
-      <details>
-        <summary>git --help</summary>
-        Displays a List of Git Commands
-      </details>
-			<table>
-				<tr>
-					<th class="bold">git Command</th>
-					<th class="bold">git Description</th>
-				</tr>
-				<tr>
-					<td class="bold">git <span>--help</span></td>
-					<td class="emphasize">Displays a List of Git Commands</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>clone</span></td>
-					<td class="emphasize">Setup a New Repository</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>init</span></td>
-					<td class="emphasize">Setup a New Repository</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>status</span></td>
-					<td class="emphasize">Displays List regarding Status of Files</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>log</span> (<u><b><em>-p</em></b></u>)</td>
-					<td class="emphasize">Displays a List of Old Commits (Show Lines Added to each File)</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>ls</span></td>
-					<td class="emphasize">Displays a List of all Repo Files</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>add</span> (.)</td>
-					<td class="emphasize">Used to Stage a File (All Files)</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>commit</span>(-a -m)</td>
-					<td class="emphasize">Used to Commit a File (All Files)</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>push</span></td>
-					<td class="emphasize">Used to Synchronize Commits with Remote Repositories</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>pull</span></td>
-					<td class="emphasize">Used to Synchronize Commits with Remote Repositories</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>mv</span></td>
-					<td class="emphasize">Move Files that are Tracked by Git</td>
-				</tr>
-				<tr>
-					<td class="bold">git <span>rm</span></td>
-					<td class="emphasize">Remove Files that are Tracked by Git</td>
-				</tr>
-			</table>	
-			
-			<p>Git Commands include <u><b><em>'Options'</em></b></u> that can be specified with <em>a Single dash (-) followed by a Letter</em> or <em>a Double dash (--) followed by a Word</em>.</p>
-			<!-- -->
-			<!-- -->
-			<hr>
-			<h3>Creating a Repository</h3>
-			<p>There are two ways to store a Repository onto your computer. You can either <b>Clone</b> or copy a repo from another machine, or you can <b>Create</b> a new repo via <em>Initializing</em>.</p>
-			<table>
-				<tr>
-					<td class="bold">Step 1 <span>Initialize a Repo</span></td>
-					<td class="">git init</td>
-				</tr>
-				<tr>
-					<td class="bold">Step 2 <span>Stage Files</span></td>
-					<td class="">git add <em>filename.extension</em></td>
-				</tr>
-				<tr>
-					<td class="bold">Step 3 <span>Commit File Changes</span></td>
-					<td class="">git commit <u><b><em>-m</em></b></u> <em>"Description of Commit"</em></td>
-				</tr>
-				<tr>
-					<td class="bold"></td>
-					<td class="small">Commits should follow the line, 'This commit will....'</td>
-				</tr>
-				<tr>
-					<td class="bold">Step 4 <span>Input User Credentials</span></td>
-					<td class="">git config <u><b><em>--global</em></b></u> user.email "principal@mistermoody.com"</td>
-				</tr>
-				<tr>
-					<td class="bold small"> (This is a One-Time Process)</td>
-					<td class="">git config <u><b><em>--global</em></b></u> user.name "Mister Moody"</td>
-				</tr>
-				<tr>
-					<td class="bold">Step 5 <span>Retrieve Remote Repo</span></td>
-					<td class="">git remote add origin https://github.com/MisterMoody/projectName.git</td>
-				</tr>
-				<tr>
-					<td class="bold"></td>
-					<td class="">git push -u origin master</td>
-				</tr>
-			</table>
-			<p>Learn more about <u>Github Authorization</u> <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">here</a>.</p>
-			
-			<h3>Staging Changes</h3>
-			<p>xxx</p>
-			<table>
-				<tr>
-					<td class="bold">Step 1 <span>Check Repo Status</span></td>
-					<td class="">git status</td>
-				</tr>
-				<tr>
-					<td class="bold">Step 2 <span>Stage File</span></td>
-					<td class="">git add <em>filename.extension</em></td>
-				</tr>
-				<tr>
-					<td class="bold">Step 3 <span>Commit Files</span></td>
-					<td class="">git commit -m "Commit Message"</td>
-				</tr>
-				<tr>
-					<td class="bold">Step 4 <span>Push Files to Repo</span></td>
-					<td class="">git push -u origin master"</td>
-				</tr>
-			</table>
-			
-			
-			<h3>Viewing File Changes</h3>
-			<p>xxx</p>
-			<table>
-				<tr>
-					<td class="bold">git diff</td>
-					<td class="">git diff --staged</td>
-				</tr>
-				<tr>
-					<td class="small">New Lines will Display a " + "</td>
-					<td class="small">Will Compare Staged Changes</td>
-				</tr>
-				<tr>
-					<td class="small">Removed Lines will Display a " - "</td>
-					<td class="small"></td>
-				</tr>
-			</table>
-			<!-- -->
-			<!-- -->
-			<hr>
-			<h2><em>Managing Committed Files</em></h2>
-			<p>Delete File / Move &amp; Rename Files / Unstage Files / Reset Files (Discard Prior Modifications) / Retrieve Deleted Files / Undo Commits</p>
-			<p>xxx</p>
-			<table>
-				<tr>
-					<td class="bold"><span>Remove a File</span></td>
-					<td class="">git <u><b><em>rm</em></b></u> <em>filename.extension</em></td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Remove Multiple Files</span></td>
-					<td class="">git <u><b><em>rm</em></b></u> <em>file1.ext file2.ext file3.ext</em></td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Rename a File</span></td>
-					<td class="">git <u><b><em>mv</em></b></u> "<em>oldFilename.ext newFilname.ext</em>"</td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Unstage a File</span></td>
-					<td class="">git <u><b><em>reset HEAD</em></b></u> <em>filename.ext</em></td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Discard Recent Changes</span></td>
-					<td class="">git <u><b><em>checkout --</em></b></u> <em>filename.ext</em></td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Retrieve Deleted Files</span></td>
-					<td class="">git <u><b><em>checkout --</em></b></u> <em>filename.ext</em></td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Undo Commited Changes</span></td>
-					<td class="">git <u><b><em>log</em></b></u></td>
-				</tr>
-				<tr>
-					<td class="bold"></td>
-					<td class="">git <u><b><em>revert</em></b></u> SHA ID# </td>
-				</tr>
-				<tr>
-					<td class=""></td>
-					<td class="small">Copy &amp; Paste the SHA ID# >> The first 5 Numbers are Required! </td>
-				</tr>
-			</table>
-			<p>Always be sure to <u><b><em>commit</em></b></u> and <u><b><em>push</em></b></u> Files.
-			<br>
-			Learn more about <u>Resets</u> <a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-reset">here</a>.
-			<br>
-			The <u>git log</u> command produces a list of Commits along with their Simple Hashing Algorithm (SHM) identification number, which is <em>a checksum of all changes in that commit</em>. he checksum is the result of combining all the changes in the commit and feeding them to an algorithm that generates these 40-character strings. When you need to select a commit from your history, you can use these SHA-1 checksums, or "SHAs" for short, to identify which commit you want.</p>
-			<!-- -->
-			<!-- -->
-			<hr>
-			<h3>Working with Remote Repositories</h3>
-			<p>Using github for independent projects is slightly different when working with others. For starters, a repo that you own is called a <u>local repo</u> whilst a repo owned by another developer is called a <u>remote repo</u>. Each repos is a full copy of its original, including version history.</p>
-			<p>While developers can make commits to their own repo independent of others, a dev must always <u><em><b>pull commits</b></em></u> other developers have made from a remote repo to a local repo to maintain the most up-to-date version.</p>
-			<p>Collaborators typically use a declared central repository and gain acces via <u>cloning</u> into their local machine. This allows developers to work on different components that can be added to the central repo by <u><em><b>pushing</b></em></u> commits. Simple add the repo by name to the folder on your local machine.</p>
-			<table>
-				<tr>
-					<td class="bold"><span>Clone a Repository</span></td>
-					<td class="">git <u><em><b>clone https://github.com/user/repo</b></em></u> newlocalFolder</td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Update Repo</span></td>
-					<td class="">git <u><em><b>pull</b></em></u></td>
-				</tr>
-				<tr>
-					<td class=""></td>
-					<td class="small">Always Update Repo each time you Begin New Work</td>
-				</tr>
-				<tr>
-					<td class="bold"><span>View Remote Repos</span></td>
-					<td class="">git <u><em><b>remote</b></em></u></td>
-				</tr>
-				<tr>
-					<td class="bold"></td>
-					<td class="small">'origin' is the Default Name for <u><b><em>Remote Repos</em></b></u>; they can be renamed.</td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Pull Changes</span></td>
-					<td class="">git <u><em><b>pull origin</b></em></u></td>
-				</tr>
-				<tr>
-					<td class="bold"></td>
-					<td class="small">This will <u><b><em>add updated files</em></b></u> to your working directory.</td>
-				</tr>
-				<tr>
-					<td class="bold"><span>Add Remote Repos</span></td>
-					<td class="">git <u><em><b>remote add origin</b></em></u> https://github.ProjectURL.git</td>
-				</tr>
-				<tr>
-					<td class="bold"></td>
-					<td class="">git <u><b><em>push origin master</em></b></u> master</td>
-				</tr>
-			</table>
-		</div>
-        <!-- -->
-        <!-- -->
-        <!-- 
-        Use this Res to discuss CSS
-        http://nimbupani.com/css-vocabulary.html
-        -->
-        <p>To conclude, I know a guy who put together an ultimate guide to using these languages and you can find his work <a target="_blank" href="https://learn.shayhowe.com/">here</a>.</p>
-        <!-- -->
-        <hr id="hs">
-        <h4 class="title">HTML Snippets</h4>
-        <p>Quisque bibendum, est quis rutrum iaculis, ligula orci egestas libero, sit amet pharetra purus neque ac ante. Fusce laoreet quam eu magna rutrum vestibulum. Mauris eget porta velit. Quisque eu rutrum enim, nec gravida urna. Pellentesque tincidunt efficitur sem, ac porttitor felis scelerisque et.</p>
-        <p>Aliquam laoreet vestibulum ligula at consectetur. Proin vulputate a dui vel vestibulum. Aenean justo orci, dapibus vel enim sed, mattis maximus urna. Proin quis leo justo. Vivamus cursus ornare nulla, ac euismod lorem placerat at.</p>
-        <!-- 
-        Use this Res to discuss CSS Snippets
-        https://www.w3schools.com/css/css_howto.asp
-        -->
-        <!-- <a href="#wb" class="arrow"></a> -->
-        <!-- -->
-        <!--<p style="text-align: center;">Blah, blah, blah, blah...<a href="portfolio.php"><br><span class="read">Learn More</span></a></p>-->
-      <!-- -->
+        <!-- 'The Dev Environ' 
+        <div class="intro" id="environ">
+          <h2 class="title"><i class="material-icons">laptop</i> 
+          The Dev Environment</h2>
+        </div>
+        <hr id="version">-->
+        <!-- 'Version Control'-->
+        <div class="intro">
+          <h2 class="title"><i class="material-icons">usb</i> Version Control &amp; Using Github</h2>
+          <p><b>Git</b> is a distributed version control system that helps developers control different versions of project files. In a distributed system, you can copy a complete repository (ie. project) with its entire history to any developers machine.</p>
+			    <p>Developers utilize <b>Git</b> via commands that are delivered via the console which can access the collection of older versions of a <b>Repository</b>. You can edit your files, then run Git commands to store your changes. Each time you complete a change to a project file, Git records a snapshot of their current contents. These snapshots are known as <b>commits</b> which are pushed back to the repository and stored, after entering your credentials.</p>
+          <p>This section begins with a list of commands followed by practical usage of those commands depending on the circumstances.</p>
+          <h3><span>Part I:</span> List of Git Commands and Description</h3>
+          <article class="table">
+            <div><b>Git Command</b></div>
+            <div><b>Git Description</b></div>
+            <div>git <code>--help</code></div>
+            <div>Displays a List of Git Commands</div>
+              <div>git <code>clone</code></div>
+            <div>Setup a New Repository</div>		
+              <div>git <code>init</code></div>
+            <div>Setup a New Repository</div>
+              <div>git <code>status</code></div>
+            <div>Displays a List of File Status</div>	
+              <div>git <code>log (-p)</code></div>
+            <div>Displays a List of Old Commits</div>	
+            <div></div>
+            <div>(Show Lines Added to each File)</div>
+              <div>git <code>ls</code></div>
+            <div>Displays a List of all Repo Files</div>
+              <div>git <code>add (.) <em>filename</em></code></div>
+            <div>Stage a File (All Files)</div>		
+              <div>git <code>commit -m (-a)</code></div>
+            <div>Commit a File (All Files)</div>		
+              <div>git <code>push</code></div>
+            <div>Synchronize Commits with Master Repo</div>		
+              <div>git <code>pull</code></div>
+            <div>Synchronize Commits with Team Repo</div>
+              <div>git <code>mv</code></div>
+            <div>Move Files Tracked by Git</div>
+              <div>git <code>rm</code></div>
+            <div>Remove Files Tracked by Git</div>					
+            <div></div>
+          </article>
+			    <p>Git Commands include <b><em>'Options'</em></b> that can be specified with <em>a Single dash (-) followed by a Letter</em> or <em>a Double dash (--) followed by a Word</em>.</p>
+          <!-- -->
+          <!-- -->
+          <h3><span>Part II:</span> Creating a Repository</h3>
+          <p>There are two ways to store a Repository onto your computer. You can either <b>Clone</b> or copy a repo from another machine, or you can <b>Create</b> a new repo via <em>Initializing</em>.</p>
+          <article class="table">
+            <div>&#91;Step 1&#93; <span>Initialize a Repo</span></div>
+            <div>git <code>init</code></div>
+            <div>&#91;Step 2&#93; <span>Stage Files</span></div>
+              <div>git <code>add <em>filename.extension</em></code></div>
+            <div>&#91;Step 3&#93; <span>Commit File Changes</span></div>
+              <div>git <code>commit <u><b><em>-m</em></b></u> <em>"Description of Commit"</em></code></div>
+            <div>&#91;Step 4&#93; <span>Input User Credentials</span></div>
+              <div>git <code>config <u><b><em>--global</em></b></u> user.email</code></div>
+            <div><small>(This is a One-Time Process)</small></div>
+              <div>git <code>config <u><b><em>--global</em></b></u> user.name</code></div>
+            <div>&#91;Step 5&#93; <span>Retrieve Remote Repo</span></div>
+              <div>git <code>remote add origin https://github.com/ &#43; UserName/projectName.git</code></div>
+            <!--<div></div>
+            <div>git push -u origin master</div>-->
+          </article>
+			   <p>Learn more about <a href="https://help.github.com/articles/connecting-to-github-with-ssh/"><u>Github Authorization</u></a>.</p>
+         <!-- -->
+         <!-- -->
+			   <h3><span>Part III:</span> Staging Changes</h3>
+          <article class="table">
+            <div>&#91;Step 1&#93; <span>Check Repo Status</span></div>
+            <div>git <code>status</code></div>
+            <div>&#91;Step 2&#93; <span>Stage File</span></div>
+              <div>git <code>add <em>filename.extension</em></code></div>
+            <div>&#91;Step 3&#93; <span>Commit Files</span></div>
+              <div>git <code>commit -m "Commit Message</code>"</div>
+            <div>&#91;Step 4&#93; <span>Push Files to Repo</span></div>
+              <div>git <code>push -u origin master"</code></div>
+          </article>
+         <!-- -->
+         <!-- -->
+			   <h3><span>Part IV:</span> Viewing File Changes</h3>
+          <article class="table">
+            <div>git <code>diff (--staged)</code></div>
+            <div>Will Compare (Staged) Changes</div>
+            <div></div>
+            <div><small>(New Lines " + " || Removed Lines " - ")</small></div>
+          </article>
+         <!-- -->
+         <!-- -->
+         <h3><span>Part V:</span> Managing Committed Files</h3>
+         <p>Miscellaneous tools to manage committed files.</p>
+         <article class="table">
+            <div><span>Remove a File</span></div> 
+           <div>git <code><u><b><em>rm</em></b></u> <em>filename.extension</em></code></div> 
+            <div><span>Remove Multiple Files</span></div> 
+              <div>git <code><u><b><em>rm</em></b></u> <em>file1.ext file2.ext file3.ext</em></code></div> 
+            <div><span>Rename a File</span></div> 
+              <div>git <code><u><b><em>mv</em></b></u> "<em>oldFilename.ext newFilname.ext</em>"</code></div> 
+            <div><span>Unstage a File</span></div> 
+              <div>git <code><u><b><em>reset HEAD</em></b></u> <em>filename.ext</em></code></div> 
+            <div><span>Discard Recent Changes</span></div> 
+              <div>git <code><u><b><em>--checkout</em></b></u> <em>filename.ext</em></code></div> 
+            <div><span>Retrieve Deleted Files</span></div> 
+              <div>git <code><u><b><em>--checkout</em></b></u> <em>filename.ext</em></code></div> 
+            <div><span>Undo Commited Changes</span></div> 
+              <div>git <code><u><b><em>log</em></b></u></code></div> 
+            <div></div> 
+              <div>git <code><u><b><em>revert</em></b></u> SHA ID#</code></div> 
+            <div></div> 
+            <div><small>(Copy &amp; Paste the SHA ID# >> The first 5 Numbers are Required!)</small></div> 
+         </article>
+         <p>Always be sure to <b><em>commit</em></b> and <b><em>push</em></b> Files. Learn more about <a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-reset"><u>Resets</u></a>.</p>
+         <p>The <code>git log</code> command produces a list of Commits along with their Simple Hashing Algorithm (SHM) identification number, which is <em>a checksum of all changes in that commit</em>. he checksum is the result of combining all the changes in the commit and feeding them to an algorithm that generates these 40-character strings. When you need to select a commit from your history, you can use these SHA-1 checksums, or "SHAs" for short, to identify which commit you want.</p>
+         <!-- -->
+         <!-- -->
+			   <h3><span>Part VI:</span> Working with Remote Repositories</h3>
+			   <p>Using github for independent projects is slightly different when working with others. For starters, a repo that you own is called a <b>Local Repo</b> whilst a repo owned by another developer is called a <b>Remote Repo</b>. Each repository is a full copy of its original, including version history.</p>
+			   <p>While developers can make commits to their own repo independent of others, a dev must always <b>pull commits</b> other developers have made from a remote repo to a local repo to maintain the most up-to-date version.</p>
+         <article class="table">
+           <div><span>Clone a Repository</span></div>
+           <div>git <code><u><em><b>clone https://github.com/user/repo</b></em></u> newlocalFolder</code></div>
+           <div><span>Update Repo</span></div>
+           <div>git <code><u><em><b>pull</b></em></u> <small>(Update Repo when Beginning New Work)</small></code></div>
+           <div><span>View Remote Repos</span></div>
+           <div>git <code><u><em><b>remote</b></em></u> <small>(Default Name for <b><em>Remote Repos</em></b> is 'origin')</small></code></div>
+           <div><span>Pull Changes</span></div>
+             <div>git <code><u><em><b>pull origin</b></em></u></code></div>
+           <div></div>
+           <div><small>(This will <em>add updated files</em> to your working directory.)</small></div>
+           <div><span>Add Remote Repos</span></div>
+             <div>git <code><u><em><b>remote add origin</b></em></u> https://github.ProjectURL.git</code></div>
+           <div></div>
+             <div>git <code><u><b><em>push -u origin master</em></b></u></code></div>
+         </article>
+			   <p>Collaborators typically use a declared central repository and gain acces via <b>Cloning</b> into their local machine. This allows developers to work on different components that can be added to the central repo by <b>Pushing</b> commits. Simply add the repo by name to the folder on your local machine.</p>
+         <!-- -->
+         <!-- -->
+        </div>
       </main>  
       
       <!-- //FOOTER -->  
