@@ -197,6 +197,10 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   text-align: center;
 	margin-bottom: 0.25em;
+}
+h3, h4, h5 {
+  margin: 1em 0 0.25em;
+  padding: 0;
 } /*for TOP Alignment */
 p {
 	margin: 0.25em;
@@ -267,19 +271,11 @@ code {
   background: #ccc; 
   border: 1px solid #888;
   border-radius: 5px;
-  padding: 3px 5px;
-  font-size: 16px;
+  padding: 0px 1px;
+  font-size: 1em;
 }
-
-
-
-/**/
-span {margin: 0;}
-/*Hide on Mobile >> Display in Desktop*/
-span.hide {display: none;}
-/**/
-@media only screen and (min-width: 800px) {
-  span.hide {display: contents;}
+@media all and (min-width: 500px) {
+  address {color: red;}
 }
 /* =========================================================== */
 
@@ -332,40 +328,25 @@ img {
 /**//*******************************//**/
 
 
-
-
-
-/*
-Layout Issues with 'Tables' on both Desktop and Mobile
-Suggest Using a Collapsing Grid or the <detail> tag.
-*/
-
-table {
-  font-size: 0.62em;
-  color: darkgoldenrod;
-	width: 100%;
-}
-th {text-align: left;}
-td.bold {
-	width: 200px;
-}
-.bold > span {text-decoration: underline;}
-.emphasize {font-style: italic;}
+/**/
 span {margin: 0;}
-
-@media all and (min-width: 800px) {
-  td.bold {width: 15.4em;}
+/*Hide on Mobile >> Display in Desktop*/
+.hide, span.hide {display: none;}
+/**/
+@media only screen and (min-width: 800px) {
+  .hide, span.hide {display: contents;}
 }
-
+/* 
 
 /* Mobile 'Table' */
-div > span {text-decoration: underline;}
 h3 > span {color: red;}
+div > span {text-decoration: underline;}
 .table > div {margin: 2px 6px;}
+
 @media all and (max-width: 500px) {
   .table{
     width: 100%;
-    font-size: 0.72em;
+    font-size: 0.68em;
     margin: 0 auto;
     padding: 0;
     display: grid;
@@ -374,14 +355,16 @@ h3 > span {color: red;}
 }
 /* Desktop 'Table' */
 @media all and (min-width: 500px) {
+  code {
+  font-size: 0.88em;}
 	.table {
     width: 100%;
-    font-size: 0.76em;
+    font-size: 0.74em;
     margin: 0 auto;
     padding: 0;
     display: grid;
     grid-template-rows: repeat(auto, 24px);
-    grid-template-columns: 15.8em 1fr;
+    grid-template-columns: 16em 1fr;
     grid-gap: 2px;
   }
 }
