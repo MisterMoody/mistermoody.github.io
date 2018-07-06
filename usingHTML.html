@@ -26,54 +26,119 @@
     <div class="grid">  
       
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
-      <nav>
-        <!--<ul class="nav">
+      <!--<nav>
+        <ul class="nav">
           <li>
-            <a class="snone" href="#environ">Introduction</a>
+            <a class="" href="#">Introduction</a>
           </li>
           <li>
-            <a class="snone" href="#environ">HTML Vernacular</a>
+            <a class="" href="#">HTML Elements</a>
           </li>
-          <li>
-            <a class="snone" href="#environ">Starter Template</a>
-          </li>
-          <li>
-            <a class="snthree" href="#hT">Page Elements</a>
-          </li>
-          <li>
-            <a class="sntwo" href="#version">Content Areas</a>
-          </li>
-          <li>
-            <a class="snone" href="#environ">Accessibility</a>
-          </li>
-          <li>
-            <a class="snfour" href="#hs">HTML Snippets</a>
-          </li>
-        </ul>-->
-      </nav>
+        </ul>
+      </nav>-->
       
       <!-- //CONTENT -->
-      <main style="height: 71vh;">
+      <main>
         <!-- -->
-        <div>
+        <div style="height: 85vh;">
           <h1 style="font-size: 2.5em;">Under Construction</h1>
+          <h5>&#91;Preview Available Below&#93;</h5>
           <hr>
           <h3 style="font-size: 1.5em; color: rgba(10, 9, 9, 0.5);">Check back 2018.08.15</h3>
         </div>
-        <!-- 
-        Use this Res to discuss CSS
-        http://nimbupani.com/css-vocabulary.html
-        
-        <p>To conclude, I know a guy who put together an ultimate guide to using these languages and you can find his work <a target="_blank" href="https://learn.shayhowe.com/">here</a>.</p>
-         -->
-        <!-- 
-        Use this Res to discuss CSS Snippets
-        https://www.w3schools.com/css/css_howto.asp
-        -->
-        <!-- <a href="#wb" class="arrow"></a> -->
         <!-- -->
-        <!--<p style="text-align: center;">Blah, blah, blah, blah...<a href="portfolio.php"><br><span class="read">Learn More</span></a></p>-->
-      <!-- -->
+        <!-- 'Using HTML'-->
+        <div class="intro">
+          <h2 class="title"><i class="material-icons">code</i> Using HTML</h2>
+          <p>Every HTML document is a hierarchical structure made up of elements and their content. This section of the reference describes all the different types of element that you can use to write an HTML document.</p>
+          <!-- -->
+          <p>The <code>html</code> element is the outer container for everything that appears in an HTML document. It can only contain two elements as direct descendants, namely the <code>head</code> element and a <code>body</code> element.  It can also contain comments.  Although the <code>html</code> element is the outermost element, it does not contain the DOCTYPE—the doctype must come before the html element.  This element will have a place on every single web page you ever create! </p>
+          <!-- -->
+          <p>The <code>head</code> element is the wrapper for all the head elements that, collectively, instruct the browser where to find style sheets, or define relationships that the document has to others in the web site (link); provide meta information (meta); and include scripts that the document will need to apply later on (script).  The <code>title</code> elementis the only <code>head</code> element that is absolutely required.</p>
+          <!-- -->
+          <p>The <code>body</code> element wraps around all of the content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Use <code>body</code> to hold all the document content that you want to be visible to the reader.	<br>::Attributes::
+	         <br>Margin-height: value;	sets space between Top-Bottom of the document content and viewport
+	         <br>Margin-width: value;	sets space between Left Right of the document content and viewport</p>
+          <!-- -->
+          <p>The <code>div</code> element is a generic block-level element. It doesn’t convey any meaning about its contents (unlike a <code>p</code> element that signifies a paragraph, or an <code>h1</code> element that would indicate a level 1 or level 2 heading, respectively); as such, it’s easy to customize it to your needs. The <code>div</code> element is currently the most common method for identifying the structural sections of a document and for laying out a web page using CSS.   The <code>div</code> element can be used to group almost any elements together —it can contain any inline or block-level elements you choose, so it has no typical content.</p>
+          <!-- -->
+          <hr>
+          <h4>HEAD / LINK Elements</h4>
+          <p>The elements listed in this section are all contained within the head element, and either provide extra information about the page, or reference other resources that are required for the page to display or behave correctly.</p>
+          <!-- -->
+          <p>Link	Creates links between a document and a stylesheet (CSS); no-limit to usage of #Links.
+          <br><code>link href="uri" media="media types" rel="relationship" rev="relationship" type="content type"/</code>
+          <br><code>link rel="stylesheet" href="basic.css"/</code>
+          <br>*The charset attribute is intended to identify the character set used in the document that’s referenced within the link element. 
+          <br>*The href defines the location of the resource.
+          <br>*The rel attribute defines the relationship of referenced document to the referencing document, the rev attribute defines the relationship that the referenced document classification.
+          <br>*The type is an optional attribute of the <link> element, that is used to identify the MIME type of the linked resource.  Although it’s optional, browsers may not load the resource if its missing or incorrect.
+          <br>The <code>a</code> element’s purpose is simple: it wraps around text, or an image, or both, and refers to another web page, or another section on the same web page; the user can click on the contained text or image. The a element has a number of special attributes, which are detailed below, but the one that you’ll use most of the time—if it’s not the only one you’ll use—is the href attribute. This attribute indicates the link’s destination, be that another web page, a section of the same web page, or some other type of document, such as an image, a spreadsheet, or a PDF document.	 <a href="url"></a>
+          </p>
+          <!-- -->
+          <p>Meta	Provides information about the document content.
+          <code>meta content="string"  { http-equiv="http response header" | name="string" } /</code>
+          The following meta tags are the most relevant in terms of search engine indexing and interpretation:
+          <!— instructs search engines not to index this page, but to follow links from the page —>
+          <code>meta name="description" content="A brief description of page content to appear in SEO results"</code>
+          <!—comma-separated list of keywords that apply to the page —>
+          <code>meta name="keywords" content="reference, SitePoint, HTML, XHTML, standards"</code>
+          Script	Used to enclose a series of statements in a scripting language (JS) or refer to an stylesheet (CSS) through the ‘src’ attribute, saved in JS.  **Most Valuable for STYLING!**
+          <br>*n this example, the src attribute refers to a script file named "complex.js":
+<code>script type="text/javascript" src="/scripts/complex.js</code>
+          <br>*The language attribute tells the browser which scripting language is to be used inside the script block (or in the file referred to by the src attribute, as shown in the example). It may be the name of the scripting language, or a version-specific implementation of the language (see the values below). The appropriate way to identify the contents of the script element is through the type attribute (for example, you might specify the content as "text/javascript"), and use JavaScript object/feature detection techniques within the script rather than assume that all browsers which support a given version of a scripting language support all of the features of that language—no questions asked.</p>
+          <!-- -->
+          <p>STYLE	Used to override the styles set in a linked style sheet, like so:
+          <br><code>link rel="stylesheet" href="basic.css"</code> 	/*which contains the selector h2 {color:#066;}*/
+          <br><code>style type="text/css">h2 {color:#000;}style</code>	/* override color set in main.css for this page only*/
+</p>
+          <!-- -->
+          <p>TITLE	used to summarize the content or purpose of the document.</p>
+          <!-- -->
+          <hr>
+          <h4>LIST Elements</h4>
+          <p>The <code>ul</code> element, the name for which is an abbreviation of unordered list, is used to group a collection of items together in a list, but in a way that doesn’t suggest an order of precedence or importance. The <code>ul</code> might be used for anything from a simple shopping list to a collection of links.</p>
+          <!-- -->
+          <p>The <code>li</code> element defines an individual list item and can only appear inside the handful of list-related elements detailed above. Each list item is represented by a bullet (for unordered lists, defined by the <code>ul</code> element) or a number or letter (in the case of ordered lists, defined by the <code>ol</code> element).</p>
+          <!-- -->
+          <hr>
+          <h4>Random = Put in Order</h4>
+          <p><B>SYNTAX</B> The elements in a web page are contained in a tree structure in which html is the root element that splits into the head and body elements. An element may contain other nested elements (for example, a <code>p</code> element can contain <code>span</code>, etc.). Where this occurs, the opening and closing tags must be symmetrical. If an opening paragraph tag is followed by the opening em element, the closing tags must appear in the reverse order.</p>
+          <!-- -->
+          <p>The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues.  </p>
+          <!-- -->
+          <p>FORMS using Fieldset and Legend Elements to logically group related form controls, and provide a title for the grouping via the Legend Element.  The Label element links a form control to the associated descriptive text in an unambiguous way (useful for non-visual browsers, using screen readers).</p>
+          <!-- -->
+          <p>IMAGES using Alt-attribute provides a text alternative for an important image; applicable with input type.  The Longdesc-attribute provides a link to additional information about the image.</p>
+          <!-- -->
+          <hr>
+          <h4>ATTRIBUTES</h4>
+          <p><b>CORE ATTRIBUTES</b> *ALL values should begin with a letter and be lowercase! http://www.htmlhelp.com/reference/html40/attrs.html 
+In addition to element-type-specific attributes (such as the cite attribute used for blockquotes), the following core attributes may also be applied across almost the entire range of HTML elements.  For example, the title attribute may be used on all elements contained in the body of a document (and can be applied to the body element itself) but is not relevant to the majority of elements found inside the head of the document, e.g. base, script and (perhaps not surprisingly) the title elements. </p>
+          <!-- -->
+          <p>The id-attribute provides a unique identifies for an element within the document creating a hyperlink.
+This identifier may also be used in CSS, as a hook that can be used for styling purposes, or with JS, to make changes or add behavior to the element referenced by its unique id.  An id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.  
+</p>
+          <!-- -->
+          <p>The class-attribute is like an expansion of the id-attribute, but is capable of being assigned to one or more subtypes, which can be used in CSS for styling or JS to make changes and add behavior to elements belonging to a particular subtype.</p>
+          <!-- -->
+          <p>*Classes used for Calendars (Advanced) 		http://www.sitepoint.com/web-foundations/hcalendar/</p>
+          <!-- -->
+          <p>The title-attribute provides a title for an element as a ‘tooltip’ on visual browsers; useful with <code>a</code>, <code>link</code> and <code>img</code> providing a title for the linked or embedded resource.</p>
+          <!-- -->
+          <!--<hr>
+          <h4>FORM ELEMENTS</h4>
+          <p>BUTTON represents a clickable button; You can add inner HTML content (think <code>em</code>, <code></code> or even <code>img</code>), and make use of :after and :before pseudo-element to achieve complex rendering while <code>input</code> only accepts a text value attribute.  </p>
+          <p>INPUT used to create interactive controls for web-based forms in order to accept data from the user. The semantics of an <code>input</code> varies considerably depending on the value of its type attribute. DO NOT STYLE</p>
+          <p>SELECT represents a control that presents a menu of options. *The options within the menu are represented by <code>option</code> elements, which can be grouped by <code>optgroup</code> elements. Options can be pre-selected for the user.
+          <br>*The HTML <code>option</code> element is used to create a control representing an item within a <code>select</code>, an <code>optgroup</code> or a <code>datalist</code> HTML5 element.
+          <br>*The HTML <code>optgroup</code> element  creates a grouping of options within a <code>select</code> element. This is useful to create a drop-down menu.</p>
+          <p>FORM represents a document section that contains interactive controls to submit information to a web server.</p>
+          <p>TEXTAREA represents a multi-line plain-text editing control. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following: <code>textarea {resize: none;}</code> https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement.</p> -->
+          <p></p>
+          <!-- -->
+          <hr id="version">
+        </div>
       </main>  
       
       <!-- //FOOTER -->  
