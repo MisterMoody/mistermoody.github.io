@@ -280,6 +280,10 @@ code {
   padding: 0px 1px;
   font-size: 1em;
 }
+/*<code> Style for Links*/
+code.reference {background: #000;}
+code.reference > a {color: #fff;}
+
 @media all and (min-width: 500px) {
   address {color: red;}
 }
