@@ -188,7 +188,7 @@ body {
   overflow-x: auto;
   margin: 0 auto;
   padding: 0;
-  font-size: calc(1em + 1vw); 
+  font-size: calc(0.9em + 0.9vw); 
 	font-family: 'Raleway', sans-serif;
   letter-spacing: 0.8px;
 }

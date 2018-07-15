@@ -26,7 +26,7 @@
     <div class="grid">  
       
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
-      <!--<nav>
+      <nav>
         <ul class="nav">
           <li>
             <a class="" href="#">Introduction</a>
@@ -35,7 +35,7 @@
             <a class="" href="#">HTML Elements</a>
           </li>
         </ul>
-      </nav>-->
+      </nav>
       
       <!-- //CONTENT -->
       <main>
@@ -56,25 +56,22 @@
           <!-- -->
           <p>The <code>head</code> element is the wrapper for all the head elements that, collectively, instruct the browser where to find style sheets, or define relationships that the document has to others in the web site (link); provide meta information (meta); and include scripts that the document will need to apply later on (script).  The <code>title</code> elementis the only <code>head</code> element that is absolutely required.</p>
           <!-- -->
-          <p>The <code>body</code> element wraps around all of the content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Use <code>body</code> to hold all the document content that you want to be visible to the reader.	<br>::Attributes::
-	         <br>Margin-height: value;	sets space between Top-Bottom of the document content and viewport
-	         <br>Margin-width: value;	sets space between Left Right of the document content and viewport</p>
+          <p>The <code>body</code> element wraps around all of the content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Use <code>body</code> to hold all the document content that you want to be visible to the reader.</p>
           <!-- -->
-          <p>The <code>div</code> element is a generic block-level element. It doesn’t convey any meaning about its contents (unlike a <code>p</code> element that signifies a paragraph, or an <code>h1</code> element that would indicate a level 1 or level 2 heading, respectively); as such, it’s easy to customize it to your needs. The <code>div</code> element is currently the most common method for identifying the structural sections of a document and for laying out a web page using CSS.   The <code>div</code> element can be used to group almost any elements together —it can contain any inline or block-level elements you choose, so it has no typical content.</p>
+          <p>The <code>div</code> element is a generic block-level element. It doesn’t convey any meaning about its contents (unlike a <code>p</code> element that signifies a paragraph, or an <code>h1</code> element that would indicate a level 1 or level 2 heading, respectively); as such, it’s easy to customize it to your needs. The <code>div</code> element is currently the most common method for identifying the structural sections of a document and for laying out a web page using CSS. The <code>div</code> element can be used to group almost any elements together —it can contain any inline or block-level elements you choose, so it has no typical content.</p>
           <!-- -->
           <hr>
           <h4>HEAD / LINK Elements</h4>
           <p>The elements listed in this section are all contained within the head element, and either provide extra information about the page, or reference other resources that are required for the page to display or behave correctly.</p>
           <!-- -->
           <p>Link	Creates links between a document and a stylesheet (CSS); no-limit to usage of #Links.
-          <br><code>link href="uri" media="media types" rel="relationship" rev="relationship" type="content type"/</code>
+          <br><code>link href="url" media="media types" rel="relationship" type="content type"</code>
           <br><code>link rel="stylesheet" href="basic.css"/</code>
           <br>*The charset attribute is intended to identify the character set used in the document that’s referenced within the link element. 
           <br>*The href defines the location of the resource.
           <br>*The rel attribute defines the relationship of referenced document to the referencing document, the rev attribute defines the relationship that the referenced document classification.
           <br>*The type is an optional attribute of the <link> element, that is used to identify the MIME type of the linked resource.  Although it’s optional, browsers may not load the resource if its missing or incorrect.
-          <br>The <code>a</code> element’s purpose is simple: it wraps around text, or an image, or both, and refers to another web page, or another section on the same web page; the user can click on the contained text or image. The a element has a number of special attributes, which are detailed below, but the one that you’ll use most of the time—if it’s not the only one you’ll use—is the href attribute. This attribute indicates the link’s destination, be that another web page, a section of the same web page, or some other type of document, such as an image, a spreadsheet, or a PDF document.	 <a href="url"></a>
-          </p>
+          <br>The <code>a</code> element’s purpose is simple: it wraps around text, or an image, or both, and refers to another web page, or another section on the same web page; the user can click on the contained text or image. The a element has a number of special attributes, which are detailed below, but the one that you’ll use most of the time—if it’s not the only one you’ll use—is the href attribute. This attribute indicates the link’s destination, be that another web page, a section of the same web page, or some other type of document, such as an image, a spreadsheet, or a PDF document.</p>
           <!-- -->
           <p>Meta	Provides information about the document content.
           <code>meta content="string"  { http-equiv="http response header" | name="string" } /</code>
@@ -113,16 +110,15 @@
           <!-- -->
           <hr>
           <h4>ATTRIBUTES</h4>
-          <p><b>CORE ATTRIBUTES</b> *ALL values should begin with a letter and be lowercase! http://www.htmlhelp.com/reference/html40/attrs.html 
-In addition to element-type-specific attributes (such as the cite attribute used for blockquotes), the following core attributes may also be applied across almost the entire range of HTML elements.  For example, the title attribute may be used on all elements contained in the body of a document (and can be applied to the body element itself) but is not relevant to the majority of elements found inside the head of the document, e.g. base, script and (perhaps not surprisingly) the title elements. </p>
+          <p>HTML <code class="reference"><a href="http://www.htmlhelp.com/reference/html40/attrs.html">Attributes</a></code> add specificty to elements beyond the scope of styles by adding values that configure the elements or adjust their behavior. There are <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Dozens of Attributes</a></code> that can be used for different purposes from simple page layout to building forms or media elements. The main attributes that are found on every website include <code>a <b>href="..."</b></code>, <code>img <b>src="..."</b> <b>alt=""</b></code>, <code>html <b>lang="en-US"</b></code>, <code>xxx <b>title="..."</b></code>, <code>xxx <b>class="..."</b></code> and <code>xxx <b>id="..."</b></code>.</p>
+          <p>The title attribute may be used on all elements contained in the body of a document, but is not relevant to the majority of elements found inside the head of the document, e.g. base, script and (perhaps not surprisingly) the title elements.</p>
           <!-- -->
-          <p>The id-attribute provides a unique identifies for an element within the document creating a hyperlink.
-This identifier may also be used in CSS, as a hook that can be used for styling purposes, or with JS, to make changes or add behavior to the element referenced by its unique id.  An id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.  
+          <p>The id-attribute provides a unique identifies for an element within the document creating a hyperlink. This identifier may also be used in CSS, as a hook that can be used for styling purposes, or with JS, to make changes or add behavior to the element referenced by its unique id.  An id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.  
 </p>
           <!-- -->
           <p>The class-attribute is like an expansion of the id-attribute, but is capable of being assigned to one or more subtypes, which can be used in CSS for styling or JS to make changes and add behavior to elements belonging to a particular subtype.</p>
           <!-- -->
-          <p>*Classes used for Calendars (Advanced) 		http://www.sitepoint.com/web-foundations/hcalendar/</p>
+          <p>*Classes used for <a href="http://www.sitepoint.com/web-foundations/hcalendar/">Calendars</a></p>
           <!-- -->
           <p>The title-attribute provides a title for an element as a ‘tooltip’ on visual browsers; useful with <code>a</code>, <code>link</code> and <code>img</code> providing a title for the linked or embedded resource.</p>
           <!-- -->
