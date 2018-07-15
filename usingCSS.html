@@ -31,10 +31,7 @@
             <a class="" href="#environ">Introduction</a>
           </li>
           <li>
-            <a class="" href="#fonts">Font Properties</a>
-          </li>
-          <li>
-            <a class="" href="#text">Text Properties</a>
+            <a class="" href="#fonts">Font &amp; Text</a>
           </li>
         </ul>
       </nav>
@@ -91,16 +88,30 @@
           <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" target="_blank">line-height</a></code> CSS property sets the height or amount of space placed between lines. This property uses a value that is a number, length or percentage. I enjoy what <code>150%</code> and values between <code>0.8 - 1.5</code>.</p>
           
           <h6>Font-Variant</h6>
-          <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant" target="_blank">font-variant</a></code> CSS property contextually modifies font. Useful values for this property include <code>normal</code> and <code>small-caps</code>.</p>
+          <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant" target="_blank">font-variant</a></code> CSS property contextually modifies font. Useful values for this property include <code>normal</code> and <code>small-caps</code>. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform" target="_blank">text-transform</a></code> CSS property works in the same fasion, using values such as <code>uppercase</code>, <code>lowercase</code> or <code>capitalize</code>.</p>
           
-           <h6>ASCII &amp; Icons</h6>
+          <h6>Text Decorations</h6>
+          <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" target="_blank">text-decoration</a></code> CSS property specifies the appearance of decorative lines used on text. Useful values that declare how a line is used include <code>none</code>, <code>underline</code>, <code>line-through</code> and <code>blink</code>. Line style options include <code>solid</code>, <code>dashed</code>, <code>dotted</code> and <code>wavy</code>.</p>
+          <p>This property can also be used as a shorthand for setting multiple text-decoration values in a single declaration, which include text-decoration-line, text-decoration-color, and text-decoration-style with no particular order of precedence.</p>
+          
+          <h6>Text Shadows</h6>
+          <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow" target="_blank">text-shadow</a></code> CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations. Each shadow is described by some combination of X and Y offsets (required) from the element, and blur radius and color (optional).</p>
+          <article class="tableEven">
+            <div>offset-x | offset-y | blur-radius | color</div>
+            <div><code>text-shadow: 1px 1px 2px pink;</code></div>
+            <div>color | offset-x | offset-y | blur-radius</div>
+            <div><code>text-shadow: #FC0 1px 0 10px;</code></div>
+            <div><small>-x | -y | blur-radius | color [x3 for 3 shadows]</small></div>
+            <div><code>text-shadow: 1px 1px 2px red,</code></div>
+            <div></div>
+            <div><code>0 0 1em blue, 0 0 0.2em blue;</code></div>
+          </article>
+          
+          <h6>ASCII &amp; Icons</h6>
           <p>When writing HTML, it is important to use a reference-code to properly display a unique symbol. There is a <code class="reference"><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">uniform standard</a></code> <code class="reference"><a href="https://www.toptal.com/designers/htmlarrows/symbols/">for all symbols</a></code>which makes it easy to ascertain which reference code to use.</p>
           <p>Using iconic images is another practice web developers should be familiar with, especially if you are not a designer. Outfits like <code class="reference"><a href="https://fontawesome.com/v4.7.0/cheatsheet/">Font</a></code>-<code class="reference"><a href="https://fontawesome.com/cheatsheet">Awesome</a></code> and <code class="reference"><a href="https://material.io/tools/icons/?style=baseline">Material</a></code> <code class="reference"><a href="http://zavoloklom.github.io/material-design-iconic-font/cheatsheet.html">Design</a></code> make including icon fonts into a web project simple.</p>
-          <!-- -->
-          <!-- -->
-          <hr id="fonts">
-          <h3>Text Properties</h3>
-          <p></p>
+          
+          <p>Aside from styling font, it is equally important to know how to properly position text. An example of this is the <em>line-height</em> property used above in the font-shortand, which sets the height between sentences. Below are some of the properties I have found helpful to adjust text layout.</p>
         </div>
       </main>  
       
