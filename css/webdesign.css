@@ -71,7 +71,7 @@ autoprefixer({grid: true})
 
 /* SITE-TEMPLATE GRID */
 .grid {
-	margin: 0 2vw;
+	margin: 0 2.4vw;
   padding: 0;
 	display: grid;
 	grid-template-rows: 4vmin minmax(200px,auto) 35px;
@@ -83,8 +83,8 @@ autoprefixer({grid: true})
   footer {grid-area: foot; }
   .grid {
     height: auto; 
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0;
+    padding: 0;
     display: grid;
   	grid-template-rows:  auto auto minmax(15px,40px);
 		grid-template-columns: 15% repeat(2, 1fr);
@@ -192,6 +192,51 @@ body {
 	font-family: 'Raleway', sans-serif;
   letter-spacing: 0.8px;
 }
+/*Back to Top Button*/
+.top {
+  background: none; 
+  margin: 0; 
+  position: fixed; 
+  bottom: 0; 
+  right: 0; 
+  width: 33px; 
+  height: 40px; 
+  z-index: 100; 
+  text-decoration: none; 
+  color: red; 
+  /*background-color: #ff9000;*/
+}
+@media only screen and (max-width: 800px) {
+  .top {
+    background: none; 
+    margin: 0; 
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    width: 22px; 
+    height: 30px; 
+    z-index: 100; 
+    text-decoration: none; 
+    color: red; 
+    /*background-color: #ff9000;*/
+  }
+}
+@media only screen and (min-width: 800px) {
+  .top {
+    background: none; 
+    margin: 0; 
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    width: 33px; 
+    height: 40px; 
+    z-index: 100; 
+    text-decoration: none; 
+    color: red; 
+    /*background-color: #ff9000;*/
+  }
+}
+
 h1, h2 {
   margin: 0 auto;
   padding: 0;

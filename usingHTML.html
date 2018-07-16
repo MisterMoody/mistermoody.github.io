@@ -53,7 +53,7 @@
       </nav>
       
       <!-- //CONTENT -->
-      <main>
+      <main id="top">
         <!-- -->
         <div style="height: 100vh;">
           <h1 style="font-size: 2.5em;">Under Construction</h1>
@@ -61,6 +61,8 @@
           <h5>&#91;Preview Available Below&#93;</h5>
         </div>
         <!-- -->
+        <div class="intro"><a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a></div>
+        
         <!-- 'Using HTML'-->
         <hr id="defineHTML">
         <div class="intro">
@@ -164,27 +166,6 @@
           <p>FORM represents a document section that contains interactive controls to submit information to a web server.</p>
           <p>TEXTAREA represents a multi-line plain-text editing control. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following: <code>textarea {resize: none;}</code> https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement.</p> -->
           <p></p>
-          
-          <div id="accessibility" class="intro">
-            <h4>Accessibility</h4>
-            <p>In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[12]</a></sup> The <a class="link" href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a> and <a class="link" href="https://a11yproject.com" target="_blank">A11Y Project</a> are two major advocates for web accessibility and provide <a class="link" href="https://w3.org/TR/WCAG21">guidelines</a> and patterns for developers to help make their applications accessible. </p>
-            <p>Here is a short list of <a class="link" href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a> that every application should include:</p>
-            <ol>
-              <li>Add Contrasting Color</li>
-              <li>Design usable :Focus States</li>
-              <li>Use Lables with Form Fields &amp; Inputs</li>
-              <li>Write Alternative Text for Images</li>
-              <li>Use Proper Markup for Content</li>
-              <li>Support Keyboard Navigation</li>
-            </ol>
-            <p>The Color-Contrast Ration between text and its background should be at least 3/4.5 to 1 depending on the font boldness. The WebAIM group offers a <a class="link" href="https://webaim.org/resources/contrastchecker/" target="_blank">Color Contrast Checker</a> that allows developers to calculate the score for <a class="link" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">conformance levels</a> in real time. When using color as an indicator, be sure to pair it with an icon, a label or pattern. Charts and graphs are often difficult to read so using shapes and varying sizes can help enhance monochromatic vision. You can use the <a class="link" href="https://colororacle.org">Color Oracle</a> to simulate what vision impaired folk see in real-time.</p>
-            <p>Adding a visual cue such as an underline text style will help an element stand out. Focus Indicators help people know which element has the keyboard focus and helps with navigating a website. Elements that should be focusable are links, form fields, widgets, buttons and menu items. Be sure to create a state that is highly visible, with good contrast to stand out from the rest.</p>
-            <p>People who use screen readers navigate form using the tab key and the <code>&lt;label&gt;</code> element is equipped to handle this action. Never use placeholder text for accessibility because it will be passed over during tabbing. There are plenty of resources for creating <a class="link" href="https://webaim.org/techniques/forms/" target="_blank">Accessible Forms</a>.</p>
-            <p>Vision impaired users rely on screen readers to 'hear' what is being displayed and the <code>&lt;alt=""&gt;</code> attribute is used to convert text to speech. Simply describe the image or what is happening in the background.</p>
-            <p>Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.</p>
-            <p>Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly markedup; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.</p>
-            <p>When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <a class="link" href="https://axe-core.org/" target="_blank">Check a Websites Accessibility</a>.</p>
-          </div>
         </div>
         <!-- -->
         <hr id="defineSec">
@@ -212,6 +193,28 @@
           <p>Allow me to point out two things about the <code>&lt;img /&gt;</code> tag: unlike the other tags used, it is self-closing and it requires <code>src="..."</code> and <code>alt="..."</code> attributes. <a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attributes</a> are useful for manipulating the state of a particular element or referencing a source as illustrated.  Although outside of the scope of our focus here, there are two attribute types that you must become familiar with: <code>class="..."</code> and <code>id="..."</code>. Attributes are always declared in HTML, but their functionality is usually declared in CSS and JavaScript. The one caveat is using attributes to make a website accessible and that is covered below.</p>
           <p>These days more and more developers are using <a class="link" href="https://staticsitegenerators.net" target="_blank">Static Site Generators</a> and <a class="link" href="https://www.awwwards.com/what-are-frameworks-22-best-responsive-css-frameworks-for-web-design.html" target="_blank">Frameworks</a> to expedite the markup process. I believe that using an open-source model with a minimal learning curve can help you understand how HTML, CSS and JavaScript work together. </p>
         </div>
+        <!-- -->
+        <hr id="accessibility">
+         <div class="intro">
+           <h4>Accessibility</h4>
+           <p>In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[12]</a></sup> The <a class="link" href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a> and <a class="link" href="https://a11yproject.com" target="_blank">A11Y Project</a> are two major advocates for web accessibility and provide <a class="link" href="https://w3.org/TR/WCAG21">guidelines</a> and patterns for developers to help make their applications accessible. </p>
+            <p>Here is a short list of <a class="link" href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a> that every application should include:</p>
+           <ol>
+             <li>Add Contrasting Color</li>
+             <li>Design usable :Focus States</li>
+             <li>Use Lables with Form Fields &amp; Inputs</li>
+             <li>Write Alternative Text for Images</li>
+             <li>Use Proper Markup for Content</li>
+             <li>Support Keyboard Navigation</li>
+           </ol>
+           <p>The Color-Contrast Ration between text and its background should be at least 3/4.5 to 1 depending on the font boldness. The WebAIM group offers a <a class="link" href="https://webaim.org/resources/contrastchecker/" target="_blank">Color Contrast Checker</a> that allows developers to calculate the score for <a class="link" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">conformance levels</a> in real time. When using color as an indicator, be sure to pair it with an icon, a label or pattern. Charts and graphs are often difficult to read so using shapes and varying sizes can help enhance monochromatic vision. You can use the <a class="link" href="https://colororacle.org">Color Oracle</a> to simulate what vision impaired folk see in real-time.</p>
+           <p>Adding a visual cue such as an underline text style will help an element stand out. Focus Indicators help people know which element has the keyboard focus and helps with navigating a website. Elements that should be focusable are links, form fields, widgets, buttons and menu items. Be sure to create a state that is highly visible, with good contrast to stand out from the rest.</p>
+           <p>People who use screen readers navigate form using the tab key and the <code>&lt;label&gt;</code> element is equipped to handle this action. Never use placeholder text for accessibility because it will be passed over during tabbing. There are plenty of resources for creating <a class="link" href="https://webaim.org/techniques/forms/" target="_blank">Accessible Forms</a>.</p>
+           <p>Vision impaired users rely on screen readers to 'hear' what is being displayed and the <code>&lt;alt=""&gt;</code> attribute is used to convert text to speech. Simply describe the image or what is happening in the background.</p>
+           <p>Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.</p>
+           <p>Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly markedup; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.</p>
+           <p>When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <a class="link" href="https://axe-core.org/" target="_blank">Check a Websites Accessibility</a>.</p>
+          </div>
         <!-- -->
         <hr id="version">
         <div class="intro">
