@@ -35,9 +35,6 @@
             <a class="" href="#template">Required HTML</a>
           </li>
           <li>
-            <a class="" href="#elements">HTML Elements</a>
-          </li>
-          <li>
             <a class="" href="#defineSec">Defining Sections</a>
           </li>
           <li>
@@ -63,6 +60,7 @@
         <!-- 'Using HTML'-->
         <hr id="defineHTML">
         <div class="intro">
+          <!--<h2 class="title"><i class="material-icons">code</i> Using HTML</h2>-->
           <h4>What is HTML?</h4>
           <p><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></code> is a markup language that defines the structure of the content on a webpage. Every HTML document is a hierarchical structure made up of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Elements</a></code> that dictate how content is displayed and&#47;or sectioned. HTML Elements, also referred to as Tags, are used by Internet browsers to read and display HTML content to a user. Elements usually have an opening <code>&lt;element&gt;</code> and closing <code>&lt;&#47;element&gt;</code> component, but there are a few exceptions in which there is no closing component.</p>
           <p>Moreover, element content can be manipulated through the use of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attributes</a></code>, which are associated properties that are used to extend the capability of an element, a configuration of sorts to meet certain criteria. An attribute is placed in the opening tag and looks something like <code>attr=&#34;...&#34;</code> where the attribute name is followed by a delimiter and its actual value. There are more than 100 attributes that can be paired with elements depending on the objective, but there are two that I use often: <code>class&#34;...&#34;</code> and <code>id&#34;...&#34;</code>, both of which deal more with CSS than HTML so I will delay further explanation until then. For now, I would like to focus on all the requirements for developing an HTML template.</p>
@@ -71,77 +69,74 @@
         <hr id="template">
         <div class="intro">
           <h4>Required Elements for an HTML Template</h4>
-          <p>When creating an HTML template, I prepare content for four distinctive areas: the Main Root, </p>
-          <p>The required structural elements for an HTML template are as follow:</p>
-          <p><img src="img/requiredHTML.jpg"> </p>
-          <p>The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page; it declares that this is an HTML file. The <code>&lt;html&gt;</code> element (aka 'root') is on the second and final line of a page. This element is a wrapper for everything on the entire page: that which can be seen or not!</p>
-          <p>The <code>&lt;head&gt;</code> element is the area consisting of meta information about a page. Within this area you can use <code>&lt;meta&gt;</code> <code>&lt;title&gt;</code> and <code>&lt;link&gt;</code> tags to make the page mobile-compatible, document the webpage in the browser and specify resources being used, respectively. Web browsers use this information to coordinate all resources required to make the website function as it was designed; none of this information is visible to the user.</p>
-          <p>The final required element is the <code>&lt;body&gt;</code>, which is the area where all content that you want displayed to users is placed.</p>
-          <p>It should be noted that the <code>&lt;!-- --&gt;</code> is used to <em><b>Comment</b></em> work; it can used to make a note that the designer can refer to later. Comments are not displayed when the HTML document is rendered by a browser so any content contained within them will be hidden!</p>
+          <p>When creating an HTML template, I prepare content for four distinctive areas: the Main Root, Metadata, Section Root and Content Sectioning&#47;Text Content. </p>
+          <figure>
+            <img src="img/requiredHTML.jpg" alt="a cute hamster" />
+            <figcaption>Required structural elements for an HTML template</figcaption>
+          </figure>
+          <h6>The Main Root</h6>
+          <p>The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page; it declares that this is an HTML file. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">&lt;html&gt;</a></code> element is on the second and final line of a page. This element is the outermost container that acts as a wrapper for everything on the entire page. There are only two direct descendants of this element and they are explained below.</p>
+          <h6>Metadata</h6>
+          <p>The second distinctive area and first direct descendant of the <code>&lt;html&gt;</code> element is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">&lt;head&gt;</a></code> element, which is the area that contains all meta information about a particular page, instructing the browser where to find style sheets while defining relationships that the document has to others in the web site. And although outside of my scope at this juncture, it is worth nothing that scripts that the document will need to apply later on can be added here as well.</p>
+          <p>The first line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">&lt;meta&gt;</a></code> element, which is a self-closing tag used to provide meta data about a webpage, its author, etc. Making a website mobile compatible, for example, is one way to use this tag and will require three attributes:</p>
+          <article class="table">
+            <div><code>charset&#61;&#34;utf&#45;8&#34;</code></div>
+            <div>Declares the character encoding of the page or script.</div>
+            <div><code>name&#61;&#34;viewport&#34;</code></div>
+            <div>A value used by the server for identifying its usage.</div>
+            <div><code>content&#61;&#34;width&#61;device&#45;width, initial&#45;scale&#61;1.0&#34;</code></div>
+            <div>A value associated with name &#40;or http&#45;equiv&#41;.</div>
+          </article>
+          <p>The second line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> element, which is used to document the webpage in the browser. Whatever is placed here will be visible on the browser tab. The third line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element, which specifies the resources incorporated into a website and will always contain two specific attributes:</p>
+          <article class="table">
+            <div><code>rel&#61;&#34;stylesheet&#34;</code></div>
+            <div>Specifies the relationship to the link object.</div>
+            <div><code>href&#61;&#34;stylesheet&#34;</code></div>
+            <div>The URL of a linked resource &#40;internal or external&#41;.</div>
+          </article>
+          <p>Web browsers use the combination of this information to coordinate all resources required to make the website function as it was designed, however, absolutely none of this information is visible to the user. Once this is complete, I shift my focus to the area where </p>
+          <h6>Section Root</h6>
+          <p>The third distinctive area and second direct descendant of the <code>&lt;html&gt;</code> element is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">&lt;body&gt;</a></code> element, which wraps all content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Use <code>body</code> to hold all the document content that you want to be visible to the reader. This is the final required element of an HTML page, but without creating content such a webpage would display a white screen. In the sections below, I share what I know about elements solely used to layout content.</p>
+          <p>The final distinctive area lays ground for all content and due to its elaborative nature, I further break down how to section content and how to create text content. Before moving forward, I want to point out the usage of Comments <code>&lt;&#33;&#45;&#45;&nbsp;&#45;&#45;&gt;</code> and that these are used in HTML for developers to make notes about what they are doing. Comments are not displayed when the HTML document is rendered by a browser so any content contained within them will be hidden!</p>
         </div>
         <!-- -->
-        <hr id="elements">
+        <hr id="defineSec">
         <div class="intro">
-          <!--<h2 class="title"><i class="material-icons">code</i> Using HTML</h2>-->
-          <h4>HTML Elements</h4>
-          <p>This section of the reference describes all the different types of element that you can use to write an HTML document.</p>
-          <!-- -->
-          <p>The <code>html</code> element is the outer container for everything that appears in an HTML document. It can only contain two elements as direct descendants, namely the <code>head</code> element and a <code>body</code> element.  It can also contain comments.  Although the <code>html</code> element is the outermost element, it does not contain the DOCTYPE—the doctype must come before the html element.  This element will have a place on every single web page you ever create! </p>
-          <!-- -->
-          <p>The <code>head</code> element is the wrapper for all the head elements that, collectively, instruct the browser where to find style sheets, or define relationships that the document has to others in the web site (link); provide meta information (meta); and include scripts that the document will need to apply later on (script).  The <code>title</code> elementis the only <code>head</code> element that is absolutely required.</p>
-          <!-- -->
-          <p>The <code>body</code> element wraps around all of the content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Use <code>body</code> to hold all the document content that you want to be visible to the reader.</p>
-          <!-- -->
+          <h4>Defining Sections</h4>
+          <p>Inside of the body is where all the magic happens. It is here that you can outline information that you want displayed based on the type of information being offered. The most important HTML elements that you can use to section information are the Header, Nav, Main, Section, Article, Aside and Footer.<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">[8]</a></sup></p>
+          <figure>
+            <img src="img/section.jpg" alt="a cute hamster" />
+            <figcaption>Method for Defining Page Sections</figcaption>
+          </figure>
+          <p>The <code>&lt;header&gt;</code> tag, when used, is the first section users encounter and contains meta information related to the website such as a logo, author or navigational aids. The <code>&lt;nav&gt;</code> tag can be used within the header or independently to help users navigate a website, providing links within the current document or to other documents. This tag should be reserved for primary navigation sections only, such as global navigation, a table of contents, previous/next links, or other noteworthy groups of navigational links.</p>
+          <p>At the bottom of the page, before the closing <code>&lt;body&gt;</code> tag, you can use the <code>&lt;footer&gt;</code> tag to highlight the page author, copyright data or social media links.</p>
+          <p>The <code>&lt;main&gt;</code> and <code>&lt;section&gt;</code> tags can be a bit confusing because although they are semantically different (the <code>&lt;main&gt;</code> is actually a text content element), act nearly the same when used in the same situation. What is important here is to use the <code>&lt;section&gt;</code> tag as the main container for a section and use the <code>&lt;main&gt;</code> tag for the most important content of the body.</p>
+          <p>The <code>&lt;article&gt;</code> tag is used to contain content intended to be independently distributabble such as a magazine article or blog post.</p>
+          <p>The <code>&lt;aside&gt;</code> tag is used for content that is indrectly related to the documents main content such as sidebars, inserts, or brief explanations. When used within an <code>&lt;article&gt;</code> element, for example, the <code>&lt;aside&gt;</code> tag may identify content related to the author of the article.</p>
           <p>The <code>div</code> element is a generic block-level element. It doesn’t convey any meaning about its contents (unlike a <code>p</code> element that signifies a paragraph, or an <code>h1</code> element that would indicate a level 1 or level 2 heading, respectively); as such, it’s easy to customize it to your needs. The <code>div</code> element is currently the most common method for identifying the structural sections of a document and for laying out a web page using CSS. The <code>div</code> element can be used to group almost any elements together —it can contain any inline or block-level elements you choose, so it has no typical content.</p>
+          
           <!-- -->
-          <hr>
-          <h4>HEAD / LINK Elements</h4>
-          <p>The elements listed in this section are all contained within the head element, and either provide extra information about the page, or reference other resources that are required for the page to display or behave correctly.</p>
-          <!-- -->
-          <p>Link	Creates links between a document and a stylesheet (CSS); no-limit to usage of #Links.
-          <br><code>link href="url" media="media types" rel="relationship" type="content type"</code>
-          <br><code>link rel="stylesheet" href="basic.css"/</code>
-          <br>*The charset attribute is intended to identify the character set used in the document that’s referenced within the link element. 
-          <br>*The href defines the location of the resource.
-          <br>*The rel attribute defines the relationship of referenced document to the referencing document, the rev attribute defines the relationship that the referenced document classification.
-          <br>*The type is an optional attribute of the <link> element, that is used to identify the MIME type of the linked resource.  Although it’s optional, browsers may not load the resource if its missing or incorrect.
-          <br>The <code>a</code> element’s purpose is simple: it wraps around text, or an image, or both, and refers to another web page, or another section on the same web page; the user can click on the contained text or image. The a element has a number of special attributes, which are detailed below, but the one that you’ll use most of the time—if it’s not the only one you’ll use—is the href attribute. This attribute indicates the link’s destination, be that another web page, a section of the same web page, or some other type of document, such as an image, a spreadsheet, or a PDF document.</p>
-          <!-- -->
-          <p>Meta	Provides information about the document content.
-          <code>meta content="string"  { http-equiv="http response header" | name="string" } /</code>
-          The following meta tags are the most relevant in terms of search engine indexing and interpretation:
-          <!— instructs search engines not to index this page, but to follow links from the page —>
-          <code>meta name="description" content="A brief description of page content to appear in SEO results"</code>
-          <!—comma-separated list of keywords that apply to the page —>
-          <code>meta name="keywords" content="reference, SitePoint, HTML, XHTML, standards"</code>
-          Script	Used to enclose a series of statements in a scripting language (JS) or refer to an stylesheet (CSS) through the ‘src’ attribute, saved in JS.  **Most Valuable for STYLING!**
-          <br>*n this example, the src attribute refers to a script file named "complex.js":
-<code>script type="text/javascript" src="/scripts/complex.js</code>
-          <br>*The language attribute tells the browser which scripting language is to be used inside the script block (or in the file referred to by the src attribute, as shown in the example). It may be the name of the scripting language, or a version-specific implementation of the language (see the values below). The appropriate way to identify the contents of the script element is through the type attribute (for example, you might specify the content as "text/javascript"), and use JavaScript object/feature detection techniques within the script rather than assume that all browsers which support a given version of a scripting language support all of the features of that language—no questions asked.</p>
-          <!-- -->
-          <p>STYLE	Used to override the styles set in a linked style sheet, like so:
-          <br><code>link rel="stylesheet" href="basic.css"</code> 	/*which contains the selector h2 {color:#066;}*/
-          <br><code>style type="text/css">h2 {color:#000;}style</code>	/* override color set in main.css for this page only*/
-</p>
-          <!-- -->
-          <p>TITLE	used to summarize the content or purpose of the document.</p>
-          <!-- -->
-          <hr>
-          <h4>LIST Elements</h4>
+          <h6>LIST Elements</h6>
           <p>The <code>ul</code> element, the name for which is an abbreviation of unordered list, is used to group a collection of items together in a list, but in a way that doesn’t suggest an order of precedence or importance. The <code>ul</code> might be used for anything from a simple shopping list to a collection of links.</p>
           <!-- -->
           <p>The <code>li</code> element defines an individual list item and can only appear inside the handful of list-related elements detailed above. Each list item is represented by a bullet (for unordered lists, defined by the <code>ul</code> element) or a number or letter (in the case of ordered lists, defined by the <code>ol</code> element).</p>
-          <!-- -->
-          <hr>
-          <h4>Random = Put in Order</h4>
-          <p><B>SYNTAX</B> The elements in a web page are contained in a tree structure in which html is the root element that splits into the head and body elements. An element may contain other nested elements (for example, a <code>p</code> element can contain <code>span</code>, etc.). Where this occurs, the opening and closing tags must be symmetrical. If an opening paragraph tag is followed by the opening em element, the closing tags must appear in the reverse order.</p>
-          <!-- -->
-          <p>The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues.  </p>
-          <!-- -->
-          <p>FORMS using Fieldset and Legend Elements to logically group related form controls, and provide a title for the grouping via the Legend Element.  The Label element links a form control to the associated descriptive text in an unambiguous way (useful for non-visual browsers, using screen readers).</p>
-          <!-- -->
-          <p>IMAGES using Alt-attribute provides a text alternative for an important image; applicable with input type.  The Longdesc-attribute provides a link to additional information about the image.</p>
-          <!-- -->
+        </div>
+        <!-- -->
+        <hr id="defineContent" >
+        <div class="intro">
+          <h4>Defining Content</h4>
+          <p>Content elements are used to organize sections of content and are nested within any section element. There are dozens of elements that can be used to markup your content, but choosing the right element depends wholly on that which you are marking up. Aside from adding identifying sections of content with headings and adding text, you may want to include an list, a form, some sort of multimedia, a script, interactivity or a web component. There are dozens of elements at your disposal, but the only way you will understand them is to study them.<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Element" target="_blank">[9]</a></sup> <sup><a href="https://www.html-5-tutorial.com/all-html-tags.htm" target="_blank">[10]</a></sup> <sup><a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">[11]</a></sup></p>
+          <figure>
+            <img src="img/content.jpg" alt="a cute hamster" />
+            <figcaption>Method for Defining Page Content</figcaption>
+          </figure>
+          <p>In the example above, there are four kinds of tags used, all of which no project goes without.</p>
+          <p>The <code>&lt;h1&gt;</code> and <code>&lt;h4&gt;</code> tags illustrate a <em><b>Heading</b></em> that is used to define the title of any section. There are six heading levels <code>&lt;h1&gt; - &lt;h6&gt;</code> which decrease in size from 1 to 6.</p>
+          <p>The <code>&lt;p&gt;</code> tag represents a paragraph of text. The <code>&lt;a&gt;</code> tag is an inline-text semantic creates a <em><b>Hyperlink</b></em> to another webpage, file, or location within the same page. This is an inline text semantic which helps define the meaning or purpose of a word, line or text.</p>
+          <p>The <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags are used in unison to create an <em><b>Unordered List</b></em> of items, which will display as bullet points. You could also use the <code>&lt;ol&gt;</code> tag to create an <em><b>Ordered List</b></em>, which will display an ascending counter.</p>
+          <p>There are two other elements that are used frequently enough to mention here. The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are valuable in that they give designers the ability to apply targeted styles to a contained set of content.  A <code>&lt;div&gt;</code> is a block-level element that is commonly used to identify large groupings of content, while <code>&lt;span&gt;</code> is an inline-level element commonly used to identify smaller groupings of text within a block-level element.</p>
+          <p>Allow me to point out two things about the <code>&lt;img /&gt;</code> tag: unlike the other tags used, it is self-closing and it requires <code>src="..."</code> and <code>alt="..."</code> attributes. <a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attributes</a> are useful for manipulating the state of a particular element or referencing a source as illustrated.  Although outside of the scope of our focus here, there are two attribute types that you must become familiar with: <code>class="..."</code> and <code>id="..."</code>. Attributes are always declared in HTML, but their functionality is usually declared in CSS and JavaScript. The one caveat is using attributes to make a website accessible and that is covered below.</p>
+          <p>These days more and more developers are using <a class="link" href="https://staticsitegenerators.net" target="_blank">Static Site Generators</a> and <a class="link" href="https://www.awwwards.com/what-are-frameworks-22-best-responsive-css-frameworks-for-web-design.html" target="_blank">Frameworks</a> to expedite the markup process. I believe that using an open-source model with a minimal learning curve can help you understand how HTML, CSS and JavaScript work together. </p>
           <hr>
           <h4>ATTRIBUTES</h4>
           <p>HTML <code class="reference"><a href="http://www.htmlhelp.com/reference/html40/attrs.html">Attributes</a></code> add specificty to elements beyond the scope of styles by adding values that configure the elements or adjust their behavior. There are <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Dozens of Attributes</a></code> that can be used for different purposes from simple page layout to building forms or media elements. The main attributes that are found on every website include <code>a <b>href="..."</b></code>, <code>img <b>src="..."</b> <b>alt=""</b></code>, <code>html <b>lang="en-US"</b></code>, <code>xxx <b>title="..."</b></code>, <code>xxx <b>class="..."</b></code> and <code>xxx <b>id="..."</b></code>.</p>
@@ -154,10 +149,17 @@
           <!-- -->
           <p>*Classes used for <a href="http://www.sitepoint.com/web-foundations/hcalendar/">Calendars</a></p>
           <!-- -->
+          <p>IMAGES using Alt-attribute provides a text alternative for an important image; applicable with input type.  The Longdesc-attribute provides a link to additional information about the image.</p>
+          <!-- -->
           <p>The title-attribute provides a title for an element as a ‘tooltip’ on visual browsers; useful with <code>a</code>, <code>link</code> and <code>img</code> providing a title for the linked or embedded resource.</p>
+          <!-- -->
+          <p>The <code>a</code> element’s purpose is simple: it wraps around text, or an image, or both, and refers to another web page, or another section on the same web page; the user can click on the contained text or image. The a element has a number of special attributes, which are detailed below, but the one that you’ll use most of the time—if it’s not the only one you’ll use—is the href attribute. This attribute indicates the link’s destination, be that another web page, a section of the same web page, or some other type of document, such as an image, a spreadsheet, or a PDF document.</p>
+          <h6>Random = Put in Order</h6>
+          <p><B>SYNTAX</B> The elements in a web page are contained in a tree structure in which html is the root element that splits into the head and body elements. An element may contain other nested elements (for example, a <code>p</code> element can contain <code>span</code>, etc.). Where this occurs, the opening and closing tags must be symmetrical. If an opening paragraph tag is followed by the opening em element, the closing tags must appear in the reverse order.</p>
           <!-- -->
           <!--<hr>
           <h4>FORM ELEMENTS</h4>
+          <p>FORMS using Fieldset and Legend Elements to logically group related form controls, and provide a title for the grouping via the Legend Element.  The Label element links a form control to the associated descriptive text in an unambiguous way (useful for non-visual browsers, using screen readers).</p>
           <p>BUTTON represents a clickable button; You can add inner HTML content (think <code>em</code>, <code></code> or even <code>img</code>), and make use of :after and :before pseudo-element to achieve complex rendering while <code>input</code> only accepts a text value attribute.  </p>
           <p>INPUT used to create interactive controls for web-based forms in order to accept data from the user. The semantics of an <code>input</code> varies considerably depending on the value of its type attribute. DO NOT STYLE</p>
           <p>SELECT represents a control that presents a menu of options. *The options within the menu are represented by <code>option</code> elements, which can be grouped by <code>optgroup</code> elements. Options can be pre-selected for the user.
@@ -165,38 +167,12 @@
           <br>*The HTML <code>optgroup</code> element  creates a grouping of options within a <code>select</code> element. This is useful to create a drop-down menu.</p>
           <p>FORM represents a document section that contains interactive controls to submit information to a web server.</p>
           <p>TEXTAREA represents a multi-line plain-text editing control. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following: <code>textarea {resize: none;}</code> https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement.</p> -->
-          <p></p>
-        </div>
-        <!-- -->
-        <hr id="defineSec">
-        <div class="intro">
-          <h4>Defining Sections</h4>
-          <p>Inside of the body is where all the magic happens. It is here that you can outline information that you want displayed based on the type of information being offered. The most important HTML elements that you can use to section information are the Header, Nav, Main, Section, Article, Aside and Footer.<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">[8]</a></sup></p>
-          <img src="img/section.jpg"> 
-          <p>The <code>&lt;header&gt;</code> tag, when used, is the first section users encounter and contains meta information related to the website such as a logo, author or navigational aids. The <code>&lt;nav&gt;</code> tag can be used within the header or independently to help users navigate a website, providing links within the current document or to other documents. This tag should be reserved for primary navigation sections only, such as global navigation, a table of contents, previous/next links, or other noteworthy groups of navigational links.</p>
-          <p>At the bottom of the page, before the closing <code>&lt;body&gt;</code> tag, you can use the <code>&lt;footer&gt;</code> tag to highlight the page author, copyright data or social media links.</p>
-          <p>The <code>&lt;main&gt;</code> and <code>&lt;section&gt;</code> tags can be a bit confusing because although they are semantically different (the <code>&lt;main&gt;</code> is actually a text content element), act nearly the same when used in the same situation. What is important here is to use the <code>&lt;section&gt;</code> tag as the main container for a section and use the <code>&lt;main&gt;</code> tag for the most important content of the body.</p>
-          <p>The <code>&lt;article&gt;</code> tag is used to contain content intended to be independently distributabble such as a magazine article or blog post.</p>
-          <p>The <code>&lt;aside&gt;</code> tag is used for content that is indrectly related to the documents main content such as sidebars, inserts, or brief explanations. When used within an <code>&lt;article&gt;</code> element, for example, the <code>&lt;aside&gt;</code> tag may identify content related to the author of the article.</p>
-        </div>
-        <!-- -->
-        <hr id="defineContent" >
-        <div class="intro">
-          <h4>Defining Content</h4>
-          <p>Content elements are used to organize sections of content and are nested within any section element. There are dozens of elements that can be used to markup your content, but choosing the right element depends wholly on that which you are marking up. Aside from adding identifying sections of content with headings and adding text, you may want to include an list, a form, some sort of multimedia, a script, interactivity or a web component. There are dozens of elements at your disposal, but the only way you will understand them is to study them.<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Element" target="_blank">[9]</a></sup> <sup><a href="https://www.html-5-tutorial.com/all-html-tags.htm" target="_blank">[10]</a></sup> <sup><a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">[11]</a></sup></p>
-          <img src="img/content.jpg"> 
-          <p>In the example above, there are four kinds of tags used, all of which no project goes without.</p>
-          <p>The <code>&lt;h1&gt;</code> and <code>&lt;h4&gt;</code> tags illustrate a <em><b>Heading</b></em> that is used to define the title of any section. There are six heading levels <code>&lt;h1&gt; - &lt;h6&gt;</code> which decrease in size from 1 to 6.</p>
-          <p>The <code>&lt;p&gt;</code> tag represents a paragraph of text. The <code>&lt;a&gt;</code> tag is an inline-text semantic creates a <em><b>Hyperlink</b></em> to another webpage, file, or location within the same page. This is an inline text semantic which helps define the meaning or purpose of a word, line or text.</p>
-          <p>The <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags are used in unison to create an <em><b>Unordered List</b></em> of items, which will display as bullet points. You could also use the <code>&lt;ol&gt;</code> tag to create an <em><b>Ordered List</b></em>, which will display an ascending counter.</p>
-          <p>There are two other elements that are used frequently enough to mention here. The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are valuable in that they give designers the ability to apply targeted styles to a contained set of content.  A <code>&lt;div&gt;</code> is a block-level element that is commonly used to identify large groupings of content, while <code>&lt;span&gt;</code> is an inline-level element commonly used to identify smaller groupings of text within a block-level element.</p>
-          <p>Allow me to point out two things about the <code>&lt;img /&gt;</code> tag: unlike the other tags used, it is self-closing and it requires <code>src="..."</code> and <code>alt="..."</code> attributes. <a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attributes</a> are useful for manipulating the state of a particular element or referencing a source as illustrated.  Although outside of the scope of our focus here, there are two attribute types that you must become familiar with: <code>class="..."</code> and <code>id="..."</code>. Attributes are always declared in HTML, but their functionality is usually declared in CSS and JavaScript. The one caveat is using attributes to make a website accessible and that is covered below.</p>
-          <p>These days more and more developers are using <a class="link" href="https://staticsitegenerators.net" target="_blank">Static Site Generators</a> and <a class="link" href="https://www.awwwards.com/what-are-frameworks-22-best-responsive-css-frameworks-for-web-design.html" target="_blank">Frameworks</a> to expedite the markup process. I believe that using an open-source model with a minimal learning curve can help you understand how HTML, CSS and JavaScript work together. </p>
         </div>
         <!-- -->
         <hr id="accessibility">
-         <div class="intro">
+          <div class="intro">
            <h4>Accessibility</h4>
+           <p>The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues. </p>
            <p>In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[12]</a></sup> The <a class="link" href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a> and <a class="link" href="https://a11yproject.com" target="_blank">A11Y Project</a> are two major advocates for web accessibility and provide <a class="link" href="https://w3.org/TR/WCAG21">guidelines</a> and patterns for developers to help make their applications accessible. </p>
             <p>Here is a short list of <a class="link" href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a> that every application should include:</p>
            <ol>
