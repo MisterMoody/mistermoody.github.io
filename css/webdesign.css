@@ -193,19 +193,6 @@ body {
   letter-spacing: 0.8px;
 }
 /*Back to Top Button*/
-.top {
-  background: none; 
-  margin: 0; 
-  position: fixed; 
-  bottom: 0; 
-  right: 0; 
-  width: 33px; 
-  height: 40px; 
-  z-index: 100; 
-  text-decoration: none; 
-  color: red; 
-  /*background-color: #ff9000;*/
-}
 @media only screen and (max-width: 800px) {
   .top {
     background: none; 
@@ -236,7 +223,7 @@ body {
     /*background-color: #ff9000;*/
   }
 }
-
+/**/
 h1, h2 {
   margin: 0 auto;
   padding: 0;
@@ -331,6 +318,8 @@ code.reference > a {color: #fff;}
 
 @media all and (min-width: 500px) {
   address {color: red;}
+  p {
+	margin: 0.25em 0.55em 0.25em 0.25em;}
 }
 /* =========================================================== */
 
@@ -339,7 +328,7 @@ code.reference > a {color: #fff;}
 /* IMAGES ================================ */
 /**/
 img {
-  width: 100%; 
+  width: 98%; 
   height: auto;
 }
 .imgL {
