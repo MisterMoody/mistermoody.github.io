@@ -21,7 +21,6 @@
 header.topnav > .active {
   background-color: red;
   color: white;
-	border-bottom:
 }
 .topnav .icon {
   display: none;
@@ -97,10 +96,6 @@ autoprefixer({grid: true})
 }
 
 /* SIDEBAR-NAVIGATION Grid */
-.snone {grid-area: snone;}
-.sntwo {grid-area: sntwo;}
-.snthree {grid-area: snthree;}
-.snfour {grid-area: snfour;}
 ul.nav {
   display: none;
   /*justify-content: center;
@@ -109,10 +104,7 @@ ul.nav {
   display: grid;
   grid-template-rows: 12px 8px;
   grid-template-columns: repeat(8, 1fr);
-  grid-gap: 0.79em;
-  grid-template-areas: 
-    "snone snone snone ";
-    " sntwo snthree snfour";*/
+  grid-gap: 0.79em;*/
 }
 ul.nav {font-size: 0.88em;}
 @media only screen and (min-width: 800px) {
@@ -121,12 +113,6 @@ ul.nav {font-size: 0.88em;}
     overflow-x: hidden;
     display: inline-block;
     justify-content: space-between;
-    /*grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: 
-      "snone"
-      "sntwo"
-      "snthree"
-      "snfour";*/
   }
   li {
     font-size: 1em;
@@ -283,6 +269,13 @@ li > a.active {
 ol {font-size: 0.68em;}
 ol.alpha {list-style-type: lower-alpha;}
 /**/
+
+figcaption {
+  font-size: 0.68em;
+  font-style: italic;
+  text-align: center;
+}
+/**/
 hr {
   background-image: linear-gradient(to right, rgba(10, 9, 9, 0.0), rgba(10, 9, 9, 0.5), rgba(10, 9, 9, 0.0));
   border: 0;
@@ -318,8 +311,10 @@ code.reference > a {color: #fff;}
 
 @media all and (min-width: 500px) {
   address {color: red;}
-  p {
-	margin: 0.25em 0.55em 0.25em 0.25em;}
+  p {margin: 0.25em 0.55em 0.25em 0.25em;}
+}
+@media all and (max-width: 500px) {
+  figure {margin: 0; padding: 0;}
 }
 /* =========================================================== */
 
@@ -328,7 +323,7 @@ code.reference > a {color: #fff;}
 /* IMAGES ================================ */
 /**/
 img {
-  width: 98%; 
+  width: 100%; 
   height: auto;
 }
 .imgL {
@@ -374,11 +369,14 @@ img {
 
 /**/
 span {margin: 0;}
+
 /*Hide on Mobile >> Display in Desktop*/
-.hide, span.hide {display: none;}
+.hideMobile, span.hideMobile {display: none;}
+.hideDesktop, span.hideDesktop {display: contents;}
 /**/
 @media only screen and (min-width: 800px) {
-  .hide, span.hide {display: contents;}
+  .hideMobile, span.hideMobile {display: contents;}
+  .hideDesktop, span.hideDesktop {display: none;}
 }
 /* 
 
