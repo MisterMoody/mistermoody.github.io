@@ -29,9 +29,6 @@
       <nav>
         <ul class="nav">
           <li>
-            <a class="" href="#">Introduction</a>
-          </li>
-          <li>
             <a class="" href="#defineHTML">What is HTML?</a>
           </li>
           <li>
@@ -67,14 +64,16 @@
         <hr id="defineHTML">
         <div class="intro">
           <h4>What is HTML?</h4>
-          <p><em><b>HTML</b></em> is a markup language that defines the structure of the content on a webpage. Sections of markup are defined with <em><b>Elements</b></em>, which are used to carve out sections of the structure. HTML <em><b>Tags</b></em> are used to define those elements, and Internet browsers read and display HTML content to the user. Tags have an opening and closing component, with a few exceptions. Moreover, we can add <em><b>Attributes</b></em> to a tag to specify how the content will display (explained later with CSS).<sup><a href="https://www.bitdegree.org/learn/what-is-html/" target="_blank">[7]</a></sup> Although this section provides only basic principles required of an HTML template, you can vist them good folks over at <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">Mozilla</a> to learn everything there is to know about web design and development. Better yet, check out the free HTML and CSS tutorial <a class="link" href="https://learn.shayhowe.com/">Shay Howe</a> put together: its perfect for an absolute beginner to learn the nuances of web design!</p>
+          <p><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></code> is a markup language that defines the structure of the content on a webpage. Every HTML document is a hierarchical structure made up of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Elements</a></code> that dictate how content is displayed and&#47;or sectioned. HTML Elements, also referred to as Tags, are used by Internet browsers to read and display HTML content to a user. Elements usually have an opening <code>&lt;element&gt;</code> and closing <code>&lt;&#47;element&gt;</code> component, but there are a few exceptions in which there is no closing component.</p>
+          <p>Moreover, element content can be manipulated through the use of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attributes</a></code>, which are associated properties that are used to extend the capability of an element, a configuration of sorts to meet certain criteria. An attribute is placed in the opening tag and looks something like <code>attr=&#34;...&#34;</code> where the attribute name is followed by a delimiter and its actual value. There are more than 100 attributes that can be paired with elements depending on the objective, but there are two that I use often: <code>class&#34;...&#34;</code> and <code>id&#34;...&#34;</code>, both of which deal more with CSS than HTML so I will delay further explanation until then. For now, I would like to focus on all the requirements for developing an HTML template.</p>
         </div>
         <!-- -->
         <hr id="template">
         <div class="intro">
           <h4>Required Elements for an HTML Template</h4>
+          <p>When creating an HTML template, I prepare content for four distinctive areas: the Main Root, </p>
           <p>The required structural elements for an HTML template are as follow:</p>
-          <img src="img/requiredHTML.jpg"> 
+          <p><img src="img/requiredHTML.jpg"> </p>
           <p>The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page; it declares that this is an HTML file. The <code>&lt;html&gt;</code> element (aka 'root') is on the second and final line of a page. This element is a wrapper for everything on the entire page: that which can be seen or not!</p>
           <p>The <code>&lt;head&gt;</code> element is the area consisting of meta information about a page. Within this area you can use <code>&lt;meta&gt;</code> <code>&lt;title&gt;</code> and <code>&lt;link&gt;</code> tags to make the page mobile-compatible, document the webpage in the browser and specify resources being used, respectively. Web browsers use this information to coordinate all resources required to make the website function as it was designed; none of this information is visible to the user.</p>
           <p>The final required element is the <code>&lt;body&gt;</code>, which is the area where all content that you want displayed to users is placed.</p>
@@ -84,7 +83,8 @@
         <hr id="elements">
         <div class="intro">
           <!--<h2 class="title"><i class="material-icons">code</i> Using HTML</h2>-->
-          <p>Every HTML document is a hierarchical structure made up of elements and their content. This section of the reference describes all the different types of element that you can use to write an HTML document.</p>
+          <h4>HTML Elements</h4>
+          <p>This section of the reference describes all the different types of element that you can use to write an HTML document.</p>
           <!-- -->
           <p>The <code>html</code> element is the outer container for everything that appears in an HTML document. It can only contain two elements as direct descendants, namely the <code>head</code> element and a <code>body</code> element.  It can also contain comments.  Although the <code>html</code> element is the outermost element, it does not contain the DOCTYPE—the doctype must come before the html element.  This element will have a place on every single web page you ever create! </p>
           <!-- -->
