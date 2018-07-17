@@ -9,7 +9,7 @@
     <link href="css/webdesign.css" rel="stylesheet">
   </head>
   <body>  
-    <!-- MAIN SITE NAVIGATION-->
+    <!-- **** Main Site NAVIGATION **** -->
 		<header class="topnav" id="myTopnav">
       <a href="webdesign.html">Web Design 101</a>
       <a href="usingHTML.html" class="active">HTML</a>
@@ -21,9 +21,11 @@
       </a>
     </header>
     
-    <!-- ****** <MAIN-GRID>  ***** -->
+    
+    <!-- ******** <MAIN-GRID>  ******** -->
     <div class="grid">  
-      
+      <!-- -->
+      <!-- -->
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
       <nav>
         <ul class="nav">
@@ -44,7 +46,8 @@
           </li>
         </ul>
       </nav>
-      
+      <!-- -->
+      <!-- -->
       <!-- //CONTENT -->
       <main id="top">
         <!-- 'Under Construction >> REMOVE when Complete-->
@@ -105,7 +108,7 @@
         <hr id="defineSec">
         <div class="intro">
           <h4>Defining Sections</h4>
-          <p>During the planning phase, I often imagine how I want the content to be displayed physically and how that content should behave. Doing so helps me determine which HTML element to use. When <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">defining page sections</a></code>, I know that I can rely on these elements to get me started:  Header, Nav, Article, Section, Main, Aside, Div and Footer.</p>
+          <p>During the planning phase, I often imagine how I want the content to be displayed physically and how that content should behave. Doing so helps me determine which HTML element to use. When <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">defining page sections</a></code>, I know that I can rely on the Header, Nav, Article, Section, Main, Aside, Div and Footer elements to get me started.</p>
           <figure>
             <img src="img/section.jpg" alt="a cute hamster" />
             <figcaption>Method for Defining Page Sections</figcaption>
@@ -124,55 +127,37 @@
           <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank">&lt;aside&gt;</a></code> element is used for content that is indrectly related to the documents main content such as sidebars, inserts, or brief explanations. These elements are frequently presented as sidebars or call-out boxes. When used within an <code>&lt;article&gt;</code> element, for example, the <code>&lt;aside&gt;</code> tag may identify content related to the author of the article.</p>
           <!-- -->
           <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">&lt;div&gt;</a></code> element is a generic block-level element that doesn’t convey any meaning about its contents, but is the most common method for identifying the structural sections of a document and for laying out a web page using CSS. I use this element in the same fashion that I described the <code>&lt;main&gt;</code>. One day my semantic incorrectness is gonna catch up with me, but until then all I need to know is that this is a pure container that is used to group content so it can be easily styled using the <code>class&#34;...&#34;</code> or <code>id&#34;...&#34;</code> attributes.</p>
+          <p>A <code>&lt;div&gt;</code> is a block-level element that is commonly used to identify large groupings of content.</p>
           <!-- -->
           <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank">&lt;footer&gt;</a></code> element typically contains information about the author of the section, copyright data or links to related documents. It is placed at the bottom of the section root or used at the bottom of any sectioning elements.</p>
-          
         </div>
         <!-- -->
         <!-- 'Define Content' -->
         <hr id="defineContent" >
         <div class="intro">
           <h4>Defining Content</h4>
-          <p>Content elements are used to organize sections of content and are nested within any section element. There are dozens of elements that can be used to markup your content, but choosing the right element depends wholly on that which you are marking up. Aside from adding identifying sections of content with headings and adding text, you may want to include an list, a form, some sort of multimedia, a script, interactivity or a web component. There are dozens of elements at your disposal, but the only way you will understand them is to study them.<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Element" target="_blank">[9]</a></sup> <sup><a href="https://www.html-5-tutorial.com/all-html-tags.htm" target="_blank">[10]</a></sup> <sup><a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">[11]</a></sup></p>
-          <figure>
-            <img src="img/content.jpg" alt="a cute hamster" />
-            <figcaption>Method for Defining Page Content</figcaption>
-          </figure>
-          <p>In the example above, there are four kinds of tags used, all of which no project goes without.</p>
-          <p>The <code>&lt;h1&gt;</code> and <code>&lt;h4&gt;</code> tags illustrate a <em><b>Heading</b></em> that is used to define the title of any section. There are six heading levels <code>&lt;h1&gt; - &lt;h6&gt;</code> which decrease in size from 1 to 6.</p>
-          <p>The <code>&lt;p&gt;</code> tag represents a paragraph of text. The <code>&lt;a&gt;</code> tag is an inline-text semantic creates a <em><b>Hyperlink</b></em> to another webpage, file, or location within the same page. This is an inline text semantic which helps define the meaning or purpose of a word, line or text.</p>
-          
+          <p>Content elements are used to organize sections of content and are nested within any section element. There are dozens of elements that can be used to markup content depending on whether you want to use a sectional heading, add text, create a form, include some sort of multimedia or script, add interactivity and much more.</p> 
+          <p>Because elements in a web page are contained in a tree structure in which html is the root element that splits into the head and body elements. An element may contain other nested elements (for example, a <code>p</code> element can contain <code>span</code>, etc.). Where this occurs, the opening and closing tags must be symmetrical. If an opening paragraph tag is followed by the opening em element, the closing tags must appear in the reverse order.</p>
           <!-- -->
-          <h6>LIST Elements</h6>
+          <h6>Text Content</h6>
+          <p>hgroup/h1-h6 >> p >> li/ol/ul/li == dd/dl/dt >> figcaption/figure >> blockquote >> dir >> pre >> hr</p>
           <p>The <code>ul</code> element, the name for which is an abbreviation of unordered list, is used to group a collection of items together in a list, but in a way that doesn’t suggest an order of precedence or importance. The <code>ul</code> might be used for anything from a simple shopping list to a collection of links.</p>
-          <!-- -->
           <p>The <code>li</code> element defines an individual list item and can only appear inside the handful of list-related elements detailed above. Each list item is represented by a bullet (for unordered lists, defined by the <code>ul</code> element) or a number or letter (in the case of ordered lists, defined by the <code>ol</code> element).</p>
           <p>The <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags are used in unison to create an <em><b>Unordered List</b></em> of items, which will display as bullet points. You could also use the <code>&lt;ol&gt;</code> tag to create an <em><b>Ordered List</b></em>, which will display an ascending counter.</p>
-          <p>There are two other elements that are used frequently enough to mention here. The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are valuable in that they give designers the ability to apply targeted styles to a contained set of content.  A <code>&lt;div&gt;</code> is a block-level element that is commonly used to identify large groupings of content, while <code>&lt;span&gt;</code> is an inline-level element commonly used to identify smaller groupings of text within a block-level element.</p>
-          <p>Allow me to point out two things about the <code>&lt;img /&gt;</code> tag: unlike the other tags used, it is self-closing and it requires <code>src="..."</code> and <code>alt="..."</code> attributes. <a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attributes</a> are useful for manipulating the state of a particular element or referencing a source as illustrated.  Although outside of the scope of our focus here, there are two attribute types that you must become familiar with: <code>class="..."</code> and <code>id="..."</code>. Attributes are always declared in HTML, but their functionality is usually declared in CSS and JavaScript. The one caveat is using attributes to make a website accessible and that is covered below.</p>
-          <p>These days more and more developers are using <a class="link" href="https://staticsitegenerators.net" target="_blank">Static Site Generators</a> and <a class="link" href="https://www.awwwards.com/what-are-frameworks-22-best-responsive-css-frameworks-for-web-design.html" target="_blank">Frameworks</a> to expedite the markup process. I believe that using an open-source model with a minimal learning curve can help you understand how HTML, CSS and JavaScript work together. </p>
-          <hr>
-          <h4>ATTRIBUTES</h4>
-          <p>HTML <code class="reference"><a href="http://www.htmlhelp.com/reference/html40/attrs.html">Attributes</a></code> add specificty to elements beyond the scope of styles by adding values that configure the elements or adjust their behavior. There are <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Dozens of Attributes</a></code> that can be used for different purposes from simple page layout to building forms or media elements. The main attributes that are found on every website include <code>a <b>href="..."</b></code>, <code>img <b>src="..."</b> <b>alt=""</b></code>, <code>html <b>lang="en-US"</b></code>, <code>xxx <b>title="..."</b></code>, <code>xxx <b>class="..."</b></code> and <code>xxx <b>id="..."</b></code>.</p>
-          <p>The title attribute may be used on all elements contained in the body of a document, but is not relevant to the majority of elements found inside the head of the document, e.g. base, script and (perhaps not surprisingly) the title elements.</p>
           <!-- -->
-          <p>The id-attribute provides a unique identifies for an element within the document creating a hyperlink. This identifier may also be used in CSS, as a hook that can be used for styling purposes, or with JS, to make changes or add behavior to the element referenced by its unique id.  An id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.  
-</p>
-          <!-- -->
-          <p>The class-attribute is like an expansion of the id-attribute, but is capable of being assigned to one or more subtypes, which can be used in CSS for styling or JS to make changes and add behavior to elements belonging to a particular subtype.</p>
-          <!-- -->
-          <p>*Classes used for <a href="http://www.sitepoint.com/web-foundations/hcalendar/">Calendars</a></p>
-          <!-- -->
-          <p>IMAGES using Alt-attribute provides a text alternative for an important image; applicable with input type.  The Longdesc-attribute provides a link to additional information about the image.</p>
-          <!-- -->
-          <p>The title-attribute provides a title for an element as a ‘tooltip’ on visual browsers; useful with <code>a</code>, <code>link</code> and <code>img</code> providing a title for the linked or embedded resource.</p>
-          <!-- -->
+          <h6>Inline Text Semantics</h6>
+          <p>a >> b/strong = em/i = u = small >> span (with p) >> q (with blockquote) >> code >> mark >> cite >> kbd >> abbr >> sup/sup >> time</p>
           <p>The <code>a</code> element’s purpose is simple: it wraps around text, or an image, or both, and refers to another web page, or another section on the same web page; the user can click on the contained text or image. The a element has a number of special attributes, which are detailed below, but the one that you’ll use most of the time—if it’s not the only one you’ll use—is the href attribute. This attribute indicates the link’s destination, be that another web page, a section of the same web page, or some other type of document, such as an image, a spreadsheet, or a PDF document.</p>
-          <h6>Random = Put in Order</h6>
-          <p><B>SYNTAX</B> The elements in a web page are contained in a tree structure in which html is the root element that splits into the head and body elements. An element may contain other nested elements (for example, a <code>p</code> element can contain <code>span</code>, etc.). Where this occurs, the opening and closing tags must be symmetrical. If an opening paragraph tag is followed by the opening em element, the closing tags must appear in the reverse order.</p>
+          <p>A <code>&lt;span&gt;</code> is an inline-level element commonly used to identify smaller groupings of text within a block-level element.</p>
           <!-- -->
-          <!--<hr>
-          <h4>FORM ELEMENTS</h4>
+          <h6>Images and Multimedia</h6>
+          <p>img >> audio/video/track area/map</p>
+          <p>The <code>&lt;img /&gt;</code> element is self-closing and it requires <code>src="..."</code> and <code>alt="..."</code> attributes.</p>
+          <h6>Embedded Content</h6>
+          <p>embed, ifram, object, param, picture, source</p>
+          <!-- -->
+          <h6>Forms</h6>
+          <p> fieldset/label/legend/textarea/button >> optgroup/select >> datalist/option >> output >> progress</p>
           <p>FORMS using Fieldset and Legend Elements to logically group related form controls, and provide a title for the grouping via the Legend Element.  The Label element links a form control to the associated descriptive text in an unambiguous way (useful for non-visual browsers, using screen readers).</p>
           <p>BUTTON represents a clickable button; You can add inner HTML content (think <code>em</code>, <code></code> or even <code>img</code>), and make use of :after and :before pseudo-element to achieve complex rendering while <code>input</code> only accepts a text value attribute.  </p>
           <p>INPUT used to create interactive controls for web-based forms in order to accept data from the user. The semantics of an <code>input</code> varies considerably depending on the value of its type attribute. DO NOT STYLE</p>
@@ -180,50 +165,92 @@
           <br>*The HTML <code>option</code> element is used to create a control representing an item within a <code>select</code>, an <code>optgroup</code> or a <code>datalist</code> HTML5 element.
           <br>*The HTML <code>optgroup</code> element  creates a grouping of options within a <code>select</code> element. This is useful to create a drop-down menu.</p>
           <p>FORM represents a document section that contains interactive controls to submit information to a web server.</p>
-          <p>TEXTAREA represents a multi-line plain-text editing control. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following: <code>textarea {resize: none;}</code> https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement.</p> -->
+          <p>TEXTAREA represents a multi-line plain-text editing control. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following: <code>textarea {resize: none;}</code> https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement.</p>
+          <!-- -->
+          <h6>Table Content</h6>
+          <p>table/tbody/thead/tfoot >> td/th/tr >> col/colgroup</p>
+          <!-- -->
+          <h6>Interactive Elements</h6>
+          <p>details/dialog/summary >> menu/menuitem</p>
+          <!-- -->
+          <h6>Scripting</h6>
+          <p>canvas >> script</p>
+          <!-- -->
+          <h6>Demarcating Edits</h6>
+          <p>del/ins == see 's' element</p>
+          <!-- -->
+          <!-- -->
+          <figure>
+            <img src="img/content.jpg" alt="a cute hamster" />
+            <figcaption>Method for Defining Page Content</figcaption>
+          </figure>
+          <p>In the example above, there are four kinds of tags used, all of which no project goes without.</p>
+          <p>The <code>&lt;h1&gt;</code> and <code>&lt;h4&gt;</code> tags illustrate a <em><b>Heading</b></em> that is used to define the title of any section. There are six heading levels <code>&lt;h1&gt; - &lt;h6&gt;</code> which decrease in size from 1 to 6.</p>
+          <p>The <code>&lt;p&gt;</code> tag represents a paragraph of text. The <code>&lt;a&gt;</code> tag is an inline-text semantic creates a <em><b>Hyperlink</b></em> to another webpage, file, or location within the same page. This is an inline text semantic which helps define the meaning or purpose of a word, line or text.</p>
+          <!-- -->
+          <!-- -->
+          <hr>
+          <h4>ATTRIBUTES</h4>
+          <p><small>???Might be best to begin with this section before moving forward????</small></p>
+          <p><a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attributes</a> are useful for manipulating the state of a particular element or referencing a source as illustrated.  Although outside of the scope of our focus here, there are two attribute types that you must become familiar with: <code>class="..."</code> and <code>id="..."</code>. Attributes are always declared in HTML, but their functionality is usually declared in CSS and JavaScript. The one caveat is using attributes to make a website accessible and that is covered below.</p>
+          <p>HTML <code class="reference"><a href="http://www.htmlhelp.com/reference/html40/attrs.html">Attributes</a></code> add specificty to elements beyond the scope of styles by adding values that configure the elements or adjust their behavior. There are <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Dozens of Attributes</a></code> that can be used for different purposes from simple page layout to building forms or media elements. The main attributes that are found on every website include <code>a <b>href="..."</b></code>, <code>img <b>src="..."</b> <b>alt=""</b></code>, <code>html <b>lang="en-US"</b></code>, <code>xxx <b>title="..."</b></code>, <code>xxx <b>class="..."</b></code> and <code>xxx <b>id="..."</b></code>.</p>
+          <p>The title attribute may be used on all elements contained in the body of a document, but is not relevant to the majority of elements found inside the head of the document, e.g. base, script and (perhaps not surprisingly) the title elements.</p>
+          <!-- -->
+          <p>The id-attribute provides a unique identifies for an element within the document creating a hyperlink. This identifier may also be used in CSS, as a hook that can be used for styling purposes, or with JS, to make changes or add behavior to the element referenced by its unique id.  An id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.</p>
+          <!-- -->
+          <p>The class-attribute is like an expansion of the id-attribute, but is capable of being assigned to one or more subtypes, which can be used in CSS for styling or JS to make changes and add behavior to elements belonging to a particular subtype.</p>
+          <!-- -->
+          <p>IMAGES using Alt-attribute provides a text alternative for an important image; applicable with input type.  The Longdesc-attribute provides a link to additional information about the image.</p>
+          <!-- -->
+          <p>The title-attribute provides a title for an element as a ‘tooltip’ on visual browsers; useful with <code>a</code>, <code>link</code> and <code>img</code> providing a title for the linked or embedded resource.</p>
+          <!-- -->
+          <!-- -->
         </div>
         <!-- -->
         <!-- 'Accessibility' -->
         <hr id="accessibility">
-          <div class="intro">
-           <h4>Accessibility</h4>
-           <p>The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues. </p>
-           <p>In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[12]</a></sup> The <a class="link" href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a> and <a class="link" href="https://a11yproject.com" target="_blank">A11Y Project</a> are two major advocates for web accessibility and provide <a class="link" href="https://w3.org/TR/WCAG21">guidelines</a> and patterns for developers to help make their applications accessible. </p>
-            <p>Here is a short list of <a class="link" href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a> that every application should include:</p>
-           <ol>
-             <li>Add Contrasting Color</li>
-             <li>Design usable :Focus States</li>
-             <li>Use Lables with Form Fields &amp; Inputs</li>
-             <li>Write Alternative Text for Images</li>
-             <li>Use Proper Markup for Content</li>
-             <li>Support Keyboard Navigation</li>
-           </ol>
-           <p>The Color-Contrast Ration between text and its background should be at least 3/4.5 to 1 depending on the font boldness. The WebAIM group offers a <a class="link" href="https://webaim.org/resources/contrastchecker/" target="_blank">Color Contrast Checker</a> that allows developers to calculate the score for <a class="link" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">conformance levels</a> in real time. When using color as an indicator, be sure to pair it with an icon, a label or pattern. Charts and graphs are often difficult to read so using shapes and varying sizes can help enhance monochromatic vision. You can use the <a class="link" href="https://colororacle.org">Color Oracle</a> to simulate what vision impaired folk see in real-time.</p>
-           <p>Adding a visual cue such as an underline text style will help an element stand out. Focus Indicators help people know which element has the keyboard focus and helps with navigating a website. Elements that should be focusable are links, form fields, widgets, buttons and menu items. Be sure to create a state that is highly visible, with good contrast to stand out from the rest.</p>
-           <p>People who use screen readers navigate form using the tab key and the <code>&lt;label&gt;</code> element is equipped to handle this action. Never use placeholder text for accessibility because it will be passed over during tabbing. There are plenty of resources for creating <a class="link" href="https://webaim.org/techniques/forms/" target="_blank">Accessible Forms</a>.</p>
-           <p>Vision impaired users rely on screen readers to 'hear' what is being displayed and the <code>&lt;alt=""&gt;</code> attribute is used to convert text to speech. Simply describe the image or what is happening in the background.</p>
-           <p>Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.</p>
-           <p>Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly markedup; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.</p>
-           <p>When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <a class="link" href="https://axe-core.org/" target="_blank">Check a Websites Accessibility</a>.</p>
-          </div>
+        <div class="intro">
+          <h4>Making a Page Accessible</h4>
+          <p>The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues. </p>
+          <p>In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[12]</a></sup> The <a class="link" href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a> and <a class="link" href="https://a11yproject.com" target="_blank">A11Y Project</a> are two major advocates for web accessibility and provide <a class="link" href="https://w3.org/TR/WCAG21">guidelines</a> and patterns for developers to help make their applications accessible. </p>
+          <p>Here is a short list of <a class="link" href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a> that every application should include:</p>
+          <ol>
+            <li>Add Contrasting Color</li>
+            <li>Design usable :Focus States</li>
+            <li>Use Lables with Form Fields &amp; Inputs</li>
+            <li>Write Alternative Text for Images</li>
+            <li>Use Proper Markup for Content</li>
+            <li>Support Keyboard Navigation</li>
+          </ol>
+          <p>The Color-Contrast Ration between text and its background should be at least 3/4.5 to 1 depending on the font boldness. The WebAIM group offers a <a class="link" href="https://webaim.org/resources/contrastchecker/" target="_blank">Color Contrast Checker</a> that allows developers to calculate the score for <a class="link" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">conformance levels</a> in real time. When using color as an indicator, be sure to pair it with an icon, a label or pattern. Charts and graphs are often difficult to read so using shapes and varying sizes can help enhance monochromatic vision. You can use the <a class="link" href="https://colororacle.org">Color Oracle</a> to simulate what vision impaired folk see in real-time.</p>
+          <p>Adding a visual cue such as an underline text style will help an element stand out. Focus Indicators help people know which element has the keyboard focus and helps with navigating a website. Elements that should be focusable are links, form fields, widgets, buttons and menu items. Be sure to create a state that is highly visible, with good contrast to stand out from the rest.</p>
+          <p>People who use screen readers navigate form using the tab key and the <code>&lt;label&gt;</code> element is equipped to handle this action. Never use placeholder text for accessibility because it will be passed over during tabbing. There are plenty of resources for creating <a class="link" href="https://webaim.org/techniques/forms/" target="_blank">Accessible Forms</a>.</p>
+          <p>Vision impaired users rely on screen readers to 'hear' what is being displayed and the <code>&lt;alt=""&gt;</code> attribute is used to convert text to speech. Simply describe the image or what is happening in the background.</p>
+          <p>Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.</p>
+          <p>Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly markedup; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.</p>
+          <p>When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <a class="link" href="https://axe-core.org/" target="_blank">Check a Websites Accessibility</a>.</p>
+        </div>
         <!-- -->
-        <hr id="version">
+        <!-- Stay Tuned Message -->
+        <hr id="">
         <div class="intro">
           <h3>Stay tuned for more...</h3>
         </div>
       </main>  
-      
+      <!-- -->
+      <!-- -->
       <!-- //FOOTER -->  
       <footer>
         <small><span><?php echo date('Y'); ?></span></small>&#32;&#32;
         <span class=""> Made with <i class="fa fa-heart"></i> by </span> Mister Moody
       </footer> 
+      <!-- -->
+      <!-- -->
     </div>
-    <!-- ************************* -->
-    <!-- -->
-		<!-- -->
-    <!-- -->
-    <!-- *****JS SCRIPTS***** -->
+    <!-- **** END of MAIN <GRID> **** -->
+    
+    
+    <!-- **** JavaScript SCRIPTS **** -->
     <!-- -----Navigation----- -->
     <script>function myFunction() {
         var x = document.getElementById("myTopnav");
