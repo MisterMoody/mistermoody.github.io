@@ -2,8 +2,8 @@
 # Repository of Web Development Resources
 
 ## Content:
-1. Introduction to Web Design (webdesign.html)
+1. Introduction to Web Design (Under Construction)
 --Project Available on <a href="https://mistermoody.github.io/webdesign.html">GH-Pages</a>
-2. Using HTML, CSS and JavaScript (Under Construction)
-3. Project Management (management.html)
+<!--2. (Coming Soon)-->
+<!--3. (Coming Soon)-->
 
