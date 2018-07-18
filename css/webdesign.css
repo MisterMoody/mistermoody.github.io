@@ -305,6 +305,8 @@ figcaption {
   text-align: center;
 }
 /**/
+mark {background: #ccc;}
+/**/
 hr {
   background-image: linear-gradient(to right, rgba(10, 9, 9, 0.0), rgba(10, 9, 9, 0.5), rgba(10, 9, 9, 0.0));
   border: 0;
