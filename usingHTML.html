@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using HTML</title>
+    <title>&Mopf; Using HTML</title>
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
@@ -235,7 +235,7 @@
         <div class="intro">
           <h4>Using Unicode </h4>
           <p>In HTML, sometimes writing is not as simple as it seems. For example, when I want to write a symbol I cannot simply type it into my keyboard; I must manually input its <code class="reference"><a href="">Character Reference</a></code>. Character references are better known as Unicode, which is a best practice and International Standard ISO&#47;ICE 10646 Universal Coded Character Set &#40;UCS&#41;. In HTML, such references are known as an <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">Entity</a></code>, which are used to display reserved characters that would otherwise be interpreted as HTML code in the browser. Entities can be created using a character entity reference, but in my studies I have become accustomed to using numeric character references. The syntax for this element begins with an ampersand <code>&amp;</code> and ends with a semicolon <code>&#59;</code> like so: <code>&amp;&#35;nn&#59;</code>. In this example, the <code>nn</code> represents the numeric value of the symbol that I want to include.</p>
-          <p>Below is a list of character references that I use. The first row displays the symbol and the second row is the actual Unicode that you would input into your HTML. There are hundreds, perhaps thousands of character references; I asked Google exactly how many exist and she said 65,000+. Go figure.</p>
+          <p>Below is a list of character references that I use. The first row displays the symbol and the second row is the actual reference code to use in my markup. There are hundreds, perhaps thousands of character references; I asked Google exactly how many exist and she said 65,000+. Go figure.</p>
           <aside class="characterGrid">
             <div class="asciiItem">
               <div class="asciiItemChar">&#60;</div>
@@ -247,28 +247,11 @@
             </div>
             <div class="asciiItem">
               <div class="asciiItemChar">&#40;</div>
-              <div>&amp;&#35;<b>40</b>&#59;</div>
+              <div><small>&amp;&#35;<b>40</b>&#59;</small></div>
             </div>
             <div class="asciiItem">
               <div class="asciiItemChar">&#41;</div>
-              <div>&amp;&#35;<b>41</b>&#59;</div>
-            </div>
-            <!-- -->
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#91;</div>
-              <div><small>&amp;&#35;<b>91</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#93;</div>
-              <div><small>&amp;&#35;<b>93</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#123;</div>
-              <div><small>&amp;&#35;<b>123</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#125;</div>
-              <div><small>&amp;&#35;<b>125</b>&#59;</small></div>
+              <div><small>&amp;&#35;<b>41</b>&#59;</small></div>
             </div>
             <!-- -->
             <div class="asciiItem">
@@ -280,29 +263,12 @@
               <div><small>&amp;&#35;<b>39</b>&#59;</small></div>
             </div>
             <div class="asciiItem">
-              <div class="asciiItemChar">&#96;</div>
-              <div><small>&amp;&#35;<b>96</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#42;</div>
-              <div><small>&amp;&#35;<b>42</b>&#59;</small></div>
-            </div>
-            <!-- -->
-            <div class="asciiItem">
               <div class="asciiItemChar">&#61;</div>
               <div><small>&amp;&#35;<b>61</b>&#59;</small></div>
             </div>
             <div class="asciiItem">
-              <div class="asciiItemChar">&#95;</div>
-              <div><small>&amp;&#35;<b>95</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
               <div class="asciiItemChar">&#45;</div>
               <div><small>&amp;&#35;<b>45</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#35;</div>
-              <div><small>&amp;&#35;<b>35</b>&#59;</small></div>
             </div>
             <!-- -->
             <div class="asciiItem">
@@ -314,15 +280,6 @@
               <div><small>&amp;&#35;<b>33</b>&#59;</small></div>
             </div>
             <div class="asciiItem">
-              <div class="asciiItemChar">&#36;</div>
-              <div><small>&amp;&#35;<b>36</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#64;</div>
-              <div><small>&amp;&#35;<b>64</b>&#59;</small></div>
-            </div>
-            <!-- -->
-            <div class="asciiItem">
               <div class="asciiItemChar">&#46;</div>
               <div><small>&amp;&#35;<b>46</b>&#59;</small></div>
             </div>
@@ -330,6 +287,7 @@
               <div class="asciiItemChar">&#44;</div>
               <div><small>&amp;&#35;<b>44</b>&#59;</small></div>
             </div>
+            <!-- -->
             <div class="asciiItem">
               <div class="asciiItemChar">&#58;</div>
               <div><small>&amp;&#35;<b>58</b>&#59;</small></div>
@@ -338,7 +296,6 @@
               <div class="asciiItemChar">&#59;</div>
               <div><small>&amp;&#35;<b>59</b>&#59;</small></div>
             </div>
-            <!-- -->
             <div class="asciiItem">
               <div class="asciiItemChar">&#43;</div>
               <div><small>&amp;&#35;<b>43</b>&#59;</small></div>
@@ -347,6 +304,7 @@
               <div class="asciiItemChar">&#215;</div>
               <div><small>&amp;&#35;<b>215</b>&#59;</small></div>
             </div>
+            <!-- -->
             <div class="asciiItem">
               <div class="asciiItemChar">&#47;</div>
               <div><small>&amp;&#35;<b>47</b>&#59;</small></div>
@@ -355,23 +313,13 @@
               <div class="asciiItemChar">&#37;</div>
               <div><small>&amp;&#35;<b>37</b>&#59;</small></div>
             </div>
-            <!-- -->
             <div class="asciiItem">
               <div class="asciiItemChar">&nbsp;</div>
-              <div><small>&amp;&#35;<b>32</b>&#59;</small></div>
               <div><small>&amp;<b>nbsp</b>&#59;</small></div>
             </div>
             <div class="asciiItem">
               <div class="asciiItemChar">&#94;</div>
               <div><small>&amp;&#35;<b>94</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#8596;</div>
-              <div><small>&amp;&#35;<b>8596</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#8597;</div>
-              <div><small>&amp;&#35;<b>8597</b>&#59;</small></div>
             </div>
             <!-- -->
             <div class="asciiItem">
@@ -425,25 +373,8 @@
               <div><small>&amp;&#35;<b>190</b>&#59;</small></div>
             </div>
             <!-- -->
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#8532;</div>
-              <div><small>&amp;&#35;<b>8532</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#8535;</div>
-              <div><small>&amp;&#35;<b>8535</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#8538;</div>
-              <div><small>&amp;&#35;<b>8538</b>&#59;</small></div>
-            </div>
-            <div class="asciiItem">
-              <div class="asciiItemChar">&#8541;</div>
-              <div><small>&amp;&#35;<b>8541</b>&#59;</small></div>
-            </div>
-            <!-- -->
           </aside>
-          <p><code class="reference"><a href="https://wiki.mozilla.org/Help:Special_characters" target="_blank">Learn</a></code> <code class="reference"><a href="https://lachy.id.au/log/2005/10/char-refs" target="_blank">more</a></code> about <code class="reference"><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">Characters</a></code> &#47; <code class="reference"><a href="https://en.wikipedia.org/wiki/Universal_Coded_Character_Set" target="_blank">Unicode</a></code>.</p>
+          <p>Be sure to do your own research to <code class="reference"><a href="https://wiki.mozilla.org/Help:Special_characters" target="_blank">learn</a></code> <code class="reference"><a href="https://lachy.id.au/log/2005/10/char-refs" target="_blank">more</a></code> about <code class="reference"><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">Uni</a></code><code class="reference"><a href="https://en.wikipedia.org/wiki/Universal_Coded_Character_Set" target="_blank">code</a></code> as you can include arrows, foreign languages, shapes and much more. &Mopf;</p>
         </div>
         <!-- Stay Tuned Message -->
         <hr id="">
