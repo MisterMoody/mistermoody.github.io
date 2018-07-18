@@ -138,6 +138,35 @@ main {
   }
 }
 
+/*Unicode Character Grid*/
+.characterGrid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 4px;
+}
+@media only screen and (min-width: 800px) {
+  .characterGrid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 8px;
+  }
+}
+/*Unicode <div> Style*/
+.asciiItem {
+  background: grey;
+  text-align: center;
+}
+/*Unicode 1st Row*/
+.asciiItemChar {
+  font-size: 1.5em;
+}
+
 /* FOOTER */
 footer {text-align: center; font-size: 0.53em;}
 .fa-heart {
