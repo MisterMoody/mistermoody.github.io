@@ -1,5 +1,17 @@
 /*  ========================================= 
-    Main GRID STYLES (layout.css) ======== */
+    Main GRID STYLES (index.html) ======== */
+.galleryGrid {
+  display: grid;
+  grid-template-rows: auto 1fr 8px;
+  grid-template-areas: 
+    "intro"
+    "gallery"
+    "footer";
+}
+.intro {grid-area: intro;}
+.main-content {grid-area: gallery;}
+footer {grid-area: footer; margin-top: 5em;}
+/**/
 .main-content {
   display: grid;
   grid-template-columns: auto;
@@ -43,6 +55,8 @@ span {margin: 0;}
 	box-sizing: border-box;
 }
 body {
+  height: 100%;
+  width: 100%;
   font-size: 1rem;
   line-height: 1.5;
 	font-family: 'Raleway', sans-serif;
