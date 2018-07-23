@@ -190,7 +190,60 @@
           <p>table/tbody/thead/tfoot >> td/th/tr >> col/colgroup</p>
           <!-- -->
           <h6>Interactive Elements</h6>
-          <p>details/dialog/summary >> menu/menuitem</p>
+          <p>details//summary >> menu/menuitem</p>
+          <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">&#60;dialog&#62;</a></code> element represents a dialog box or other interactive component, such as an inspector or window. Dialogs are hidden by default, but can be made active and available for interaction by replacing the <code>id&#61;&#39;...&#39;</code> with the <code>open</code> attribute in the <code>&#60;dialog&#62;</code> element.</p>
+          <p><code>&#60;form&#62;</code> elements can be integrated within a dialog by specifying them with the attribute method="dialog". When such a form is submitted, the dialog is closed with a returnValue attribute set to the value of the submit button used. -- The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop">::backdrop</a></code> CSS pseudo-element &#40;experimental&#41; can be used to style behind a <code>&#60;dialog&#62;</code> element, for example to dim inaccessible content whilst a modal dialog is active. The backdrop is only drawn when the dialog element is displayed with <code>dialog.showModal()</code>. You can use a <a href="https://github.com/GoogleChrome/dialog-polyfill"  target="_blank"><mark>Polyfill</mark></a> for browser support and learn more about <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms" target="_blank">&#60;form&#62;</a></code> + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/close" target="_blank">.close&#40;&#41;</a></code> Events + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/cancel" target="_blank">.cancel&#40;&#41;</a></code> Events + and check out these <code class="reference"><a href="https://demo.agektmr.com/dialog/" target="_blank">examples</a></code>.</p>
+          <article class="block">
+            <div class="card">
+              <menu>
+                <button id="openDialogText">Dialog: Enter Text</button>
+              </menu>
+              <dialog id="dialogWindow">
+                <form method="dialog">
+                  <input type="text">
+                  <button type="submit">Submit</button>
+                </form>
+              </dialog> 
+              <p>This dialog box will open a window with an input text area that you can enter text into. After you submit text, the information will be stored until the next usage.</p>
+            </div>
+            <div class="card">
+              <menu>
+                <button id="openModalDialogText">Modal: Enter Text</button>
+              </menu>
+              <dialog id="dialogWindow">
+                <form method="dialog">
+                  <menu>
+                    <button type="submit">Submit</button>
+                  </menu>
+                  <section><input type="text"></section>
+                </form>
+              </dialog>
+              <p>This modal dialog will perform like the dialog box with the exception being a full-screen overlay will distort the background.</p>
+            </div>
+            <div class="card">
+              <dialog id="openDialogChoice">
+              <form method="dialog">
+                <section>
+                  <p><label for="favDrink">Favorite Drink:</label>
+                  <select id="favDrink">
+                    <option></option>
+                    <option>Cocktail</option>
+                    <option>Coffee</option>
+                    <option>Coke</option>
+                  </select></p>
+                </section>
+                <menu>
+                  <button id="cancel" type="reset">Cancel</button>
+                  <button type="submit">Confirm</button>
+                </menu>
+              </form>
+              </dialog>
+              <menu>
+                <button id="updateDetails">Dialog: Make a Choice</button>
+              </menu>
+              <p>This modal dialog box uses <code>&#60;select&#62;</code> to inject an 'options-list' of possible choices. Make a selection, then click submit and the choice is saved. Click 'cancel' to reset the choice.</p>
+            </div>
+          </article>
           <!-- -->
           <h6>Scripting</h6>
           <p>canvas >> script</p>
@@ -430,7 +483,8 @@
             x.className = "topnav";
         }
     }
-    </script>    
+    </script>  
+    <script src="dialogElement.js"></script>
 		<!-- -->
   </body>
 </html>
