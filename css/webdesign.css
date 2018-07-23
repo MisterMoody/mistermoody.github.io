@@ -468,7 +468,9 @@ div > span {text-decoration: underline;}
   }
 }
 
-
+dialog::backdrop {
+  background: rgba(255,0,0,.25);
+}
 .card {
   margin: 6px;
   padding: 8px;
