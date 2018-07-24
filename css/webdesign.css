@@ -336,10 +336,25 @@ code {
   padding: 0px 1px;
   font-size: 1em;
 }
+.paraCode {
+  font-size: 0.71em;
+  text-align: left;
+  /*padding-left: 24%;*/  
+}
+
 /*<code> Style for Links*/
 code.reference {background: #000;}
 code.reference > a {color: #fff;}
+@media all and (min-width: 500px) {
+  .paraCode {
+    font-size: 0.8em;
+    margin-left: 16%;
+  }
+}
 
+details {font-size: 0.8em;}
+
+/**/
 @media all and (min-width: 500px) {
   address {color: red;}
   p {margin: 0.25em 0.55em 0.25em 0.25em;}
