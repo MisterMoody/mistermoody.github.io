@@ -67,8 +67,32 @@
         <div class="intro">
           <!--<h2 class="title"><i class="material-icons">code</i> Using HTML</h2>-->
           <h3>What is HTML?</h3>
-          <p><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></code> is a markup language that defines the structure of the content on a webpage. Every HTML document is a hierarchical structure made up of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Elements</a></code> that dictate how content is displayed and&#47;or sectioned. HTML Elements, also referred to as Tags, are used by Internet browsers to read and display HTML content to a user. Elements usually have an opening <code>&lt;element&gt;</code> and closing <code>&lt;&#47;element&gt;</code> component, but there are a few exceptions in which there is no closing component.</p>
-          <p>Moreover, element content can be manipulated through the use of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attributes</a></code>, which are associated properties that are used to extend the capability of an element, a configuration of sorts to meet certain criteria. An attribute is placed in the opening tag and looks something like <code>attr=&#34;...&#34;</code> where the attribute name is followed by a delimiter and its actual value. There are more than 100 attributes that can be paired with elements depending on the objective, but there are two that I use often: <code>class&#34;...&#34;</code> and <code>id&#34;...&#34;</code>, both of which deal more with CSS than HTML so I will delay further explanation until then. For now, I would like to focus on all the requirements for developing an HTML template.</p>
+          <!-- Elements -->
+          <p>
+            <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></code> is a markup language that defines the structure of the content on a webpage. Every HTML document is a hierarchical structure made up of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Elements</a></code> that dictate how content is displayed and&#47;or sectioned. HTML Elements are used by Internet browsers to read and display HTML content to a user. Elements usually have an opening <code>&lt;element&gt;</code> and closing <code>&lt;&#47;element&gt;</code> component, but there are a few elements that are self-closing.
+          </p>
+          <!-- Attributes -->
+          <p>
+            Information contained within any <code>&lt;element&gt;</code> can be configured through the use of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attributes</a></code>, which adjust its behavior in a manner that meets a specific criteria. An attribute is placed in the opening component of an element, followed by a delimiter and its actual value, like so: <code>attribute&#61;&#34;value&#34;</code>. There are more than 100 attributes that can be paired with elements depending on the objective. To outline conceivable uses would be a tall order as attributes are declared in HTML, but their functionality is declared in CSS and JavaScript. Obviously, these topics go well beyond the scope of this lesson with the one caveat being using attributes to improve website accessibility. Moving forward I will introduce attributes where they can be expected to be used, but I now present the most common.
+            <br>
+            
+            
+          </p>
+          <p>
+            The <code class=""><a href="">href&#61;&#34;...&#34;</a></code> element specifies the URL of a linked resource while the <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content. The <code class=""><a href="">rel</a></code> element specifies the relationship of the target object to the link object while. The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
+          </p>
+          <p>
+            The <code class=""><a href="">title&#61;&#34;...&#34;</a></code> attribute provides a title for an element as a <mark>tooltip</mark> in web browsers. It is most useful for embedded or linked resources. Although it may be used on all elements contained in the body of a document, it is not relevant to the majority of elements found inside the head of the document. Do not confuse with the <code>&#60;title&#62;</code> element.
+          </p>
+          <p>
+            The 
+            <code class=""><a href="">class&#61;&#34;...&#34;</a></code> attribute is used in CSS for styling or JavaScript to make changes and add behavior to elements belonging to a particular subtype. It can be assigned to one or more subtypes unlike the <code class=""><a href="">id&#61;&#34;...&#34;</a></code> attribute, which provides a unique identifier for an element within the document to create a hyperlink. This identifier may also be used in CSS and JavaScript in the same fashion as the class attribute with one exception: an id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.
+          </p>
+          <!-- -->
+          <p>
+            With that out of the way I would like to shift attention to requirements for developing an HTML template.
+          </p>
+          
         </div>
         <!-- -->
         <!-- -->
@@ -77,7 +101,7 @@
         <div class="intro">
           <h3>Required Elements for an HTML Template</h3>
           <p>
-            When creating an HTML template, I prepare content for four distinctive areas: the Main Root, Metadata, Section Root and Content Sectioning&#47;Text Content.
+            When creating an HTML template, seven is the magic number as it takes as many <code>&lt;element&gt;</code>s to structure a functional document. The illustration below highlights what is required, followed by a brief explanation for each.
           </p>
           <figure>
             <img src="img/requiredHTML.jpg" alt="a cute hamster" />
@@ -232,6 +256,8 @@
             <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;&#47;hgroup&#62;</code>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;p&#62;</code>blah blah blahblah blah blahhhhh... blah<code>&#60;&#47;p&#62;</code>
             <br><code>&#60;&#47;article&#62;</code></p> 
+          <!-- List -->
+          <p>In the old days, the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">&#60;table&#62;</a></code> element was the go-to element for structuring tabular data. Nowadays, thanks to CSS flexbox and grid properties, I never use this element.</p>
           <!-- -->
           <!-- INLINE-TEXT SEMANTICS--> 
           <!-- -->
@@ -259,7 +285,7 @@
           <!-- -->
           <h4>Images</h4>
           <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;img /&gt;</a></code> element embeds an image into a document. It requires a <code>src&#61;&#34;...&#34;</code> attribute for the image file path whose extension will take .svg, .jpg, or .png formats. Although optional, a description of the image will enhance accessibility for screenreaders and this can be accomplished using the <code>alt&#61;&#34;...&#34;</code> attribute. There are several attributes that can be applied for styling images; crossorigin and srcset are two that can go a long way in determining the presentation of an image. I prefer using CSS properties &#40;ie  border, object-position, margin, width&#41; to control image styling. Moreover, the <code>&lt;img /&gt;</code> element pairs well with a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure" target="_blank">&lt;figure&gt;</a></code> element, which represents a self-contained container that pairs well with the captioning <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" target="_blank">&lt;figcaption&gt;</a></code> element.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;img /&gt;</a></code> element embeds an image into a document. It requires a <code>src&#61;&#34;...&#34;</code> attribute for the image file path whose extension will take .svg, .jpg, or .png formats. Although optional, a description of the image will enhance accessibility for screenreaders and this can be accomplished using the <code>alt&#61;&#34;...&#34;</code> attribute. There are other attributes that can be applied for styling images, notably, crossorigin and srcset. I prefer using CSS properties &#40;ie  border, object-position, margin, width&#41; to control image styling. Moreover, the <code>&lt;img /&gt;</code> element pairs well with a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure" target="_blank">&lt;figure&gt;</a></code> element, which represents a self-contained container that pairs well with the captioning <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" target="_blank">&lt;figcaption&gt;</a></code> element.
           </p>
           <!-- -->
           <!-- FORMS -->
@@ -277,11 +303,6 @@
           <p>FORM represents a document section that contains interactive controls to submit information to a web server.</p>
           <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement.">TEXTAREA</a> represents a multi-line plain-text editing control. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following: <code>textarea {resize: none;}</code> </p>
           </details>
-          <!-- -->
-          <!-- TABLE CONTENT -->
-          <!-- -->
-          <h4>Table Content</h4>
-          <p>table/tbody/thead/tfoot >> td/th/tr</p>
           <!-- -->
           <!-- INTERACTIVE ELEMENTS -->
           <!-- -->
@@ -358,36 +379,6 @@
             That concludes the list of content elements that I am comfortable using, but there are many more elements that I want to tinker with in the near future. A couple are the inline-text semantic elements such as the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd" target="_blank">&lt;kbd&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" target="_blank">&lt;time&gt;</a></code> elements. Embedding multimedia content is an area that I lack experience about so understanding <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">&lt;audio&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" target="_blank">&lt;embed&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">&lt;iframe&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map" target="_blank">&lt;map&gt;</a></code>/<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">&lt;area&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" target="_blank">&lt;object&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" target="_blank">&lt;param&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">&lt;picture&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">&lt;source&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track" target="_blank">&lt;track&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">&lt;video&gt;</a></code> elements will be crucial to my development. On the same token 
             Web components is another area that I felt I am getting further behind in, particularly the HTML Content <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank">template</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></code> elements.
             Lastly, I need to learn how to draw. Perhaps I will learn how to do so with the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" target="_blank">canvas</a></code> element.
-          </p>
-          <!-- -->
-          <!-- -->
-          <hr>
-          <h3>ATTRIBUTES</h3>
-          <p>
-            <small>???Might be best to begin with this section before moving forward????</small>
-            <a class="link" href="https://www.w3schools.com/tags/ref_attributes.asp">Attributes</a> are useful for manipulating the state of a particular element or referencing a source as illustrated.  Although outside of the scope of our focus here, there are two attribute types that you must become familiar with: <code>class="..."</code> and <code>id="..."</code>. Attributes are always declared in HTML, but their functionality is usually declared in CSS and JavaScript. The one caveat is using attributes to make a website accessible and that is covered below.
-          </p>
-          <p>
-            HTML <code class="reference"><a href="http://www.htmlhelp.com/reference/html40/attrs.html">Attributes</a></code> add specificty to elements beyond the scope of styles by adding values that configure the elements or adjust their behavior. There are <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Dozens of Attributes</a></code> that can be used for different purposes from simple page layout to building forms or media elements. The main attributes that are found on every website include <code>a <b>href="..."</b></code>, <code>img <b>src="..."</b> <b>alt=""</b></code>, <code>html <b>lang="en-US"</b></code>, <code>xxx <b>title="..."</b></code>, <code>xxx <b>class="..."</b></code> and <code>xxx <b>id="..."</b></code>.
-          </p>
-          <p>
-            The title attribute may be used on all elements contained in the body of a document, but is not relevant to the majority of elements found inside the head of the document, e.g. base, script and (perhaps not surprisingly) the title elements.
-          </p>
-          <!-- -->
-          <p>
-            The id-attribute provides a unique identifies for an element within the document creating a hyperlink. This identifier may also be used in CSS, as a hook that can be used for styling purposes, or with JS, to make changes or add behavior to the element referenced by its unique id.  An id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.
-          </p>
-          <!-- -->
-          <p>
-            The class-attribute is like an expansion of the id-attribute, but is capable of being assigned to one or more subtypes, which can be used in CSS for styling or JS to make changes and add behavior to elements belonging to a particular subtype.
-          </p>
-          <!-- -->
-          <p>
-            IMAGES using Alt-attribute provides a text alternative for an important image; applicable with input type.  The Longdesc-attribute provides a link to additional information about the image.
-          </p>
-          <!-- -->
-          <p>
-            The title-attribute provides a title for an element as a ‘tooltip’ on visual browsers; useful with <code>a</code>, <code>link</code> and <code>img</code> providing a title for the linked or embedded resource.
           </p>
           <!-- -->
           <!-- -->
