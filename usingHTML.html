@@ -255,13 +255,11 @@
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr" target="_blank">&lt;abbr&gt;</a></code> element represents an abbreviation or acronym; an optional title attribute can provide a description in the form of a tooltip. If present, the title attribute must contain this full description and nothing else. You can also use the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr" target="_blank">&lt;hr&gt;</a></code> element to create a stylish line-break between sections of content.
           </p>
           <!-- -->
-          <!-- IMAGES and MULTIMEDIA --> 
+          <!-- IMAGES --> 
           <!-- -->
-          <h4>Images and Multimedia</h4>
-          <p>img (size/type attributes) >> /video/track >> figcaption / figure</p>
-          <!-- Images -->
+          <h4>Images</h4>
           <p>
-            The <code>&lt;img /&gt;</code> element is self-closing and it requires <code>src="..."</code> and <code>alt="..."</code> attributes.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img /&gt;</a></code> element embeds an image into a document. It requires a <code>src="..."</code> attribute for the image file path whose extension will take .svg, .jpg, or .png formats. Although optional, a description of the image will enhance accessibility for screenreaders and this can be accomplished using the <code>alt="..."</code> attribute. There are several attributes that can be applied for styling images; crossorigin and srcset are two that can go a long way in determining the presentation of an image. I prefer using CSS properties &#40;ie  border, object-position, margin, width&#41; to control image styling. Moreover, the <code>&lt;img /&gt;</code> element pairs well with a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">&lt;figure&gt;</a></code> element, which represents a self-contained container that pairs well with the captioning <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">&lt;figcaption&gt;</a></code> element.
           </p>
           <!-- -->
           <!-- FORMS -->
@@ -347,33 +345,15 @@
             </div>
           </article>
           <!-- -->
-          <p>details//summary >> menu/menuitem</p>
+          <p>details//summary >> menu/menuitem >> script</p>
           <!-- -->
-          <!-- SCRIPTING -->
+          <!-- ADVANCED -->
           <!-- -->
-          <h4>Scripting</h4>
-          <p>canvas >> script</p>
-          <!-- -->
-          <!-- WEB COMPONENTS -->
-          <!-- -->
-          <h4>Web Components</h4>
+          <h4>Advanced Elements</h4>
           <p>
-            <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Components</a></code> is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps.
-          </p>
-          <!-- Template -->
-          <p>
-            The HTML Content <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank">template</a></code> element is a mechanism for holding client-side content that is not to be rendered when a page is loaded but may subsequently be instantiated during runtime using JavaScript. Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the <code>template</code> element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.
-          </p>
-          <!-- Slot -->
-          <p>
-            The HTML <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></code> element is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
-          </p>
-          
-          
-          
-          <!-- Advanced -->
-          <p>
-            That concludes the list of content elements that I regularly use, but there are many more that I want to tinker with in the near future. A couple are the inline-text semantic elements such as the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd" target="_blank">&lt;kbd&gt;</a></code> &#40;keyboard input&#41; and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" target="_blank">&lt;time&gt;</a></code> elements. Embedding multimedia content is an area that I lack experience about so understanding <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">&lt;audio&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" target="_blank">&lt;embed&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">&lt;iframe&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map" target="_blank">&lt;map&gt;</a></code>/<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">&lt;area&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" target="_blank">&lt;object&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" target="_blank">&lt;param&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">&lt;picture&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">&lt;source&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track" target="_blank">&lt;track&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">&lt;video&gt;</a></code> elements will be crucial to my development.
+            That concludes the list of content elements that I am comfortable using, but there are many more elements that I want to tinker with in the near future. A couple are the inline-text semantic elements such as the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd" target="_blank">&lt;kbd&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" target="_blank">&lt;time&gt;</a></code> elements. Embedding multimedia content is an area that I lack experience about so understanding <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">&lt;audio&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" target="_blank">&lt;embed&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">&lt;iframe&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map" target="_blank">&lt;map&gt;</a></code>/<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">&lt;area&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" target="_blank">&lt;object&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" target="_blank">&lt;param&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">&lt;picture&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">&lt;source&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track" target="_blank">&lt;track&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">&lt;video&gt;</a></code> elements will be crucial to my development. On the same token 
+            Web components is another area that I felt I am getting further behind in, particularly the HTML Content <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank">template</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></code> elements.
+            Lastly, I need to learn how to draw. Seriously. Perhaps I will learn how to do so with the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" target="_blank">canvas</a></code> element.
           </p>
           <!-- -->
           <!-- -->
