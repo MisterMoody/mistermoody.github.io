@@ -277,18 +277,84 @@
           <!-- FORMS -->
           <!-- -->
           <h4>Forms</h4>
+          <p>
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">&lt;form&gt;</a></code> element represents a document section that contains interactive controls for submitting information to a web server. It requires two attributes: <code>action&#61;&#34;...&#34;</code> and <code>method&#61;&#34;...&#34;</code>. The former is URI of a program that processes the form information while the latter is the HTTP method that the browser uses to submit the form. The method attribute will accept either <code>&#34;post&#34;</code> or <code>&#34;get&#34;</code> as its value. Every form that I have ever made used the <code>&#34;post&#34;</code> value, which corresponds to the HTTP POST method whereas form data is included in the body of the form and sent to the server. 
+          </p>
+          <p>
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">&lt;fieldset&gt;</a></code> element is used to logically group form element controls within a web form. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend" target="_blank">&lt;legend&gt;</a></code> element captions its parent &#40;<code>&lt;fieldset&gt;</code>&#41; like a title for a paragraph. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label" target="_blank">&lt;label&gt;</a></code> element share similarities with the <code>&lt;fieldset&gt;</code> in that it also provides a caption for its parent. Its importance rests in how, when used, it links a form control to the associated descriptive text in an unambiguous way that is useful for screen readers and that this element can be applied to any item in a user interface. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">&lt;input&gt;</a></code> element fits the bill in this regard as it is used to create interactive controls for web-based forms in order to accept data from users. What is most fascinating is how the <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> elements work in unison via their associated attributes. There are two ways to associate these attributes: implicitly nest the <code>&lt;input&gt;</code> attribute directly inside of the <code>&lt;label&gt;</code> element or apply <code>id&#61;&#34;...&#34;</code> and <code>for&#61;&#34;...&#34;</code> attributes, both with the same value, to the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements.
+          </p>
+          
+          <p>The semantics of an <code>&lt;input&gt;</code> varies considerably depending on the value of its <code>type&#61;&#34;...&#34;</code> attribute. There are 34 possible values to choose from, but if this attribute is not specified it will provide a default <code>&#34;text&#34;</code>type. Other type values include:</p>
+          <h1><b>Add the Links for the <a href="">34 Values</a></b></h1>
           <details>
-            <summary>about Forms</summary>
-          <p> fieldset/label/legend/textarea/button >> optgroup/select >> datalist/option >> output >> progress</p>
-          <p>FORMS using Fieldset and Legend Elements to logically group related form controls, and provide a title for the grouping via the Legend Element.  The Label element links a form control to the associated descriptive text in an unambiguous way (useful for non-visual browsers, using screen readers).</p>
-          <p>BUTTON represents a clickable button; You can add inner HTML content (think <code>em</code>, <code></code> or even <code>img</code>), and make use of :after and :before pseudo-element to achieve complex rendering while <code>input</code> only accepts a text value attribute.  </p>
-          <p>INPUT used to create interactive controls for web-based forms in order to accept data from the user. The semantics of an <code>input</code> varies considerably depending on the value of its type attribute. DO NOT STYLE</p>
-          <p>SELECT represents a control that presents a menu of options. *The options within the menu are represented by <code>option</code> elements, which can be grouped by <code>optgroup</code> elements. Options can be pre-selected for the user.</p>
-          <p>The HTML <code>option</code> element is used to create a control representing an item within a <code>select</code>, an <code>optgroup</code> or a <code>datalist</code> HTML5 element.
-          <br>*The HTML <code>optgroup</code> element  creates a grouping of options within a <code>select</code> element. This is useful to create a drop-down menu.</p>
-          <p>FORM represents a document section that contains interactive controls to submit information to a web server.</p>
-          <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement.">TEXTAREA</a> represents a multi-line plain-text editing control. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following: <code>textarea {resize: none;}</code> </p>
+            <summary>34 <code>type&#61;&#34;...&#34;</code> Values &amp; Definitions</summary>
+          <section class="table">
+            <div>button</div>
+            <div>button: A push button with no default behavior.</div>
+            <!-- -->
+            <div>checkbox</div>
+            <div>checkbox: A check box allowing single values to be selected/deselected.</div>
+            <!-- -->
+            <div></div>
+            <div>color: HTML5 A control for specifying a color. A color picker's UI has no required features other than accepting simple colors as text (more info).</div>
+            <!-- -->
+            <div></div>
+            <div>date: HTML5 A control for entering a date (year, month, and day, with no time).</div>
+            <!-- -->
+            <div></div>
+            <div>email: HTML5 A field for editing an e-mail address.</div>
+            <!-- -->
+            <div></div>
+            <div>file: A control that lets the user select a file. Use the accept attribute to define the types of files that the control can select.</div>
+            <!-- -->
+            <div></div>
+            <div>hidden: A control that is not displayed but whose value is submitted to the server.</div>
+            <!-- -->
+            <div></div>
+            <div>image: A graphical submit button. You must use the src attribute to define the source of the image and the alt attribute to define alternative text. You can use the height and width attributes to define the size of the image in pixels.</div>
+            <!-- -->
+            <div></div>
+            <div>number: HTML5 A control for entering a number.</div>
+            <!-- -->
+            <div></div>
+            <div>password: A single-line text field whose value is obscured. Use the maxlength and minlength attributes to specify the maximum length of the value that can be entered.</div>
+            <!-- -->
+            <div></div>
+            <div>radio: A radio button, allowing a single value to be selected out of multiple choices.</div>
+            <!-- -->
+            <div></div>
+            <div>range: HTML5 A control for entering a number whose exact value is not important.</div>
+            <!-- -->
+            <div></div>
+            <div>reset: A button that resets the contents of the form to default values.</div>
+            <!-- -->
+            <div></div>
+            <div>search: HTML5 A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.</div>
+            <!-- -->
+            <div></div>
+            <div>submit: A button that submits the form.</div>
+            <!-- -->
+            <div></div>
+            <div>tel: HTML5 A control for entering a telephone number.</div>
+            <!-- -->
+            <div></div>
+            <div>text: A single-line text field. Line-breaks are automatically removed from the input value.</div>
+            <!-- -->
+            <div></div>
+            <div>time: HTML5 A control for entering a time value with no time zone.</div>
+            <!-- -->
+            <div></div>
+            <div>url: HTML5 A field for entering a URL.</div>
+            <!-- -->
+            <div></div>
+            <div></div>
+            <!-- -->
+            <div></div>
+            <div></div>
+            <!-- -->
+          </section>
           </details>
+          <p>There is a wide variety of types of input data and control widgets are available, depending on the device and user agent. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea" target="_blank">&lt;textarea&gt;</a></code> element is one such widget as it represents a multi-line plain-text editing control, useful for users to input information to be relayed in an email or for providing a comment on a blog. There are five friendly attributes that can be applied, starting with the <code>id&#61;&#34;...&#34;</code> which respectively associates itself with the <code>&#60;label&#62;</code> element for accessibility purposes so long as the values are identical. The <code>name&#61;&#34;...&#34;</code> attribute is used to set the name of the associated data point submitted to the server when the form is submitted. The <code>row&#61;&#34;...&#34;</code> and <code>cols&#61;&#34;...&#34;</code> attributes specify the precise size for the <code>&#60;textarea&#62;</code> while the <code>maxlength&#61;&#34;...&#34;</code> attribute sets the maximum number of characters that the <code>&#60;textarea&#62;</code> is allowed to contain.</p>
           <!-- -->
           <!-- INTERACTIVE ELEMENTS -->
           <!-- -->
