@@ -62,11 +62,11 @@ header.topnav > .active {
 
 /* ========================================================= */
 /* ===================== GRID LAYOUTS ====================== */
-/**/
-autoprefixer({grid: true})
+/*
+autoprefixer({grid: true;})
 @supports (display: grid){}
 .grid > * {min-width: 0;}
-/**/
+*/
 
 /* SITE-TEMPLATE GRID */
 .grid {
@@ -95,7 +95,7 @@ autoprefixer({grid: true})
   }
 }
 
-/* SIDEBAR-NAVIGATION Grid */
+/* SIDEBAR-NAVIGATION GRID */
 ul.nav {
   display: none;
   /*justify-content: center;
@@ -119,7 +119,7 @@ ul.nav {font-size: 0.88em;}
   }
 }
 
-/* MAIN-SECTION Grid */
+/* MAIN-SECTION GRID */
 main {
   max-width: 100%;
 }
@@ -137,6 +137,70 @@ main {
     max-width: 1000px;
   }
 }
+
+
+/* TABLE GRIDS*/
+@media all and (max-width: 500px) {
+  .block {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(24px, auto));	
+    grid-template-columns: 1fr;    
+  }
+  .table, .tableEven {
+    width: 100%;
+    font-size: 0.68em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(24px, auto));	grid-template-columns: 1fr;
+	}
+}
+/* Desktop 'Table' */
+@media all and (min-width: 500px) {
+  .block {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(24px, auto));	
+    grid-template-columns: repeat(2, 1fr);   
+    grid-gap: 2px; 
+  }
+	.table {
+    width: 100%;
+    font-size: 0.74em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, 24px);
+    grid-template-columns: 16em 1fr;
+    grid-gap: 2px;
+  }
+	.tableEven {
+    width: 100%;
+    font-size: 0.74em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, 24px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
+  }
+}
+
+.glossary {
+   width: 100%;
+   font-size: 0.74em;
+   margin: 0 auto;
+   padding: 0;
+   display: grid;
+   grid-template-rows: repeat(auto, 24px);
+   grid-template-columns: 8em 1fr;
+   grid-gap: 2px;
+ }
 
 /*Unicode Character Grid*/
 .characterGrid {
@@ -298,7 +362,6 @@ li > a.active {
 ol {font-size: 0.68em;}
 ol.alpha {list-style-type: lower-alpha;}
 /**/
-
 figcaption {
   font-size: 0.68em;
   font-style: italic;
@@ -351,16 +414,18 @@ code.reference > a {color: #fff;}
     margin-left: 16%;
   }
 }
-
-details {font-size: 0.8em;}
+/**/
 
 /**/
 @media all and (min-width: 500px) {
   address {color: red;}
   p {margin: 0.25em 0.55em 0.25em 0.25em;}
+  code {font-size: 0.88em;}
+  details {margin: 0 4px; font-size: 1em;}
 }
 @media all and (max-width: 500px) {
   figure {margin: 0; padding: 0;}
+  details {margin: 0 4px; font-size: 0.8em;}
 }
 /* =========================================================== */
 
@@ -386,7 +451,6 @@ img {
   height: 100%; 
   border-radius: 8px;
 } 
-}
 @media all and (min-width: 800px) {  
   img {
     display: block;
@@ -412,7 +476,10 @@ img {
 }
 /**//*******************************//**/
 
-
+/* Mobile 'Table' */
+h3 > span {color: red;}
+div > span {text-decoration: underline;}
+.table, .tableEven > div {margin: 2px 6px;}
 /**/
 span {margin: 0;}
 
@@ -424,68 +491,11 @@ span {margin: 0;}
   .hideMobile, span.hideMobile {display: contents;}
   .hideDesktop, span.hideDesktop {display: none;}
 }
-/* 
-
-/* Mobile 'Table' */
-h3 > span {color: red;}
-div > span {text-decoration: underline;}
-.table, .tableEven > div {margin: 2px 6px;}
-
-@media all and (max-width: 500px) {
-  .block {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-rows: repeat(auto, minmax(24px, auto));	
-    grid-template-columns: 1fr;    
-  }
-  .table, .tableEven {
-    width: 100%;
-    font-size: 0.68em;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-rows: repeat(auto, minmax(24px, auto));	grid-template-columns: 1fr;
-	}
-}
-/* Desktop 'Table' */
-@media all and (min-width: 500px) {
-  code {font-size: 0.88em;}
-  .block {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-rows: repeat(auto, minmax(24px, auto));	
-    grid-template-columns: repeat(2, 1fr);   
-    grid-gap: 2px; 
-  }
-	.table {
-    width: 100%;
-    font-size: 0.74em;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-rows: repeat(auto, 24px);
-    grid-template-columns: 16em 1fr;
-    grid-gap: 2px;
-  }
-	.tableEven {
-    width: 100%;
-    font-size: 0.74em;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-rows: repeat(auto, 24px);
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2px;
-  }
-}
-
+/**/
 dialog::backdrop {
   background: rgba(255,0,0,.25);
 }
+/**/
 .card {
   margin: 6px;
   padding: 8px;

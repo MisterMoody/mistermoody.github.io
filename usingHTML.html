@@ -282,86 +282,65 @@
           </p>
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">&lt;fieldset&gt;</a></code> element is used to logically group form element controls within a web form. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend" target="_blank">&lt;legend&gt;</a></code> element captions its parent &#40;<code>&lt;fieldset&gt;</code>&#41; like a title for a paragraph. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label" target="_blank">&lt;label&gt;</a></code> element share similarities with the <code>&lt;fieldset&gt;</code> in that it also provides a caption for its parent. Its importance rests in how, when used, it links a form control to the associated descriptive text in an unambiguous way that is useful for screen readers and that this element can be applied to any item in a user interface. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">&lt;input&gt;</a></code> element fits the bill in this regard as it is used to create interactive controls for web-based forms in order to accept data from users. What is most fascinating is how the <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> elements work in unison via their associated attributes. There are two ways to associate these attributes: implicitly nest the <code>&lt;input&gt;</code> attribute directly inside of the <code>&lt;label&gt;</code> element or apply <code>id&#61;&#34;...&#34;</code> and <code>for&#61;&#34;...&#34;</code> attributes, both with the same value, to the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements.
+          </p>          
+          <p>
+            The semantics of the <code>&lt;input&gt;</code> element varies considerably depending on the value of its <code>type&#61;&#34;...&#34;</code> attribute. Aside from the attributes available to use for the <code>&lt;input&gt;</code> element, the <code>type&#61;&#34;...&#34;</code> attribute itself offers 34 possible values to choose from. When this attribute is not specified it will provide a default <code>&#34;text&#34;</code>type.
           </p>
-          
-          <p>The semantics of an <code>&lt;input&gt;</code> varies considerably depending on the value of its <code>type&#61;&#34;...&#34;</code> attribute. There are 34 possible values to choose from, but if this attribute is not specified it will provide a default <code>&#34;text&#34;</code>type. Other type values include:</p>
-          <h1><b>Add the Links for the <a href="">34 Values</a></b></h1>
           <details>
-            <summary>34 <code>type&#61;&#34;...&#34;</code> Values &amp; Definitions</summary>
-          <section class="table">
-            <div>button</div>
-            <div>button: A push button with no default behavior.</div>
+            <summary>Other <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_<input>_types" target="_blank">&lt;input type&#61;&#34;...&#34;&gt;</a></code> Values include:</summary>
+          <section class="glossary">
+            <!-- Click Events-->
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button" target="_blank">&#34;button&#34;</a></code></div>
+            <div>a push button with no default behavior.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox" target="_blank">&#34;checkbox&#34;</a></code></div>
+            <div>allows single values to be selected/deselected.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio" target="_blank">&#34;radio&#34;</a></code></div>
+            <div>allows single value selection from multiple options.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file" target="_blank">&#34;file&#34;</a></code></div>
+            <div>a control that lets the user select a file.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit" target="_blank">&#34;submit&#34;</a></code></div>
+            <div>a button that submits the form.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset" target="_blank">&#34;reset&#34;</a></code></div>
+            <div>a button that resets the contents of the form.</div>
+            <!-- Input Events -->
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email" target="_blank">&#34;email&#34;</a></code></div>
+            <div>a field for editing an e-mail address.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel" target="_blank">&#34;tel:&#34;</a></code></div>
+            <div>a control for entering a telephone number.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text" target="_blank">&#34;text&#34;</a></code></div>
+            <div>a single-line text field; no line-breaks.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search" target="_blank">&#34;search&#34;</a></code></div>
+            <div>a single-line text field for searching data.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password" target="_blank">&#34;password&#34;</a></code></div>
+            <div>a single-line text field whose value is obscured.</div>
+            <!-- Misc. -->
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number" target="_blank">&#34;number&#34;</a></code></div>
+            <div>a control for entering a number.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range" target="_blank">&#34;range&#34;</a></code></div>
+            <div>a control for entering a, inconsequential number.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color" target="_blank">&#34;color&#34;</a></code></div>
+            <div>a control for specifying a color.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date" target="_blank">&#34;date&#34;</a></code></div>
+            <div>a control for entering a date.</div>
+            <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden" target="_blank">&#34;hidden&#34;</a></code></div>
+            <div>an invisible control; value is submitted to the server.</div>
             <!-- -->
-            <div>checkbox</div>
-            <div>checkbox: A check box allowing single values to be selected/deselected.</div>
-            <!-- -->
-            <div></div>
-            <div>color: HTML5 A control for specifying a color. A color picker's UI has no required features other than accepting simple colors as text (more info).</div>
-            <!-- -->
-            <div></div>
-            <div>date: HTML5 A control for entering a date (year, month, and day, with no time).</div>
-            <!-- -->
-            <div></div>
-            <div>email: HTML5 A field for editing an e-mail address.</div>
-            <!-- -->
-            <div></div>
-            <div>file: A control that lets the user select a file. Use the accept attribute to define the types of files that the control can select.</div>
-            <!-- -->
-            <div></div>
-            <div>hidden: A control that is not displayed but whose value is submitted to the server.</div>
-            <!-- -->
-            <div></div>
-            <div>image: A graphical submit button. You must use the src attribute to define the source of the image and the alt attribute to define alternative text. You can use the height and width attributes to define the size of the image in pixels.</div>
-            <!-- -->
-            <div></div>
-            <div>number: HTML5 A control for entering a number.</div>
-            <!-- -->
-            <div></div>
-            <div>password: A single-line text field whose value is obscured. Use the maxlength and minlength attributes to specify the maximum length of the value that can be entered.</div>
-            <!-- -->
-            <div></div>
-            <div>radio: A radio button, allowing a single value to be selected out of multiple choices.</div>
-            <!-- -->
-            <div></div>
-            <div>range: HTML5 A control for entering a number whose exact value is not important.</div>
-            <!-- -->
-            <div></div>
-            <div>reset: A button that resets the contents of the form to default values.</div>
-            <!-- -->
-            <div></div>
-            <div>search: HTML5 A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.</div>
-            <!-- -->
-            <div></div>
-            <div>submit: A button that submits the form.</div>
-            <!-- -->
-            <div></div>
-            <div>tel: HTML5 A control for entering a telephone number.</div>
-            <!-- -->
-            <div></div>
-            <div>text: A single-line text field. Line-breaks are automatically removed from the input value.</div>
-            <!-- -->
-            <div></div>
-            <div>time: HTML5 A control for entering a time value with no time zone.</div>
-            <!-- -->
-            <div></div>
-            <div>url: HTML5 A field for entering a URL.</div>
-            <!-- -->
-            <div></div>
-            <div></div>
-            <!-- -->
-            <div></div>
-            <div></div>
             <!-- -->
           </section>
           </details>
-          <p>There is a wide variety of types of input data and control widgets are available, depending on the device and user agent. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea" target="_blank">&lt;textarea&gt;</a></code> element is one such widget as it represents a multi-line plain-text editing control, useful for users to input information to be relayed in an email or for providing a comment on a blog. There are five friendly attributes that can be applied, starting with the <code>id&#61;&#34;...&#34;</code> which respectively associates itself with the <code>&#60;label&#62;</code> element for accessibility purposes so long as the values are identical. The <code>name&#61;&#34;...&#34;</code> attribute is used to set the name of the associated data point submitted to the server when the form is submitted. The <code>row&#61;&#34;...&#34;</code> and <code>cols&#61;&#34;...&#34;</code> attributes specify the precise size for the <code>&#60;textarea&#62;</code> while the <code>maxlength&#61;&#34;...&#34;</code> attribute sets the maximum number of characters that the <code>&#60;textarea&#62;</code> is allowed to contain.</p>
+          <p>
+            I want to point out two other attributes to complete the list of that which is required of the <code>&lt;form&gt;</code> element. The <code>value&#61;&#34;...&#34;</code> attribute is a control value that is required when the elements <code>type&#61;&#34;...&#34;</code> value is <code>&#34;radio&#34;</code> or <code>&#34;checkbox&#34;</code>. The <code>name&#61;&#34;...&#34;</code> attribute is the name of the control, which is submitted with the control's value as part of the form data. It is required to be used with the <code>&lt;input&gt;</code> element.
+          </p>
+          <p>
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea" target="_blank">&lt;textarea&gt;</a></code> element represents a multi-line plain-text editing control, useful for users to input information to be relayed in an email or for providing a comment on a blog. There are five friendly attributes that can be applied, starting with the <code>id&#61;&#34;...&#34;</code> which respectively associates itself with the <code>&#60;label&#62;</code> element for accessibility purposes so long as the values are identical. The <code>name&#61;&#34;...&#34;</code> attribute is used to set the name of the associated data point submitted to the server when the form is submitted. The <code>row&#61;&#34;...&#34;</code> and <code>cols&#61;&#34;...&#34;</code> attributes specify the precise size for the <code>&#60;textarea&#62;</code> while the <code>maxlength&#61;&#34;...&#34;</code> attribute sets the maximum number of characters that the <code>&#60;textarea&#62;</code> is allowed to contain. This element also accepts several attributes, the most useful of which are autocomplete, autofocus, disabled, readonly and required.
+          </p>
           <!-- -->
           <!-- INTERACTIVE ELEMENTS -->
           <!-- -->
           <h4>Interactive Elements</h4>
           <!-- Details / Summary -->
           <p>
-             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">&lt;details&gt;</a></code> element creates a disclosure widget in which information is visible only when the widget is toggled. A summary, caption or legend can be applied to the widget by employing the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">&lt;summary&gt;</a></code> element .
+             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">&lt;details&gt;</a></code> element creates a disclosure widget in which information is visible only when the widget is toggled. Use the self-contained <code>open</code> attribute to programmatically keep open the widge. A summary, caption or legend can be applied to the widget by employing the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">&lt;summary&gt;</a></code> element .
           </p>
           <!-- Dialog -->
           <p>
