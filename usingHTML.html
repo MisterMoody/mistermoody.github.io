@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&Mopf; Using HTML</title>
@@ -73,21 +73,17 @@
           </p>
           <!-- Attributes -->
           <p>
-            Information contained within any <code>&lt;element&gt;</code> can be configured through the use of <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attributes</a></code>, which adjust its behavior in a manner that meets a specific criteria. An attribute is placed in the opening component of an element, followed by a delimiter and its actual value, like so: <code>attribute&#61;&#34;value&#34;</code>. There are more than 100 attributes that can be paired with elements depending on the objective. To outline conceivable uses would be a tall order as attributes are declared in HTML, but their functionality is declared in CSS and JavaScript. Obviously, these topics go well beyond the scope of this lesson with the one caveat being using attributes to improve website accessibility. Moving forward I will introduce attributes where they can be expected to be used, but I now present the most common.
-            <br>
-            
-            
+            Content contained within any <code>&lt;element&gt;</code> can be configured through the use of an <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attribute</a></code>, which is an explicit value placed in the opening component of an <code>&lt;element&gt;</code> to adjust its behavior in a manner that meets a specific criteria. An attribute is created by using a keyword followed by a delimiter and a value that is surrounded by quotations, like so: <code>attribute&#61;&#34;value&#34;</code>. There are 100&#43; attributes that can be used to enhance an <code>&lt;element&gt;</code>, depending on the objective. Although declared in HTML, the functionality of an attribute is often  &#40;not always&#41; declared in CSS and JavaScript, which kind of complicates the issue of staying on topic with the study of HTML. To keep things simple, attributes will be introduced where appropriate for potential usage within a particular <code>&lt;element&gt;</code>.
           </p>
-          <p>
-            The <code class=""><a href="">href&#61;&#34;...&#34;</a></code> element specifies the URL of a linked resource while the <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content. The <code class=""><a href="">rel</a></code> element specifies the relationship of the target object to the link object while. The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
+          <!-- Move these Attributes to where they can be used -->
+          <!--<p>
+            The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
+            <br>
+            The <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content.
           </p>
           <p>
             The <code class=""><a href="">title&#61;&#34;...&#34;</a></code> attribute provides a title for an element as a <mark>tooltip</mark> in web browsers. It is most useful for embedded or linked resources. Although it may be used on all elements contained in the body of a document, it is not relevant to the majority of elements found inside the head of the document. Do not confuse with the <code>&#60;title&#62;</code> element.
-          </p>
-          <p>
-            The 
-            <code class=""><a href="">class&#61;&#34;...&#34;</a></code> attribute is used in CSS for styling or JavaScript to make changes and add behavior to elements belonging to a particular subtype. It can be assigned to one or more subtypes unlike the <code class=""><a href="">id&#61;&#34;...&#34;</a></code> attribute, which provides a unique identifier for an element within the document to create a hyperlink. This identifier may also be used in CSS and JavaScript in the same fashion as the class attribute with one exception: an id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page.
-          </p>
+          </p>-->
           <!-- -->
           <p>
             With that out of the way I would like to shift attention to requirements for developing an HTML template.
@@ -100,7 +96,7 @@
         <div class="intro">
           <h3>Required Elements for an HTML Template</h3>
           <p>
-            When creating an HTML template, seven is the magic number as it takes as many <code>&lt;element&gt;</code>s to structure a functional document. The illustration below highlights what is required, followed by a brief explanation for each.
+            When creating an HTML template, there are seven <code>&lt;element&gt;</code>s that are required of a functional document. The illustration below highlights what is required, followed by a brief explanation for each <code>&lt;element&gt;</code> used.
           </p>
           <figure>
             <img src="img/requiredHTML.jpg" alt="a cute hamster" />
@@ -109,40 +105,30 @@
           <!-- MAIN-ROOT -->
           <h4>The Main Root</h4>
           <p>
-            The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page; it declares that this is an HTML file. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="_blank">&lt;html&gt;</a></code> element is on the second and final line of a page. This element is the outermost container that acts as a wrapper for everything on the entire page. There are only two direct descendants of this element and they are explained below.
+            The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page; it declares that this is an HTML file. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="_blank">&lt;html&gt;</a></code> element is on the second and final line of a page. This element is the outermost container that acts as a wrapper for everything on the entire page. This element possess two direct descendants.
           </p>
           <!-- HEAD -->
           <h4>The Head</h4>
           <p>
-           The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">&lt;head&gt;</a></code> element is the area that contains all meta information about a particular page, instructing the browser where to find style sheets while defining relationships that the document has to others in the web site. It is a direct descedant of the <code>&lt;html&gt;</code> element.
+           The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">&lt;head&gt;</a></code> element is the first child descendant of the <code>&lt;html&gt;</code> element and represents the area that contains all meta information about a particular page, its title and instructions for the browser to locate style sheets while defining relationships that the document has to others in the web site.
           </p>
           <p>
-            The first line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">&lt;meta&gt;</a></code> element, which is a self-closing tag used to provide meta data about a webpage, its author, etc. Making a website mobile compatible, for example, is one way to use this tag and will require three attributes:
+            The first line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">&lt;meta&gt;</a></code> element, which is a self-closing tag used to provide meta data about a webpage, its author, etc. In the example above, three attributes are declared to control the viewport's size and scale, essentially making the site mobile compatible. The <code>charset&#61;&#34;utf&#45;8&#34;</code> attribute declares the character encoding of the page or script. The <code><a href="">name&#61;&#34;viewport&#34;</a></code> attribute is used by the server for identifying its usage.<sup><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">&#91;*&#93;</a></sup> <sup><a href="https://css-tricks.com/snippets/html/responsive-meta-tag/">&#91;*&#93;</a></sup> The <code>content&#61;&#34;...&#34;</code> attribute represents an association with the <code>name&#61;&#34;...&#34;</code> attribute and its values <code>&#34;width&#61;device&#45;width, initial&#45;scale&#61;1.0&#34;</code> controls the size of the viewport and the zoom level when the page is first loaded, respectively. When combined, the latter attributes make the site mobile compatible, allowing users to visit the site from any device while maintaining the structural and stylistic integrity.
           </p>
-          <article class="table">
-            <div><code>charset&#61;&#34;utf&#45;8&#34;</code></div>
-            <div>Declares the character encoding of the page or script.</div>
-            <div><code>name&#61;&#34;viewport&#34;</code></div>
-            <div>A value used by the server for identifying its usage.</div>
-            <div><code>content&#61;&#34;width&#61;device&#45;width, initial&#45;scale&#61;1.0&#34;</code></div>
-            <div>A value associated with name &#40;or http&#45;equiv&#41;.</div>
-          </article>
           <p>
-            The second line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" target="_blank">&lt;title&gt;</a></code> element, which is used to document the webpage in the browser. Whatever is placed here will be visible on the browser tab. The third line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank">&lt;link&gt;</a></code> element, which specifies the resources incorporated into a website and will always contain two specific attributes:
+            The second line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" target="_blank">&lt;title&gt;</a></code> element, which is used to document the webpage in the browser. Whatever is placed here will be visible on the browser tab.
           </p>
-          <article class="table">
-            <div><code>rel&#61;&#34;stylesheet&#34;</code></div>
-            <div>Specifies the relationship to the link object.</div>
-            <div><code>href&#61;&#34;stylesheet&#34;</code></div>
-            <div>The URL of a linked resource &#40;internal or external&#41;.</div>
-          </article>
           <p>
-            Web browsers use the combination of this information to coordinate all resources required to make the website function as it was designed, however, absolutely none of this information is visible to the user. Once this technical aspect is complete, I shift my focus to structuring content layout.
+            The third line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank">&lt;link&gt;</a></code> element, which specifies the resources incorporated into a site. In the example above, the <code class="">rel&#61;&#34;stylesheet&#34;</code> attribute 
+            specifies the relationship of the target object to the link object, which in this case is a &#39;cascading stylesheet&#39;. This attribute is accompanied &#40;always&#41; by the <code class="">href&#61;&#34;URL&#34;</code> attribute, which specifies the URL of a linked resource. In this case, the value will point to a file with an ending extension of <code>&#46;css</code>.
+          </p>
+          <p>
+            Web browsers use the combination of this information to coordinate all resources required to make the website function as it was designed, however, absolutely none of this information is visible to the user. Once this technical aspect is complete, focus shifts to structuring content layout.
           </p>
           <!-- BODY-->
           <h4>The Body</h4>
           <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">&lt;body&gt;</a></code> element wraps all content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. It is also a direct descedant of the <code>&lt;html&gt;</code> element, but it is in this area that we developers create magic for our users!
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">&lt;body&gt;</a></code> element is the second child descendant of the <code>&lt;html&gt;</code> element and represents the area that wraps all content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Lets explore!
           </p>
         </div>
         <!-- -->
@@ -152,7 +138,7 @@
         <div class="intro">
           <h3>Defining Sections</h3>
           <p>
-            During the planning phase, I often imagine how I want the content to be displayed physically and how that content should behave. Doing so helps me determine which HTML element to use. When <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">defining page sections</a></code>, I know that I can rely on the Header, Nav, Article, Section, Main, Aside, Div and Footer elements to get me started.
+            During the planning phase, I often imagine how I want the content to be displayed physically and how that content should behave. Doing so helps me determine which HTML element to use. When <mark><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">defining page sections</a></mark>, I know that I can rely on the Header, Nav, Article, Section, Main, Aside, Div and Footer elements to get me started.
           </p>
           <figure>
             <img src="img/section.jpg" alt="a cute hamster" />
@@ -160,7 +146,7 @@
           </figure>
           <!-- Header / Nav -->
           <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank">&lt;header&gt;</a></code> element is the first section users encounter and contains introdutory information related to the website such as a logo, author or navigational aids. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank">&lt;nav&gt;</a></code> element allows users to navigate a website, providing links within the current document or to an external source. This element can be used within a <code>&lt;header&gt;</code> or independently, and should be reserved for primary navigation sections only including global navigation, a table of contents, previous&#47;next links, etc.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank">&lt;header&gt;</a></code> element is the first section users encounter and contains introductory information related to the website such as a logo, author or navigational aids. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank">&lt;nav&gt;</a></code> element allows users to navigate a website, providing links within the current document or to an external source. This element can be used within a <code>&lt;header&gt;</code> or independently, and should be reserved for primary navigation sections only including global navigation, a table of contents, previous&#47;next links, etc.
           </p>
           <!-- Main -->
           <p>
@@ -172,11 +158,15 @@
           </p>
           <!-- Aside / Div -->
           <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank">&lt;aside&gt;</a></code> element is used for content that is indrectly related to the documents main content such as sidebars, inserts, or brief explanations. These elements are frequently presented as sidebars or call-out boxes. This element can be nested within other section elements and act as an identifier container for content related to that specific secion. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">&lt;div&gt;</a></code> element is a generic block-level container used to identify large groupings and the flow of content. It has no effect on the content or layout until styled using CSS, which is conducted when employing a <code>class&#34;...&#34;</code> or <code>id&#34;...&#34;</code> attribute.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank">&lt;aside&gt;</a></code> element is used for content that is indirectly related to the documents main content such as sidebars, inserts, or brief explanations. These elements are frequently presented as sidebars or call-out boxes. This element can be nested within other section elements and act as an identifier container for content related to that specific section. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">&lt;div&gt;</a></code> element is a generic block-level container used to identify large groupings and the flow of content.
           </p>
           <!-- Footer -->
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank">&lt;footer&gt;</a></code> element typically contains information about the author of the section, copyright data or links to related documents. It is placed at the bottom of the section root or used at the bottom of any sectioning elements.
+          </p>
+          <p>
+            Now is a good time to introduce the <code class=""><a href="">id&#61;&#34;...&#34;</a></code> attribute, which provides a unique identifier for an element within the document to create a hyperlink. This identifier may also be used in CSS and JavaScript in the same fashion as the <code class="">class&#61;&#34;...&#34;</code> attribute with one exception: an id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page. This attribute is very useful for providing <mark><a href="https://www.lifewire.com/adding-internal-links-3466484">internal links</a></mark>. The aforementioned
+            <code class="">class&#61;&#34;...&#34;</code> attribute is used in CSS for styling or with JavaScript to make changes and add behavior to elements belonging to a particular subtype.
           </p>
         </div>
         <!-- -->
@@ -193,11 +183,11 @@
           <!-- -->
           <h4>Navigation</h4>
           <p>
-            The first goal that I target when creating a website is building an efficient navigation system that will allow users to seemlessly traverse the site. This project will include three separate pages consisting of the home page, the about page and a linke to an external page. I can complete this goal by using an Unordered List with List Items that contain Anchors. Allow me to explain.
+            The first goal that I target when creating a website is building an efficient navigation system that will allow users to seamlessly traverse the site. This project will include three separate pages consisting of the home page, the about page and a link to an external page. I can complete this goal by using an Unordered List with List Items that contain Anchors. Allow me to explain.
           </p>
           <!-- Unordered List/List-Items -->
           <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">&#60;ul&#62;</a></code> element represents an unordered list of items typically rendered as a bulleted list and is used for grouping a collection of items that do not have a numerical ordering precedence. It is nested within the <code>&#60;nav&#62;</code> section and acts as a container for individual list-items or <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank">&#60;li&#62;</a></code> elements. For every list-item placed within an unordered list, an anchor element must be used. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">&#60;a&#62;</a></code> element controls the hyperlink that is created when the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/href" target="_blank">href&#61;&#34;...&#34;</a></code> attribute is employed. The file name included within this attribute has the ability to transport the user to another page, a location within the same page, a file,  an email address or any other URL browser supported <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers" target="_blank">protocol handlers</a></code>. The example below outlines the hiearchy of a navigation and includes the optional <code>target&#61;&#34;&#95;blank&#34;</code> attribute that is used to open that an external link in another browser tab.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">&#60;ul&#62;</a></code> element represents an unordered list of items typically rendered as a bulleted list and is used for grouping a collection of items that do not have a numerical ordering precedence. It is nested within the <code>&#60;nav&#62;</code> section and acts as a container for individual list-items or <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank">&#60;li&#62;</a></code> elements. For every list-item placed within an unordered list, an anchor element must be used. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">&#60;a&#62;</a></code> element controls the hyperlink that is created when the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/href" target="_blank">href&#61;&#34;...&#34;</a></code> attribute is employed. The file name included within this attribute has the ability to transport the user to another page, a location within the same page, a file,  an email address or any other URL browser supported <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers" target="_blank">protocol handlers</a></code>. The example below outlines the hierarchy of a navigation and includes the optional <code>target&#61;&#34;&#95;blank&#34;</code> attribute that is used to open that an external link in another browser tab.
           </p>
           <p class="paraCode">
             <code>&#60;nav class&#61;&#34;mainNav&#34;&#62;</code>
@@ -211,7 +201,7 @@
             Before concluding this section, I would like to make a note regarding attributes in relation to the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank">&#60;link&#62;</a></code> element used in the <code>&#60;head&#62;</code> section. The required <code>rel&#61;&#34;...&#34;</code> attribute is used to specify the relationship between target and link objects. There are two values that I use for such: <code>&#34;canonical&#34;</code> &#40;helps webmasters prevent duplicate content issues by specifying the "preferred" version of a page as part of SEO&#41;<sup><a href="https://en.wikipedia.org/wiki/Canonical_link_element" target="_blank">&#91;&#42;&#93;</a></sup> and <code>&#34;stylesheet&#34;</code> &#40;defines an external resource to be used as a stylesheet&#41;.
           </p>
           <p>
-            Understanding <code>rel&#61;&#34;...&#34;</code> attribute <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types" target="_blank">linking-types</a></code> is a necessary evil that I must further investigate in order to improve my hand when creating <code>&#60;link&#62;</code>s. Another attribute vital to this element is the <code>type&#61;&#34;...&#34;</code> attribute, which helps clarify the content type and will contain a value of <code>&#34;text/css&#34;</code> by default when not included. It is most useful when linking a media source, in which case it would also be wise to include a <code>sizes&#61;&#34;H&#215;W&#34;</code> attribute to control its height and width. The <code>title&#61;&#34;...&#34;</code> attribute will create a <mark>tooltip</mark> which is a visual cue for the resource. The <code>media&#61;&#34;...&#34;</code> attribute is peculiarly important depending on ones approach to leveraging the <code>&#64;media&#40;query&#41;</code>s of <mark>CSS</mark> <code>&#34;stylesheet&#34;</code>s. Inclusion of this attribute will load said stylesheet only when a specific media condition is true. <br><small>A media query is a <mark>CSS</mark> concept that I will expand upon during the next course.</small>
+            Understanding <code>rel&#61;&#34;...&#34;</code> attribute <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types" target="_blank">linking-types</a></code> is a necessary evil that I must further investigate in order to improve my hand when creating <code>&#60;link&#62;</code>s. Another attribute vital to this element is the <code>type&#61;&#34;...&#34;</code> attribute, which helps clarify the content type and will contain a value of <code>&#34;text/css&#34;</code> by default when not included. It is most useful when linking a media source, in which case it would also be wise to include a <code>sizes&#61;&#34;H&#215;W&#34;</code> attribute to control its height and width. The <code>title&#61;&#34;...&#34;</code> attribute will create a <mark>tooltip</mark> which is a visual cue for the resource. The <code>media&#61;&#34;...&#34;</code> attribute is peculiarly important depending on ones approach to leveraging the <code>&#64;media&#40;query&#41;</code>s of a <mark>CSS</mark> <code>&#34;stylesheet&#34;</code>. Inclusion of this attribute will load said stylesheet only when a specific media condition is true. <br><small>A media query is a <mark>CSS</mark> concept that I will expand upon during the next course.</small>
           </p>
           <!-- Ordered List -->
           <details>
@@ -243,14 +233,16 @@
             <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;p&#62;</code>blah blah blahblah blah blahhhhh... blah<code>&#60;&#47;p&#62;</code>
             <br><code>&#60;&#47;article&#62;</code></p> 
           <!-- List -->
-          <p>In the old days, the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">&#60;table&#62;</a></code> element was the go-to element for structuring tabular data. Nowadays, thanks to CSS flexbox and grid properties, I never use this element.</p>
+          <p>
+            In the old days, the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">&#60;table&#62;</a></code> element was the go-to element for structuring tabular data. Nowadays, thanks to CSS flexbox and grid properties, I never use this element.
+          </p>
           <!-- -->
           <!-- INLINE-TEXT SEMANTICS--> 
           <!-- -->
           <h4>Inline Text Semantics</h4>
           <!-- Anchor -->
           <p>
-            As was illustrated, the <code>&#60;a&#62;</code> element is used to transport a user to another source, but it is generally used to wrap around text and/or an image providing interaction that can provide not only a link, but also an image, spreedsheet or PDF document. This element is but one of many <code class="reference"><a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics" target="_blank">semantic inline text</a></code> elements, which are used to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
+            As was illustrated, the <code>&#60;a&#62;</code> element is used to transport a user to another source, but it is generally used to wrap around text and/or an image providing interaction that can provide not only a link, but also an image, spreadsheet or PDF document. This element is but one of many <code class="reference"><a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics" target="_blank">semantic inline text</a></code> elements, which are used to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
           </p>
           <!-- Styling -->
           <p>
@@ -284,7 +276,7 @@
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">&lt;fieldset&gt;</a></code> element is used to logically group form element controls within a web form. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend" target="_blank">&lt;legend&gt;</a></code> element captions its parent &#40;<code>&lt;fieldset&gt;</code>&#41; like a title for a paragraph. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label" target="_blank">&lt;label&gt;</a></code> element share similarities with the <code>&lt;fieldset&gt;</code> in that it also provides a caption for its parent. Its importance rests in how, when used, it links a form control to the associated descriptive text in an unambiguous way that is useful for screen readers and that this element can be applied to any item in a user interface. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">&lt;input&gt;</a></code> element fits the bill in this regard as it is used to create interactive controls for web-based forms in order to accept data from users. What is most fascinating is how the <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> elements work in unison via their associated attributes. There are two ways to associate these attributes: implicitly nest the <code>&lt;input&gt;</code> attribute directly inside of the <code>&lt;label&gt;</code> element or apply <code>id&#61;&#34;...&#34;</code> and <code>for&#61;&#34;...&#34;</code> attributes, both with the same value, to the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements.
           </p>          
           <p>
-            The semantics of the <code>&lt;input&gt;</code> element varies considerably depending on the value of its <code>type&#61;&#34;...&#34;</code> attribute. Aside from the attributes available to use for the <code>&lt;input&gt;</code> element, the <code>type&#61;&#34;...&#34;</code> attribute itself offers 34 possible values to choose from. When this attribute is not specified it will provide a default <code>&#34;text&#34;</code>type.
+            The semantics of the <code>&lt;input&gt;</code> element varies considerably depending on the value of its <code>type&#61;&#34;...&#34;</code> attribute. Aside from the attributes available to use for the <code>&lt;input&gt;</code> element, the <code>type&#61;&#34;...&#34;</code> attribute itself offers 34 possible values to choose from. When this attribute is not specified it will provide a default <code>&#34;text&#34;</code> type.
           </p>
           <details>
             <summary>Other <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_<input>_types" target="_blank">&lt;input type&#61;&#34;...&#34;&gt;</a></code> Values include:</summary>
@@ -340,12 +332,12 @@
           <h4>Interactive Elements</h4>
           <!-- Details / Summary -->
           <p>
-             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">&lt;details&gt;</a></code> element creates a disclosure widget in which information is visible only when the widget is toggled. Use the self-contained <code>open</code> attribute to programmatically keep open the widge. A summary, caption or legend can be applied to the widget by employing the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">&lt;summary&gt;</a></code> element .
+             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">&lt;details&gt;</a></code> element creates a disclosure widget in which information is visible only when the widget is toggled. Use the self-contained <code>open</code> attribute to programmatically keep open the widge. A summary, caption or legend can be applied to the widget by employing the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">&lt;summary&gt;</a></code> element.
           </p>
           <!-- Dialog -->
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">&#60;dialog&#62;</a></code> element is an experimental technology that represents a dialog box or other interactive component, such as an inspector or window. Dialogs are hidden by default, but can be made active and available for interaction by replacing the <code>id&#61;&#34;...&#34;</code> with the <code>open</code> attribute in the <code>&#60;dialog&#62;</code> element.
-            <code>&#60;form&#62;</code> elements can be integrated within a dialog by specifying them with the attribute method="dialog". When such a form is submitted, the dialog is closed with a returnValue attribute set to the value of the submit button used. -- The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop">::backdrop</a></code> CSS pseudo-element &#40;experimental&#41; can be used to style behind a <code>&#60;dialog&#62;</code> element, for example to dim inaccessible content whilst a modal dialog is active. The backdrop is only drawn when the dialog element is displayed with <code>dialog.showModal()</code>. You can use a <a href="https://github.com/GoogleChrome/dialog-polyfill"  target="_blank"><mark>Polyfill</mark></a> for browser support and learn more about <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms" target="_blank">&#60;form&#62;</a></code> + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/close" target="_blank">.close&#40;&#41;</a></code> Events + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/cancel" target="_blank">.cancel&#40;&#41;</a></code> Events + and check out these <code class="reference"><a href="https://demo.agektmr.com/dialog/" target="_blank">examples</a></code> which further elaborates on this elements usage.
+            <code>&#60;form&#62;</code> elements can be integrated within a dialog by specifying them with the attribute method="dialog". When such a form is submitted, the dialog is closed with a returnValue attribute set to the value of the submit button used. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop">::backdrop</a></code> CSS pseudo-element &#40;experimental&#41; can be used to style behind a <code>&#60;dialog&#62;</code> element, for example to dim inaccessible content whilst a modal dialog is active. The backdrop is only drawn when the dialog element is displayed with <code>dialog.showModal()</code>. You can use a <a href="https://github.com/GoogleChrome/dialog-polyfill"  target="_blank"><mark>Polyfill</mark></a> for browser support and learn more about <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms" target="_blank">&#60;form&#62;</a></code> + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/close" target="_blank">.close&#40;&#41;</a></code> Events + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/cancel" target="_blank">.cancel&#40;&#41;</a></code> Events + and check out these <code class="reference"><a href="https://demo.agektmr.com/dialog/" target="_blank">examples</a></code> which further elaborates on this elements usage.
           </p>
           <article class="block">
             <div class="card">
@@ -400,7 +392,7 @@
           </article>
           <!-- Script -->
           <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;script&gt;</a></code> element is not an interactive element. However, inclusion of this element will embed or reference executable JavaScript code which is in and of itself an interactive programming language. It requires the <code>src&#61;&#34;...&#34;</code> attribute to specify the URI of an external script. It is also good practice to include a <code>type&#61;&#34;text/javascriptt&#34;</code> attribute to indicate the type of script, particularly for older browsers. Use of this element is an alternative to embedding a script directly within a document.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;script&gt;</a></code> element is not an interactive element. However, inclusion of this element will embed or reference executable JavaScript code which is in and of itself an interactive programming language. It requires the <code>src&#61;&#34;...&#34;</code> attribute to specify the URI of an external script. It is also good practice to include a <code>type&#61;&#34;text/javascript&#34;</code> attribute to indicate the type of script, particularly for older browsers. Use of this element is an alternative to embedding a script directly within a document.
           </p>
           <!-- -->
           <!-- ADVANCED -->
@@ -424,9 +416,11 @@
             The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues. 
           </p>
           <p>
-            In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[12]</a></sup> The <a class="link" href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a> and <a class="link" href="https://a11yproject.com" target="_blank">A11Y Project</a> are two major advocates for web accessibility and provide <a class="link" href="https://w3.org/TR/WCAG21">guidelines</a> and patterns for developers to help make their applications accessible. 
+            In web design, <em><b>Accessibility</b></em> refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[*]</a></sup> The <a class="link" href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a> and <a class="link" href="https://a11yproject.com" target="_blank">A11Y Project</a> are two major advocates for web accessibility and provide <a class="link" href="https://w3.org/TR/WCAG21">guidelines</a> and patterns for developers to help make their applications accessible. 
           </p>
-          <p>Here is a short list of <a class="link" href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a> that every application should include:</p>
+          <p>
+            Here is a short list of <a class="link" href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a> that every application should include:
+          </p>
           <ol>
             <li>Add Contrasting Color</li>
             <li>Design usable :Focus States</li>
@@ -451,7 +445,7 @@
             Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.
           </p>
           <p>
-            Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly markedup; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.
+            Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly marked; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.
           </p>
           <p>
             When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <a class="link" href="https://axe-core.org/" target="_blank">Check a Websites Accessibility</a>.
@@ -464,7 +458,7 @@
         <div class="intro">
           <h3>Using Unicode </h3>
           <p>
-            In HTML, sometimes writing is not as simple as it seems. For example, when I want to write a symbol I cannot simply type it into my keyboard; I must manually input its <code class="reference"><a href="">Character Reference</a></code>. Character references are better known as Unicode, which is a best practice and International Standard ISO&#47;ICE 10646 Universal Coded Character Set &#40;UCS&#41;. In HTML, such references are known as an <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">Entity</a></code>, which are used to display reserved characters that would otherwise be interpreted as HTML code in the browser. Entities can be created using a character entity reference, but in my studies I have become accustomed to using numeric character references. The syntax for this element begins with an ampersand <code>&amp;</code> and ends with a semicolon <code>&#59;</code> like so: <code>&amp;&#35;nn&#59;</code>. In this example, the <code>nn</code> represents the numeric value of the symbol that I want to include.
+            In HTML, sometimes writing is not as simple as it seems. For example, when I want to write a symbol I cannot simply type it into my keyboard; I must manually input its <code class="reference">Character Reference</code>. Character references are better known as Unicode, which is a best practice and International Standard ISO&#47;ICE 10646 Universal Coded Character Set &#40;UCS&#41;. In HTML, such references are known as an <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">Entity</a></code>, which are used to display reserved characters that would otherwise be interpreted as HTML code in the browser. Entities can be created using a character entity reference, but in my studies I have become accustomed to using numeric character references. The syntax for this element begins with an ampersand <code>&amp;</code> and ends with a semicolon <code>&#59;</code> like so: <code>&amp;&#35;nn&#59;</code>. In this example, the <code>nn</code> represents the numeric value of the symbol that I want to include.
           </p>
           <p>
             Below is a list of character references that I use. The first row displays the symbol and the second row is the actual reference code to use in my markup. There are hundreds, perhaps thousands of character references; I asked Google exactly how many exist and she said 65,000+. Go figure.
