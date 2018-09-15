@@ -78,18 +78,7 @@ p {
 }
 /*
 */
-.ribbon {
-  width: 500px;
-  background: #e43;
-  position: fixed;
-  top: 55px;
-  left: -150px;
-  text-align: center;
-  line-height: 50px;
-  letter-spacing: 1px;
-  color: #fff;
-  transform: rotate(-45deg);
-}
+
 /*
 */
 .btn {
