@@ -1,5 +1,5 @@
-/* ========================================================= */
-/* ============== TABBED-NAVIGATION INTERFACE ============== */
+/* ============================================ */
+/* ============== TOP-NAVIGATION ============== */
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -21,9 +21,13 @@
 header.topnav > .active {
   background-color: red;
   color: white;
+  padding-right: 80px;
 }
 .topnav .icon {
   display: none;
+}
+fa-home {
+  padding-right: 75px;
 }
 @media screen and (max-width: 700px) {
   .topnav a:not(:first-child) {display: none;}
@@ -51,32 +55,65 @@ header.topnav > .active {
     width: 100%;
     top: 0px;
     z-index: 1;
-    /*overflow-x: hidden;
-    display: block;*/
   }
-  nav {margin-top: 69px;}
   main {margin-top: 44px;}
 }
+/**//*******************************//**/
 
 
+/* ============================================ */
+/* ============ SIDEBAR-NAVIGATION ============ */
+nav {
+  white-space: nowrap;
+  background: #333;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 2em 0;
+}
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+  nav ul {
+    position: sticky;
+    top: 8px;
+  }
+}
+nav ul li a {
+  display: block;
+  padding: 0.5rem 0rem;
+  color: white;
+  text-decoration: none;
+}
+.nested {
+  padding: 0rem 2rem;
+  font-size: 0.88rem;
+}
+nav ul li a.current {
+  color: #000;
+}
+/**//*******************************//**/
 
-/* ========================================================= */
-/* ===================== GRID LAYOUTS ====================== */
+
+/* ===================================== */
+/* =========== GRID LAYOUTS ============ */
 /*
 autoprefixer({grid: true;})
 @supports (display: grid){}
 .grid > * {min-width: 0;}
 */
 
+/**********************/
 /* SITE-TEMPLATE GRID */
+/**********************/
 .grid {
 	margin: 0 2.4vw;
   padding: 0;
 	display: grid;
-	grid-template-rows: 4vmin minmax(200px,auto) 35px;
+	grid-template-rows: 0px minmax(200px,auto) 35px;
 	grid-gap: 4px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
   nav {grid-area: nav;}
   main {grid-area: main;}
   footer {grid-area: foot; }
@@ -86,43 +123,26 @@ autoprefixer({grid: true;})
     padding: 0;
     display: grid;
   	grid-template-rows:  auto auto minmax(15px,40px);
-		grid-template-columns: 15% repeat(2, 1fr);
+		grid-template-columns: 168px repeat(4, 1fr);
 		grid-template-areas: 
-    "nav  main main main" 
-    "nav  main main main" 
-    "nav foot foot foot";
-    grid-gap: 1vw;
+    "nav main main main main" 
+    "nav main main main main" 
+    "nav foot foot foot foot";
+    grid-gap: 0;
   }
 }
+/**//*******************************//**/
 
-/* SIDEBAR-NAVIGATION GRID */
-ul.nav {
-  display: none;
-  /*justify-content: center;
-  margin: 0 auto;
-  padding: 0 auto;
-  display: grid;
-  grid-template-rows: 12px 8px;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 0.79em;*/
-}
-ul.nav {font-size: 0.88em;}
-@media only screen and (min-width: 800px) {
-  ul.nav {
-    position: fixed;
-    overflow-x: hidden;
-    display: inline-block;
-    justify-content: space-between;
-  }
-  li {
-    font-size: 1em;
-  }
-}
 
-/* MAIN-SECTION GRID */
+
+/**********************/
+/* MAIN-SECTION GRID  */
+/**********************/
+/*Page CONTAINER*/
 main {
   max-width: 100%;
 }
+/*Container PARAGRAPH */
 .intro {
 	margin: 2vw;
   padding: 0;
@@ -132,14 +152,18 @@ main {
 }
 @media only screen and (min-width: 800px) {
   .intro {
-    margin: 1em auto;
+    margin: 8px 1em 0;
     width: 95%;
     max-width: 1000px;
   }
 }
+/**//*******************************//**/
 
 
-/* TABLE GRIDS*/
+
+/**********************/
+/*    TABLE GRIDS     */
+/**********************/
 @media all and (max-width: 500px) {
   .block {
     width: 100%;
@@ -191,6 +215,11 @@ main {
   }
 }
 
+
+
+/**********************/
+/*   GLOSSARY GRID    */
+/**********************/
 .glossary {
    width: 100%;
    font-size: 0.74em;
@@ -230,39 +259,13 @@ main {
 .asciiItemChar {
   font-size: 1.5em;
 }
-
-/* FOOTER */
-footer {text-align: center; font-size: 0.53em;}
-.fa-heart {
-  color: red;
-  animation: pulse 1.3s ease infinite;
-  padding-top: -50px;  /*Required for Heart Animation*/
-}
-@keyframes pulse {
-  0% {transform: scale(0.5);}
-  50% {transform: scale(0.7);}
-  100% {transform: scale(0.5);}
-}
-
-/************************************/
+/**//*******************************//**/
 
 
 
 /* ======================================================= */
 /* =============== UNIVERSAL BASE STYLES ================= */
 
-/* 
-REMOVE Browser Scroll + Gives Site an 'APP' 
-html {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 0px;               
-  background: transparent;  
-}
-*/
-/**/
 body {
   overflow-x: auto;
   margin: 0 auto;
@@ -303,6 +306,7 @@ body {
   }
 }
 /**/
+/**/
 h1, h2 {
   margin: 0 auto;
   padding: 0;
@@ -328,10 +332,12 @@ p {
   line-height: 1.5;*/
 }
 /**/
+/**/
 .material-icons {
   color: #ff4d4d; 
   font-size: 1em;
 }
+/**/
 /**/
 a {
   color: #000;
@@ -358,24 +364,25 @@ li > a.active {
   border-bottom: 1px solid #000;
   padding: 2px;
 }
-/**/
 ol {font-size: 0.68em;}
 ol.alpha {list-style-type: lower-alpha;}
+/**/
 /**/
 figcaption {
   font-size: 0.68em;
   font-style: italic;
   text-align: center;
 }
-/**/
+
 mark {background: #ccc;}
-/**/
+
 hr {
   background-image: linear-gradient(to right, rgba(10, 9, 9, 0.0), rgba(10, 9, 9, 0.5), rgba(10, 9, 9, 0.0));
   border: 0;
   height: 1px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  
   overflow: visible;
   text-align: center;
 }
@@ -391,7 +398,7 @@ hr:after { /*rgba(255, 0, 0, 0.8)*/
   position: relative;
   top: -0.7em;
 }
-/**/
+
 code {
   background: #ccc; 
   border: 1px solid #888;
@@ -415,7 +422,6 @@ code.reference > a {color: #fff;}
   }
 }
 /**/
-
 /**/
 @media all and (min-width: 500px) {
   address {color: red;}
@@ -427,12 +433,12 @@ code.reference > a {color: #fff;}
   figure {margin: 0; padding: 0;}
   details {margin: 0 4px; font-size: 0.8em;}
 }
-/* =========================================================== */
+/**//*******************************//**/
 
 
 
-/* IMAGES ================================ */
-/**/
+/* ==================================== */
+/* ============== IMAGES ============== */
 img {
   width: 100%; 
   height: auto;
@@ -472,10 +478,28 @@ img {
     height: auto; 
     border-radius: 2px;
   }
-  /**/
 }
 /**//*******************************//**/
 
+
+/* ==================================== */
+/* ============== FOOTER ============== */
+footer {text-align: center; font-size: 0.53em;}
+.fa-heart {
+  color: red;
+  animation: pulse 1.3s ease infinite;
+  padding-top: -50px;  /*Required for Heart Animation*/
+}
+@keyframes pulse {
+  0% {transform: scale(0.5);}
+  50% {transform: scale(0.7);}
+  100% {transform: scale(0.5);}
+}
+/**//*******************************//**/
+
+
+/* ==================================== */
+/* ============== ?????? ============== */
 /* Mobile 'Table' */
 h3 > span {color: red;}
 div > span {text-decoration: underline;}
@@ -501,3 +525,4 @@ dialog::backdrop {
   padding: 8px;
   border: 1px solid #e1e1e1;
 }
+/**//*******************************//**/

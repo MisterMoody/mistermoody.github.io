@@ -1,21 +1,24 @@
 /*  ========================================= 
     Main GRID STYLES (index.html) ======== */
+.intro {grid-area: intro;}
+.main-content {grid-area: gallery;}
+footer {grid-area: footer;}
+/**/
 .galleryGrid {
+  margin: 0 0.5em;
   display: grid;
-  grid-template-rows: auto 1fr 8px;
+  grid-template-rows: auto auto 8px;
   grid-template-areas: 
     "intro"
     "gallery"
     "footer";
 }
-.intro {grid-area: intro;}
-.main-content {grid-area: gallery;}
-footer {grid-area: footer; margin-top: 5em;}
-/**/
 .main-content {
+  margin: 1.5em auto;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 100% auto;
+  grid-template-rows: repeat(auto, 1fr);
+  grid-gap: 24px;
 }
 .sub-content {
 	margin: 0 1em;
@@ -24,11 +27,17 @@ footer {grid-area: footer; margin-top: 5em;}
   grid-template-rows:  auto;
   grid-gap: 10px;
 }
+/*DESKTOP Media-Query*/
 @media screen and (min-width: 500px) {
+  .galleryGrid {
+    margin: 0 2em;
+    grid-template-rows: auto 100% 8px;
+  }
 	.main-content {
+    margin: 0.5em auto;
 		display: grid;
-  	grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 100% auto;
+  	grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: minmax(auto, 200px);/*auto*/
 	}
 	.sub-content {margin: 0 2.5em;}
 }
@@ -55,6 +64,7 @@ span {margin: 0;}
 	box-sizing: border-box;
 }
 body {
+  background: #838487;
   height: 100%;
   width: 100%;
   font-size: 1rem;
@@ -102,8 +112,10 @@ p {
   line-height: 1.25;
 }
 .card {
-  padding: 1.5em 1em;
-  /*border: 1px solid #e1e1e1;*/
+  margin: 0 auto;
+  padding: 0;
+  height: 200px;
+  border: 1px solid #fff;
   border-radius: 0.25em;
 }
 .card:hover {
@@ -123,7 +135,7 @@ p {
 /*
 */
 .intro {
-  margin: 1em auto;
+  margin: 0 auto;
   width: 95%;
   max-width: 1000px;
 }
