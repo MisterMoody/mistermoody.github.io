@@ -34,12 +34,14 @@
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
       <nav>
         <ul>
-          <li><a href="#topicOne">Introduction</a></li>
-          <li><a href="#topicTwo">Environ</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <!-- -->
+          <li><a href="#environment">Environ Setup</a></li>
+            <li class="nested"><a href="#ideSetup">IDE Setup</a></li>
+            <li class="nested"><a href="#serverSetup">Localhost Setup</a></li>
+            <li class="nested"><a href="#vcsSetup">VCS Setup</a></li>
+          <!-- 
           <li><a href="#topicThree">Topic 3</a></li>
-            <li class="nested"><a href="#subTopA">Sub-topic A</a></li>
-            <li class="nested"><a href="#subTopB">Sub-topic B</a></li>
-            <li class="nested"><a href="#subTopC">Sub-topic C</a></li>
           <li><a href="#topicFour">Topic 4</a></li>
           <li><a href="#topicFive">Topic 5</a></li>
             <li class="nested"><a href="#subTopX">Sub-topic X</a></li>
@@ -50,6 +52,7 @@
           <li><a href="#topicEight">Topic 8</a></li>
           <li><a href="#topicNine">Topic 9</a></li>
           <li><a href="#topicTen">Topic 10</a></li>
+           -->
         </ul>
       </nav>
       
@@ -62,17 +65,18 @@
         
         
         <!-- TOPIC-ONE: INTRODUCTION -->
-        <div id="topicOne" class="intro">
-          <h2><i class="material-icons">code</i> Topic 1 - Introduction</h2>
-          <p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience. I created this project to highlight my web design skills, but could be used by students as a no-frills guide for learning the basics of designing web applications.</p>
-          <p>This page provides an overview of the main concepts related to web design. The first section discusses a developers environment and tools required to begin a web dev career. The middle parts feature the bare essentials for understanding how to write, style and add interactivity using HTML, CSS and JavaScript, respectively. The page concludes with a review of resources that will make any web designers journey a bit easier.</p>
-          <p>On that note, there are plenty of resources embedded with this article. As you read, click on <code class="reference"><a>Link</a></code> and <sup><a href="">[#Link]</a></sup> to view a resource that will open in another browser window. As well, lookout for <mark>same-page-links</mark> that can direct you to an area pertinent to stated topic.</p>
+        <div id="introduction" class="intro">
+          <h2><i class="material-icons">code</i> Introduction</h2>
+          <p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience. I created this repository of resources to highlight my knowledge as a web developer.</p>
+          <p>This page provides an overview of the technical aspects pertinent for jumpstarting a career in web development. It is a simple no-frills guide for preparing a commuter to handle the demands of programming a web application.</p>
+          <p>Unlike the pages that deal with writing code, all resources listed on this page are embedded within the section where it is mentioned.</p>
+          <p>An embedded link with be underlined <u>like this</u>.</p>
         </div>
         
         
         <hr>
         <!-- TOPIC-TWO: XXXXXXXXX -->
-        <div id="topicTwo"  class="intro">
+        <div id="environment" class="intro">
           <h2>Setting Up your Dev Environment</h2>
           <p>Aside from owning a computer and having access to the internet you will also need:</p>
           <ol class="alpha">
@@ -80,123 +84,105 @@
             <li>a <em>Local Host-Server</em> <span class="hide">to work on a project in real-time offline</span></li>
             <li>a <em>Version Control System</em> <span class="hide">to manage your work</span></li>
           </ol>
-          <p><img src="img/ide.jpg" class="imgR">An <em><b>Integrated Development Environment</b></em> is a software application that provides comprehensive facilities to computer programmers for software development. IDEs are designed to maximize programmer productivity by providing versitle components in a single program by which all development is done. In general, an IDE is a graphical user interface (GUI)-based workbench designed to aid a developer in building software applications with an integrated source-code editor combined with all the required (automation) tools at hand. This program typically provides many features for authoring, modifying, compiling, deploying and debugging software, which helps developers quickly execute actions without switching to other applications.<sup><a href="https://www.techopedia.com/definition/26860/integrated-development-environment-ide" target="_blank">[1]</a></sup> My IDE of choice is Brackets. It's really easy to use so I recommend checking it out.<sup><a href="https://github.com/adobe/brackets/wiki/How-to-Use-Brackets" target="_blank">[2]</a></sup></p>
+          <!-- Sub-Topic 1: IDE -->
+          <div id="ideSetup">
+            <h5>Integrated Development Environment</h5>
+            <p><img src="img/ide.jpg" class="imgR">An <u><a href="https://www.techopedia.com/definition/26860/integrated-development-environment-ide" target="_blank">Integrated Development Environment</a></u> is a software application that provides comprehensive facilities to computer programmers for software development. In general, an IDE is a graphical user interface (GUI)-based workbench designed to aid a developer in building software applications with an integrated source-code editor combined with all the required automation tools at hand. IDE's are designed to maximize programmer productivity by providing versitle components within a single program of which all development is done. IDE's typically provide many features for authoring, modifying, compiling, deploying and debugging software, which helps developers quickly execute actions without switching to other applications. My IDE of choice is <u><a href="https://github.com/adobe/brackets/wiki/How-to-Use-Brackets" target="_blank">Brackets</a></u>.</p>
+          </div>
           <!-- -->
-          <p><img src="img/xampp.jpg" class="imgL">A <em><b>Local Host-Server</b></em> is a computer networking configuration that creates an online-like environment for developers to test applications without internet access. Specifically, localhost is the host name for your computer and uses the IP address 127.0.0.1 to act as a loopback mechanism used to run a network service on a host without requiring a physical network interface.<sup><a href="http://www.tech-faq.com/127-0-0-1.html" target="_blank">[3]</a></sup> Configuring a local host manually is beyond the scope of this project so I strongly suggest that you head over to Apache Friends and download their open source cross-platform web server-stack.<sup><a href="https://www.apachefriends.org/index.html" target="_blank">[4]</a></sup> <small><em>Note: Before downloading this program, research alternatives that are best suited for you. For example, I work within a Microsoft Windows Operating System and there is a WAMP server-stack designed specifically for Microsoft Windows OS. However, my preferred server-stack is XAMPP due to its versitility.</em></small></p>
+          <!-- Sub-Topic 2: LocalHost Server -->
+          <div id="serverSetup">
+            <h5>LocalHost Server</h5>
+            <p><img src="img/xampp.jpg" class="imgL">A <u><a href="https://www.ionos.com/digitalguide/server/know-how/localhost/" target="_blank">Localhost Server</a></u> is a computer networking configuration that creates an online-like environment for developers to test applications without the need for internet access. Specifically, localhost is the host name for your computer and uses the IP address 127.0.0.1 to act as a loopback mechanism used to run a network service on a host without requiring a physical network interface. Those good folks at <u><a href="https://www.apachefriends.org/index.html" target="_blank">Apache Friends</a></u> offer an open source cross-platform web server-stack with compatible options for users regardless of computer operating system. My localhost of choice is XAMMP.
+              <br><small><em>Note: Before downloading this program, research alternatives that are best suited for you.</em></small></p>
+          </div>
           <!-- -->
-          <p>A <em><b>Version Control System</b></em> is a software configuration that records changes to web files over time so that you can recall specific versions later. For all intents and purposes, a VCS is an online storage facility for your code, enabling dDevelopers with the ability to manage source-code, track all file versions (independent of network access) and coordinate a non-linear workflow in a team environment.<sup><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">[5]</a></sup> Github is my VCS of choice. Register to get started.<sup><a href="https://github.com" target="_blank">[6]</a></sup></p>
+          <!-- Sub-Topic 3: Version Control System -->
+          <div id="vcsSetup">
+            <h5>Version Control System</h5>
+            <p>A <u><a href="https://en.wikipedia.org/wiki/Version_control" target="_blank">Version Control System</a></u> is a software configuration that records changes to web files over time so that you can recall specific versions later. For all intents and purposes, a VCS is an online storage repository for your code, enabling developers with the ability to manage source-code, track all file versions (independent of network access) and coordinate a non-linear workflow in a team environment. My VCS of choice <u><a href="https://github.com" target="_blank">Github</a></u> due to its ease of use. You can check it out for yourself <u><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">here</a></u>.</p>
+            <p>This method of working with coded files is actually optional: it is not a requirement for facilitating a web application project. However, featured tenants of a VCS that I enjoy includes files never being lost and that those files are always accessible from any location in the world. Moreover, with some tinkering, security features can be implemented using the SSH protocol to synchronously connect with a file server, enabling near instantaneous deployment online.</p>
+          </div>
         </div>
         
+        <div class="intro"><address>Last Updated: 12/24/2018</address></div>
         
-        <hr>
-        <!-- TOPIC-THREE: XXXXXXXXX -->
+        <!--<hr>-->
+        <!-- TOPIC-THREE: XXXXXXXXX 
         <div id="topicThree" class="intro">
           <h2>Topic 3</h2>
           <p>Fusce ipsum tortor, tempor sed fermentum ut, placerat eu eros. Morbi sed massa sit amet elit luctus volutpat. Curabitur nec magna sit amet erat scelerisque vestibulum eu quis odio. Suspendisse eu turpis orci. Morbi molestie nec nisi non viverra. Maecenas eleifend aliquam leo.</p>
           <p>Donec porta elit sed tellus porttitor, non elementum mauris placerat. Nullam condimentum sagittis ante ac tincidunt. Ut sollicitudin quam quis finibus molestie. Curabitur efficitur finibus massa, quis interdum mi accumsan non. Donec et sodales orci. Curabitur nec ultrices lectus. Sed finibus eget purus a rutrum. Donec at efficitur nibh.</p>
           <p>Donec imperdiet faucibus est sit amet finibus. In dictum varius felis, vel hendrerit nibh convallis vitae. Nullam mattis quis lectus sit amet imperdiet. Fusce ut lacus metus. Nam vel nisl ipsum. Donec vestibulum aliquam varius. Nulla tempus odio eu metus gravida, sed fermentum turpis faucibus. Sed eu lacus odio. Aliquam at enim mi. Duis vel eros nibh.</p>
-          
-          <!-- Sub-Topic A -->
-          <div id="subTopA">
-            <h5>Sub-Topic A</h5>
-          <ol class="alpha">
-            <li>an <em>IDE</em> text-editor <span class="hide">to program your application</span></li>
-            <li>a <em>Local Host-Server</em> <span class="hide">to work on a project in real-time offline</span></li>
-            <li>a <em>Version Control System</em> <span class="hide">to manage your work</span></li>
-          </ol>
-          <p><img src="img/ide.jpg" class="imgR">An <em><b>Integrated Development Environment</b></em> is a software application that provides comprehensive facilities to computer programmers for software development. IDEs are designed to maximize programmer productivity by providing versitle components in a single program by which all development is done. In general, an IDE is a graphical user interface (GUI)-based workbench designed to aid a developer in building software applications with an integrated source-code editor combined with all the required (automation) tools at hand. This program typically provides many features for authoring, modifying, compiling, deploying and debugging software, which helps developers quickly execute actions without switching to other applications.<sup><a href="https://www.techopedia.com/definition/26860/integrated-development-environment-ide" target="_blank">[1]</a></sup> My IDE of choice is Brackets. It's really easy to use so I recommend checking it out.<sup><a href="https://github.com/adobe/brackets/wiki/How-to-Use-Brackets" target="_blank">[2]</a></sup></p>
-          </div>
-          
-          <!-- Sub-Topic B -->         
-          <div id="subTopB">
-            <h5>Sub-Topic B</h5>
-            <p>Resources are referenced like this <sup><a href="http://www.tech-faq.com/127-0-0-1.html" target="_blank">[3]</a></sup>, with Note formatted accordingly: <small><em>Note: Vestibulum sodales convallis magna quis sodales. Curabitur mi elit, facilisis non augue vitae, sodales lobortis purus. Donec imperdiet dapibus nisi id fringilla. Nulla aliquam a nibh vitae imperdiet. Vestibulum eget maximus diam, quis placerat quam. Fusce eget porta augue. Etiam vel mattis sapien. </em></small></p>
-            <p>Nullam consectetur condimentum semper. Vestibulum non nibh rhoncus, ultricies sem vel, vestibulum nisl. Proin tristique velit vitae purus viverra, at tincidunt purus mollis. Etiam sollicitudin ex quis quam interdum ornare. Duis commodo eros sit amet mauris aliquam tincidunt vel non turpis. Nullam magna nunc, feugiat id tincidunt aliquet, iaculis ut nisl.</p>
-            <p>Donec consectetur tellus velit, a aliquam lacus varius at. Suspendisse potenti. Nam varius sed ex id tempor. Proin ipsum tortor, porttitor a tellus eget, eleifend consequat purus. In vitae lobortis eros. Morbi sed tristique urna. Curabitur varius tortor vitae est gravida, quis mollis diam pulvinar. Quisque facilisis eros in nisl laoreet dictum. Sed id tristique eros, vitae feugiat nulla. Ut quis nunc mauris. Maecenas nec velit et erat placerat scelerisque vitae et felis. Mauris mattis tincidunt ultricies. Nullam tristique pellentesque dapibus. Morbi eu ultricies leo. Pellentesque non facilisis nisl. Proin ut dui commodo, varius tortor ac, tincidunt arcu.</p>
-          </div>
-          
-          <!-- Sub-Topic C -->
-          <div id="subTopC">
-            <h5>Sub-Topic C</h5>
-            <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
-            <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-            <p><a target="_blank" href="https://learn.shayhowe.com/">Learn HTML/CSS</a> and Use this Res to discuss CSS <a target="_blank" href="https://nimbupani.com/css-vocabulary.html">CSS</a>.</p>
-          </div>
-          <!-- -->
-        </div>
+        </div>-->
         
-        <hr>
-        <!-- TOPIC-FOUR: XXXXXXXXX -->
+        <!--<hr>-->
+        <!-- TOPIC-FOUR: XXXXXXXXX 
         <div id="topicFour" class="intro">
           <h2>Topic 4</h2>
           <p>Quisque dictum et metus euismod sodales. Ut ex felis, auctor eu lacus eu, tincidunt lobortis nulla. Morbi cursus blandit libero, quis blandit nisl molestie at. Phasellus lacinia efficitur ante, vehicula vehicula lectus euismod ut. Mauris a vulputate sem, quis euismod justo. Quisque a semper augue. Nam volutpat, risus a convallis commodo, mauris orci ullamcorper erat, tincidunt blandit arcu ante in nisl.</p>
           <p>Aliquam mattis justo nec tellus varius tincidunt. Aenean lobortis odio enim, non mattis purus tincidunt sed. In ultrices, nisl et dictum blandit, elit quam pulvinar tellus, at facilisis lorem purus placerat neque. Nulla eget auctor metus, et venenatis justo. Nulla consectetur interdum congue. Sed scelerisque, velit quis placerat aliquet, sem odio aliquam nisi, in maximus lectus ante in dolor. Praesent rhoncus quis sem et sollicitudin. Nullam ut ligula ante. Phasellus vitae arcu ut lectus sollicitudin aliquet.</p>
           <p>Sed ultricies orci non eros congue sagittis. Nam fringilla mattis magna, et vulputate dui vehicula id. Nullam molestie imperdiet magna non convallis. Praesent et turpis id tortor efficitur malesuada. Curabitur condimentum varius nulla quis volutpat. Donec imperdiet ipsum tortor, at consectetur mi bibendum et. Nulla malesuada sapien augue, dictum vulputate odio dapibus et. Donec maximus ultricies ante, ac suscipit turpis interdum ac. Nunc semper eu ipsum vel elementum. Integer imperdiet rutrum eros a euismod. Donec diam tellus, sagittis a felis vitae, lobortis facilisis justo. Nunc arcu mauris, hendrerit id ullamcorper sit amet, congue vel lorem. Maecenas vitae odio faucibus, lobortis odio vitae, rutrum mi. Suspendisse potenti. In lacus sapien, dapibus quis est vel, condimentum iaculis leo.</p>
           <p>Curabitur est ligula, faucibus nec ultrices vel, pharetra ac ex. Curabitur risus nisl, dapibus vitae orci sit amet, commodo vehicula magna. Nulla in ante sit amet purus rhoncus hendrerit. Donec finibus iaculis pharetra. Nullam hendrerit leo vel odio sollicitudin, eget venenatis quam hendrerit. Sed a aliquam enim, ut volutpat augue. </p>
-        </div>
+        </div>-->
         
-        <hr>
-        <!-- TOPIC-FIVE: XXXXXXXXX -->
+        <!--<hr>-->
+        <!-- TOPIC-FIVE: XXXXXXXXX 
         <div id="topicFive" class="intro">
           <h2>Topic 5</h2>
           <p>Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>
-          <!-- Sub-Topic X -->
           <div id="subTopX">
             <h5>Sub-Topic X</h5>
             <p>Pellentesque ultricies consequat neque eget convallis. Proin at ex ac dui porttitor finibus sit amet id lectus. Donec nec ligula eget ipsum scelerisque viverra. Vivamus fermentum gravida lectus, a varius dolor ornare non. Quisque condimentum ligula enim, eu ullamcorper odio ultricies a. Suspendisse tempor non lorem vel tempus. Duis aliquet pharetra nulla. Sed venenatis sem nec ante mollis euismod. Nullam ornare sem sed turpis interdum tincidunt. Fusce iaculis et odio ut molestie. Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>
             <p>Pellentesque ultricies consequat neque eget convallis. Proin at ex ac dui porttitor finibus sit amet id lectus. Donec nec ligula eget ipsum scelerisque viverra. Vivamus fermentum gravida lectus, a varius dolor ornare non. Quisque condimentum ligula enim, eu ullamcorper odio ultricies a. Suspendisse tempor non lorem vel tempus. Duis aliquet pharetra nulla. Sed venenatis sem nec ante mollis euismod. Nullam ornare sem sed turpis interdum tincidunt. Fusce iaculis et odio ut molestie. Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>
           </div>
           
-          <!-- Sub-Topic Y -->
           <div id="subTopY">
             <h5>Sub-Topic Y</h5>
             <p>Pellentesque ultricies consequat neque eget convallis. Proin at ex ac dui porttitor finibus sit amet id lectus. Donec nec ligula eget ipsum scelerisque viverra. Vivamus fermentum gravida lectus, a varius dolor ornare non. Quisque condimentum ligula enim, eu ullamcorper odio ultricies a. Suspendisse tempor non lorem vel tempus. Duis aliquet pharetra nulla. Sed venenatis sem nec ante mollis euismod. Nullam ornare sem sed turpis interdum tincidunt. Fusce iaculis et odio ut molestie. Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>
             <p>Pellentesque ultricies consequat neque eget convallis. Proin at ex ac dui porttitor finibus sit amet id lectus. Donec nec ligula eget ipsum scelerisque viverra. Vivamus fermentum gravida lectus, a varius dolor ornare non. Quisque condimentum ligula enim, eu ullamcorper odio ultricies a. Suspendisse tempor non lorem vel tempus. Duis aliquet pharetra nulla. Sed venenatis sem nec ante mollis euismod. Nullam ornare sem sed turpis interdum tincidunt. Fusce iaculis et odio ut molestie. Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>            
           </div>
           
-          <!-- Sub-Topic Z -->
           <div id="subTopZ">
             <h5>Sub-Topic Z</h5>
             <p>Pellentesque ultricies consequat neque eget convallis. Proin at ex ac dui porttitor finibus sit amet id lectus. Donec nec ligula eget ipsum scelerisque viverra. Vivamus fermentum gravida lectus, a varius dolor ornare non. Quisque condimentum ligula enim, eu ullamcorper odio ultricies a. Suspendisse tempor non lorem vel tempus. Duis aliquet pharetra nulla. Sed venenatis sem nec ante mollis euismod. Nullam ornare sem sed turpis interdum tincidunt. Fusce iaculis et odio ut molestie. Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>
             <p>Pellentesque ultricies consequat neque eget convallis. Proin at ex ac dui porttitor finibus sit amet id lectus. Donec nec ligula eget ipsum scelerisque viverra. Vivamus fermentum gravida lectus, a varius dolor ornare non. Quisque condimentum ligula enim, eu ullamcorper odio ultricies a. Suspendisse tempor non lorem vel tempus. Duis aliquet pharetra nulla. Sed venenatis sem nec ante mollis euismod. Nullam ornare sem sed turpis interdum tincidunt. Fusce iaculis et odio ut molestie. Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>
             <p>Pellentesque ultricies consequat neque eget convallis. Proin at ex ac dui porttitor finibus sit amet id lectus. Donec nec ligula eget ipsum scelerisque viverra. Vivamus fermentum gravida lectus, a varius dolor ornare non. Quisque condimentum ligula enim, eu ullamcorper odio ultricies a. Suspendisse tempor non lorem vel tempus. Duis aliquet pharetra nulla. Sed venenatis sem nec ante mollis euismod. Nullam ornare sem sed turpis interdum tincidunt. Fusce iaculis et odio ut molestie. Maecenas mauris nisi, tempus a libero nec, cursus dictum tortor. Suspendisse pulvinar nulla nec rhoncus dignissim. Donec aliquam mi vel metus finibus molestie at quis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nibh odio, sagittis sit amet laoreet ac, malesuada quis risus. Maecenas vel ligula sit amet nisl pellentesque ornare accumsan in massa. Mauris condimentum tempus felis non euismod. Vestibulum suscipit venenatis urna ut vestibulum.</p>            
           </div>
-          <!-- -->
-        </div>
-        
-        <hr>
-        <!-- TOPIC-SIX: XXXXXXXXX -->
+        </div>-->
+        <!--<hr>-->
+        <!-- TOPIC-SIX: XXXXXXXXX 
         <div id="topicSix" class="intro">
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Officia ipsum fugit iure eaque quisquam error tempore earum enim illum, delectus officiis incidunt corrupti aliquid nam quas perspiciatis eveniet doloremque quod labore? Doloremque, ipsum?</p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-        </div>
-        <hr>
-        <!-- TOPIC-SEVEN: XXXXXXXXX -->
+        </div>-->
+        <!--<hr>-->
+        <!-- TOPIC-SEVEN: XXXXXXXXX 
         <div id="topicSeven" class="intro">
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-        </div>
-        <hr>
-        <!-- TOPIC-EIGHT: XXXXXXXXX -->
+        </div>-->
+        <!--<hr>-->
+        <!-- TOPIC-EIGHT: XXXXXXXXX 
         <div id="topicEight" class="intro">
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Officia ipsum fugit iure eaque quisquam error tempore earum enim illum, delectus officiis incidunt corrupti aliquid nam quas perspiciatis eveniet doloremque quod labore? Doloremque, ipsum?</p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-        </div>
-        <hr>
-        <!-- TOPIC-SNINEIX: XXXXXXXXX -->
+        </div>-->
+        <!--<hr>-->
+        <!-- TOPIC-SNINEIX: XXXXXXXXX 
         <div id="topicNine" class="intro">
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-        </div>
-        <hr>
-        <!-- TOPIC-TEN: XXXXXXXXX -->
+        </div>-->
+        <!--<hr>-->
+        <!-- TOPIC-TEN: XXXXXXXXX 
         <div id="topicTen" class="intro">
           <p>In facilisis pulvinar ipsum a luctus. Maecenas et dui sit amet mauris elementum accumsan. Mauris nec odio ante. In iaculis sapien ut blandit aliquam. Nam ullamcorper ex in gravida commodo. Proin sit amet orci ut ligula fringilla placerat non vulputate libero. Vestibulum ornare purus id tincidunt varius. </p>
           <p>Officia ipsum fugit iure eaque quisquam error tempore earum enim illum, delectus officiis incidunt corrupti aliquid nam quas perspiciatis eveniet doloremque quod labore? Doloremque, ipsum?</p>
           <p>Fusce quis luctus dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu ultrices ex, a sagittis dolor. Pellentesque ex mauris, porttitor et quam non, imperdiet auctor mauris. Phasellus vitae eros vitae velit pulvinar commodo. Pellentesque vestibulum enim non eleifend consequat. Vestibulum leo massa, pulvinar et diam sit amet, molestie ullamcorper dolor. Mauris vitae eros risus. Vivamus porttitor mi vel erat ultrices aliquam.</p>
-        </div>
+        </div>-->
       </main>  
       
       <!-- //FOOTER -->  
