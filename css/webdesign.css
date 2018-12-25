@@ -29,7 +29,7 @@ header.topnav > .active {
 fa-home {
   padding-right: 75px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -48,7 +48,7 @@ fa-home {
     text-align: left;
   }
 }
-/*Settings for 'FIXED-Header/Nav' on 'Desktop ONLY'*/
+/*Settings for 'FIXED-Header/Nav' on 'Desktop = REQ'*/
 @media screen and (min-width: 800px) {
   header {
     position: fixed;
@@ -434,11 +434,20 @@ code.reference > a {color: #fff;}
   details {margin: 0 4px; font-size: 0.8em;}
 }
 address {
-  margin: 0.5em 0 2em 0;
+  margin: 0 0 0.4em 0;
   color: red;
   font-size: 0.6em;
   font-family: cursive;
   text-align: center;
+}
+@media all and (min-width: 800px) {
+  address {
+    margin: 0 0 2em 0;
+    color: red;
+    font-size: 0.6em;
+    font-family: cursive;
+    text-align: center;
+  }
 }
 /**//*******************************//**/
 
@@ -447,43 +456,15 @@ address {
 /* ==================================== */
 /* ============== IMAGES ============== */
 img {
-  width: 100%; 
+  max-width: 100%; 
   height: auto;
 }
-.imgL {
-  float: left;
-  margin: 8px 16px 0 0;
-  width: 38%;
-  height: 100%; 
-  border-radius: 8px;
-}  
-.imgR {
-  float: right;
-  margin: 8px 0 0 16px;
-  width: 35%;
-  height: 100%; 
-  border-radius: 8px;
-} 
 @media all and (min-width: 800px) {  
   img {
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 80%;
-  }
-  .imgL {
-    float: left;
-    margin: 5px 20px 0 0;
-    width: 38%;
-    height: auto; 
-    border-radius: 2px;
-  }
-  .imgR {
-    float: right;
-    margin: 8px 0 0 20px;
-    width: 32%;
-    height: auto; 
-    border-radius: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
   }
 }
 /**//*******************************//**/
