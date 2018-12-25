@@ -68,9 +68,8 @@
         <div id="introduction" class="intro">
           <h2><i class="material-icons">code</i> Introduction</h2>
           <p>Learning to build web applications is an arduous process that requires a sprinkle of intelligence, a splash of determination and a whole lot of patience. I created this repository of resources to highlight my knowledge as a web developer.</p>
-          <p>This page provides an overview of the technical aspects pertinent for jumpstarting a career in web development. It is a simple no-frills guide for preparing a commuter to handle the demands of programming a web application.</p>
-          <p>Unlike the pages that deal with writing code, all resources listed on this page are embedded within the section where it is mentioned.</p>
-          <p>An embedded link with be underlined <u>like this</u>.</p>
+          <p>This page provides an overview of the technical aspects pertinent for jumpstarting a career in web development. It offers a simple no-frills guide for preparing a computer to handle the demands of programming a web application.</p>
+          <p>As you read, be sure to investigate the contextual links provided (all <u>underlined</u>).</p>
         </div>
         
         
@@ -78,7 +77,7 @@
         <!-- TOPIC-TWO: XXXXXXXXX -->
         <div id="environment" class="intro">
           <h2>Setting Up your Dev Environment</h2>
-          <p>Aside from owning a computer and having access to the internet you will also need:</p>
+          <p>This section highlights the main aspects required for establishing a proper developers environment. Aside from owning a computer and having access to the internet you will also need:</p>
           <ol class="alpha">
             <li>an <em>IDE</em> text-editor <span class="hide">to program your application</span></li>
             <li>a <em>Local Host-Server</em> <span class="hide">to work on a project in real-time offline</span></li>
@@ -87,25 +86,45 @@
           <!-- Sub-Topic 1: IDE -->
           <div id="ideSetup">
             <h5>Integrated Development Environment</h5>
-            <p><img src="img/ide.jpg" class="imgR">An <u><a href="https://www.techopedia.com/definition/26860/integrated-development-environment-ide" target="_blank">Integrated Development Environment</a></u> is a software application that provides comprehensive facilities to computer programmers for software development. In general, an IDE is a graphical user interface (GUI)-based workbench designed to aid a developer in building software applications with an integrated source-code editor combined with all the required automation tools at hand. IDE's are designed to maximize programmer productivity by providing versitle components within a single program of which all development is done. IDE's typically provide many features for authoring, modifying, compiling, deploying and debugging software, which helps developers quickly execute actions without switching to other applications. My IDE of choice is <u><a href="https://github.com/adobe/brackets/wiki/How-to-Use-Brackets" target="_blank">Brackets</a></u>.</p>
+            <p>An <u><a href="https://www.techopedia.com/definition/26860/integrated-development-environment-ide" target="_blank">Integrated Development Environment</a></u> (IDE) is a software application suite that combines tools required to write and test software, and is typically composed of a source code editor, build automation tools (i.e. compiler, interpreter), and a debugger. </p>
+            <figure>
+              <img src="img/ide.jpg" alt="Example of Brackets Text Editor" />
+              <figcaption>The Brackets IDE</figcaption>
+            </figure>
+            <p>IDE's are designed to maximize programmer productivity by providing versatile components within a single program of which all development is done. IDE's typically provide features for authoring, modifying, compiling, deploying and debugging software, which helps developers quickly execute actions without switching to other applications. </p>
+            <p>One aim of the IDE is to reduce the configuration necessary to piece together multiple development utilities, instead providing the same set of capabilities as a cohesive unit. Reducing that setup time can increase developer productivity, in cases where learning to use the IDE is faster than manually integrating all of the individual tools. Tighter integration of all development tasks has the potential to improve overall productivity beyond just helping with setup tasks. Without an IDE, a developer must select, deploy, integrate and manage all of these tools separately.</p>
+            <p>My IDE of choice is <u><a href="http://brackets.io/" target="_blank">Brackets</a></u>, an open-source, cross-platform software that primarily focuses on web development. Some of the reasons that I am partial to this particular IDE revolve around its various built-in features, including, but not limited to: inline editing of CSS and JavaScript elements; live preview of code in a browser; split pane views to work on two files simultaneously; and multiple file format support to write code using one of thrity-eight languages. As well, extensions can be imported via the built-in extension manager; for that matter, developers can create their own extension, a venture I have yet to attempt. Learn more about <u><a href="https://github.com/adobe/brackets/wiki/How-to-Use-Brackets" target="_blank">How to Use</a></u> Brackets and explore the <u><a href="https://onextrapixel.com/best-brackets-extensions/" target="_blank">various</a></u>-<u><a href="https://www.designbombs.com/best-free-brackets-extensions/" target="_blank">extensions</a></u> available for use.</p>
+            
           </div>
           <!-- -->
           <!-- Sub-Topic 2: LocalHost Server -->
           <div id="serverSetup">
             <h5>LocalHost Server</h5>
-            <p><img src="img/xampp.jpg" class="imgL">A <u><a href="https://www.ionos.com/digitalguide/server/know-how/localhost/" target="_blank">Localhost Server</a></u> is a computer networking configuration that creates an online-like environment for developers to test applications without the need for internet access. Specifically, localhost is the host name for your computer and uses the IP address 127.0.0.1 to act as a loopback mechanism used to run a network service on a host without requiring a physical network interface. Those good folks at <u><a href="https://www.apachefriends.org/index.html" target="_blank">Apache Friends</a></u> offer an open source cross-platform web server-stack with compatible options for users regardless of computer operating system. My localhost of choice is XAMMP.
-              <br><small><em>Note: Before downloading this program, research alternatives that are best suited for you.</em></small></p>
+            <p>A <u><a href="https://www.ionos.com/digitalguide/server/know-how/localhost/" target="_blank">Localhost Server</a></u> is a computer networking configuration that creates an online-like environment for developers to test applications without the need for internet access.</p>
+            <figure>
+              <img src="img/xampp.jpg" alt="Example of XAMPP Localhost Server" />
+              <figcaption>The XAMPP Localhost Server</figcaption>
+            </figure>
+            <p>Specifically, localhost is the default host name that means this computer and uses the IP address 127.0.0.1 to act as a loopback mechanism, which may be used to run a network service on a host without requiring a physical network interface, or without making the service accessible from the networks the computer may be connected to. The 127.0.0.1 is a universal address reserved for localhost; you can locate your computer IP address by selecting ‘start’ and typing ‘cmd’ into the search box. A command prompt will display, then you type ‘ipconfig /all’ and scroll the list until you find ‘IPv4 Address.’</p>
+            <p>Those good folks at <u><a href="https://www.apachefriends.org/index.html" target="_blank">Apache Friends</a></u> offer an open source cross-platform web server-stack with compatible options for users regardless of computer operating system. My localhost of choice is XAMMP, which is compatible with my Windows OS. It incorporates Apache, MySQL and PHP services in order to facilitate a server, store data, and run PHP scripts that can interact with a database.</p>
+            <p><small><em>Note: Before downloading this program, research alternatives that are best suited for you. Moreover, although outside of the scope of this content, it should be noted that a localhost should not be confused with a Web host, which is a service required in order to publish a website online. The Web host stores and makes files available to computers connected to the Internet website pages.</em></small></p>
+            
           </div>
           <!-- -->
           <!-- Sub-Topic 3: Version Control System -->
           <div id="vcsSetup">
             <h5>Version Control System</h5>
-            <p>A <u><a href="https://en.wikipedia.org/wiki/Version_control" target="_blank">Version Control System</a></u> is a software configuration that records changes to web files over time so that you can recall specific versions later. For all intents and purposes, a VCS is an online storage repository for your code, enabling developers with the ability to manage source-code, track all file versions (independent of network access) and coordinate a non-linear workflow in a team environment. My VCS of choice <u><a href="https://github.com" target="_blank">Github</a></u> due to its ease of use. You can check it out for yourself <u><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">here</a></u>.</p>
-            <p>This method of working with coded files is actually optional: it is not a requirement for facilitating a web application project. However, featured tenants of a VCS that I enjoy includes files never being lost and that those files are always accessible from any location in the world. Moreover, with some tinkering, security features can be implemented using the SSH protocol to synchronously connect with a file server, enabling near instantaneous deployment online.</p>
+            <p>A <u><a href="https://en.wikipedia.org/wiki/Version_control" target="_blank">Version Control System</a></u> (VCS) is a software configuration, or source sode manager, that records changes to a file or set of files over time; it is a categorization of processes and tools designed to keep track of different versions of software, content, documents, and websites in development.</p>
+            <figure>
+              <img src="img/vcs.jpg" alt="Example of Xthe Github Version Control System" />
+              <figcaption>The Github Version Control System</figcaption>
+            </figure>
+            <p>For all intents and purposes, a VCS is an online storage repository for your code, enabling developers with the ability to manage source-code, track all file versions and coordinate a non-linear workflow in a team environment. Version control allows servers in multiple locations to run different versions on different sites, even while those versions are being updated simultaneously by a number of different developers. The importance of this feature cannot be understated as this system allows developers to compare revised files, identify differences, and merge changes prior to committing any code.</p>
+            <p>My VCS of choice is <u><a href="https://github.com" target="_blank">Github</a></u> due to its integration capabilities. This VCS is well-documented, provides options for using an extension as opposed to the console, and requires authentication when checking-in or out of a repository. Featured tenants of the Github VCS that I enjoy include files never being lost and that those files are always accessible from any location in the world. Moreover, with some tinkering, security features can be implemented using the SSH protocol to synchronously connect with a file server, enabling near instantaneous deployment online. Learn more about <u><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">How to Use</a></u> Github and be sure to read the list of <u><a href="management.html">Git Commands</a></u> that I am familiar with and regularly use.</p>
           </div>
         </div>
         
-        <div class="intro"><address>Last Updated: 12/24/2018</address></div>
+        <div class="intro"><address>Last Updated: 12/25/2018</address></div>
         
         <!--<hr>-->
         <!-- TOPIC-THREE: XXXXXXXXX 
