@@ -1,3 +1,28 @@
+/*
+  BANNER -- to Hide Code during Production
+*/
+/*Under Construction Banner*/
+.banner{
+  height: 65vh;
+  margin-top: 10vh;
+}
+/*In-Progress Banner*/
+.banner2 {
+  height: 70vh;
+  margin-top: 25vh;
+}
+@media screen and (min-width: 900px) {
+  .banner {
+    height: 61vh;
+    margin-top: 21vh;
+  }
+  .banner2 {
+    height: 62vh;
+    margin-top: 30vh;}
+}
+
+
+
 /* ============================================ */
 /* ============== TOP-NAVIGATION ============== */
 .topnav {
@@ -109,6 +134,7 @@ autoprefixer({grid: true;})
 .grid {
 	margin: 0 2.4vw;
   padding: 0;
+  height: auto;
 	display: grid;
 	grid-template-rows: 0px minmax(200px,auto) 35px;
 	grid-gap: 4px;
@@ -324,12 +350,10 @@ h6 {
   text-align: center;
 } /*for TOP Alignment */
 p {
-	margin: 0.25em;
+	margin: 0.80em 0.44em 0 -0.42em;
 	text-align: justify;
   line-height: 1.5; 
   font-size: 0.78em;
-  /*font-size: 18px;
-  line-height: 1.5;*/
 }
 /**/
 /**/
@@ -425,7 +449,7 @@ code.reference > a {color: #fff;}
 /**/
 /**/
 @media all and (min-width: 500px) {
-  p {margin: 0.25em 0.55em 0.25em 0.25em;}
+  p {}
   code {font-size: 0.88em;}
   details {margin: 0 4px; font-size: 1em;}
 }

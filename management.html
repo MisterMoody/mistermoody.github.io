@@ -30,7 +30,7 @@
     <div class="grid">  
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
       <nav>
-        <ul class="nav">
+        <!--<ul class="nav">
           <li>
             <a class="" href="#version">Version Control</a>
           </li>
@@ -40,26 +40,28 @@
           <li>
             <a class="" href="#"></a>
           </li>
-        </ul>
+        </ul>-->
       </nav>
       
       <!-- //CONTENT -->
       <main id="top">
-        <!-- -->
-        <div class="intro"><a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a></div>
-        <!-- 'The Dev Environ' 
-        <div class="intro" id="environ">
-          <h2 class="title"><i class="material-icons">laptop</i> 
-          The Dev Environment</h2>
+        <!-- TEMPORARY CONSTRUCTION BANNER-->
+        <div class="banner2">
+          <h1>IN-PROGRESS</h1>
+          <h5 style="color: red;">Check Below</h5>
         </div>
-        <hr id="version">-->
+        <!-- Back-to-Top Button-->
+        <!--<div class="intro">
+          <a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a>
+        </div>-->
+        
         <!-- 'Version Control'-->
         <div class="intro">
           <h2 class="title"><i class="material-icons">usb</i> Version Control &amp; Using Github</h2>
           <p>Github is a distributed version control system that helps developers manage different versions of project files. In a distributed system, you can copy a complete repository (ie git, project) with its entire history to any machine making it easy to work remotely on projects from any physical location.</p>
 			    <p>Developers utilize Git via commands that are delivered via the console which grants access to a repository. You can edit your files, then run Git commands to store your changes. Each time you complete a change to a project file, Git records a snapshot of their current contents. These snapshots are known as commits which are pushed back to the repository and stored.</p>
           <p>This section includes a list of commands along with the circumstance that would requier you to use each. </p>
-          <!-- -->
+          
           <h3><span>Part I:</span> List of Git Commands and Description</h3>
           <article class="table">
             <div class="hideMobile"><b>Git Command</b></div>
@@ -92,7 +94,7 @@
             <div>Remove Files Tracked by Git</div>	
           </article>
 			    <p>Git Commands include <em>'Options'</em> that can be specified with a Single dash (-) or a Double dash (--) followed by a Letter or a Word, respectively.</p>
-          <!-- -->
+          
           <h3><span>Part II:</span> Creating a Repository</h3>
           <p>There are two ways to create a repository: You can <em>Clone</em> a repo from another machine, or you can <em>Initialize</em> a brand new repo.</p>
           <article class="table">
@@ -112,7 +114,7 @@
             <div>git push -u origin master</div>-->
           </article>
 			   <p>Learn more about <code class="reference"><a href="https://help.github.com/articles/connecting-to-github-with-ssh/t">Github AUTH</a></code> <code class="reference"><a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Configurations</a></code>.</p>
-         <!-- -->
+         
 			   <h3><span>Part III:</span> Staging Changes</h3>
          <p>At this point, you have a repository properly configured and you simply want to save your work. Before saving your work, you run &#91;Step 1&#93; to ascertain what files are ready to be versioned.</p>
           <article class="table">
@@ -126,12 +128,12 @@
             <div>git <code>push -u origin master</code></div>
           </article>
          <p>After performing these four steps, you will be promted to enter your credentials unless you use advanced features that allow you to configure your dev environment.</p>
-         <!-- -->
-         <!-- -->
+         
+          
 			   <h3><span>Part IV:</span> Viewing File Changes</h3>
           <p>To view how a file was modified, use the <code>git diff</code>(<code>--staged</code>)  to make comparisons. Files that have been modified will display <code>&#45;</code> while files that have been removed will display <code>&#43;</code>.</p>
           <p>When writting commits, have fun including <u><a href="https://emoji.muan.co" target="_blank">Emojis</a></u>!</p>
-         <!-- -->
+         
          <h3><span>Part V:</span> Managing Committed Files</h3>
          <p>Below are commands that may prove useful only after becoming comfortable using the console.</p>
          <article class="table">
@@ -154,8 +156,8 @@
          </article>
          <p>The <code>git log</code> command produces a list of Commits along with their Simple Hashing Algorithm (SHM) identification number, which is <em>a checksum of all changes in that commit</em>. The checksum is the result of combining all the changes in the commit and feeding them to an algorithm that generates these 40-character strings. When you need to select a commit from your history, you can use these SHA-1 checksums, or "SHAs" for short, to identify which commit you want.</p>
          <p>Learn more about <code class="reference"><a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-reset">Resets</a></code> and <code class="reference"><a href="https://dev.to/vorahsa/fixing-mistakes-with-git-27a5">Fixing Mistakes</a></code>.</p>
-         <!-- -->
-         <!-- -->
+         
+          
 			   <h3><span>Part VI:</span> Working with Remote Repositories</h3>
 			   <p>Using github for independent projects is slightly different when working with others. For starters, a repo that you own is called a Local Repo whilst a repo owned by another developer is called a Remote Repo. Each repository is a full copy of its original, including version history.</p>
 			   <p>While developers can make commits to their own repo independent of others, a dev must always pull commits other developers have made from a remote repo to a local repo to maintain the most up-to-date version.</p>
@@ -170,11 +172,10 @@
            <div>git <code>pull origin</code> <small>(Add Updated Files to Directory)</small></div>
          </article>
 			   <p>Collaborators typically use a declared central repository and gain acces via cloning into their local machine. This allows developers to work on different components that can be added to the central repo by pushing commits. Simply add the repo by name to the folder on your local machine.</p>
-         <!-- -->
-         <!-- -->
-          <address>Last Updated: 16 July 2018</address>
+         
+          <address>Last Updated: 12/25/2018</address>
         </div>
-      </main>  
+      </main>
       
       <!-- //FOOTER -->  
       <footer>
