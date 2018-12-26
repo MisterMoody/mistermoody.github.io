@@ -301,30 +301,19 @@ body {
   letter-spacing: 0.8px;
 }
 /*Back to Top Button*/
-@media only screen and (max-width: 800px) {
-  .top {
-    background: none; 
-    margin: 0; 
-    position: fixed; 
-    bottom: 0; 
-    right: 0; 
-    width: 22px; 
-    height: 30px; 
-    z-index: 100; 
-    text-decoration: none; 
-    color: red; 
-    /*background-color: #ff9000;*/
-  }
+.top {
+  display: none;
 }
 @media only screen and (min-width: 800px) {
   .top {
+    display: inline-block;
     background: none; 
     margin: 0; 
     position: fixed; 
-    bottom: 0; 
+    bottom: 50vh; 
     right: 0; 
-    width: 33px; 
-    height: 40px; 
+    width: 30px; 
+    height: 10px; 
     z-index: 100; 
     text-decoration: none; 
     color: red; 
