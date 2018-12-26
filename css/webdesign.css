@@ -339,16 +339,10 @@ h6 {
   text-align: center;
 } /*for TOP Alignment */
 p {
-	margin: 0.80em 0.44em 0 -0.42em;
+	margin: 0.80em 0.44em;
 	text-align: justify;
   line-height: 1.5; 
   font-size: 0.78em;
-}
-/**/
-/**/
-.material-icons {
-  color: #ff4d4d; 
-  font-size: 1em;
 }
 /**/
 /**/
@@ -381,11 +375,6 @@ ol {font-size: 0.68em;}
 ol.alpha {list-style-type: lower-alpha;}
 /**/
 /**/
-figcaption {
-  font-size: 0.68em;
-  font-style: italic;
-  text-align: center;
-}
 
 mark {background: #ccc;}
 
@@ -443,7 +432,6 @@ code.reference > a {color: #fff;}
   details {margin: 0 4px; font-size: 1em;}
 }
 @media all and (max-width: 500px) {
-  figure {margin: 0; padding: 0;}
   details {margin: 0 4px; font-size: 0.8em;}
 }
 address {
@@ -451,6 +439,16 @@ address {
   color: red;
   font-size: 0.6em;
   font-family: cursive;
+  text-align: center;
+}
+
+figure {
+  margin: 0; 
+  padding: 0;
+}
+figcaption {
+  font-size: 0.68em;
+  font-style: italic;
   text-align: center;
 }
 @media all and (min-width: 800px) {
@@ -467,8 +465,9 @@ address {
 
 
 /* ==================================== */
-/* ============== IMAGES ============== */
+/* ========= IMAGES & ICONS =========== */
 img {
+  margin: 0 auto;
   max-width: 100%; 
   height: auto;
 }
@@ -480,6 +479,13 @@ img {
   width: 80%;
   }
 }
+
+/**/
+.material-icons {
+  color: #ff4d4d; 
+  font-size: 1em;
+}
+/**/
 /**//*******************************//**/
 
 
