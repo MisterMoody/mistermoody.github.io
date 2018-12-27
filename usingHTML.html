@@ -28,21 +28,50 @@
     
     <!-- ******** <MAIN-GRID>  ******** -->
     <div class="grid">  
-      <!-- -->
-      <!-- -->
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
       <nav>
-        <!--<ul class="nav">
-          <li>
-            <a class="" href="#version">Version Control</a>
-          </li>
-          <li>
-            <a class="" href="#"></a>
-          </li>
-          <li>
-            <a class="" href="#"></a>
-          </li>
-        </ul>-->
+        <ul>
+          <li><a href="#introduction">Using HTML</a></li>
+          <li><a href="#defineHTML">What is HTML?</a></li>
+          <li><a href="#template">Required HTML</a></li>
+            <li class="nested"><a href="#reqRoot">Main Root</a></li>
+            <li class="nested"><a href="#reqHead">Head</a></li>
+            <li class="nested"><a href="#reqBody">Body</a></li>
+          <li><a href="#defineSec">Defining Sections</a></li>
+            <li class="nested"><a href="#secHead">Header Section</a></li>
+            <li class="nested"><a href="#secMain">Main Section</a></li>
+            <li class="nested"><a href="#secContent">Sections for Content</a></li>
+            <li class="nested"><a href="#secFooter">Footer Section</a></li>
+          <li><a href="#defineContent">Defining Content</a></li>
+            <li class="nested"><a href="#conNav">Navigation</a></li>
+            <li class="nested"><a href="#conHP">Headings / Paragraphs</a></li>
+            <li class="nested"><a href="#conInline">Inline-Text Semantics</a></li>
+            <li class="nested"><a href="#conImages">Images</a></li>
+            <li class="nested"><a href="#conForms">Forms</a></li>
+            <li class="nested"><a href="#conInteract">Interactive Elements</a></li>
+            <li class="nested"><a href="#conAscii">Using Unicode</a></li>
+            <li class="nested"><a href="#conAdvanced">Advanced Elements</a></li>
+          <li><a href="#accessibility">Accessibility</a></li>
+          <li><a href="#xxx">xxx</a></li>
+          
+          
+            <li class="nested"><a href="#"></a></li>
+            <li class="nested"><a href="#"></a></li>
+            <li class="nested"><a href="#"></a></li>
+          <!-- 
+          <li><a href="#topicThree">Topic 3</a></li>
+          <li><a href="#topicFour">Topic 4</a></li>
+          <li><a href="#topicFive">Topic 5</a></li>
+            <li class="nested"><a href="#subTopX">Sub-topic X</a></li>
+            <li class="nested"><a href="#subTopY">Sub-topic Y</a></li>
+            <li class="nested"><a href="#subTopZ">Sub-topic Z</a></li>
+          <li><a href="#topicSix">Topic 6</a></li>
+          <li><a href="#topicSeven">Topic 7</a></li>
+          <li><a href="#topicEight">Topic 8</a></li>
+          <li><a href="#topicNine">Topic 9</a></li>
+          <li><a href="#topicTen">Topic 10</a></li>
+           -->
+        </ul>
       </nav>
       <!-- -->
       <!-- <CONTENT> -->
@@ -52,52 +81,62 @@
           <a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a>
         </div>
         <!-- -->
-        <!-- -->
-        <!-- TEMPORARY CONSTRUCTION BANNER-->
+        <!-- TEMPORARY 'In-Progress' BANNER-->
         <div class="banner2">
           <h1>IN-PROGRESS</h1>
           <h5 style="color: red;">Check Below</h5>
         </div>
-        <!-- Back-to-Top Button-->
-        <!--<div class="intro">
-          <a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a>
-        </div>-->
         <!-- -->
+        <!-- //INTRODUCTION -->
+        <div id="introduction" class="intro">
+          <h2 class="title"><i class="material-icons">code</i> Using HTML</h2>
+          <p>This page defines the Hypertext Markup Language, better known as HTML, which is the standard markup language for creating web pages and web applications. The list of topics to be covered include:</p>
+          <!-- -->
+          <ol>
+            <li>Topic 1</li>
+            <li>Topic 2</li>
+            <li>Topic 3</li>
+            <li>Topic 4</li>
+            <li>Topic 5</li>
+            <li>Topic 6</li>
+          </ol> 
+          <!-- -->
+          <p>Brief explanations will be provided to explain the primary concepts associated with this language. Useful resources are provided as well.</p>
+        </div>
         <!-- -->
         <!-- ++WHAT is HTML++ -->
+        <hr>
         <div id="defineHTML" class="intro">
-          <!--<h2 class="title"><i class="material-icons">code</i> Using HTML</h2>-->
-          <h3>What is HTML?</h3>
+          <h2>What is HTML?</h2>
           <!-- Elements -->
-          <p>This page provides useful resources for writing semantic markup that is accessible while providing explainations and examples.</p>
-          <p><u><a target="_blank" href="https://learn.shayhowe.com/">Learn HTML/CSS</a></u> and Use this Res to discuss CSS <a target="_blank" href="https://nimbupani.com/css-vocabulary.html">CSS</a>.</p>
+          <!--<p><u><a target="_blank" href="https://learn.shayhowe.com/">Learn HTML/CSS</a></u> and Use this Res to discuss CSS <a target="_blank" href="https://nimbupani.com/css-vocabulary.html">CSS</a>.</p>-->
           <p>
-            <mark><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></mark> is a markup language that defines the structure of the content on a webpage. Every HTML document is a hierarchical structure made up of <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Elements</a></mark> that dictate how content is displayed and&#47;or sectioned. HTML Elements are used by Internet browsers to read and display HTML content to a user. Elements usually have an opening <code>&lt;element&gt;</code> and closing <code>&lt;&#47;element&gt;</code> component, but there are a few elements that are self-closing.
+            <u><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></u> defines the hierarchical structure of the content on a webpage using <u><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Elements</a></u> that dictate how content is displayed and&#47;or sectioned. HTML Elements are used by Internet browsers to read and display HTML content to a user. Elements usually have an opening <code>&lt;..&gt;</code> and closing <code>&lt;&#47;..&gt;</code> component, but there are some that are self-closing.
           </p>
           <!-- Attributes -->
           <p>
-            Content contained within any <code>&lt;element&gt;</code> can be configured through the use of an <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attribute</a></mark>, which is an explicit value placed in the opening component of an <code>&lt;element&gt;</code> to adjust its behavior in a manner that meets a specific criteria. An attribute is created by using a keyword followed by a delimiter and a value that is surrounded by quotations, like so: <code>attribute&#61;&#34;value&#34;</code>. There are 100&#43; attributes that can be used to enhance an <code>&lt;element&gt;</code>, depending on the objective. Although declared in HTML, the functionality of an attribute is often  &#40;not always&#41; declared in CSS and JavaScript, which kind of complicates the issue of staying on topic with the study of HTML. To keep things simple, attributes will be introduced where appropriate for potential usage within a particular <code>&lt;element&gt;</code>.
+            Content contained within an element can be configured through the use of an <u><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attribute</a></u>, which is an explicit value placed in the opening component of an element to adjust its behavior in a manner that meets a specific criteria. An attribute is created by using a keyword followed by a delimiter and a value that is surrounded by quotations, like so: <code>&lt;attribute&#61;&#34;value&#34;&gt;</code>.
           </p>
-          <!-- Move these Attributes to where they can be used -->
-          <!--<p>
+          <p>
+            There are 100&#43; attributes that can be used to enhance an element, depending on the objective. To be clear, there are CSS Selectors that can be applied to an HTML element as well, but such properties are used for styling that particular elements content in a precise manner. To keep things simple, attributes will be introduced where appropriate while selectors will be explained later on the CSS page.
+          </p>
+          <p>
             The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
             <br>
             The <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content.
-          </p>
-          <p>
+            <br>
             The <code class=""><a href="">title&#61;&#34;...&#34;</a></code> attribute provides a title for an element as a <mark>tooltip</mark> in web browsers. It is most useful for embedded or linked resources. Although it may be used on all elements contained in the body of a document, it is not relevant to the majority of elements found inside the head of the document. Do not confuse with the <code>&#60;title&#62;</code> element.
-          </p>-->
+          </p>
           <!-- -->
           <p>
             With that out of the way I would like to shift attention to requirements for developing an HTML template.
           </p>
         </div>
         <!-- -->
-        <!-- -->
         <!-- ++REQUIRED HTML++ -->
-        <hr id="template">
-        <div class="intro">
-          <h3>Required Elements for an HTML Template</h3>
+        <hr>
+        <div id="template" class="intro">
+          <h2>Required Elements for an HTML Template</h2>
           <p>
             When creating an HTML template, there are seven <code>&lt;element&gt;</code>s that are required of a functional document. The illustration below highlights what is required, followed by a brief explanation for each <code>&lt;element&gt;</code> used.
           </p>
@@ -106,12 +145,15 @@
             <figcaption>Required structural elements for an HTML template</figcaption>
           </figure>
           <!-- MAIN-ROOT -->
-          <h4>The Main Root</h4>
+          <div id="reqRoot">
+          <h5>The Main Root</h5>
           <p>
             The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page; it declares that this is an HTML file. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="_blank">&lt;html&gt;</a></code> element is on the second and final line of a page. This element is the outermost container that acts as a wrapper for everything on the entire page. This element possess two direct descendants.
           </p>
+          </div>
           <!-- HEAD -->
-          <h4>The Head</h4>
+          <div id="reqHead">
+          <h5>The Head</h5>
           <p>
            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">&lt;head&gt;</a></code> element is the first child descendant of the <code>&lt;html&gt;</code> element and represents the area that contains all meta information about a particular page, its title and instructions for the browser to locate style sheets while defining relationships that the document has to others in the web site.
           </p>
@@ -131,42 +173,50 @@
           <p>
             Web browsers use the combination of this information to coordinate all resources required to make the website function as it was designed, however, absolutely none of this information is visible to the user. Once this technical aspect is complete, focus shifts to structuring content layout.
           </p>
-          <!-- BODY-->
-          <h4>The Body</h4>
+          </div>
+          <!-- Sub-Topic 3: BODY-->
+          <div id="reqBody">
+          <h5>The Body</h5>
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">&lt;body&gt;</a></code> element is the second child descendant of the <code>&lt;html&gt;</code> element and represents the area that wraps all content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Lets explore!
           </p>
+          </div>
         </div>
         <!-- -->
-        <!-- -->
         <!-- ++DEFINE SECTION++ -->
-        <hr id="defineSec">
-        <div class="intro">
-          <h3>Defining Sections</h3>
+        <hr>
+        <div id="defineSec" class="intro">
+          <h2>Defining Sections</h2>
           <p>
             During the planning phase, I often imagine how I want the content to be displayed physically and how that content should behave. Doing so helps me determine which HTML element to use. When <mark><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">defining page sections</a></mark>, I know that I can rely on the Header, Nav, Article, Section, Main, Aside, Div and Footer elements to get me started.
           </p>
           <figure>
-            <img src="img/section.jpg" alt="a cute hamster" />
+            <img src="img/section.jpg" alt="Method for Defining Page Sections" />
             <figcaption>Method for Defining Page Sections</figcaption>
           </figure>
-          <!-- Header / Nav -->
+          <!-- Sub-Topic 1: Header / Nav -->
+          <div id="secHead">
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank">&lt;header&gt;</a></code> element is the first section users encounter and contains introductory information related to the website such as a logo, author or navigational aids. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank">&lt;nav&gt;</a></code> element allows users to navigate a website, providing links within the current document or to an external source. This element can be used within a <code>&lt;header&gt;</code> or independently, and should be reserved for primary navigation sections only including global navigation, a table of contents, previous&#47;next links, etc.
           </p>
-          <!-- Main -->
+          </div>
+          <!-- Sub-Topic 2: Main -->
+          <div id="secMain">
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main" target="_blank">&lt;main&gt;</a></code> element is not an element that should be used to section content as it represents content that is directly related to the central topic of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application. This element is essentially the main container within the <code>&#60;body&#62;</code> element, possessing all information outside of content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos or search forms.
           </p>
-          <!-- Article / Section -->
+          </div>
+          <!-- Sub-Topic 3: Sections for Content -->
+          <div id="secContent">
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank">&lt;article&gt;</a></code> element represents a self-contained composition in a document that is intended to be distributable such as a forum post, a newspaper article, or a blog entry. This is 1 of 4 elements that I use to section main areas of content. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank">&lt;section&gt;</a></code> element represents a standalone section contained within an HTML document. It can be nested inside of the <code>&lt;article&gt;</code> element to create distinguishable sections.
           </p>
-          <!-- Aside / Div -->
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank">&lt;aside&gt;</a></code> element is used for content that is indirectly related to the documents main content such as sidebars, inserts, or brief explanations. These elements are frequently presented as sidebars or call-out boxes. This element can be nested within other section elements and act as an identifier container for content related to that specific section. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">&lt;div&gt;</a></code> element is a generic block-level container used to identify large groupings and the flow of content.
           </p>
-          <!-- Footer -->
+          </div>
+          <!-- Sub-Topic 4: Footer -->
+          <div id="secFooter">
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank">&lt;footer&gt;</a></code> element typically contains information about the author of the section, copyright data or links to related documents. It is placed at the bottom of the section root or used at the bottom of any sectioning elements.
           </p>
@@ -174,20 +224,20 @@
             Now is a good time to introduce the <code class=""><a href="">id&#61;&#34;...&#34;</a></code> attribute, which provides a unique identifier for an element within the document to create a hyperlink. This identifier may also be used in CSS and JavaScript in the same fashion as the <code class="">class&#61;&#34;...&#34;</code> attribute with one exception: an id-attribute applied to an element must NOT match an id-attribute used elsewhere on the page. This attribute is very useful for providing <mark><a href="https://www.lifewire.com/adding-internal-links-3466484">internal links</a></mark>. The aforementioned
             <code class="">class&#61;&#34;...&#34;</code> attribute is used in CSS for styling or with JavaScript to make changes and add behavior to elements belonging to a particular subtype.
           </p>
+          </div>
         </div>
         <!-- -->
-        <!-- -->
         <!-- ++DEFINE CONTENT++ -->
-        <hr id="defineContent" >
-        <div class="intro">
-          <h3>Defining Content</h3>
+        <hr>
+        <div id="defineContent" class="intro">
+          <h2>Defining Content</h2>
           <p>
             Content elements are used to organize sections of content and are nested within any sectional element. There are dozens of elements that can be used to markup content depending on whether you want to use a sectional heading, add text, create a form, include some sort of multimedia or script, add interactivity and much more. At this juncture, I definitely want to add some context for how elements should be used to define content. In this regard, I will outline components for a new magazine to demonstrate the power of HTML.
           </p> 
           <!-- -->
           <!-- NAVIGATION --> 
-          <!-- -->
-          <h4>Navigation</h4>
+          <div id="conNav">
+          <h5>Navigation</h5>
           <p>
             Building an efficient navigation system that will allow users to seamlessly traverse the site is the first order of business for this project. Lets create a system consisting of links to the home page, an about page and a contact page. This task can be completed by utilizing a <mark><a href="https://learn.shayhowe.com/html-css/creating-lists/" target="_blank">structured</a></mark>-<mark><a href="https://webplatform.github.io/docs/guides/html_lists/" target="_blank">list</a></mark> and in this case, an Unordered List fits the bill.
           </p>
@@ -213,10 +263,11 @@
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl" target="_blank">&#60;dl&#62;</a></code> element is another list; it is not commonly used and is recommended for implementing a glossary. The element encloses a list of groups of terms (specified using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt" target="_blank">&#60;dt&#62;</a></code> element) and descriptions (provided by <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt" target="_blank">&#60;dd&#62;</a></code> elements).
           </p>
+          </div>
           <!-- -->
           <!-- HEADINGS & PARAGRAPH -->
-          <!-- -->
-          <h4>Headings and Paragraph</h4>
+          <div id="conHP">
+          <h5>Headings and Paragraph</h5>
           <p>
             Now lets markup a simple article with a title and some paragraph text. The title of any article or section is known as a heading and should employ one of the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">&#60;h1-h6&#62;</a></code> elements, which are perfectly suited for this objective. Best practice mandates that the <code>&#60;h1&#62;</code> be used only once per page and to avoid skipping levels when nesting subsections to reflect the organization of the content of the page. One practical explanation for this is that most screen readers can generate an ordered list of headings on a page, which can help a person quickly determine the hierarchy of the content.<sup><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">[*]</a></sup> We can outline our article using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">&#60;p&#62;</a></code> element, which will create perfectly aligned blocks of text. We should also illustrate credibility for our story by including a source reference and this can be accomplished by using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">&#60;blockquote&#62;</a></code> element.
           </p>
@@ -227,11 +278,11 @@
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;h2&#62;</code>H2 = Secondary-Title<code>&#60;&#47;h2&#62;</code>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;&#47;hgroup&#62;</code>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;p&#62;</code>blah blah blahblah blah blahhhhh... blah<code>&#60;&#47;p&#62;</code>
-            <br><code>&#60;&#47;article&#62;</code></p>
+            <br><code>&#60;&#47;article&#62;</code></p></div>
           <!-- --> 
           <!-- INLINE-TEXT SEMANTICS -->
-          <!-- --> 
-          <h4>Inline Text Semantics</h4>
+          <div id="conInline">
+          <h5>Inline Text Semantics</h5>
           <p>
             Within the <code>&#60;p&#62;</code>, we can employ <mark><a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics" target="_blank">semantic inline text</a></mark> elements, which are used to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
           </p>
@@ -246,17 +297,19 @@
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite" target="_blank">&lt;cite&gt;</a></code> element is used to describe a reference to a cited creative work; it must include either the title or the URL of that work and most likely will employ the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q" target="_blank">&lt;q&gt;</a></code> element, which indicates that the enclosed text is a short inline quotation. 
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr" target="_blank">&lt;abbr&gt;</a></code> element represents an abbreviation or acronym; an optional title attribute can provide a description in the form of a tooltip. If present, the title attribute must contain this full description and nothing else. You can also use the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr" target="_blank">&lt;hr&gt;</a></code> element to create a stylish line-break between sections of content.
           </p>
+          </div>
           <!-- -->
-          <!-- IMAGES --> 
-          <!-- -->
-          <h4>Images</h4>
+          <!-- IMAGES -->
+          <div id="conImages">
+          <h5>Images</h5>
           <p>
             An image can be embedded into a <code>&#60;p&#62;</code> using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;img /&gt;</a></code> element. It requires a <code>src&#61;&#34;...&#34;</code> attribute for the image file path whose extension will take .svg, .jpg, or .png formats. Although optional, a description of the image will enhance accessibility for screenreaders and this can be accomplished using the <code>alt&#61;&#34;...&#34;</code> attribute. There are other attributes that can be applied for styling images, notably, <code>crossorigin&#61;&#34;...&#34;</code> and <code>srcset&#61;&#34;...&#34;</code>, but visual enhancements &#40;ie  border, object-position, margin, width&#41;. Furthermore, the <code>&lt;img /&gt;</code> element pairs well with a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure" target="_blank">&lt;figure&gt;</a></code> element, which represents a self-contained container that pairs well with the captioning <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" target="_blank">&lt;figcaption&gt;</a></code> element.
           </p>
+          </div>
           <!-- -->
           <!-- FORMS -->
-          <!-- -->
-          <h4>Forms</h4>
+          <div id="conForms">
+          <h5>Forms</h5>
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">&lt;form&gt;</a></code> element represents a document section that contains interactive controls for submitting information to a web server. It requires two attributes: <code>action&#61;&#34;...&#34;</code> and <code>method&#61;&#34;...&#34;</code>. The former is URI of a program that processes the form information while the latter is the HTTP method that the browser uses to submit the form. The method attribute will accept either <code>&#34;post&#34;</code> or <code>&#34;get&#34;</code> as its value. Every form that I have ever made used the <code>&#34;post&#34;</code> value, which corresponds to the HTTP POST method whereas form data is included in the body of the form and sent to the server. 
           </p>
@@ -313,11 +366,11 @@
           </p>
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea" target="_blank">&lt;textarea&gt;</a></code> element represents a multi-line plain-text editing control, useful for users to input information to be relayed in an email or for providing a comment on a blog. There are five friendly attributes that can be applied, starting with the <code>id&#61;&#34;...&#34;</code> which respectively associates itself with the <code>&#60;label&#62;</code> element for accessibility purposes so long as the values are identical. The <code>name&#61;&#34;...&#34;</code> attribute is used to set the name of the associated data point submitted to the server when the form is submitted. The <code>row&#61;&#34;...&#34;</code> and <code>cols&#61;&#34;...&#34;</code> attributes specify the precise size for the <code>&#60;textarea&#62;</code> while the <code>maxlength&#61;&#34;...&#34;</code> attribute sets the maximum number of characters that the <code>&#60;textarea&#62;</code> is allowed to contain. This element also accepts several attributes, the most useful of which are autocomplete, autofocus, disabled, readonly and required.
-          </p>
+          </p></div>
           <!-- -->
           <!-- INTERACTIVE ELEMENTS -->
-          <!-- -->
-          <h4>Interactive Elements</h4>
+          <div id="conInteract">
+          <h5>Interactive Elements</h5>
           <!-- Details / Summary -->
           <p>
              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">&lt;details&gt;</a></code> element creates a disclosure widget in which information is visible only when the widget is toggled. Use the self-contained <code>open</code> attribute to programmatically keep open the widget. A summary, caption or legend can be applied to the widget by employing the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">&lt;summary&gt;</a></code> element.
@@ -382,69 +435,11 @@
           <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;script&gt;</a></code> element is not an interactive element. However, inclusion of this element will embed or reference executable JavaScript code which is in and of itself an interactive programming language. It requires the <code>src&#61;&#34;...&#34;</code> attribute to specify the URI of an external script. It is also good practice to include a <code>type&#61;&#34;text/javascript&#34;</code> attribute to indicate the type of script, particularly for older browsers. Use of this element is an alternative to embedding a script directly within a document.
           </p>
-          <!-- -->
-          <!-- ADVANCED -->
-          <!-- -->
-          <h4>Advanced Elements</h4>
-          <p>
-            That concludes the list of content elements that I am comfortable using, but there are many more elements that I want to tinker with in the near future. A couple are the inline-text semantic elements such as the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd" target="_blank">&lt;kbd&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" target="_blank">&lt;time&gt;</a></code> elements. Embedding multimedia content is an area that I lack experience about so understanding <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">&lt;audio&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" target="_blank">&lt;embed&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">&lt;iframe&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map" target="_blank">&lt;map&gt;</a></code>/<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">&lt;area&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" target="_blank">&lt;object&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" target="_blank">&lt;param&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">&lt;picture&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">&lt;source&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track" target="_blank">&lt;track&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">&lt;video&gt;</a></code> elements will be crucial to my development. On the same token 
-            Web components is another area that I felt I am getting further behind in, particularly the HTML Content <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank">template</a></mark> and <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></mark> elements.
-            Lastly, I need to learn how to draw. Perhaps I will learn how to do so with the <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" target="_blank">canvas</a></mark> element.
-          </p>
-          <!-- -->
-          <!-- -->
-        </div>
-        <!-- -->
-        <!-- -->
-        <!-- ++ACCESSIBILITY++ -->
-        <hr id="accessibility">
-        <div class="intro">
-          <h3>Making a Page Accessible</h3>
-          <p>
-            The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues. 
-          </p>
-          <p>
-            In web design, Accessibility refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[*]</a></sup> The <mark><a href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a></mark> and <mark><a href="https://a11yproject.com" target="_blank">A11Y Project</a></mark> are two major advocates for web accessibility and provide <mark><a href="https://w3.org/TR/WCAG21">guidelines</a></mark> and patterns for developers to help make their applications accessible. <mark><a href="https://developer.paciellogroup.com/blog/2018/07/short-note-on-the-accessibility-of-styled-form-controls/">Another Source</a></mark>
-          </p>
-          <p>
-            Here is a short list of <mark><a href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a></mark> that every application should include:
-          </p>
-          <ol>
-            <li>Add Contrasting Color</li>
-            <li>Design usable :Focus States</li>
-            <li>Use Lables with Form Fields &amp; Inputs</li>
-            <li>Write Alternative Text for Images</li>
-            <li>Use Proper Markup for Content</li>
-            <li>Support Keyboard Navigation</li>
-          </ol>
-          <p>
-            The Color-Contrast Ration between text and its background should be at least 3/4.5 to 1 depending on the font boldness. The WebAIM group offers a <mark><a href="https://webaim.org/resources/contrastchecker/" target="_blank">Color Contrast Checker</a></mark> that allows developers to calculate the score for <mark><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">conformance levels</a></mark> in real time. When using color as an indicator, be sure to pair it with an icon, a label or pattern. Charts and graphs are often difficult to read so using shapes and varying sizes can help enhance monochromatic vision. You can use the <mark><a href="https://colororacle.org">Color Oracle</a></mark> to simulate what vision impaired folk see in real-time.
-          </p>
-          <p>
-            Adding a visual cue such as an underline text style will help an element stand out. Focus Indicators help people know which element has the keyboard focus and helps with navigating a website. Elements that should be focusable are links, form fields, widgets, buttons and menu items. Be sure to create a state that is highly visible, with good contrast to stand out from the rest.
-          </p>
-          <p>
-            People who use screen readers navigate form using the tab key and the <code>&lt;label&gt;</code> element is equipped to handle this action. Never use placeholder text for accessibility because it will be passed over during tabbing. There are plenty of resources for creating <mark><a href="https://webaim.org/techniques/forms/" target="_blank">Accessible Forms</a></mark>.
-          </p>
-          <p>
-            Vision impaired users rely on screen readers to 'hear' what is being displayed and the <code>&lt;alt=""&gt;</code> attribute is used to convert text to speech. Simply describe the image or what is happening in the background.
-          </p>
-          <p>
-            Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.
-          </p>
-          <p>
-            Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly marked; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.
-          </p>
-          <p>
-            When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <mark><a href="https://axe-core.org/" target="_blank">Check a Websites Accessibility</a></mark>.
-          </p>
-        </div>
-        <!-- -->
-        <!-- -->
-        <!-- ++UNICODE++ -->
-        <hr id="ascii">
-        <div class="intro">
-          <h3>Using Unicode </h3>
+          </div>
+          
+          <!-- ++UNICODE++ -->
+          <div id="conAscii">
+          <h5>Using Unicode </h5>
           <p>
             In HTML, sometimes writing is not as simple as it seems. For example, when I want to write a symbol I cannot simply type it into my keyboard; I must manually input its <mark>Character Reference</mark>, better known as Unicode: a best practice and International Standard ISO&#47;ICE 10646 Universal Coded Character Set &#40;UCS&#41;. In HTML, such references are known as an <mark><a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">Entity</a></mark>, which are used to display reserved characters that would otherwise be interpreted as HTML code in the browser. Entities can be created using a character entity reference, but in my studies I have become accustomed to using numeric character references. The syntax for this element begins with an ampersand <code>&amp;</code> and ends with a semicolon <code>&#59;</code> like so: <code>&amp;&#35;nn&#59;</code>. In this example, the <code>nn</code> represents the numeric value of the symbol that I want to include.
           </p>
@@ -593,9 +588,63 @@
             Be sure to do your own research to <mark><a href="https://wiki.mozilla.org/Help:Special_characters" target="_blank">learn</a></mark> <mark><a href="https://lachy.id.au/log/2005/10/char-refs" target="_blank">more</a></mark> about <mark><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">Unicode</a></mark> as you can include arrows, foreign languages, shapes and much more.<sup><a href="https://en.wikipedia.org/wiki/Universal_Coded_Character_Set" target="_blank">&#91;*&#93;</a></sup>
           </p>
         </div>
+          <!-- -->
+          <!-- ADVANCED -->
+          <div id="conAdvanced">
+          <h5>Advanced Elements</h5>
+          <p>
+            That concludes the list of content elements that I am comfortable using, but there are many more elements that I want to tinker with in the near future. A couple are the inline-text semantic elements such as the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd" target="_blank">&lt;kbd&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" target="_blank">&lt;time&gt;</a></code> elements. Embedding multimedia content is an area that I lack experience about so understanding <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">&lt;audio&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" target="_blank">&lt;embed&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">&lt;iframe&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map" target="_blank">&lt;map&gt;</a></code>/<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">&lt;area&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" target="_blank">&lt;object&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" target="_blank">&lt;param&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">&lt;picture&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">&lt;source&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track" target="_blank">&lt;track&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">&lt;video&gt;</a></code> elements will be crucial to my development. On the same token 
+            Web components is another area that I felt I am getting further behind in, particularly the HTML Content <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank">template</a></mark> and <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></mark> elements.
+            Lastly, I need to learn how to draw. Perhaps I will learn how to do so with the <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" target="_blank">canvas</a></mark> element.
+          </p>
+          </div>
+          <!-- -->
+        </div>
         <!-- -->
+        <!-- ++ACCESSIBILITY++ -->
+        <hr>
+        <div id="accessibility" class="intro">
+          <h2>Making a Page Accessible</h2>
+          <p>
+            The concept of Accessibility focuses on making your web content easy for a wide range of users to access. This may include people with vision impairments, people with mobility problems, and those with cognitive issues. 
+          </p>
+          <p>
+            In web design, Accessibility refers to the practice of designing digital content and applications that can be used by people with visual, motor, auditory, speech or cognitive disabilities. Besides making a site more accessible for users with limitations, research proves that doing so improves SEO, increases download speeds and has better usability.<sup><a href="https://w3.org/WAI/bcase/Overview" target="_blank">[*]</a></sup> The <mark><a href="https://w3.org/WAI/standards-guidelines/aria/" target="_blank">WC3</a></mark> and <mark><a href="https://a11yproject.com" target="_blank">A11Y Project</a></mark> are two major advocates for web accessibility and provide <mark><a href="https://w3.org/TR/WCAG21">guidelines</a></mark> and patterns for developers to help make their applications accessible. <mark><a href="https://developer.paciellogroup.com/blog/2018/07/short-note-on-the-accessibility-of-styled-form-controls/">Another Source</a></mark>
+          </p>
+          <p>
+            Here is a short list of <mark><a href="https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94" target="_blank">Accesibility Criteria</a></mark> that every application should include:
+          </p>
+          <ol class="alpha">
+            <li>Add Contrasting Color</li>
+            <li>Design usable :Focus States</li>
+            <li>Use Lables with Form Fields &amp; Inputs</li>
+            <li>Write Alternative Text for Images</li>
+            <li>Use Proper Markup for Content</li>
+            <li>Support Keyboard Navigation</li>
+          </ol>
+          <p>
+            The Color-Contrast Ration between text and its background should be at least 3/4.5 to 1 depending on the font boldness. The WebAIM group offers a <mark><a href="https://webaim.org/resources/contrastchecker/" target="_blank">Color Contrast Checker</a></mark> that allows developers to calculate the score for <mark><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">conformance levels</a></mark> in real time. When using color as an indicator, be sure to pair it with an icon, a label or pattern. Charts and graphs are often difficult to read so using shapes and varying sizes can help enhance monochromatic vision. You can use the <mark><a href="https://colororacle.org">Color Oracle</a></mark> to simulate what vision impaired folk see in real-time.
+          </p>
+          <p>
+            Adding a visual cue such as an underline text style will help an element stand out. Focus Indicators help people know which element has the keyboard focus and helps with navigating a website. Elements that should be focusable are links, form fields, widgets, buttons and menu items. Be sure to create a state that is highly visible, with good contrast to stand out from the rest.
+          </p>
+          <p>
+            People who use screen readers navigate form using the tab key and the <code>&lt;label&gt;</code> element is equipped to handle this action. Never use placeholder text for accessibility because it will be passed over during tabbing. There are plenty of resources for creating <mark><a href="https://webaim.org/techniques/forms/" target="_blank">Accessible Forms</a></mark>.
+          </p>
+          <p>
+            Vision impaired users rely on screen readers to 'hear' what is being displayed and the <code>&lt;alt=""&gt;</code> attribute is used to convert text to speech. Simply describe the image or what is happening in the background.
+          </p>
+          <p>
+            Web browsers read the content and the type of HTML element that contains it. Browsers create their own structure of how the page renders using the elements. Using inline-styles will negatively affect accessibility.
+          </p>
+          <p>
+            Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly marked; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.
+          </p>
+          <p>
+            When you think your code is up to par and accessible, download <em>the Accessibility Engines</em> web browser extension to <mark><a href="https://axe-core.org/" target="_blank">Check a Websites Accessibility</a></mark>.
+          </p>
+        </div>
         <!-- -->
-        <hr id="">
       </main>  
       <!-- -->
       <!-- -->
@@ -621,6 +670,42 @@
         }
     }
     </script> 
+      
+		<!-- SidebarNavigation -->
+    <script>
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainSections = document.querySelectorAll("main section");
+
+    let lastId;
+    let cur = [];
+
+    // This should probably be throttled.
+    // Especially because it triggers during smooth scrolling.
+    // https://lodash.com/docs/4.17.10#throttle
+    // You could do like...
+    // window.addEventListener("scroll", () => {
+    //    _.throttle(doThatStuff, 100);
+    // });
+    // Only not doing it here to keep this Pen dependency-free.
+
+    window.addEventListener("scroll", event => {
+      let fromTop = window.scrollY;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+
+          if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+              ) {
+                  link.classList.add("current");
+                } else {
+                  link.classList.remove("current");
+                }
+              });
+            });
+    </script>
+    
     <!-- <dialog> Element Example -->
     <script src="dialogElement.js"></script>
 		<!-- -->
