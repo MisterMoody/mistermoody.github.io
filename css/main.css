@@ -22,7 +22,7 @@ footer {grid-area: footer;}
 	margin: 0.5em;
 	display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 150px));
   grid-gap: 10px;
 }
 /*DESKTOP Media-Query*/
