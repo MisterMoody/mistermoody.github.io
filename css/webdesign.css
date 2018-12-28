@@ -110,7 +110,10 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+/* !Issue with Sidebar >> NOT Scrolling past a specific limit*/
 .nested {
+  display: none;
+  margin: -8px 0;
   padding: 0rem 2rem;
   font-size: 0.88rem;
 }
@@ -443,7 +446,7 @@ address {
 }
 
 figure {
-  margin: 0; 
+  margin: 0 0.38em; 
   padding: 0;
 }
 figcaption {
@@ -459,6 +462,7 @@ figcaption {
     font-family: cursive;
     text-align: center;
   }
+  figure {margin: 0;}
 }
 /**//*******************************//**/
 
