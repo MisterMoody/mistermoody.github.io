@@ -105,7 +105,7 @@
             <li>Making HTML Accessible</li>
           </ol> 
           <!-- -->
-          <p>Examples will be provided throughout the page, but perhaps more valuable is the curated list of resources at the bottom of the page.</p>
+          <p>Examples will be provided throughout the page in the form of <u>contextual links</u> or code references, like so: <code class="reference"><a href="">&lt;code&gt;</a></code>. Perhaps more valuable is the curated list of resources at the bottom of the page.</p>
         </div>
         <!-- -->
         <!-- ++WHAT is HTML++ -->
@@ -124,15 +124,6 @@
           <p>
             There are 100&#43; attributes that can be used to enhance an element, depending on the objective. To be clear, there are CSS Selectors that can be applied to an HTML element as well, but such properties are used for styling that particular elements content in a precise manner. For simplicity sake, attributes will be introduced where appropriate while selectors will be explained on the CSS page. Just keep in mind that elements are only as powerful as the attributes that motivate them, and vice-versa.
           </p>
-          <!-- Alt, Src, Title Attributes Explained-->
-          <!--<p>
-            The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
-            <br>
-            The <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content.
-            <br>
-            The <code class=""><a href="">title&#61;&#34;...&#34;</a></code> attribute provides a title for an element as a <mark>tooltip</mark> in web browsers. It is most useful for embedded or linked resources. Although it may be used on all elements contained in the body of a document, it is not relevant to the majority of elements found inside the head of the document. Do not confuse with the <code>&#60;title&#62;</code> element.
-          </p>-->
-          <!-- -->
         </div>
         <!-- -->
         <!-- ++REQUIRED HTML++ -->
@@ -140,7 +131,7 @@
         <div id="template" class="intro">
           <h2>Required Elements for an HTML Template</h2>
           <p>
-            When creating an HTML template, there are seven <code>&lt;element&gt;</code>s that are required of a functional document. The illustration below highlights what is required, followed by a brief explanation for each <code>&lt;element&gt;</code> used.
+            When creating an HTML template, there are sevral elements that are required to ensure web browsers properly render documents. The illustration below highlights what is required, followed by a brief explanation for each element used.
           </p>
           <figure>
             <img src="img/requiredHTML.jpg" alt="a cute hamster" />
@@ -148,40 +139,56 @@
           </figure>
           <!-- MAIN-ROOT -->
           <div id="reqRoot">
-          <h5>The Main Root</h5>
-          <p>
-            The <code>&lt;!DOCTYPE html&gt;</code> is the first line of a page; it declares that this is an HTML file. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="_blank">&lt;html&gt;</a></code> element is on the second and final line of a page. This element is the outermost container that acts as a wrapper for everything on the entire page. This element possess two direct descendants.
-          </p>
+            <h5>The Main Root</h5>
+            <p>
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype" target="_blank">&lt;!DOCTYPE html&gt;</a></code> is the first line of a page. It declares that this document is indeed an HTML file by providing browsers with relevant specifications to ensure rendering.
+            </p>
+            <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="_blank">&lt;html&gt;</a></code> element is on the second and final line of a page and is the outermost container that acts as a wrapper for everything on the entire page. This element accepts the <code>&lt;lang="..."&gt;</code> attribute, which assists screen reading technology in determining what language to promulgate.</p>
           </div>
           <!-- HEAD -->
           <div id="reqHead">
-          <h5>The Head</h5>
+            <h5>The Head</h5>
+            <p>
+             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">&lt;head&gt;</a></code> element is the first child descendant of the <code>&lt;html&gt;</code> element and represents the area that contains all meta information about a particular page, its title and instructions for the browser to locate style sheets while defining relationships that the document has to others in the web site.
+            </p>
+            <p>
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">&lt;meta&gt;</a></code> tag is the first line in this area and it is used to provide meta data about a webpage, its author and pertinent information that enhances search engine optimization. This element accepts three attributes that will create a standard, mobile responsive document.
+            </p>
+            <p>
+              The <code>charset&#61;&#34;...&#34;</code> attribute declares the character encoding of the page or script. The assigned value for this attribute is <code>&#34;UTF&#45;8&#34;</code>, which stands for Universal Character Set and Transformation Format (8-bit).  This value is capable of encoding all possible characters in any language including Unicode, which as you will soon learn, is significant.
+            </p>
+            <p>
+              The <code>name&#61;&#34;viewport&#34;</code> attribute is used by the server for identifying device usage. The assigned value, <u>&#34;<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>&#34;</u>, describes the visible area of the webpage.
+            </p>
+            <p>
+              The <code>content&#61;&#34;...&#34;</code> attribute represents an association with the <code>name&#61;&#34;...&#34;</code> attribute and controls the size of the viewport and the zoom level when the page is first loaded, respectively. The assigned value, <code>&#34;width&#61;device&#45;width, initial&#45;scale&#61;1.0&#34;</code>, does several things that <u><a href="https://css-tricks.com/snippets/html/responsive-meta-tag/">enables a mobile responsive</a></u> platform while maintaining the structural and stylistic integrity. The width property controls the size of the viewport and when assigned the special value &#34;device-width&#34;, will scale the full-width of the screen. The initial-scale property controls the zoom level when the page is first loaded and simply controls how users are allowed to zoom the page in or out.
+            </p>
           <p>
-           The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">&lt;head&gt;</a></code> element is the first child descendant of the <code>&lt;html&gt;</code> element and represents the area that contains all meta information about a particular page, its title and instructions for the browser to locate style sheets while defining relationships that the document has to others in the web site.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" target="_blank">&lt;title&gt;</a></code> tag is the second line in this area and is simply used to document the webpage in the browser. Whatever is placed here will be visible on the browser tab.
           </p>
           <p>
-            The first line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">&lt;meta&gt;</a></code> element, which is a self-closing tag used to provide meta data about a webpage, its author, etc. In the example above, three attributes are declared to control the viewport's size and scale, essentially making the site mobile compatible. The <code>charset&#61;&#34;utf&#45;8&#34;</code> attribute declares the character encoding of the page or script. The <code><a href="">name&#61;&#34;viewport&#34;</a></code> attribute is used by the server for identifying its usage.<sup><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">&#91;*&#93;</a></sup> <sup><a href="https://css-tricks.com/snippets/html/responsive-meta-tag/">&#91;*&#93;</a></sup> The <code>content&#61;&#34;...&#34;</code> attribute represents an association with the <code>name&#61;&#34;...&#34;</code> attribute and its values <code>&#34;width&#61;device&#45;width, initial&#45;scale&#61;1.0&#34;</code> controls the size of the viewport and the zoom level when the page is first loaded, respectively. When combined, the latter attributes make the site mobile compatible, allowing users to visit the site from any device while maintaining the structural and stylistic integrity.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank">&lt;link&gt;</a></code> tag is the third line in this area and it specifies the resources incorporated into a site. In the example above, the <code class="">rel&#61;&#34;stylesheet&#34;</code> attribute 
+            specifies the relationship of the target object to the link object, which in this case is a &#39;cascading stylesheet&#39;. The <u><a href="https://en.wikipedia.org/wiki/Canonical_link_element" target="_blank">canonical value</a></u> can also be useful as it helps webmasters prevent duplicate content issues by specifying the "preferred" version of a page as part of SEO. This attribute is always accompanied by the <code class="">href&#61;&#34;URL&#34;</code> attribute, which specifies the URL of a linked resource. In this case, the value will point to a file with an ending extension of <code>&#46;css</code>.
+          </p>
+          <!-- Alt, Src, Title Attributes Explained-->
+          <!--<p>
+            The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
+            <br>
+            The <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content.
+          </p>-->
+          <!-- -->
+          <p>
+            Understanding <code>rel&#61;&#34;...&#34;</code> attribute <u><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types" target="_blank">linking-types</a></u> is a necessary evil that must be investigated further. Other attributes to consider using here include the <code>type&#61;&#34;...&#34;</code> attribute, which helps clarify the content type and the <code>title&#61;&#34;...&#34;</code> attribute, which will create a visual cue for the resource known as a <mark>tooltip</mark> and is especially useful for embedded or linked resources. <small>Be sure not to confuse the title&#61;&#34;...&#34; <i>Attribute</i> with the &#60;title&#62; tag.</small>
           </p>
           <p>
-            The second line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" target="_blank">&lt;title&gt;</a></code> element, which is used to document the webpage in the browser. Whatever is placed here will be visible on the browser tab.
-          </p>
-          <p>
-            The third line in this area is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank">&lt;link&gt;</a></code> element, which specifies the resources incorporated into a site. In the example above, the <code class="">rel&#61;&#34;stylesheet&#34;</code> attribute 
-            specifies the relationship of the target object to the link object, which in this case is a &#39;cascading stylesheet&#39;. The <code>&#34;canonical&#34;</code> value can also be useful as it helps webmasters prevent duplicate content issues by specifying the "preferred" version of a page as part of SEO&#41;<sup><a href="https://en.wikipedia.org/wiki/Canonical_link_element" target="_blank">&#91;&#42;&#93;</a></sup>. This attribute is &#40;always&#41; accompanied by the <code class="">href&#61;&#34;URL&#34;</code> attribute, which specifies the URL of a linked resource. In this case, the value will point to a file with an ending extension of <code>&#46;css</code>.
-          </p>
-          <p>
-            Understanding <code>rel&#61;&#34;...&#34;</code> attribute <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types" target="_blank">linking-types</a></mark> is a necessary evil that I must further investigate. Other attributes to consider using here include the <code>type&#61;&#34;...&#34;</code> attribute, which helps clarify the content type and the <code>title&#61;&#34;...&#34;</code> attribute, which will create a visual cue for the resource known as a <mark>tooltip</mark>.
-          </p>
-          <p>
-            Web browsers use the combination of this information to coordinate all resources required to make the website function as it was designed, however, absolutely none of this information is visible to the user. Once this technical aspect is complete, focus shifts to structuring content layout.
+            Web browsers use the combination of this information to coordinate all resources required to make the website function as it was designed, however, absolutely none of this information is visible to the user.
           </p>
           </div>
           <!-- Sub-Topic 3: BODY-->
           <div id="reqBody">
-          <h5>The Body</h5>
-          <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">&lt;body&gt;</a></code> element is the second child descendant of the <code>&lt;html&gt;</code> element and represents the area that wraps all content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Lets explore!
-          </p>
+            <h5>The Body</h5>
+            <p>
+              Once <code>&lt;head&gt;</code> specifications are declared, content layout takes center stage. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">&lt;body&gt;</a></code> element is the second child descendant of the <code>&lt;html&gt;</code> element and represents the area that wraps all content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Lets explore!</p>
           </div>
         </div>
         <!-- -->
@@ -647,6 +654,7 @@
           </p>
         </div>
         <!-- -->
+        <div class="intro"><address>Last Updated: 12/30/2018</address></div>
       </main>  
       <!-- -->
       <!-- -->
