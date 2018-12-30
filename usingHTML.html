@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&Mopf; Using HTML</title>
+    <!-- Browser Tab Icon -->
+    <link rel="shortcut icon" href="img/me.jpg" type="img/m" class="rounded">  
+    <!-- Icon Font -->
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <!-- Cascading Style Sheets -->
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
-    <link href="css/webdesign.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
   </head>
   <body>  
     <!-- ************ MAIN SITE NAVIGATION *********** -->
@@ -90,18 +95,17 @@
         <!-- //INTRODUCTION -->
         <div id="introduction" class="intro">
           <h2 class="title"><i class="material-icons">code</i> Using HTML</h2>
-          <p>This page defines the Hypertext Markup Language, better known as HTML, which is the standard markup language for creating web pages and web applications. The list of topics to be covered include:</p>
+          <p>This page defines the Hypertext Markup Language, better known as HTML, which is the standard markup language for creating web pages and web applications. The list of topics that are covered include:</p>
           <!-- -->
           <ol>
-            <li>Topic 1</li>
-            <li>Topic 2</li>
-            <li>Topic 3</li>
-            <li>Topic 4</li>
-            <li>Topic 5</li>
-            <li>Topic 6</li>
+            <li>Explanation of HTML</li>
+            <li>Required HTML Elements</li>
+            <li>Defining HTML Sections</li>
+            <li>Defining HTML Content</li>
+            <li>Making HTML Accessible</li>
           </ol> 
           <!-- -->
-          <p>Brief explanations will be provided to explain the primary concepts associated with this language. Useful resources are provided as well.</p>
+          <p>Examples will be provided throughout the page, but perhaps more valuable is the curated list of resources at the bottom of the page.</p>
         </div>
         <!-- -->
         <!-- ++WHAT is HTML++ -->
@@ -118,19 +122,17 @@
             Content contained within an element can be configured through the use of an <u><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attribute</a></u>, which is an explicit value placed in the opening component of an element to adjust its behavior in a manner that meets a specific criteria. An attribute is created by using a keyword followed by a delimiter and a value that is surrounded by quotations, like so: <code>&lt;attribute&#61;&#34;value&#34;&gt;</code>.
           </p>
           <p>
-            There are 100&#43; attributes that can be used to enhance an element, depending on the objective. To be clear, there are CSS Selectors that can be applied to an HTML element as well, but such properties are used for styling that particular elements content in a precise manner. To keep things simple, attributes will be introduced where appropriate while selectors will be explained later on the CSS page.
+            There are 100&#43; attributes that can be used to enhance an element, depending on the objective. To be clear, there are CSS Selectors that can be applied to an HTML element as well, but such properties are used for styling that particular elements content in a precise manner. For simplicity sake, attributes will be introduced where appropriate while selectors will be explained on the CSS page. Just keep in mind that elements are only as powerful as the attributes that motivate them, and vice-versa.
           </p>
-          <p>
+          <!-- Alt, Src, Title Attributes Explained-->
+          <!--<p>
             The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
             <br>
             The <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content.
             <br>
             The <code class=""><a href="">title&#61;&#34;...&#34;</a></code> attribute provides a title for an element as a <mark>tooltip</mark> in web browsers. It is most useful for embedded or linked resources. Although it may be used on all elements contained in the body of a document, it is not relevant to the majority of elements found inside the head of the document. Do not confuse with the <code>&#60;title&#62;</code> element.
-          </p>
+          </p>-->
           <!-- -->
-          <p>
-            With that out of the way I would like to shift attention to requirements for developing an HTML template.
-          </p>
         </div>
         <!-- -->
         <!-- ++REQUIRED HTML++ -->
