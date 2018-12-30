@@ -1,174 +1,236 @@
-/*  ========================================= 
-    Main GRID STYLES (index.html) ======== */
-.intro {grid-area: intro;}
-.main-content {grid-area: gallery;}
-footer {grid-area: footer;}
-/**/
-.galleryGrid {
-  margin: 0 0.5em;
-  display: grid;
-  min-height: 100%;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    "intro"
-    "gallery"
-    "footer";
-}
-.main-content {
-  /*margin: 1.5em auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 8px;*/
-	margin: 0.5em;
-	display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto-fit, minmax(100px, 150px));
-  grid-gap: 10px;
-}
-/*DESKTOP Media-Query*/
-@media screen and (min-width: 500px) {
-  .galleryGrid {
-    margin: 0 1em;
-    grid-template-rows: auto auto 24px;
+/* ========================================= */
+/* CASCADING STYLESHEET for NON-LANDING-PAGE */
+/*
+      *   Temporary 'Banner' <code>
+      1.  CSS for 'TOP-NAVIGATION'
+      2.  CSS for 'SIDEBAR-NAVIGATION'
+      3.  UNIVERSAL BASE STYLES              
+      4.  CSS for 'IMAGES & ICONS'
+      5.  FOOTER STYLES                      */
+/* ========================================= */
+
+
+
+/* ============================================ */
+/* *  BANNER -- to Hide Code during Production  */
+/*Under Construction Banner*/
+.banner{height: 65vh; margin-top: 10vh;}
+/*In-Progress Banner*/
+.banner2 {height: 70vh; margin-top: 25vh;}
+@media screen and (min-width: 900px) {
+  .banner {
+    height: 61vh;
+    margin-top: 21vh;
   }
-	.main-content {
-    margin: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	}
+  .banner2 {
+    height: 62vh;
+    margin-top: 30vh;}
 }
-/**/
-/**/
-table {
-	table-layout: auto;
-	width: 100%;
-}
-th {text-align: left;}
-td.bold {
-	width: 200px;
-	margin-right: 75px;
-}
-.bold > span {text-decoration: underline;}
-.emphasize {font-style: italic;}
-span {margin: 0;}
-.small {font-size: 0.71em;}
 
 
-/*  ========================================= 
-    UNIVERSAL BASE STYLES (pages.css) ==== */
+
+/* ============================================ */
+/* 1. TOP-NAVIGATION ========================== */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:first-child {float: left;}
+.topnav a:hover {
+  background-color: red;
+  color: black;
+	transition-duration: 0.8s;
+}
+header.topnav > .active {
+  background-color: red;
+  color: white;
+  padding-right: 80px;
+}
+.topnav .icon {
+  display: none;
+}
+fa-home {
+  padding-right: 75px;
+}
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/*Settings for 'FIXED-Header/Nav' on 'Desktop = REQ'*/
+@media screen and (min-width: 800px) {
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+  }
+  main {margin-top: 44px;}
+}
+/* ============================================ */
+
+
+
+/* ============================================ */
+/* 2. SIDEBAR-NAVIGATION ====================== */
+nav {
+  white-space: nowrap;
+  background: #333;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 2em 0;
+}
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+  nav ul {
+    position: sticky;
+    top: 8px;
+  }
+}
+nav ul li a {
+  display: block;
+  padding: 0.5rem 0rem;
+  color: white;
+  text-decoration: none;
+}
+/* !Issue with Sidebar >> NOT Scrolling past a specific limit*/
+.nested {
+  display: none;
+  margin: -8px 0;
+  padding: 0rem 2rem;
+  font-size: 0.88rem;
+}
+nav ul li a.current {
+  color: red;
+}
+/* ============================================ */
+
+
+/*
+*/
+/*  ============================================= 
+    3.  UNIVERSAL BASE STYLES (pages.css) ==== */
 * {
 	box-sizing: border-box;
 }
 body {
-  /*background: #838487;*/
-  height: 100%;
-  width: 100%;
-  font-size: 1rem;
-  line-height: 1.2;
-	font-family: 'Raleway', sans-serif;
-  margin: 0;
-}
-h1, h2, h3, h4, h5, .card {
-	margin-bottom: 0.25em;
-	text-align: center;
-}
-
-a {
-  color: rgba(10, 9, 9, 0.5);
-  text-decoration: none;
-}
-p {
-	margin: 0.4em 0;
-	text-align: justify;
-}
-/*
-*/
-.btn {
-  display: inline-block;
-  margin: 4px;
-  width: 150px;
-  text-align: center;
-  font-size: 0.85em;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 0.5em;
-  background-color: #ff4d4d;
-  border-radius: 0.35em;
-}
-/*
-*/
-.card h1, .card h2 {
-  color: #ff1a1a; 
-  margin: 0;
-}
-.card {
+  overflow-x: auto;
   margin: 0 auto;
   padding: 0;
-  border: 1px solid #838487;
-  border-radius: 0.25em;
-  width: 100%;
-  height: 150px;
+  font-size: calc(0.9em + 0.9vw); 
+	font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.8px;
 }
-.card:hover {
-  background-color: black;
-  color: red;
-  opacity: 0.7;
-  border: none;
-  box-shadow: 2px 2px 20px red;
-  transition-duration: .8s; 
+/*Back to Top Button*/
+.top {
+  display: none;
 }
-.card > p {
+@media only screen and (min-width: 800px) {
+  .top {
+    display: inline-block;
+    background: none; 
+    margin: 0; 
+    position: fixed; 
+    bottom: 50vh; 
+    right: 0; 
+    width: 30px; 
+    height: 10px; 
+    z-index: 100; 
+    text-decoration: none; 
+    color: red; 
+    /*background-color: #ff9000;*/
+  }
+}
+/*
+*/
+h1, h2 {
   margin: 0 auto;
+  padding: 0;
   text-align: center;
-  font-size: 0.88em;
+	margin-bottom: 0.25em;
 }
-.material-icons {
-  color: #ff4d4d; 
-  font-size: 2.42em;
-}
-/* for Alignment purpose*/
-div.card > .material-icons {margin-top: 8px;}
-/*
-*/
-.intro {
-  margin: 0 auto;
-  width: 95%;
-  max-width: 1000px;
-}
-@media screen and (min-width: 800px) {
-  p {
-    text-align: center;
-  }
-  .btn {
-    padding: 0.75em 1.5em;
-  }
-  .card {
-    height: 150px;
-    margin: 0 auto; 
-    padding: 0;
-    width: 100%;
-  }
-
-  .intro {
-    margin: 0 auto;
-    width: 100%;
-  }
-  div.card > .material-icons {margin-top: 4px;}
+h3, h4, h5 {
+  margin: 1em 0 0.25em;
+  padding: 0;
+  text-align: center;
+} 
+h6 {
+  margin: 0.8em 0 0 0;
+  padding: 0;
+  text-align: center;
+} /*for TOP Alignment */
+p {
+	margin: 0.80em 0.44em;
+	text-align: justify;
+  line-height: 1.5; 
+  font-size: 0.78em;
 }
 /*
 */
-
-
+a {
+  color: #000;
+  text-decoration: none
+}
+/*Style for <a> and <sup> Content */
+a.link {text-decoration: underline;}
+a:hover {opacity: 0.7;}
+sup a:link {color: #f1a23c;}
+sup a:visited {color: red;}
+/*
+*/
+ul.nav >li > a:hover {
+  color: red;
+  transition: 0.3s;
+}
+ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;
+}
+li {padding-left: 16px;}
+li > a {font-size: 0.62em;}
+li > a.active {
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  padding: 2px;
+}
+ol {font-size: 0.68em;}
+ol.alpha {list-style-type: lower-alpha;}
+/*
+*/
+mark {background: #ccc;}
 /*
 */
 hr {
   background-image: linear-gradient(to right, rgba(10, 9, 9, 0.0), rgba(10, 9, 9, 0.5), rgba(10, 9, 9, 0.0));
   border: 0;
   height: 1px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 80px;
+  margin-top: 80px;
   overflow: visible;
   text-align: center;
 }
@@ -186,7 +248,136 @@ hr:after { /*rgba(255, 0, 0, 0.8)*/
 }
 /*
 */
-/* FOOTER */
+code {
+  background: #ccc; 
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 0px 1px;
+  font-size: 1em;
+  font-family: monospace;
+}
+.paraCode {
+  font-size: 0.71em;
+  text-align: left;
+  /*padding-left: 24%;*/  
+}
+/*<code> Style for Links*/
+code.reference {background: #000;}
+code.reference > a {color: #fff;}
+@media all and (min-width: 500px) {
+  .paraCode {
+    font-size: 0.8em;
+    margin-left: 16%;
+  }
+}
+/*
+*/
+@media all and (min-width: 500px) {
+  p {}
+  code {font-size: 0.88em;}
+  details {margin: 0 4px; font-size: 1em;}
+}
+/*
+*/
+@media all and (max-width: 500px) {
+  details {margin: 0 4px; font-size: 0.8em;}
+}
+/*
+*/
+address {
+  margin: 0 0 0.4em 0;
+  color: red;
+  font-size: 0.6em;
+  font-family: cursive;
+  text-align: center;
+}
+
+figure {
+  margin: 0 0.38em; 
+  padding: 0;
+}
+figcaption {
+  font-size: 0.68em;
+  font-style: italic;
+  text-align: center;
+}
+@media all and (min-width: 800px) {
+  address {
+    margin: 0 0 2em 0;
+    color: red;
+    font-size: 0.6em;
+    font-family: cursive;
+    text-align: center;
+  }
+  figure {margin: 0;}
+}
+/*
+*/
+
+/* =======================================*/
+
+
+
+/* ==================================== */
+/* === ???????????????????????????? === */
+/* Mobile 'Table' */
+h3 > span {color: red;}
+div > span {text-decoration: underline;}
+.table, .tableEven > div {margin: 2px 6px;}
+/**/
+span {margin: 0;}
+
+/*Hide on Mobile >> Display in Desktop*/
+.hideMobile, span.hideMobile {display: none;}
+.hideDesktop, span.hideDesktop {display: contents;}
+/**/
+@media only screen and (min-width: 800px) {
+  .hideMobile, span.hideMobile {display: contents;}
+  .hideDesktop, span.hideDesktop {display: none;}
+}
+/**/
+dialog::backdrop {
+  background: rgba(255,0,0,.25);
+}
+/**/
+.card {
+  margin: 6px;
+  padding: 8px;
+  border: 1px solid #e1e1e1;
+}
+/* ==================================== */
+
+
+
+/* ==================================== */
+/* 4. IMAGES & ICONS ================== */
+img {
+  margin: 0 auto;
+  max-width: 100%; 
+  height: auto;
+}
+@media all and (min-width: 800px) {  
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  }
+}
+/*
+*/
+.material-icons {
+  color: #ff4d4d; 
+  font-size: 1em;
+}
+/*
+*/
+/* =================================== */
+
+
+
+/*  ================== */
+/*  5. FOOTER ======== */
 footer {text-align: center;}
 .fa-heart {
   color: red;
@@ -198,52 +389,4 @@ footer {text-align: center;}
   50% {transform: scale(0.7);}
   100% {transform: scale(0.5);}
 }
-
-
-
-/*ToolTip*/
-/*tooltip Box*/
-.tooltipWrap {
-  display: inline-block;
-  position: relative;  
-  cursor: default;
-}
-/*tooltip */
-.tooltip {
-  visibility: hidden;
-  z-index: 1;
-  width: 100%;
-  padding: 0px 10px;
-  background: #838487;
-  color: #fff;
-  position: absolute;
-  top:-140%;
-  left: 0;
-  border-radius: 8px;
-  font: 16px;
-  transform: translateY(9px);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 3px red;
-}
-/* tooltip  after*/
-.tooltip::after {
-  content: " ";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 12px 12.5px 0 12.5px;
-  border-color: red transparent transparent transparent;
-  position: absolute;
-  left: 40%;
-}
-.tooltipWrap:hover .tooltip{
-  visibility: visible;
-  transform: translateY(-10px);
-  opacity: 1;
-  transition: .3s linear;
-  animation: tipAnime 1s ease-in-out infinite alternate;
-}
-@keyframes tipAnime {
-  0%{transform: translateY(6px);}
-  100%{transform: translateY(1px);	}
-}
+/*  ================== */

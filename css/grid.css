@@ -1,0 +1,197 @@
+/* ========================================= */
+/* CSS 'GRIDS' */
+/*
+      1.  xxx
+      2.  xxx
+      3.  xxx             
+      4.  xxx                       */
+/* ========================================= */
+
+
+/* ===================================== */
+/* =========== GRID LAYOUTS ============ */
+/*
+autoprefixer({grid: true;})
+@supports (display: grid){}
+.grid > * {min-width: 0;}
+*/
+
+/**********************/
+/* SITE-TEMPLATE GRID */
+/**********************/
+.grid {
+	margin: 0 2.4vw;
+  padding: 0;
+  height: auto;
+	display: grid;
+	grid-template-rows: 0px minmax(200px,auto) 35px;
+	grid-gap: 4px;
+}
+@media only screen and (min-width: 700px) {
+  nav {grid-area: nav;}
+  main {grid-area: main;}
+  footer {grid-area: foot; }
+  .grid {
+    height: auto; 
+    margin: 0;
+    padding: 0;
+    display: grid;
+  	grid-template-rows:  auto auto minmax(15px,40px);
+		grid-template-columns: 168px repeat(4, 1fr);
+		grid-template-areas: 
+    "nav main main main main" 
+    "nav main main main main" 
+    "nav foot foot foot foot";
+    grid-gap: 0;
+  }
+}
+/**//*******************************//**/
+
+
+
+/**********************/
+/* MAIN-SECTION GRID  */
+/**********************/
+/*Page CONTAINER*/
+main {
+  max-width: 100%;
+}
+/*Container PARAGRAPH */
+.intro {
+	margin: 2vw;
+  padding: 0;
+	display: grid;
+	grid-template-rows: auto;
+	grid-gap: 4px;
+}
+@media only screen and (min-width: 800px) {
+  .intro {
+    margin: 8px 1em 0;
+    width: 95%;
+    max-width: 1000px;
+  }
+}
+/**//*******************************//**/
+
+
+
+/**********************/
+/*    TABLE GRIDS     */
+/**********************/
+@media all and (max-width: 500px) {
+  .block {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(24px, auto));	
+    grid-template-columns: 1fr;    
+  }
+  .table, .tableEven {
+    width: 100%;
+    font-size: 0.68em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(24px, auto));	grid-template-columns: 1fr;
+	}
+}
+/* Desktop 'Table' */
+@media all and (min-width: 500px) {
+  .block {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(24px, auto));	
+    grid-template-columns: repeat(2, 1fr);   
+    grid-gap: 2px; 
+  }
+	.table {
+    width: 100%;
+    font-size: 0.74em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, 24px);
+    grid-template-columns: 16em 1fr;
+    grid-gap: 2px;
+  }
+	.tableEven {
+    width: 100%;
+    font-size: 0.74em;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(auto, 24px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
+  }
+}
+
+
+
+/**********************/
+/*   GLOSSARY GRID    */
+/**********************/
+.glossary {
+   width: 100%;
+   font-size: 0.74em;
+   margin: 0 auto;
+   padding: 0;
+   display: grid;
+   grid-template-rows: repeat(auto, 24px);
+   grid-template-columns: 8em 1fr;
+   grid-gap: 2px;
+ }
+
+/*Unicode Character Grid*/
+.characterGrid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 4px;
+}
+@media only screen and (min-width: 800px) {
+  .characterGrid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 8px;
+  }
+}
+/*Unicode <div> Style*/
+.asciiItem {
+  background: grey;
+  text-align: center;
+}
+/*Unicode 1st Row*/
+.asciiItemChar {
+  font-size: 1.5em;
+}
+/**//*******************************//**/
+
+
+
+/* ==================================== */
+/* xxxx =========== */
+
+/* ==================================== */
+
+
+
+/* ==================================== */
+/* xxxx =========== */
+
+/* ==================================== */
+
+
+
+/* ==================================== */
+/* xxxx =========== */
+
+/* ==================================== */
