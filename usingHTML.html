@@ -134,7 +134,7 @@
             When creating an HTML template, there are sevral elements that are required to ensure web browsers properly render documents. The illustration below highlights what is required, followed by a brief explanation for each element used.
           </p>
           <figure>
-            <img src="img/requiredHTML.jpg" alt="a cute hamster" />
+            <img src="img/requiredHTML.jpg" alt="an HTML template" />
             <figcaption>Required structural elements for an HTML template</figcaption>
           </figure>
           <!-- MAIN-ROOT -->
@@ -229,85 +229,83 @@
         <div id="defineContent" class="intro">
           <h2>Defining Content</h2>
           <p>
-            Content elements are used to organize sections of content and are nested within any sectional element. There are dozens of elements that can be used to markup content depending on whether you want to use a sectional heading, add text, create a form, include some sort of multimedia or script, add interactivity and much more. At this juncture, I definitely want to add some context for how elements should be used to define content. In this regard, I will outline components for a new magazine to demonstrate the power of HTML.
+            Content elements are used to organize sections of content and are nested within primary section areas. There are dozens of elements that can be used to markup content depending on whether you want to use a sectional heading, add text, create a form, include some sort of multimedia or script, add interactivity and much more. At this juncture, we definitely want to add some context for how elements can be used to define content.
           </p> 
           <!-- -->
           <!-- NAVIGATION --> 
           <div id="conNav">
-          <h5>Navigation</h5>
-          <p>
-            Building an efficient navigation system that will allow users to seamlessly traverse the site is the first order of business for this project. Lets create a system consisting of links to the home page, an about page and a contact page. This task can be completed by utilizing a <mark><a href="https://learn.shayhowe.com/html-css/creating-lists/" target="_blank">structured</a></mark>-<mark><a href="https://webplatform.github.io/docs/guides/html_lists/" target="_blank">list</a></mark> and in this case, an Unordered List fits the bill.
-          </p>
-          <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">&#60;ul&#62;</a></code> element represents an unordered list of items typically rendered as a bulleted list used for grouping a collection of items that do not have a numerical ordering precedence. It is nested within the <code>&#60;nav&#62;</code> section and acts as a container for individual list-items or <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank">&#60;li&#62;</a></code> elements. For every list-item placed within an unordered list, an anchor element must be used. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">&#60;a&#62;</a></code> element controls the hyperlink that is created when the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/href" target="_blank">href&#61;&#34;...&#34;</a></code> attribute is employed. The file name included within this attribute has the ability to transport the user to another page, a location within the same page, a file,  an email address or any other URL browser supported <mark><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers" target="_blank">protocol handlers</a></mark>.
-          </p>
-          <p class="paraCode">
-            <code>&#60;nav&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;ul&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;li&#62;</code>     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;a href&#61;&#34;index.html&#34;&#62;Home&#60;&#47;a&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;&#47;li&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;li&#62;</code> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;a href&#61;&#34;about.html&#34;&#62;About&#60;&#47;a&#62;</code>           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;&#47;li&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;li&#62;</code> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;a href&#61;&#34;contact.html&#34;&#62;Contact&#60;&#47;a&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;&#47;li&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;&#47;ul&#62;</code>
-            <br><code>&#60;&#47;nav&#62;</code></p>
-          <p>
-            The example above outlines the hierarchy of a simple navigation system using an unordered list with list items that employs anchor tags with an href attribute to direct the user according to the selected list item. All of the list items point to an internal resource, that is, a page within the website. Using the <code>target&#61;&#34;&#95;blank&#34;</code> attribute is useful when directing a user to an external resource.
-          </p>
-          <p>
-            Another kind of list, although not suitable for building a navigation system, is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank">&#60;ol&#62;</a></code> element, which represents an ordered list of items rendered as a numbered list. Each item is represented by a <code>&#60;li&#62;</code> element that can be modified through use of the <code>start&#61;&#34;...&#34;</code> or <code>type&#61;&#34;...&#34;</code> attributes. The <code>start&#61;&#34;...&#34;</code> integer attribute specifies the start value for numbering individual list items. For example, I would use <code>&#60;ol <b>start&#61;&#34;4&#34;</b>&#62;</code> to start numbering elements from the &#35;4 and this would mark the first <code>&#60;li&#62;</code> as such. The <code>type&#61;&#34;...&#34;</code> attribute indicates the numbering type with 'a', 'A', 'i', 'I' and '1' representing lowercase and uppercase letters, lowercase and uppercase Roman numerals; and numbers (default), respectively.
-          </p>
-          <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl" target="_blank">&#60;dl&#62;</a></code> element is another list; it is not commonly used and is recommended for implementing a glossary. The element encloses a list of groups of terms (specified using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt" target="_blank">&#60;dt&#62;</a></code> element) and descriptions (provided by <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt" target="_blank">&#60;dd&#62;</a></code> elements).
-          </p>
+            <h5>Navigation</h5>
+            <p>
+              Building an efficient navigation system that will allow users to seamlessly traverse the site is the first order of business for this project. Lets create a system consisting of links to the home page, an about page and a contact page. This task can be completed by utilizing a <u><a href="https://learn.shayhowe.com/html-css/creating-lists/" target="_blank">structured</a></u>-<u><a href="https://webplatform.github.io/docs/guides/html_lists/" target="_blank">list</a></u>.
+            </p>
+            <figure>
+              <img src="img/navigation.JPG" alt="a standard navigation uni" />
+              <figcaption>A standard Navigation unit</figcaption>
+            </figure>
+            <p>
+              The example above outlines the hierarchy of a typical navigation system using an unordered list with list items that employs anchor tags with an href attribute to direct the user to a specific page within the website.
+            </p>
+            <p>
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">&#60;ul&#62;</a></code> tag represents an unordered list of items typically rendered as a bulleted list used for grouping a collection of items that do not have a numerical ordering precedence. It is nested within the <code>&#60;nav&#62;</code> section and acts as a container for individual list-items or <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank">&#60;li&#62;</a></code> tags. For every list-item placed within an unordered list, an anchor element must be used. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">&#60;a&#62;</a></code> tag controls the hyperlink that is created when the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/href" target="_blank">href&#61;&#34;...&#34;</a></code> attribute is employed. The file name included within this attribute has the ability to transport the user to another page, a location within the same page, a file,  an email address or any other URL browser supported <u><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers" target="_blank">protocol handlers</a></u>. For example, the highlighted list items point to pages associated with this website, and  when selected, the website will go directly to that page. When dealing with external resources, however, it is helpful to apply the <code>target&#61;&#34;&#95;blank&#34;</code> attribute, which will create a new browser tab for the user, while keeping open the current page.
+            </p>
+            <p>
+              Another kind of list, although not suitable for building a navigation system, is the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank">&#60;ol&#62;</a></code> element, which represents an ordered list of items rendered as a numbered list. Each item is represented by a <code>&#60;li&#62;</code> element that can be modified through use of the <code>start&#61;&#34;...&#34;</code> or <code>type&#61;&#34;...&#34;</code> attributes. The <code>start&#61;&#34;...&#34;</code> integer attribute specifies the start value for numbering individual list items. For example, I would use <code>&#60;ol <b>start&#61;&#34;4&#34;</b>&#62;</code> to start numbering elements from the &#35;4 and this would mark the first <code>&#60;li&#62;</code> as such. The <code>type&#61;&#34;...&#34;</code> attribute indicates the numbering type with 'a', 'A', 'i', 'I' and '1' representing lowercase and uppercase letters, lowercase and uppercase Roman numerals; and numbers (default), respectively.
+            </p>
+            <p>
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl" target="_blank">&#60;dl&#62;</a></code> element is another list; it is not commonly used and is recommended for implementing a glossary. The element encompasses a group list of terms using <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt" target="_blank">&#60;dt&#62;</a></code> tags, and descriptions using <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt" target="_blank">&#60;dd&#62;</a></code> tags.
+            </p>
           </div>
           <!-- -->
           <!-- HEADINGS & PARAGRAPH -->
           <div id="conHP">
-          <h5>Headings and Paragraph</h5>
-          <p>
-            Now lets markup a simple article with a title and some paragraph text. The title of any article or section is known as a heading and should employ one of the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">&#60;h1-h6&#62;</a></code> elements, which are perfectly suited for this objective. Best practice mandates that the <code>&#60;h1&#62;</code> be used only once per page and to avoid skipping levels when nesting subsections to reflect the organization of the content of the page. One practical explanation for this is that most screen readers can generate an ordered list of headings on a page, which can help a person quickly determine the hierarchy of the content.<sup><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">[*]</a></sup> We can outline our article using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">&#60;p&#62;</a></code> element, which will create perfectly aligned blocks of text. We should also illustrate credibility for our story by including a source reference and this can be accomplished by using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">&#60;blockquote&#62;</a></code> element.
-          </p>
-          <p class="paraCode">
-            <code>&#60;article class&#61;&#34;...&#34;&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;hgroup&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;h1&#62;</code>H1 = Main Title<code>&#60;&#47;h1&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;h2&#62;</code>H2 = Secondary-Title<code>&#60;&#47;h2&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;&#47;hgroup&#62;</code>
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&#60;p&#62;</code>blah blah blahblah blah blahhhhh... blah<code>&#60;&#47;p&#62;</code>
-            <br><code>&#60;&#47;article&#62;</code></p></div>
+            <h5>Headings and Paragraph</h5>
+            <p>
+              As previously stated, the <code>article</code> tag is a primary section area for content. The first bits of content for any page will include a heading and an introductory paragraph. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">&#60;h1-h6&#62;</a></code> tags are used to create title-based headings. Best practice mandates that the <code>&#60;h1&#62;</code> be used only once per page, and to avoid skipping levels when nesting sub-sections to reflect the organization of the content of that page. One practical explanation for this is that most <u><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">screen readers can generate an ordered list of headings on a page</a></u>, which helps users with disabilities ascertain content hierarchy. With a title in place, we can markup content using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">&#60;p&#62;</a></code> tag, which will create perfectly aligned blocks of text.
+            </p>
+            <figure>
+              <img src="img/headingParagraph.JPG" alt="Headings and Paragraph Markup" />
+              <figcaption>Headings and Paragraph Markup</figcaption>
+            </figure>
+            <p>
+              The example above highlights the bare necessities for bringing content to life. However, we can advance this structure by including an <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup" target="_blank">&#60;hgroup&#62;</a></code> tag to display a multi-level heading. Moreover, we can reference the origin source of our content by nesting the <code>&#60;p&#62;</code> tag in a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote" target="_blank">&#60;blockquote&#62;</a></code> tag, which acknowledges that the content is a quotation.
+            </p>
+            <figure>
+              <img src="img/headingParagraph2.JPG" alt="Advanced Headings and Paragraph Markup" />
+              <figcaption>Advanced Headings and Paragraph Markup</figcaption>
+            </figure>
+            <p>
+              In the previous example, an <code>&#60;h1&#62;</code> and <code>&#60;h2&#62;</code> tags are nested in the<code>&#60;hgroup&#62;</code> tag to create a main title with a sub-title heading. The <code>cite&#61;&#34;URL&#34;</code> attribute is added to the <code>&#60;blockquote&#62;</code> tag to reference a source document or message for the information quoted; this citation is not visible.
+            </p>
+          </div>
           <!-- --> 
           <!-- INLINE-TEXT SEMANTICS -->
           <div id="conInline">
-          <h5>Inline Text Semantics</h5>
+            <h5>Inline Text Semantics</h5>
+            <p>
+              Aside from using the <code>&#60;p&#62;</code> tag to introduce text, we may also want to define the meaning, structure, or style of any piece of text. To achieve such objectives, we can employ <u><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics" target="_blank">inline text semantics</a></u>, of which there are nearly three dozen elements that we can use to modify text. 
+            </p>
+            <p>
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b" target="_blank">&lt;b&gt;</a></code> &#47; <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" target="_blank">&lt;strong&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" target="_blank">&lt;em&gt;</a></code> &#47; <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i" target="_blank">&lt;i&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u" target="_blank">&lt;u&gt;</a></code> tags can be used to 'style text' as <b>bold</b>, <em>italic</em> or <u>underlined</u>, respectively. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark" target="_blank">&lt;mark&gt;</a></code> tag is useful for highlighting or notating important text. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code" target="_blank">&lt;code&gt;</a></code> tag can be used to style text in a monospace fashion that indicates it is a fragment of computer code.
+            </p>
+            <p>
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small" target="_blank">&lt;small&gt;</a></code>,<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub" target="_blank">&lt;sub&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup" target="_blank">&lt;sup&gt;</a></code> tags are useful to 'control text size'. Respectively, these elements will <small>decrease the text size</small>, and specify that inline text be displayed as <sub><code>subscript</code></sub> or <sup><code>superscript</code></sup>.
+            </p>
           <p>
-            Within the <code>&#60;p&#62;</code>, we can employ <mark><a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics" target="_blank">semantic inline text</a></mark> elements, which are used to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
-          </p>
-          <p>
-            Some inline text elements are handy for styling text. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b" target="_blank">&lt;b&gt;</a></code>&#47;<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" target="_blank">&lt;strong&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" target="_blank">&lt;em&gt;</a></code>&#47;<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i" target="_blank">&lt;i&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u" target="_blank">&lt;u&gt;</a></code> elements will make the text <b>bold</b>, <em>italic</em> or <u>underlined</u>, respectively. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark" target="_blank">&lt;mark&gt;</a></code> element is useful for highlighting or notating important text. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code" target="_blank">&lt;code&gt;</a></code> element can be used to style text in a monospace fashion.
-          </p>
-          <p>
-            Other inline text elements control the sizing of text. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small" target="_blank">&lt;small&gt;</a></code> element will <small>decrease the text size</small> and is useful for a copyright or things of that nature. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub" target="_blank">&lt;sub&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup" target="_blank">&lt;sup&gt;</a></code> elements specify that inline text be displayed as <sub><code>subscript</code></sub> or <sup><code>superscript</code></sup>.
-          </p>
-          <p>
-            And there are quite a few inline text elements that provide additional meaning to text. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span" target="_blank">&lt;span&gt;</a></code> element is an inline-level element commonly used to identify smaller groupings of text within a block-level element. 
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite" target="_blank">&lt;cite&gt;</a></code> element is used to describe a reference to a cited creative work; it must include either the title or the URL of that work and most likely will employ the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q" target="_blank">&lt;q&gt;</a></code> element, which indicates that the enclosed text is a short inline quotation. 
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr" target="_blank">&lt;abbr&gt;</a></code> element represents an abbreviation or acronym; an optional title attribute can provide a description in the form of a tooltip. If present, the title attribute must contain this full description and nothing else. You can also use the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr" target="_blank">&lt;hr&gt;</a></code> element to create a stylish line-break between sections of content.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span" target="_blank">&lt;span&gt;</a></code> tag is an inline-level element commonly used to identify smaller groupings of text within a block-level element. It is very useful for targeting a particular <code>&lt;p&gt;</code> element that might also make use of the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite" target="_blank">&lt;cite&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q" target="_blank">&lt;q&gt;</a></code> or <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr" target="_blank">&lt;abbr&gt;</a></code> tags to add specificity. Respectively, these tags provide a visible text representation of a quoted source, indicates that the enclosed text is a short inline quotation and represents an abbreviation or acronym.  (an optional title attribute can provide a description in the form of a tooltip. If present, the title attribute must contain this full description and nothing else.) 
+            The <code>&lt;cite&gt;</code> tag must include either the title or the URL of that work and is often accompanied by the  <code>&lt;q&gt;</code> tag, which optionally accepts a title attribute that will display a tooltip description.
+            Lastly, try tinkering with the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr" target="_blank">&lt;hr&gt;</a></code> element to create a stylish line-break between sections of content.
           </p>
           </div>
           <!-- -->
           <!-- IMAGES -->
           <div id="conImages">
-          <h5>Images</h5>
-          <p>
-            An image can be embedded into a <code>&#60;p&#62;</code> using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;img /&gt;</a></code> element. It requires a <code>src&#61;&#34;...&#34;</code> attribute for the image file path whose extension will take .svg, .jpg, or .png formats. Although optional, a description of the image will enhance accessibility for screenreaders and this can be accomplished using the <code>alt&#61;&#34;...&#34;</code> attribute. There are other attributes that can be applied for styling images, notably, <code>crossorigin&#61;&#34;...&#34;</code> and <code>srcset&#61;&#34;...&#34;</code>, but visual enhancements &#40;ie  border, object-position, margin, width&#41;. Furthermore, the <code>&lt;img /&gt;</code> element pairs well with a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure" target="_blank">&lt;figure&gt;</a></code> element, which represents a self-contained container that pairs well with the captioning <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" target="_blank">&lt;figcaption&gt;</a></code> element.
-          </p>
-          <!-- Alt, Src Attributes Explained-->
-          <!--<p>
-            The <code class=""><a href="">alt&#61;&#34;...&#34;</a></code> attribute provides an alternative textual description for an image or any HTML object.
-            <br>
-            The <code class=""><a href="">src&#61;&#34;...&#34;</a></code> element specifies the URL of embedded content.
-          </p>-->
+            <h5>Images</h5>
+            <p>
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;img /&gt;</a></code> element is a self-closing tag used to embed images into a document that requires two attributes to be effectively implemented. The <code>src&#61;&#34;...&#34;</code> attribute ascertains an images' file path extension which must be of .svg, .jpg, or .png format. The <code>alt&#61;&#34;...&#34;</code> attributes offers a physical description of the image and is required for accessibility purposes. 
+            </p>
+            <p>
+              There are many attributes that can be specified to achieve a specific purpose. The <code>crossorigin&#61;&#34;...&#34;</code> attribute can be added to provide security while the  <code>srcset&#61;&#34;...&#34;</code>, <code>width&#61;&#34;...&#34;</code> and <code>height&#61;&#34;...&#34;</code> attributes can be used to 'specify image dimensions.' Furthermore, the <code>&lt;img /&gt;</code> tag pairs well with a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure" target="_blank">&lt;figure&gt;</a></code> tag, which represents a self-contained container that is accompanied with the captioning <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" target="_blank">&lt;figcaption&gt;</a></code> tag. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">&lt;picture&gt;</a></code> tag may be a more appropriate substitute for the <code>&lt;figure&gt;</code> tag depending on the objective.
+            </p>
           <!-- -->
           </div>
           <!-- -->
@@ -649,7 +647,7 @@
           </p>
         </div>
         <!-- -->
-        <div class="intro"><address>Last Updated: 12/30/2018</address></div>
+        <div class="intro"><address>Last Updated: 12/31/2018</address></div>
       </main>  
       <!-- -->
       <!-- -->
