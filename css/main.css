@@ -251,10 +251,14 @@ hr:after { /*rgba(255, 0, 0, 0.8)*/
 code {
   background: #ccc; 
   border: 1px solid #888;
-  border-radius: 5px;
-  padding: 0px 1px;
-  font-size: 1em;
+  /*border-radius: 5px;*/
   font-family: monospace;
+  font-size: 0.80em;
+  font-weight: 700;
+  line-height: 0;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
 }
 .paraCode {
   font-size: 0.71em;
@@ -265,16 +269,14 @@ code {
 code.reference {background: #000;}
 code.reference > a {color: #fff;}
 @media all and (min-width: 500px) {
+  p {}
+  code {
+    font-size: 0.88em;
+  }
   .paraCode {
     font-size: 0.8em;
     margin-left: 16%;
   }
-}
-/*
-*/
-@media all and (min-width: 500px) {
-  p {}
-  code {font-size: 0.88em;}
   details {margin: 0 4px; font-size: 1em;}
 }
 /*
