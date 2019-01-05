@@ -119,7 +119,7 @@ nav ul li a {
 }
 /* !Issue with Sidebar >> NOT Scrolling past a specific limit*/
 .nested {
-  display: none;
+  /*display: none;*/
   margin: -8px 0;
   padding: 0rem 2rem;
   font-size: 0.88rem;
