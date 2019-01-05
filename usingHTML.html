@@ -18,7 +18,7 @@
     <!-- (Outside of 'Grid' for Responsiveness) -->
 		<header class="topnav" id="myTopnav">
       <a href="index.html" class="active"><i class="fa fa-home"></i> Home</a>
-      <a href="devenviron.html">Dev Environ</a>
+      <a href="webdesign.html">Dev Environ</a>
       <a href="usingHTML.html">HTML</a>
       <a href="usingCSS.html">CSS</a>
       <a href="usingJS.html">JavaScript</a>
@@ -88,7 +88,7 @@
         <!-- //INTRODUCTION -->
         <div id="introduction" class="intro">
           <h2 class="title"><i class="material-icons">code</i> Using HTML</h2>
-          <p>This page defines Hypertext Markup Language (HTML), the standard markup language for creating web pages and web applications. The list of topics that are covered include:</p>
+          <p>This page defines the Hypertext Markup Language, better known as HTML, which is the standard markup language for creating web pages and web applications. The list of topics that are covered include:</p>
           <!-- -->
           <ol>
             <li>Explanation of HTML</li>
@@ -373,51 +373,22 @@
             <p>
             The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea" target="_blank">&lt;textarea&gt;</a></code> element represents a multi-line plain-text editing control, useful for users to input information to be relayed in an email or for providing a comment on a blog. There are five friendly attributes that can be applied, starting with the <code>id&#61;&#34;...&#34;</code>, which respectively associates itself with the <code>&#60;label&#62;</code> element for accessibility purposes so long as the values are identical. The <code>name&#61;&#34;...&#34;</code> attribute is used to set the name of the associated data point submitted to the server when the form is submitted. The <code>row&#61;&#34;...&#34;</code> and <code>cols&#61;&#34;...&#34;</code> attributes specify the precise size for the <code>&#60;textarea&#62;</code> while the <code>maxlength&#61;&#34;...&#34;</code> attribute sets the maximum number of characters that the <code>&#60;textarea&#62;</code> is allowed to contain. 
           </p>
+            <p>...</p>
           </div>
           <!-- -->
+          <!-- HIDDEN -->
           <!-- INTERACTIVE ELEMENTS -->
-          <div id="conInteract">
+          <!--<div id="conInteract">
             <h5>Interactive Elements</h5>
             <p>
-             All elements previously studied, with the exception of the <code>&lt;form&gt;</code> and its associated element, provides semantic structure for content. However, there are a few powerful HTML elements that help create interactive user interface widgets.
-            </p>
-            <div class="block">
-              <div>
-                <p>
-                   The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">&lt;details&gt;</a></code> element creates a disclosure widget in which information is visible only when the widget is toggled.
-                </p>
-                <p>
-                   Use the self-contained <code>open</code> attribute to programmatically keep open the widget. A summary, caption or legend can be applied to the widget by employing the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">&lt;summary&gt;</a></code> element.
-                </p>
-              </div>
-              <div class="blockCard">
-                <p>
-                  This is an example of how the <code>&lt;details&gt;</code> tag is used to create an interactive drop-down box that can be filled with content. 
-                </p>
-                <details>
-                  <summary>The <code>&lt;summary&gt;</code> tag is the Title</summary>
-                  <p>It opens on-click. This content uses the <code>&lt;p&gt;</code> tag to add text.</p>
-                </details>
-              </div>
-            </div>
-            <p>
-              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog" target="_blank">&#60;dialog&#62;</a></code> element represents a dialog box or other interactive component, such as an inspector or window. Dialogs are hidden by default, but can be made active and available for interaction by replacing the <code>id&#61;&#34;...&#34;</code> with the <code>open</code> attribute in the <code>&#60;dialog&#62;</code> element.
-              <code>&#60;form&#62;</code> elements can be integrated within a dialog by specifying them with the <code>method="dialog"</code> attribute. When such a form is submitted, the dialog is closed with a <code>returnValue&#61;&#34;...&#34;</code> attribute set to the value of the submit button used. 
+               The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank">&lt;details&gt;</a></code> element creates a disclosure widget in which information is visible only when the widget is toggled. Use the self-contained <code>open</code> attribute to programmatically keep open the widget. A summary, caption or legend can be applied to the widget by employing the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary" target="_blank">&lt;summary&gt;</a></code> element.
             </p>
             <p>
-              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" target="_blank">&lt;select&gt;</a></code> element represents a control that provides a menu of options. It is given an <code>id&#61;&#34;...&#34;</code> attribute, to enable it to be associated with a <code>&lt;label&gt;</code> tag for accessibility purposes, and a <code>name&#61;&#34;...&#34;</code> attribute to represent the name of the associated data point submitted to the server. This element also accepts the self-contained attributes <code>multiple</code>, <code>required</code>, <code>disabled</code> and <code>autofocus</code> to control if multiple option are to be selected, to require that a value be selected for an option, to prohibit interaction with an option or to determine whether or not a form control should have input focus on page load.
-            </p>
-            <p>
-              Menu options are defined by nesting an <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option" target="_blank">&lt;option&gt;</a></code> tag for every available option within the <code>&lt;select&gt;</code> tag. All <code>&lt;option&gt;</code> tags should have a <code>value&#61;&#34;...&#34;</code> attribute containing the data value to submit to the server when that option is selected; the value defaults to the text inside the element if this attribute is excluded. Moreover, you can include a selected attribute on an <code>&lt;option&gt;</code> tag to make it selected by default on page load and you can further nest <code>&lt;option&gt;</code> tags inside of a <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup" target="_blank">&lt;optgroup&gt;</a></code> element to create a variety of option groups within a dropdown menu.
-            </p>
-            <p>
-              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu" target="_blank">&lt;menu&gt;</a></code> tag represents a group of commands that a user can perform or activate. This is an experimental technology that is not readily available in all browsers, but is worth mentioning as it will be used to create context and toolbar menus.
-            </p>
-            <p>
-              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop" target="_blank">::backdrop</a></code> CSS pseudo-element can be used to style behind a <code>&#60;dialog&#62;</code> element, for example to dim inaccessible content whilst a modal dialog is active. The backdrop is only drawn when the dialog element is displayed with <code>dialog.showModal()</code>. You can use a <a href="https://github.com/GoogleChrome/dialog-polyfill"  target="_blank"><u>Polyfill</u></a> for browser support and learn more about <code>&#60;form&#62;</code> + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/close" target="_blank">.close&#40;&#41;</a></code> Events + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/cancel" target="_blank">.cancel&#40;&#41;</a></code> Events + and check out these <u><a href="https://demo.agektmr.com/dialog/" target="_blank">examples</a></u> which further elaborates on this elements usage.
+              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">&#60;dialog&#62;</a></code> element is an experimental technology that represents a dialog box or other interactive component, such as an inspector or window. Dialogs are hidden by default, but can be made active and available for interaction by replacing the <code>id&#61;&#34;...&#34;</code> with the <code>open</code> attribute in the <code>&#60;dialog&#62;</code> element.
+              <code>&#60;form&#62;</code> elements can be integrated within a dialog by specifying them with the attribute method="dialog". When such a form is submitted, the dialog is closed with a returnValue attribute set to the value of the submit button used. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop">::backdrop</a></code> CSS pseudo-element &#40;experimental&#41; can be used to style behind a <code>&#60;dialog&#62;</code> element, for example to dim inaccessible content whilst a modal dialog is active. The backdrop is only drawn when the dialog element is displayed with <code>dialog.showModal()</code>. You can use a <a href="https://github.com/GoogleChrome/dialog-polyfill"  target="_blank"><mark>Polyfill</mark></a> for browser support and learn more about <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms" target="_blank">&#60;form&#62;</a></code> + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/close" target="_blank">.close&#40;&#41;</a></code> Events + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/cancel" target="_blank">.cancel&#40;&#41;</a></code> Events + and check out these <mark><a href="https://demo.agektmr.com/dialog/" target="_blank">examples</a></mark> which further elaborates on this elements usage.
             </p>
             <article class="block">
-              <div class="blockCard">
+              <div class="card">
                 <menu>
                   <button id="openDialogText">Dialog: Enter Text</button>
                 </menu>
@@ -429,7 +400,7 @@
                 </dialog> 
                 <p>This dialog box will open a window with an input text area that you can enter text into. After you submit text, the information will be stored until the next usage.</p>
               </div>
-              <div class="blockCard">
+              <div class="card">
                 <menu>
                   <button id="openModalDialogText">Modal: Enter Text</button>
                 </menu>
@@ -443,7 +414,7 @@
                 </dialog>
                 <p>This modal dialog will perform like the dialog box with the exception being a full-screen overlay will distort the background.</p>
               </div>
-              <div class="blockCard">
+              <div class="card">
                 <dialog id="openDialogChoice">
                 <form method="dialog">
                   <section>
@@ -468,9 +439,9 @@
               </div>
             </article>
             <p>
-            Now would be a great time to introduce the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank">&lt;script&gt;</a></code> tag, which is not an interactive element at all, rather, inclusion of this element will embed or reference executable JavaScript code which is in and of itself an interactive programming language. The interactive <code>&lt;dialog&gt;</code> tag differs from the <code>&lt;details&gt;</code> tag in that JavaScript is required in order for it to be functional. In this situation, it is best practice to create an external file to store the JavaScript code and reference that file within the HTML. Whenever a <code>&lt;script&gt;</code> is used to reference some code, it must be placed immediately above the closing <code>&lt;&#47;body&gt;</code> tag and include the <code>src&#61;&#34;folder/file.ext&#34;</code> attribute to specify the URI of the external script. For older browsers, include the <code>type&#61;&#34;text/javascript&#34;</code> attribute to indicate the script type. 
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">&lt;script&gt;</a></code> element is not an interactive element. However, inclusion of this element will embed or reference executable JavaScript code which is in and of itself an interactive programming language. It requires the <code>src&#61;&#34;...&#34;</code> attribute to specify the URI of an external script. It is also good practice to include a <code>type&#61;&#34;text/javascript&#34;</code> attribute to indicate the type of script, particularly for older browsers. Use of this element is an alternative to embedding a script directly within a document.
           </p>
-          </div>
+          </div>-->
           <!-- -->          
           <!-- ++UNICODE++ -->
           <div id="conAscii">
@@ -543,7 +514,7 @@
               </div>
               <div class="asciiItem">
                 <div class="asciiItemChar">&#43;</div>
-                <div><small>&amp;&#35;<b>43</b>&#59;</small></div>
+                <div><small>&amp;;&#35;<b>43</b>&#59;</small></div>
               </div>
               <div class="asciiItem">
                 <div class="asciiItemChar">&#215;</div>
@@ -647,14 +618,6 @@
             <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank">template</a></code></div>
             <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></code></div>
             <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" target="_blank">canvas</a></code></div>
-=======
-          <h5>Advanced Elements</h5>
-          <p>
-            That concludes the list of content elements that I am comfortable using, but there are many more elements that I want to tinker with in the near future. A couple are the inline-text semantic elements such as the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd" target="_blank">&lt;kbd&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" target="_blank">&lt;time&gt;</a></code> elements. Embedding multimedia content is an area that I lack experience about so understanding <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">&lt;audio&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" target="_blank">&lt;embed&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">&lt;iframe&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map" target="_blank">&lt;map&gt;</a></code>/<code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">&lt;area&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object" target="_blank">&lt;object&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param" target="_blank">&lt;param&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">&lt;picture&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">&lt;source&gt;</a></code>, <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track" target="_blank">&lt;track&gt;</a></code> and <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">&lt;video&gt;</a></code> elements will be crucial to my development. On the same token 
-            Web components is another area that I felt I am getting further behind in, particularly the HTML Content <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank">template</a></mark> and <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></mark> elements.
-            Lastly, I need to learn how to draw. Perhaps I will learn how to do so with the <mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" target="_blank">canvas</a></mark> element.
-          </p>
->>>>>>> 6fbda38bd1ce8ce0f8a88a38de4404956eae9abf
           </div>
           <!-- -->
         </div>
@@ -699,11 +662,11 @@
             Navigation is accessible only when the <code>&lt;nav&gt;</code> element is properly marked; this makes it easy to navigate a page through interactive elements that include links, buttons and input fields. Add a <code>:focus</code> state to add a visual indicator. Navigation should be intuitive, minimal and flow from left to right, top to bottom. Test your website using the tab key.
           </p>
           <p>
-            When you think your code is up to par and accessible, download <em>the accessibility engines</em> web browser extension to <u><a href="https://axe-core.org/" target="_blank">check a websites accessibility</a></u>.
+            When you think your code is up to par and accessible, download <em>the accessibility engines</em> web browser extension to <mark><a href="https://axe-core.org/" target="_blank">check a websites accessibility</a></mark>.
           </p>
         </div>
         <!-- -->
-        <div class="intro"><address>Last Updated: 1/5/2018</address></div>
+        <div class="intro"><address>Last Updated: 1/1/2018</address></div>
       </main>  
       <!-- -->
       <!-- -->
@@ -770,3 +733,5 @@
 		<!-- -->
   </body>
 </html>
+
+
