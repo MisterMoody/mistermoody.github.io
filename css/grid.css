@@ -182,13 +182,12 @@ main {max-width: 100%;}
 /* =================================== */
 
 .tagRef {
-   width: 100%;
    font-size: 0.74em;
    margin: 0 7px;
    padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto, 90px);
-  grid-template-rows: 20px 20px;
+  grid-template-columns: repeat(6, 80px);
+  grid-template-rows: repeat(4, 25px);
   grid-auto-flow: column;
 }
 @media only screen and (min-width: 800px) {
