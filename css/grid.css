@@ -182,16 +182,23 @@ main {max-width: 100%;}
 /* =================================== */
 
 .tagRef {
-   font-size: 0.74em;
-   margin: 0 7px;
-   padding: 0;
+  /*font-size: 0.74em;*/
+  margin: 0 7px;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(6, 80px);
-  grid-template-rows: repeat(4, 25px);
-  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 4px;
 }
 @media only screen and (min-width: 800px) {
-  .tagRef {margin: 0 0.6em;}
+  .tagRef {
+    margin: 0;  /*0 0.6em;*/
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 8px;
+  }
 }
 /* ==================================== */
 /* xxxx =========== */
