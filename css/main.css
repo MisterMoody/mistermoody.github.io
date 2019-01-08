@@ -218,11 +218,13 @@ li > a.active {
   padding: 2px;
 }
 ol {
-  margin: 0 auto; 
-  padding: 0;
+  margin: 0; 
   font-size: 0.68em;
 }
 ol.alpha {list-style-type: lower-alpha;}
+@media all and (min-width: 800px) {
+  ol {padding-left: 80px;}
+}
 /*
 */
 mark {background: #ccc;}
