@@ -105,7 +105,7 @@ nav ul {
   padding: 2em 0;
 }
 /* Only stick if you can fit */
-@media (min-height: 600px) {
+@media (min-height: 300px) {
   nav ul {
     position: sticky;
     top: 8px;
