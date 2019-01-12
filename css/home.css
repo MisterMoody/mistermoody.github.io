@@ -1,6 +1,6 @@
 /*  ====================================================== 
     HOMEPAGE GRID STYLES (index.html) ================= */
-.intro {grid-area: intro;}
+.intro {grid-area: intro; }
 .main-content {grid-area: gallery;}
 footer {grid-area: footer;}
 /*
@@ -30,7 +30,20 @@ footer {grid-area: footer;}
   max-width: 1000px;
 }
 /*DESKTOP Media-Query*/
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) and (max-width: 899px) {
+  .indexContainer {
+    min-height: 100%;
+    margin: 0 1em;
+    grid-template-rows: auto 100% auto;
+  }
+	.main-content {
+    margin: 1em 8.8em;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 14px;
+	}
+}
+/*DESKTOP Media-Query*/
+@media screen and (min-width: 900px) {
   .indexContainer {
     min-height: 100%;
     margin: 0 1em;
