@@ -53,7 +53,7 @@ footer {grid-area: footer;}
 }
 body {
   /*background: #838487;*/
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   font-size: 1rem;
   line-height: 1.2;
