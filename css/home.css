@@ -30,7 +30,7 @@ footer {grid-area: footer;}
   max-width: 1000px;
 }
 /*DESKTOP Media-Query*/
-@media screen and (min-width: 650px) and (max-width: 899px) {
+@media screen and (min-width: 650px) /*and (max-width: 899px)*/ {
   .indexContainer {
     min-height: 100%;
     margin: 0 1em;
