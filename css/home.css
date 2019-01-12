@@ -34,7 +34,7 @@ footer {grid-area: footer;}
   .indexContainer {
     min-height: 100%;
     margin: 0 1em;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 100% auto;
   }
 	.main-content {
     margin: 1em 12.4em;
