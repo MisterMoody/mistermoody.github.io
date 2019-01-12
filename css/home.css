@@ -32,6 +32,7 @@ footer {grid-area: footer;}
 /*DESKTOP Media-Query*/
 @media screen and (min-width: 500px) {
   .indexContainer {
+    min-height: 100%;
     margin: 0 1em;
     grid-template-rows: auto 1fr auto;
   }
