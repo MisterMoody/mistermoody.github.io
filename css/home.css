@@ -37,7 +37,7 @@ footer {grid-area: footer;}
   }
 	.main-content {
     margin: 1em 8.8em;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 16px;
 	}
 }
