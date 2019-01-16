@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
     <!-- Cascading stylesheets -->
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
   </head>
   <body> 
     <!-- ************ MAIN SITE NAVIGATION *********** -->
@@ -97,12 +97,32 @@
             <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">Cascading stylesheets</a></u> (CSS) is a stylesheet language used to describe the rendering of elements on an HTML document. In the same fashion that HTML has a standardized set of specifications, the <u><a href="https://www.w3.org/Style/CSS" target="_blank">W3C</a></u> group is also the leading authority of CSS best practices. <u><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS" target="_blank">Mozilla</a></u> and <u><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">W3Schools</a></u>, however, are great sources of reference that offer a suite of articles, tutorials and tools for implementing CSS.
           </p>
           <p>
-            The setup for <u><a href="https://www.w3schools.com/css/css_howto.asp" target="_blank">applying CSS to a web page</a></u> using CSS is quite simple and begins by creating a file with the extension .css then including that file in the <code>&lt;head&gt;</code> of the HTML document that you want to style as a <code>&lt;link&gt;</code>. The <code>&lt;link&gt;</code> tag requires the <code>rel="val"</code> attribute that accepts a value of <code>"stylesheet"</code>, the <code>type="val"</code> attribute that accepts a value of <code>"text/css"</code> and an <code>href="val"</code> attribute that accepts a <code>URL</code> as its value to establish a connection with an <code class="reference"><a href="https://www.techopedia.com/definition/25421/external-style-sheet" target="_blank">external stylesheet</a></code>, which is a file with an extension that ends in <code>.css</code> that is linked to an HTML document. The <code class="reference"><a href="https://www.w3schools.com/tags/att_link_rel.asp " target="_blank">rel="val"</a></code> attribute, which specifies the relationship of the target object to the link object, accepts a dozen values to specify a particular relationship with the document, but when implementing CSS its value is always <code>"stylesheet</code>. 
+            The setup for <u><a href="https://www.w3schools.com/css/css_howto.asp" target="_blank">applying CSS to a web page</a></u> using CSS is quite simple and begins by creating a file with the extension .css then including that file in the <code>&lt;head&gt;</code> of the HTML document that you want to style as a <code>&lt;link&gt;</code>. The <code>&lt;link&gt;</code> tag requires three attributes to to be effectively implemented with an HTML document.  Those attributes include the <code>href="val"</code>, <code>rel="val"</code> and the <code>type="val"</code> attributes.
+          </p>
+          <figure>
+            <img src="img/cssLinkStrategy.JPG" alt="Strategy to Link a CSS File with an HTML Document" />
+            <figcaption>CSS &lt;Link&gt; Strategy</figcaption>
+          </figure>
+          <p>
+            The <code class="reference"><a href="https://www.w3schools.com/tags/att_link_href.asp " target="_blank">href="val"</a></code> attribute specifies the location of an external resource and  that resource will always be an external stylesheet whose location is referenced on the same server as the webpage that contains it. This attribute accepts a <code class="reference"><a href="https://www.webopedia.com/TERM/U/URL.html " target="_blank">URL</a></code> as its value to establish a connection with an <code class="reference"><a href="https://www.techopedia.com/definition/25421/external-style-sheet" target="_blank">external stylesheet</a></code>.
+            While an <code>external stysheet</code> is the file that is linked to the HTML document, the precise value for this element is the stylesheets' <code>URL</code>, or Uniform Resource Locator, which is the web browser mechanism used to retrieve a unique resource located on the web.
           </p>
           <p>
-            The <code class="reference"><a href="https://www.w3schools.com/tags/att_link_href.asp " target="_blank">href="val"</a></code> attribute specifies the location of an external resource and  that resource will always be an external stylesheet whose location is referenced on the same server as the webpage that contains it. The precise value for this element is the stylesheets' <code class="reference"><a href="https://www.webopedia.com/TERM/U/URL.html " target="_blank">URL</a></code>, or Uniform Resource Locator, which is the web browser mechanism used to retrieve a unique resource (ie style) located on the web. 
-            The <code class="reference"><a href="https://www.w3schools.com/tags/att_link_type.asp" target="_blank">type="val"</a></code> attribute specifies the Internet media type of the linked resources; a value of ‘text/css’ indicates that the referenced document is an external stylesheet. This attribute is required only when the <code>href="val"</code> attribute is set. 
+            Authored stylesheets have a relative URL, which is an implicit reference to a resource located on the same server as the web page. However, some resources are located somewhere else in the webiverse and these have an <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL" target="_blank">absolute</a></code> URL, which is an explicitly specified web address. Where a relative URL requires a simple file path to process a file, an absolute URL takes the following format: <code>protocol://domain/path/resource</code>.
           </p>
+          <p>
+            Here, <u><a href="https://docs.microsoft.com/en-us/sql/ado/guide/data/absolute-and-relative-urls?view=sql-server-2017" target="_blank">protocol</a></u> specifies how the resource is to be accessed while the domain specifies the name of the computer where the resource is located. The path specifies the sequence of directories leading to the target while the resource, if included, is the target, typically the name of a file. The <u><a href="https://www.webopedia.com/TERM/U/URL.html" target="_blank">protocol identifier</a></u> is either <code>http</code> or <code>https</code>, and is separated from the domain by a colon and two forward slashes. While the protocol is a method for exchanging or transferring data around a computer network, the domain is the server that is being requested. While it is clear that developers should use relative URLs to server style sheets, <u><a href="https://www.seoclarity.net/resources/knowledgebase/difference-relative-absolute-url-15325/" target="_blank">an argument can be made for using an absolute URL instead</a></u>. <u><a href="https://www.ietf.org/rfc/rfc1738.txt" target="_blank">Learn more about URLs</a></u> and how they formally came about via the <u><a href="https://www.rfc-editor.org/info/rfc1738" target="_blank">RFC 1738</a></u> pact.
+          </p>
+          <p>              
+            The <code class="reference"><a href="https://www.w3schools.com/tags/att_link_rel.asp " target="_blank">rel="val"</a></code> attribute specifies the relationship of the target object to the link object and can accept a dozen values to specify a particular relationship with the document, but when implementing CSS, its value is always <code>"stylesheet"</code>. 
+          </p>
+          <p> 
+            The <code class="reference"><a href="https://www.w3schools.com/tags/att_link_type.asp" target="_blank">type="val"</a></code> attribute specifies the Internet media type of the linked resources; a value of <code>"text/css"</code>  indicates that the referenced document is an external stylesheet. This attribute is required only when the <code>href="val"</code> attribute is set. 
+          </p>
+          <p>
+            As you can see, setting up a web project to handle CSS is simple, but as the project grows, it will become difficult to manage how styles are applied. A good practice here is to separate project styles from one another using multiple &lt;link&gt; tags in order to prevent <u><a href="https://www.computerhope.com/jargon/s/spaghett.htm" target="_blank">spaghetti code</a></u>. This occurs when you have different layout styles or patterns applied to various elements across multiple pages. 
+          </p>
+          <p>With that covered, lets focus on writing CSS!</p>
         </div>
         <!-- -->
         <!-- ++CSS Syntax++ -->
