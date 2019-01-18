@@ -91,7 +91,20 @@ main {max-width: 100%;}
     display: grid;
     grid-template-rows: repeat(auto, minmax(24px, auto));	grid-template-columns: 1fr;
 	}
-}
+  /* specific to 'Management' File*/
+  table {font-size: 0.62em;
+    table-layout: auto;
+    width: 100%;
+  }
+  th {text-align: left;}
+  td.bold {
+    width: 150px;
+  }
+  .bold > span {text-decoration: underline;}
+  .emphasize {font-style: italic;}
+  span {margin: 0;}
+  .small {font-size: 0.71em;}
+  }
 /* Desktop 'Table' */
 @media all and (min-width: 500px) {
   .block {
@@ -123,6 +136,8 @@ main {max-width: 100%;}
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2px;
   }
+  /* specific to 'Management' File*/
+  
 }
 /* =================================== */
 
