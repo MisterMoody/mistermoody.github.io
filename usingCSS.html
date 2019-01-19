@@ -135,17 +135,23 @@
           <p>
             <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Selectors</a></u> are used to select elements based on their name, class, id or attribute. <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Declarations</a></u> have beginning and ending curly braces and are composed of a property and corresponding value. A <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">property</a></u> is an identifier that indicates which stylistic features to implement while its <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">value</a></u> are specifications for how you want those stylistic features. A colon separates the property from its value while a semi-colon separates declarations from one another. With <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">more than 300 CSS properties</a></u>, there is number of styling possibilities is endless!
           </p>
-          <h5>Selector Types</h5>
+          <h5>Selector Types</h5><u><a href="" target="_blank"></a></u>
           <p>
-            There are seven types of selectors, all of which are used for a specific purpose.
+            There are seven types of selectors, all of which are used for a specific purpose. An explanation for how to use selectors appropriately can be found 
+            <u><a href="https://css-tricks.com/how-css-selectors-work/" target="_blank">here</a></u>, 
+            <u><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">here</a></u> and 
+            <u><a href="https://www.tutorialspoint.com/css/css_syntax.htm" target="_blank">here</a></u>.
           </p>
           <p>
-            The id selector <code>&#35;id &#123;prop: val;&#125;</code> is a unique CSS identifier that can only be used on one element; it is very useful for referencing the position of a block of code as a navigation link.
+            The #id Selector <code>&#35;id &#123;prop: val;&#125;</code> is a unique CSS identifier that can only be used on one element. It is very useful when referencing the location of a block of code, being the only purpose of which I employ this selector.
           </p>
           <figure>
             <img src="img/selectorID.JPG" alt="Example of how to Style the #ID Selector" />
-            <figcaption>Example of an #ID Selector</figcaption>
+            <figcaption>Example of an #id Selector</figcaption>
           </figure>
+          <p>
+            In the example above, an #id selector is applied to the navigational links' <code>&lt;a href&#61;&#34;&#35;val&#34;&gt;</code> attribute that, when clicked, will transport the user to the <code>&lt;div&gt;</code> with the corresponding <code>id&#34;val&#34;</code>. Notice the placement of the hashtag &#40;&#35;&#41;; it is always placed in an <code>&lt;a&gt;</code> tag, but not with the targeted element.
+          </p>
           <p>
             The class selector <code>&#46;class &#123;prop: val;&#125;</code> selects elements with a specific class, and can be applied to more than one element selector.
           </p>
