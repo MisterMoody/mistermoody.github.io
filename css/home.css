@@ -152,7 +152,7 @@ span {margin: 0;}
   visibility: hidden;
   z-index: 1;
   width: 100%;
-  padding: 0px 10px;
+  padding: 0px;
   background: #838487;
   color: #fff;
   position: absolute;
@@ -163,6 +163,10 @@ span {margin: 0;}
   transform: translateY(9px);
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 3px red;
+}
+/*tooltip Content */
+.tooltip > p {
+  text-align: center;
 }
 /* tooltip  after*/
 .tooltip::after {
