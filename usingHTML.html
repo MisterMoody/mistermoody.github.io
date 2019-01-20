@@ -365,7 +365,7 @@
               <code>&#60;form&#62;</code> elements can be integrated within a dialog by specifying them with the attribute method="dialog". When such a form is submitted, the dialog is closed with a returnValue attribute set to the value of the submit button used. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop">::backdrop</a></code> CSS pseudo-element &#40;experimental&#41; can be used to style behind a <code>&#60;dialog&#62;</code> element, for example to dim inaccessible content whilst a modal dialog is active. The backdrop is only drawn when the dialog element is displayed with <code>dialog.showModal()</code>. You can use a <u><a href="https://github.com/GoogleChrome/dialog-polyfill"  target="_blank">Polyfill</a></u>for browser support and learn more about <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms" target="_blank">&#60;form&#62;</a></code> + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/close" target="_blank">.close&#40;&#41;</a></code> Events + <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/cancel" target="_blank">.cancel&#40;&#41;</a></code> Events + and check out these <u><a href="https://demo.agektmr.com/dialog/" target="_blank">examples</a></u> which further elaborates on this elements usage.
             </p>
             <article class="block">
-              <div class="card">
+              <div class="blockCard">
                 <menu>
                   <button id="openDialogText">Dialog: Enter Text</button>
                 </menu>
@@ -377,7 +377,7 @@
                 </dialog> 
                 <p>This dialog box will open a window with an input text area that you can enter text into. After you submit text, the information will be stored until the next usage.</p>
               </div>
-              <div class="card">
+              <div class="blockCard">
                 <menu>
                   <button id="openModalDialogText">Modal: Enter Text</button>
                 </menu>
@@ -391,7 +391,7 @@
                 </dialog>
                 <p>This modal dialog will perform like the dialog box with the exception being a full-screen overlay will distort the background.</p>
               </div>
-              <div class="card">
+              <div class="blockCard">
                 <dialog id="openDialogChoice">
                 <form method="dialog">
                   <section>

@@ -357,6 +357,7 @@ dialog::backdrop {
   margin: 6px;
   padding: 8px;
   border: 1px solid #838487;
+  text-align: center;
 }
 .blockCard {
   margin: 4px 6px;
