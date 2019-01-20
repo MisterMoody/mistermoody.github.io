@@ -133,7 +133,7 @@
             In life, there are rules: when you follow the rules, you are rewarded and when you break a rule, well, all hell breaks loose. Same analogy applies to CSS: there are rules for writing CSS to instruct a document to display a certain way. CSS is created by employing a <u><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works" target="_blank">rule-set</a></u>, which is a rule for how the browser will interpret styling an HTML element. A rule-set is simply a block of code that consists of a selector, which references the HTML element that you want to apply styles to, and a declaration, which sets the property and value for the applied style. 
           </p>
           <p>
-            <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Selectors</a></u> are used to select elements based on their name, class, id or attribute. <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Declarations</a></u> have beginning and ending curly braces and are composed of a property and corresponding value. A <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">property</a></u> is an identifier that indicates which stylistic features to implement while its <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">value</a></u> are specifications for how you want those stylistic features. A colon separates the property from its value while a semi-colon separates declarations from one another. With <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">more than 300 CSS properties</a></u>, there is number of styling possibilities is endless!
+            <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Selectors</a></u> are used to select elements based on their name, class, id or attribute. <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Declarations</a></u> have beginning and ending curly braces and are composed of a property and corresponding value. A <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">property</a></u> is an identifier for an HTML attribute that indicates which stylistic features to implement while its <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">value</a></u> are specifications for how you want those stylistic features. A colon separates the property from its value while a semi-colon separates declarations from one another. With <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">more than 300 CSS properties</a></u>, there is number of styling possibilities is endless!
           </p>
           <h5>Selector Types</h5><u><a href="" target="_blank"></a></u>
           <p>
@@ -143,7 +143,46 @@
             <u><a href="https://www.tutorialspoint.com/css/css_syntax.htm" target="_blank">here</a></u>.
           </p>
           <p>
-            The #id Selector <code>&#35;id &#123;prop: val;&#125;</code> is a unique CSS identifier that can only be used on one element. It is very useful when referencing the location of a block of code, being the only purpose of which I employ this selector.
+            The <em>type selector</em> <code>type &#123;prop: val;&#125;</code> will apply consistent styles to a specific HTML element. In the example below, all <code>&lt;h1&gt;</code> headings are modified to accept a 'grey' color and 'increased' size.
+          </p>
+          <figure>
+            <img src="img/selectorTYPE.JPG" alt="Example of how to Style the #ID Selector" />
+            <figcaption>Example of a type Selector</figcaption>
+          </figure>
+          <br>
+          <p>
+            The <em>descendant selector</em> <code>type<sup>1</sup> type<sup>2</sup> &#123;prop: val;&#125;</code> is useful for applying styles to a <u><a href="https://www.webopedia.com/TERM/N/nesting.html" target="_blank">nested</a></u> element. In the example below, the <code>&lt;li&gt;</code> within the <code>&lt;ul&gt;</code> will accept a 'grey' color and 'decreased' size.
+          </p>
+          <figure>
+            <img src="img/selectorDESCENDANT.JPG" alt="Example of how to Style the Descendant Selector" />
+            <figcaption>Example of a descendant Selector</figcaption>
+          </figure>
+          <br>
+          <p>
+            The <em>child selector</em> <code>type<sup>1</sup> &#62; type<sup>2</sup> &#123;prop: val;&#125;</code> applies styles to an elements in the event that it is the direct child of that element.	In the example below, the declaration renders all <code>&lt;li&gt;</code> elements within a <code>&lt;ol&gt;</code> as green.
+          </p>
+          <figure>
+            <img src="img/selectorCHILD.JPG" alt="Example of how to Style the Child Selector" />
+            <figcaption>Example of a child Selector</figcaption>
+          </figure>
+          <br>
+          <p>
+            The <em>class selector</em> <code>&#46;class &#123;prop: val;&#125;</code> selects elements with a specific class, and can be applied to more than one element.
+          </p>
+          <figure>
+            <img src="img/selectorClass.JPG" alt="Example of how to Style the .CLASS Selector" />
+            <figcaption>Example of a .CLASS Selector applied to HTML</figcaption>
+          </figure>
+          <p>
+            The illustration above highlights the simplicity in applying a <code>&lt;.class&gt;</code> to an HTML element while the illustration below indicates the style change and how it is applied. In this example, the first declaration will render elements that contain a <code>.class</code> selector as 'red' whereas the second declaration will render <code>&lt;p&gt;</code> elements that contain a <code>.class</code> selector as 'yellow.'
+          </p>
+          <figure>
+            <img src="img/selectorClass2.JPG" alt="Example of how to Style the .CLASS Selector" />
+            <figcaption>Examples of .CLASS Selectors applied in CSS</figcaption>
+          </figure>
+          <br>
+          <p>
+            The <em>#id Selector</em> <code>&#35;id &#123;prop: val;&#125;</code> is a unique CSS identifier that can only be used on one element. Whereas the type selector is the most commonly used for applying styles to the same element, the #id selector has the highest level of <u><a href="https://developer.mozilla.org/en/docs/Web/CSS/Specificity" target="_blank">specificity</a></u> among all selectors.  It is very useful when referencing the location of a block of code, being the only purpose of which I employ this selector.
           </p>
           <figure>
             <img src="img/selectorID.JPG" alt="Example of how to Style the #ID Selector" />
@@ -152,39 +191,57 @@
           <p>
             In the example above, an #id selector is applied to the navigational links' <code>&lt;a href&#61;&#34;&#35;val&#34;&gt;</code> attribute that, when clicked, will transport the user to the <code>&lt;div&gt;</code> with the corresponding <code>id&#34;val&#34;</code>. Notice the placement of the hashtag &#40;&#35;&#41;; it is always placed in an <code>&lt;a&gt;</code> tag, but not with the targeted element.
           </p>
-          <p>
-            The class selector <code>&#46;class &#123;prop: val;&#125;</code> selects elements with a specific class, and can be applied to more than one element selector.
-          </p>
-          <p>
-            The type selector <code>type &#123;prop: val;&#125;</code> will apply consistent styles to a specific element.
-          </p>
-          <p>
-            The descendant selector <code>type<sup>1</sup> type<sup>2</sup> &#123;prop: val;&#125;</code> is useful for applying styles to a nested element.
-          </p>
-          <p>
-            The child selector <code>type<sup>1</sup> &#62; type<sup>2</sup> &#123;prop: val;&#125;</code> applies styles to an elements in the event that it is the direct child of that element.	
-          </p>
-          <figure>
-            <img src="img/selectorClass.JPG" alt="Example of how to Style the .CLASS Selector" />
-            <figcaption>Example of a .CLASS Selector applied to HTML</figcaption>
-          </figure>
           <br>
+          <p>
+            The <em>universal selector</em> <code><b>&#42; </b>&#123;prop: val;&#125;</code> is used to render a specific style to all elements of a website. In the illustration below, all text elements will render 'blue.'
+          </p>
           <figure>
-            <img src="img/selectorClass.JPG" alt="Example of how to Style the .CLASS Selector" />
-            <figcaption>Example of a .CLASS Selector applied in CSS</figcaption>
+            <img src="img/selectorUNIVERSAL.JPG" alt="Example of how to Style the Universal Selector" />
+            <figcaption>Example of an Universal Selector</figcaption>
           </figure>
           <p>
-            The universal selector <code><b>&#42; </b>&#123;prop: val;&#125;</code> is used to render a specific style to all elements of a website. 
+            One must be careful when using this selector for certain properties as it severly limits application of the same property applied to a different selector. For example, all <code>&lt;a href&#61;&#34;val&#34;&gt;</code> have a default style where <code>&lt;link&gt;</code> elements render 'blue' in color. The rule-set above would cause havoc as it would be difficult to differentiate normal text from an <code>&lt;a&gt;</code> element embedded within a block of text.
+          </p>
+          <br>
+          <p>
+            <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">Pseudo-class selectors</a></u> <code><b>&#58;pseudo-class </b>&#123;prop: val;&#125;</code> are actually keywords that are added to other selectors and provide a unique style during a particular instance of that selector. Knowing <u><a href="https://css-tricks.com/pseudo-class-selectors/" target="_blank"> how to apply a pseudo-class</a></u> will seem difficult at first, but developers become familiar with these quickly as it provides additional styling capabilities. The illustration below highlights ways in which these selectors can be applied to navigational links.
+          </p>
+          <figure>
+            <img src="img/selectorPSEUDOclass.JPG" alt="Example of how to Style a Pseudo-Class Selector" />
+            <figcaption>Example of a Pseudo-Class Selector</figcaption>
+          </figure>
+          <p> 
+            It would be wise to check out this handy <u><a href="https://css-tricks.com/almanac/selectors/" target="_blank">almanac of pseudo-class selectors</a></u> to better understand how these can be applied in a variety of situations, one of which is a pseudo-class <u><a href="https://css-tricks.com/pseudo-class-selectors/#article-header-id-2" target="_blank">based on position</a></u>, which is a good method for specifiying a location for blocks of code. In this regard, understanding how to <u><a href="https://css-tricks.com/how-nth-child-works/" target="_blank">use</a></u> and <u><a href="https://css-tricks.com/examples/nth-child-tester/" target="_blank">test</a></u> the <code class="reference"><a href="https://css-tricks.com/useful-nth-child-recipies/" target="_blank">&#58;nth-child&#40;&#41;</a></code>, which selects elements based on an algebraic expression, is imperative, but that should not stop one from exploring <code class="reference"><a href="https://css-tricks.com/almanac/selectors/r/required/" target="_blank">&#58;required&#40;&#41;</a></code>, <code class="reference"><a href="https://css-tricks.com/almanac/selectors/f/focus/" target="_blank">&#58;focus</a></code> and <code class="reference"><a href="https://css-tricks.com/almanac/selectors/d/disabled/" target="_blank">&#58;disabled</a></code> pseudo-class selectors that go far when styling <code>&lt;form&gt;</code>inputs. 
+          </p>
+          <br>
+          <p>
+            In contrast to pseudo-classes, <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">pseudo-elements</a></u> can be used to style a specific part of an element. There are many <u><a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">amazing ways to use</a></u> pseudo-elements, but the scope of this subject focuses on four selectors that adds depth to elements that possess text.
           </p>
           <p>
-            The attribute selector <code>type&#91;<b>attribute</b> &#61; &#34;val;&#34; &#123;prop: val;&#125;</code> is used to apply styles to an HTML element with a specific attribute, but what do I know: I never use this selector! 
+            The <code class="reference"><a href="https://css-tricks.com/almanac/selectors/f/first-letter/" target="_blank">&#58;first-letter</a></code> and <code class="reference"><a href="https://css-tricks.com/almanac/selectors/f/first-line/" target="_blank">&#58;first-line</a></code> pseudo-elements can be used to add style to the first letter or first line of text, respectively, but they can only be applied to <u><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements" target="_blank">block-level elements</a></u>. In the illustration below, the first declaration states that the 'first letter' of 'every paragraph' with a class of 'intro' will display as 'red.' The second declaration states that the 'first line' of 'every paragraph' with a class of 'intro' will display 'bolder' than the text below it.
           </p>
-          <!--<p>
-            Psudo-classes
-          </p>
+          <figure>
+            <img src="img/selectorPSEUDOelement.JPG" alt="Example of how to Style a Pseudo-Element Selector" />
+            <figcaption>Example of a Pseudo-Element Selector</figcaption>
+          </figure>
           <p>
-            Pseudo-elements
-          </p>-->        
+            The <code class="reference"><a href="https://css-tricks.com/almanac/selectors/a/after-and-before/" target="_blank">&#58;&#58;before</a></code> and
+            <code class="reference"><a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank">&#58;&#58;after</a></code> pseudo-elements can be used to add content before or after an element, respectively. The key to these selectors is that they require the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content" target="_blank">content&#58; &#34;&#34;&#59;</a></code> property in order to work. Add a symbol as a value for the property, or leave it empty and add the <code class="reference"><a href="https://developer.mozilla.org/en/docs/Web/CSS/background" target="_blank">background</a></code> shorthand property to the declaration with the resource (i.e. URL, image, string) that you want to display. In the illustration below, the value of the <code>content&#58; &#34;&#34;&#59;</code> property will display a checkmark before any list-item.
+          </p>
+          <figure>
+            <img src="img/selectorPSEUDOelement2.JPG" alt="Example of how to Style a Pseudo-Element Selector" />
+            <figcaption>Example of a Pseudo-Element Selector</figcaption>
+          </figure>
+          <p>These selector types can do more than improve how text is displayed: they can even be used to <u><a href="http://nicolasgallagher.com/multiple-backgrounds-and-borders-with-css2/" target="_blank">create multiple backgrounds</a></u> and borders.</p>
+          <br>
+          <p>
+            The <em>attribute selector</em> <code>type&#91;<b>attribute</b> &#61; &#34;val&#34; &#123;prop: val;&#125;</code> is used to apply styles to an HTML element with a specific attribute, but what do I know: I never use this selector! If I did, I would probably use it to select all <code>&lt;p&gt;</code> elements with a <code>lang</code> attribute that has a value of <code>zh</code>, for the Mandarin language. But what would I use that for!?!
+          </p>
+          <figure>
+            <img src="img/selectorATTRIBUTE.JPG" alt="Example of how to Style the Attribute Selector" />
+            <figcaption>Example of an Attribute Selector</figcaption>
+          </figure>
+          <p>That is the extent of my knowledge in this area. Moving along now...</p>       
         </div>
         <!-- -->
         <!-- ++C.I.S.++ -->
