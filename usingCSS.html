@@ -135,7 +135,7 @@
           <p>
             <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Selectors</a></u> are used to select elements based on their name, class, id or attribute. <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Declarations</a></u> have beginning and ending curly braces and are composed of a property and corresponding value. A <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">property</a></u> is an identifier for an HTML attribute that indicates which stylistic features to implement while its <u><a href="https://www.w3schools.com/css/css_syntax.asp " target="_blank">value</a></u> are specifications for how you want those stylistic features. A colon separates the property from its value while a semi-colon separates declarations from one another. With <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">more than 300 CSS properties</a></u>, there is number of styling possibilities is endless!
           </p>
-          <h5>Selector Types</h5><u><a href="" target="_blank"></a></u>
+          <h5>Selector Types</h5>
           <p>
             There are seven types of selectors, all of which are used for a specific purpose. An explanation for how to use selectors appropriately can be found 
             <u><a href="https://css-tricks.com/how-css-selectors-work/" target="_blank">here</a></u>, 
@@ -246,14 +246,37 @@
           <p>
             Again, learning to use these selectors is a challenge every developer encounters. One thing to remember is that sometimes <u><em><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors" target="_blank">combinator</a></em></u> selectors can be more efficient than creating separate styles for each targeted element. Equally important is to know how to hide styles when in production-mode. We implement <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Comments" target="_blank">comments</a></u> by adding  <code>&#47;&#42;</code> and <code>&#42;&#47;</code> to the beginning and end of any text; this will prevent any code from being rendered by the browser. Comments are also useful when collaborating on a project to ensure that all team members can readily comprehend its working status.
           </p>
-          <p>That is the extent of my knowledge regarding the bare essentials of CSS. </p>       
         </div>
         <!-- -->
         <!-- ++C.I.S.++ -->
         <hr>
         <div id="casInheritSpecify" class="intro">
           <h2>The Cascade, Inheritance &amp; Specificity</h2>
-          <p></p>
+          <p>
+            The core of CSS is the <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade" target="_blank">Cascade</a></u>, an algorithm that defines how to combine property values that originate from different sources. Essentially, it defines that the order of CSS rules is important, and when not followed, could produce disastrous results. In accordance with the rules, developers should be wary of the descending order of importance for the cascade: origin, specificity and order.
+          </p>
+          <p>
+            The <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#Cascading_order" target="_blank">order</a></u> in which CSS declarations cascade depends on the origin of CSS declarations.  Because style sheets come from different origins, they tend to overlap in scope, and this is when the algorithm defines the interaction. The browser uses a basic style sheet known as a <u><em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#User-agent_stylesheets" target="_blank">user-agent stylesheet</a></em></u> that provides a default style to any document. A <u><em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#User_stylesheets" target="_blank">user stylesheet</a></em></u> is created by individual users to customize and override styles that have been applied to the browser, regardless of origin. <u><em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#Author_stylesheets" target="_blank">Authored stylesheets</a></em></u> are CSS files created by developers to define how a website will display. Respectively, these origins represent the order of priority in which they cascade, top-down, meaning that a user-agent stylesheet will take precedence over an authored stylesheet. 
+          </p>
+          <p>
+            In the event that multiple declarations target one specific element, <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank">specificity</a></u> is invoked, which are actions taken by browsers to determine which CSS declaration should be applied. Generally, the last declaration made based on multiple declarations of equal specificity will be applied to the CSS. In the illustration below, the color of the class <code>.fav</code> will render 'black' because the source order determines which declaration to utilize.
+          </p>
+          <figure>
+            <img src="img/specificity.JPG" alt="Specificity Exemplified" />
+            <figcaption>Example of Specifity at Work</figcaption>
+          </figure>
+          <p>
+            The amount of specificity possessed by selectors can alter such measurement, which is why <u><a href="https://css-tricks.com/specifics-on-css-specificity/ " target="_blank">calculating</a></u> specificity values can be challenging. The basic principle of specificity defines a rank-order of most to least significant selectors to use when writing CSS. <code>&#35;id</code> selectors have the highest rank followed by <code>&#46;class</code>, <code>&#91;attribute &#61; &#34;val&#34;&#93;</code>, <code>&#58;pseudo-class</code>, <code>&lt;element&gt;</code> then finally the <code>&#58;&#58;pseudo-element</code>.
+          </p>
+          <p>
+            It should be mentioned that the universal selector <code>&#91; &#42; &#93;</code>, selector combinators <code>&#91; &#43;&#44; &gt;&#44; &#126;&#44; &#39;&#39;&#44; &#124;&#124; &#93;</code> and the negation pseudo-class <code>&#91; &#58;not&#40;&#41; &#93;</code>do not impair specificity. The <u><a href="https://css-tricks.com/when-using-important-is-the-right-choice/ " target="_blank">!important</a></u> exemption <code>&#91; &#33; &#93;</code>, as well as an <u><a href="https://www.lifewire.com/what-is-css-inline-style-3466446" target="_blank">inline-style</a></u>, can be used to override any declaration, but it is considered bad practice due to the complications that can arise with debugging. There are <u><a href="https://www.w3schools.com/css/css_specificity.asp" target="_blank">plenty</a></u> <u><a href="https://specifishity.com/ " target="_blank">of</a></u> <u><a href="https://cssspecificity.com" target="_blank">tools</a></u> readily available online to help developers better understand this concept.
+          </p>
+          <p>
+            CSS styles are also controlled via <u><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Inheritance" target="_blank">inheritance</a></u>, which is the concept that some property values applied to an element will be inherited by its children, but some will not. A <u><a href="https://medium.com/@sayes2x/css-cascade-inheritance-and-specificity-9b18550b7637" target="_blank">good example</a></u> is a <code>&lt;p&gt;</code> tag nested in a <code>&lt;div&gt;</code>; setting the color property for the <code>&lt;div&gt;</code> will cause the <code>&lt;p&gt;</code> to be the same color. Setting the color property for the <code>&lt;p&gt;</code> will override the styles applied to the <code>&lt;div&gt;</code>. Developers should consult a CSS property <u><a href="" target="_blank">reference list</a></u> to ascertain which properties are natively inherited.
+          </p>
+          <p>
+            That is the extent of my knowledge regarding how to use CSS, so now let's explore the infinite possibilities in how we can apply styles to websites!
+          </p>
         </div>
         <!-- -->
         <!-- ++Layout++ -->
@@ -402,8 +425,10 @@
           </p>
           
         </div>-->
+        
+        
         <!-- -->
-        <div class="intro"><address>Last Updated: 1/20/2018</address></div>
+        <div class="intro"><address>Last Updated: 1/21/2018</address></div>
       </main>  
       <!-- -->
       <!-- -->
