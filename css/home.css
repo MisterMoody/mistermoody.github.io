@@ -18,7 +18,7 @@ footer {grid-area: footer;}
 .galleryGrid {
   margin: 0 0.5em;
   display: grid;
-  grid-template-rows: auto 90% 5vh;
+  grid-template-rows: auto auto 5vh;
   grid-template-areas: 
     "intro"
     "gallery"
@@ -33,7 +33,7 @@ footer {grid-area: footer;}
 	margin: 1em;
 	display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(auto-fit, 150px);
   grid-gap: 10px;
 }
 /*DESKTOP Media-Query*/
