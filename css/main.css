@@ -98,6 +98,7 @@ fa-home {
 nav {
   white-space: nowrap;
   background: #333;
+  padding-top: 62px;
 }
 nav ul {
   list-style: none;
@@ -423,3 +424,32 @@ footer {text-align: center;}
   100% {transform: scale(0.5);}
 }
 /*  ================== */
+
+/* ==================================== */
+/* ============== ?????? ============== */
+/* Mobile 'Table' */
+h3 > span {color: red;}
+div > span {text-decoration: underline;}
+.table, .tableEven > div {margin: 2px 6px;}
+/**/
+span {margin: 0;}
+
+/*Hide on Mobile >> Display in Desktop*/
+.hideMobile, span.hideMobile {display: none;}
+.hideDesktop, span.hideDesktop {display: contents;}
+/**/
+@media only screen and (min-width: 800px) {
+  .hideMobile, span.hideMobile {display: contents;}
+  .hideDesktop, span.hideDesktop {display: none;}
+}
+/**/
+dialog::backdrop {
+  background: rgba(255,0,0,.25);
+}
+/**/
+.card {
+  margin: 6px;
+  padding: 8px;
+  border: 1px solid #e1e1e1;
+}
+/**//*******************************//**/
