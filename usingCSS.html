@@ -11,13 +11,13 @@
     <!-- Cascading stylesheets -->
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/layouts.css" rel="stylesheet" type="text/css">
   </head>
   <body> 
     <!-- ************ MAIN SITE NAVIGATION *********** -->
     <!-- (Outside of 'Grid' for Responsiveness) -->
 		<header class="topnav" id="myTopnav">
-      <a href="index.html" class="active"><i class="fa fa-home"></i> Home</a>
+      <a href="index.html" class="active"><i class="fa fa-home"></i>Home</a>
       <a href="usingHTML.html">HTML</a>
       <a href="usingCSS.html">CSS</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -53,15 +53,6 @@
         <div class="intro">
           <a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a>
         </div>
-        <!-- TEMPORARY CONSTRUCTION BANNER-->
-        <div class="banner2">
-          <h1>IN-PROGRESS</h1>
-          <h5 style="color: red;">Check Below</h5>
-        </div>
-        <!-- Back-to-Top Button-->
-        <!--<div class="intro">
-          <a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a>
-        </div>-->
               
         <!-- -->
         <!-- ++Using CSS++ -->
@@ -446,7 +437,7 @@
         
         
         <!-- -->
-        <div class="intro"><address>Last Updated: 1/24/2018</address></div>
+        <div class="intro"><address>Last Updated: 3/20/2019</address></div>
       </main>  
       <!-- -->
       <!-- -->
@@ -456,21 +447,16 @@
         <span class=""> Made with <i class="fa fa-heart"></i> by </span> Mister Moody
       </footer> 
     </div>
-    <!-- ************************* -->
-    <!-- -->
-		<!-- -->
-    <!-- -->
-    <!-- *****JS SCRIPTS***** -->
+    <!-- ***** <END of MAIN-GRID> ***** -->
+    
+    
+    <!-- **** JavaScript SCRIPTS **** -->
     <!-- -----Navigation----- -->
-    <script>function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-    </script>    
+    <script src="js/topNav.js"></script> 
+      
+		<!-- SidebarNavigation -->
+    <script src="js/sidebarNav.js"></script>
+       
 		<!-- -->
   </body>
 </html>

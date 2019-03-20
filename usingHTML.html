@@ -11,7 +11,7 @@
     <!-- Cascading Style Sheets -->
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/layouts.css" rel="stylesheet">
   </head>
   <body>  
     <!-- ************ MAIN SITE NAVIGATION *********** -->
@@ -35,22 +35,10 @@
           <li><a href="#introduction">Using HTML</a></li>
           <li><a href="#defineHTML">What is HTML?</a></li>
           <li><a href="#template">Required HTML</a></li>
-            <li class="nested"><a href="#reqRoot">Main Root</a></li>
-            <li class="nested"><a href="#reqHead">Head</a></li>
-            <li class="nested"><a href="#reqBody">Body</a></li>
           <li><a href="#defineSec">Defining Sections</a></li>
-            <li class="nested"><a href="#secHead">Header Section</a></li>
-            <li class="nested"><a href="#secMain">Main Section</a></li>
-            <li class="nested"><a href="#secFooter">Footer Section</a></li>
           <li><a href="#defineContent">Defining Content</a></li>
-            <li class="nested"><a href="#conNav">Navigation</a></li>
-            <li class="nested"><a href="#conHP">Headings / Paragraphs</a></li>
-            <li class="nested"><a href="#conInline">Inline-Text Semantics</a></li>
-            <li class="nested"><a href="#conImages">Images</a></li>
-            <li class="nested"><a href="#conForms">Forms</a></li>
-            <!--<li class="nested"><a href="#conInteract">Interactive Elements</a></li>-->
-            <li class="nested"><a href="#conAscii">Using Unicode</a></li>
-            <li class="nested"><a href="#conAdvanced">Advanced Elements</a></li>
+          <li><a href="#conForms">Forms</a></li>
+          <li><a href="#conAscii">Using Unicode</a></li>
           <li><a href="#accessibility">Accessibility</a></li>
         </ul>
       </nav>
@@ -107,7 +95,7 @@
             <figcaption>Required structural elements for an HTML template</figcaption>
           </figure>
           <!-- Sub-Topic 1: MAIN-ROOT -->
-          <div id="reqRoot">
+          <div>
             <h5>The Main Root</h5>
             <p>
               The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype" target="_blank">&lt;!DOCTYPE html&gt;</a></code> is the first line of a page. It declares that this document is indeed an HTML file by providing browsers with relevant specifications to ensure rendering.
@@ -115,7 +103,7 @@
             <p>The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="_blank">&lt;html&gt;</a></code> element is on the second and final line of a page and is the outermost container that acts as a wrapper for everything on the entire page. This element accepts the <code>&lt;lang="val"&gt;</code> attribute, which assists screen reading technology in determining what language to promulgate.</p>
           </div>
           <!-- Sub-Topic 2: HEAD -->
-          <div id="reqHead">
+          <div>
             <h5>The Head</h5>
             <p>
              The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">&lt;head&gt;</a></code> element is the first child descendant of the <code>&lt;html&gt;</code> element and represents the area that contains all meta information about a particular page, its title and instructions for the browser to locate style sheets while defining relationships that the document has to others in the web site.
@@ -143,7 +131,7 @@
             </p>
           </div>
           <!-- Sub-Topic 3: BODY-->
-          <div id="reqBody">
+          <div>
             <h5>The Body</h5>
             <p>
               Once <code>&lt;head&gt;</code> specifications are declared, content layout takes center stage. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">&lt;body&gt;</a></code> element is the second child descendant of the <code>&lt;html&gt;</code> element and represents the area that wraps all content that will be displayed on screen (or in other media, such as print), such as headings, paragraphs, images, tables, and so on. Lets explore!</p>
@@ -162,14 +150,14 @@
             <figcaption>Method for Defining Page Sections</figcaption>
           </figure>
           <!-- Sub-Topic 1: Header / Nav -->
-          <div id="secHead">
+          <div>
             <h5>Header and Navigation</h5>
             <p>
               The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank">&lt;header&gt;</a></code> element is the first section users encounter and contains introductory information related to the website such as a logo, author or navigational aids. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank">&lt;nav&gt;</a></code> element allows users to navigate a website, providing links within the current document or to an external source. This element can be used within a <code>&lt;header&gt;</code> or independently, and should be reserved for primary navigation sections only including global navigation, a table of contents, previous&#47;next links, etc.
             </p>
           </div>
           <!-- Sub-Topic 2: Sections for Content -->
-          <div id="secMain">
+          <div>
             <h5>Primary Section Areas</h5>
             <p>
               The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main" target="_blank">&lt;main&gt;</a></code> element is not an element that should be used to section content as it represents content that is directly related to the central topic of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application. This element is essentially the main container within the <code>&#60;body&#62;</code> element, possessing all information outside of content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos or search forms.
@@ -182,7 +170,7 @@
           </p>
           </div>
           <!-- Sub-Topic 3: Footer -->
-          <div id="secFooter">
+          <div>
             <h5>Footer</h5>
             <p>
               The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank">&lt;footer&gt;</a></code> element typically contains information about the author of the section, copyright data or links to related documents. It is placed at the bottom of the section root or used at the bottom of any sectioning elements.
@@ -202,7 +190,7 @@
           </p> 
           <!-- -->
           <!-- NAVIGATION --> 
-          <div id="conNav">
+          <div>
             <h5>Navigation</h5>
             <p>
               Building an efficient navigation system that will allow users to seamlessly traverse the site is the first order of business for this project. Lets create a system consisting of links to the home page, an about page and a contact page. This task can be completed by utilizing a <u><a href="https://learn.shayhowe.com/html-css/creating-lists/" target="_blank">structured</a></u>-<u><a href="https://webplatform.github.io/docs/guides/html_lists/" target="_blank">list</a></u>.
@@ -226,7 +214,7 @@
           </div>
           <!-- -->
           <!-- HEADINGS & PARAGRAPH -->
-          <div id="conHP">
+          <div>
             <h5>Headings and Paragraph</h5>
             <p>
               As previously stated, the <code>article</code> tag is a primary section area for content. The first bits of content for any page will include a heading and an introductory paragraph. The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">&#60;h1-h6&#62;</a></code> tags are used to create title-based headings. Best practice mandates that the <code>&#60;h1&#62;</code> be used only once per page, and to avoid skipping levels when nesting sub-sections to reflect the organization of the content of that page. One practical explanation for this is that most <u><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">screen readers can generate an ordered list of headings on a page</a></u>, which helps users with disabilities ascertain content hierarchy. With a title in place, we can markup content using the <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">&#60;p&#62;</a></code> tag, which will create perfectly aligned blocks of text.
@@ -248,7 +236,7 @@
           </div>
           <!-- --> 
           <!-- INLINE-TEXT SEMANTICS -->
-          <div id="conInline">
+          <div>
             <h5>Inline Text Semantics</h5>
             <p>
               Aside from using the <code>&#60;p&#62;</code> tag to introduce text, we may also want to define the meaning, structure, or style of any piece of text. To achieve such objectives, we can employ <u><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics" target="_blank">inline text semantics</a></u>, of which there are nearly three dozen elements that we can use to modify text. 
@@ -602,8 +590,8 @@
               It would be a worthy venture to <u><a href="https://wiki.mozilla.org/Help:Special_characters" target="_blank">learn</a></u> <u><a href="https://lachy.id.au/log/2005/10/char-refs" target="_blank">more</a></u> about <u><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">Unicode</a></u> as you can include arrows, foreign languages, shapes and much more.
             </p>
           </div>
-          <!-- HIDDEN -->
-          <!-- ADVANCED -->
+          
+          <!-- ADVANCED 
           <div id="conAdvanced">
             <div>
               <h5>Advanced Elements</h5>
@@ -628,7 +616,7 @@
             <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">slot</a></code></div>
             <div><code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" target="_blank">canvas</a></code></div>
           </div>
-          </div>
+          </div>-->
          
           <!-- -->
         </div>
@@ -681,7 +669,7 @@
           </p>
         </div>
         <!-- -->
-        <div class="intro"><address>Last Updated: 1/8/2018</address></div>
+        <div class="intro"><address>Last Updated: 3/20/2019</address></div>
       </main>  
       <!-- -->
       <!-- -->
@@ -698,53 +686,13 @@
     
     <!-- **** JavaScript SCRIPTS **** -->
     <!-- -----Navigation----- -->
-    <script>function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-    </script> 
+    <script src="js/topNav.js"></script> 
       
 		<!-- SidebarNavigation -->
-    <script>
-    let mainNavLinks = document.querySelectorAll("nav ul li a");
-    let mainSections = document.querySelectorAll("main section");
-
-    let lastId;
-    let cur = [];
-
-    // This should probably be throttled.
-    // Especially because it triggers during smooth scrolling.
-    // https://lodash.com/docs/4.17.10#throttle
-    // You could do likeval
-    // window.addEventListener("scroll", () => {
-    //    _.throttle(doThatStuff, 100);
-    // });
-    // Only not doing it here to keep this Pen dependency-free.
-
-    window.addEventListener("scroll", event => {
-      let fromTop = window.scrollY;
-
-      mainNavLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-
-          if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-              ) {
-                  link.classList.add("current");
-                } else {
-                  link.classList.remove("current");
-                }
-              });
-            });
-    </script>
+    <script src="js/sidebarNav.js"></script>
     
     <!-- <dialog> Element Example -->
-    <script src="dialogElement.js"></script>
+    <script src="js/dialogElement.js"></script>
 		<!-- -->
   </body>
 </html>
