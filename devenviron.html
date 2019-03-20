@@ -11,7 +11,7 @@
     <!-- Cascading Style Sheets -->
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/layouts.css" rel="stylesheet">
   </head>
   <body>  
     <!-- ************ MAIN SITE NAVIGATION *********** -->
@@ -209,49 +209,9 @@
 
     <!-- *****JS SCRIPTS***** -->
     <!-- -----Navigation----- -->
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-    </script>    
+    <script src="js/topNav.js"></script> 
+      
 		<!-- SidebarNavigation -->
-    <script>
-    let mainNavLinks = document.querySelectorAll("nav ul li a");
-    let mainSections = document.querySelectorAll("main section");
-
-    let lastId;
-    let cur = [];
-
-    // This should probably be throttled.
-    // Especially because it triggers during smooth scrolling.
-    // https://lodash.com/docs/4.17.10#throttle
-    // You could do like...
-    // window.addEventListener("scroll", () => {
-    //    _.throttle(doThatStuff, 100);
-    // });
-    // Only not doing it here to keep this Pen dependency-free.
-
-    window.addEventListener("scroll", event => {
-      let fromTop = window.scrollY;
-
-      mainNavLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-
-          if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-              ) {
-                  link.classList.add("current");
-                } else {
-                  link.classList.remove("current");
-                }
-              });
-            });
-    </script>
+    <script src="js/sidebarNav.js"></script>
   </body>
 </html>
