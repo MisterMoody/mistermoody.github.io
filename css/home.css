@@ -5,16 +5,13 @@
 footer {grid-area: footer;}
 /*
 */
-
-/*
-*/
 .intro {
   margin: 0 auto;
   width: 95%;
   max-width: 1000px;
 }
-/* */
-/**/
+/*
+*/
 .galleryGrid {
   margin: 0 0.5em;
   display: grid;
