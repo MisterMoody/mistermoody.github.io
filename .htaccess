@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+  # TURN-On 'mod_rewrite'
+  RewriteEngine On
+  
+  #Eschew '.php' File Extension
+  Options +MultiViews
+  
+  
+  # DO NOT FORGET TO PLACE THIS FILE ON THE OUTSIDE OF THE 'root/' FOLDER
+</IfModule>
