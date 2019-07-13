@@ -37,14 +37,16 @@ footer {grid-area: footer;}
 /*DESKTOP Media-Query*/
 @media screen and (min-width: 500px) {
   .galleryGrid {
-    margin: 0 10em; /* 0 1em */
-    grid-template-rows: auto auto 24px;
+    margin: 0 12em; /* 0 1em */
+    grid-template-rows: auto 1fr 24px;
+    grid-gap: 44px;
   }
 	.main-content {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 }
 /* ==================================================== */
+
 
 
 
