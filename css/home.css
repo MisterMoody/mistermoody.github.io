@@ -39,7 +39,7 @@ footer {grid-area: footer;}
   .galleryGrid {
     margin: 0 12em; /* 0 1em */
     grid-template-rows: auto 1fr auto;
-    grid-gap: 10px
+    grid-gap: 5vh;
   }
 	.main-content {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
