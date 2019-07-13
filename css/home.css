@@ -38,7 +38,7 @@ footer {grid-area: footer;}
 @media screen and (min-width: 500px) {
   .galleryGrid {
     margin: 0 12em; /* 0 1em */
-    grid-template-rows: auto 1fr 24px;
+    grid-template-rows: auto 1fr auto;
     grid-gap: 44px;
   }
 	.main-content {
