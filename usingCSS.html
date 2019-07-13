@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using CSS</title>
@@ -9,7 +9,7 @@
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
     <!-- Cascading stylesheets -->
-	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/layouts.css" rel="stylesheet" type="text/css">
   </head>
@@ -36,20 +36,13 @@
       <!-- //SIDEBAR-NAVIGATION (Desktop Only)--> 
       <nav>
         <ul class="hideMobile">
-          <br>
           <li><a href=""></a></li>
           <li><a href="#introduction">Using CSS</a></li>
           <li><a href="#whatIsCSS">What is CSS?</a></li>
           <li><a href="#cssSyntax">CSS Syntax</a></li>
-          <li><a href="#casInheritSpecify">C. I. S.</a></li>
+          <li><a href="#casInheritSpecify">C.I.S.</a></li>
           <li><a href="#debugCSS">Debugging CSS</a></li>
-          <li><a href="#cssLayout">Layout</a></li>
           <li><a href="#cssGenStyles">General Styles</a></li>
-          <li><a href="#cssAdvStyles">Advanced Styles</a></li>
-          <!--<li><a href="#topicThree">Topic Three</a></li>
-            <li class="nested"><a href="#subTopicOne">Sub-Topic One</a></li>
-            <li class="nested"><a href="#subTopicTwo">Sub-Topic Two</a></li>
-            <li class="nested"><a href="#subTopicThree">Sub-Topic Three</a></li>-->
         </ul>
       </nav>
       
@@ -60,7 +53,6 @@
           <a href="#top" class="top"><i class="fa fa-angle-double-up fa-2x"></i></a>
         </div>
               
-        <!-- -->
         <!-- ++Using CSS++ -->
         <div id="introduction" class="intro">
           <h2> Using CSS</h2>
@@ -82,7 +74,7 @@
             Examples will be provided throughout the page in the form of <u>contextual links</u> or <code class="reference"><a href="">&lt;code&gt;</a></code> references. Perhaps more valuable is the curated list of resources (coming soon). Now that we have a gameplan, lets look at how to write CSS.
           </p>
         </div>
-        <!-- -->
+        
         <!-- ++What is CSS?++ -->
         <hr>
         <div id="whatIsCSS" class="intro">
@@ -118,7 +110,7 @@
           </p>
           <p>With that covered, lets focus on writing CSS!</p>
         </div>
-        <!-- -->
+        
         <!-- ++CSS Syntax++ -->
         <hr>
         <div id="cssSyntax" class="intro">
@@ -241,7 +233,7 @@
             Again, learning to use these selectors is a challenge every developer encounters. One thing to remember is that sometimes <u><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors" target="_blank">combinator</a></u> selectors can be more efficient than creating separate styles for each targeted element. Equally important is to know how to hide styles when in production-mode. We implement <u><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Comments" target="_blank">comments</a></u> by adding  <code>&#47;&#42;</code> and <code>&#42;&#47;</code> to the beginning and end of any text; this will prevent any code from being rendered by the browser. Comments are also useful when collaborating on a project to ensure that all team members can readily comprehend its working status.
           </p>
         </div>
-        <!-- -->
+        
         <!-- ++C.I.S.++ -->
         <hr>
         <div id="casInheritSpecify" class="intro">
@@ -269,7 +261,7 @@
             CSS styles are also controlled via <u><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Inheritance" target="_blank">inheritance</a></u>, which is the concept that some property values applied to an element will be inherited by its children, but some will not. A <u><a href="https://medium.com/@sayes2x/css-cascade-inheritance-and-specificity-9b18550b7637" target="_blank">good example</a></u> is a <code>&lt;p&gt;</code> tag nested in a <code>&lt;div&gt;</code>; setting the color property for the <code>&lt;div&gt;</code> will cause the <code>&lt;p&gt;</code> to be the same color. Setting the color property for the <code>&lt;p&gt;</code> will override the styles applied to the <code>&lt;div&gt;</code>. Developers should consult a CSS property <u><a href="" target="_blank">reference list</a></u> to ascertain which properties are natively inherited.
           </p>
         </div>
-        <!-- -->
+        
         <!-- ++Debugging CSS++ -->
         <hr>
         <div id="debugCSS" class="intro">
@@ -388,7 +380,7 @@
           
           <h6>Text-Align</h6>
           <p>
-            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="_blank">text-align</a></code> CSS property describes how inline content like text is aligned in its parent block element. This property accepts the values <code>left</code>, <code>right</code>, <code>center</code> or <coode>justify</coode> which aligns text to the left side, right side, center of box or left and right side.
+            The <code class="reference"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="_blank">text-align</a></code> CSS property describes how inline content like text is aligned in its parent block element. This property accepts the values <code>left</code>, <code>right</code>, <code>center</code> or <code>justify</code> which aligns text to the left side, right side, center of box or left and right side.
           </p>
           
           <h6>Text-Indent</h6>
@@ -411,16 +403,13 @@
             Using icons as font is another practice web developers should be familiar with. Outfits like <u><a href="https://fontawesome.com/v4.7.0/cheatsheet/">Font</a></u>-<u><a href="https://fontawesome.com/cheatsheet">Awesome</a></u> and <u><a href="https://material.io/tools/icons/?style=baseline">Material</a></u> <u><a href="http://zavoloklom.github.io/material-design-iconic-font/cheatsheet.html">Design</a></u> make including icon fonts into a web project simple.
           </p>
         </div>
-        
-        
         <!-- -->
         <div class="intro"><address>Last Updated: 3/20/2019</address></div>
       </main>  
-      <!-- -->
-      <!-- -->
+      
+      
       <!-- //FOOTER -->  
       <footer>
-        <small><span><?php echo date('Y'); ?></span></small>&#32;&#32;
         <span class=""> Made with <i class="fa fa-heart"></i> by </span> Mister Moody
       </footer> 
     </div>
@@ -428,12 +417,9 @@
     
     
     <!-- **** JavaScript SCRIPTS **** -->
-    <!-- -----Navigation----- -->
+    <!--    Navigation    -->
     <script src="js/topNav.js"></script> 
-      
 		<!-- SidebarNavigation -->
     <script src="js/sidebarNav.js"></script>
-       
-		<!-- -->
   </body>
 </html>
