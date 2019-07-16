@@ -22,11 +22,6 @@ footer {grid-area: footer;}
     "footer";
 }
 .main-content {
-  /*margin: 1.5em auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 8px;*/
 	margin: 0.5em;
 	padding: 0;
 	display: grid;
@@ -112,7 +107,7 @@ p {
   border: 1px solid #838487;
   border-radius: 0.25em;
   width: 100%;
-  height: 150px;
+  max-height: 100%;
 }
 .card:hover {
   background-color: black;
@@ -122,17 +117,12 @@ p {
   box-shadow: 2px 2px 20px red;
   transition-duration: .8s; 
 }
-.card > p {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 0.88em;
-}
 .material-icons {
   color: #ff4d4d; 
   font-size: 2.42em;
 }
-/* for Alignment purpose*/
-div.card > .material-icons {margin-top: 8px;}
+/* for Alignment purpose
+div.card > .material-icons {margin-top: 8px;}*/
 /*
 */
 span {margin: 0;}

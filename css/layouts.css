@@ -325,7 +325,7 @@ main {
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: minmax(24px, auto);
-  grid-gap: 10px;  
+  grid-gap: 8px;  
 }
 
 /**//*******************************//**/
