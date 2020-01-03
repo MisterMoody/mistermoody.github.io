@@ -1,5 +1,5 @@
-/*  ====================================================== 
-    HOMEPAGE GRID STYLES (index.html) ================= */
+/*  ============================================= 
+    HOMEPAGE GRID STYLES (index.html) =========*/
 .intro {grid-area: intro; }
 .main-content {grid-area: gallery;}
 footer {grid-area: footer;}
@@ -10,8 +10,7 @@ footer {grid-area: footer;}
   width: 95%;
   max-width: 1000px;
 }
-/*
-*/
+/**/
 .galleryGrid {
   margin: 0 0.5em;
   display: grid;
@@ -41,16 +40,12 @@ footer {grid-area: footer;}
     grid-template-rows: repeat(auto-fit, 1fr);
 	}
 }
-/* ==================================================== */
+/* =========================================== */
 
 
-
-
-/*  ========================================= 
-    HOMEPAGE BASE STYLES (index.html) ==== */
-* {
-	box-sizing: border-box;
-}
+/*  ============================================= 
+    HOMEPAGE BASE STYLES (index.html) ======== */
+* {box-sizing: border-box;}
 body {
   /*background: #838487;*/
   min-height: 100%;
@@ -64,8 +59,7 @@ h1, h2, h3, h4, h5, .card {
 	margin-bottom: 0.25em;
 	text-align: center;
 }
-/*
-*/
+/**/
 a {
   color: rgba(10, 9, 9, 0.5);
   text-decoration: none;
@@ -74,8 +68,7 @@ p {
 	margin: 0.4em 0;
 	text-align: justify;
 }
-/*
-*/
+/**/
 .btn {
   display: inline-block;
   margin: 4px;
@@ -95,8 +88,7 @@ p {
   box-shadow: 2px 2px 20px #fff;
   transition-duration: .8s; 
 }
-/*
-*/
+/**/
 .card h1, .card h2 {
   color: #ff1a1a; 
   margin: 4px 0;
@@ -121,24 +113,12 @@ p {
   color: #ff4d4d; 
   font-size: 2.42em;
 }
-/* for Alignment purpose
-div.card > .material-icons {margin-top: 8px;}*/
-/*
-*/
+/**/
 span {margin: 0;}
-/*
-*/
-
-/*
-*/
 /*DESKTOP Media-Query*/
 @media screen and (min-width: 800px) {
-  p {
-    text-align: center;
-  }
-  .btn {
-    padding: 0.75em 1.5em;
-  }
+  p {text-align: center;}
+  .btn {padding: 0.75em 1.5em;}
   .card {
     height: 150px;
     margin: 0 auto; 
@@ -147,12 +127,11 @@ span {margin: 0;}
   }
   div.card > .material-icons {margin-top: 4px;}
 }
-/* ======================================= */
+/* =========================================== */
 
 
-
-/*  ================== 
-    FOOTER ======== */
+/*  ============================================= 
+    FOOTER =================================== */
 footer {text-align: center;}
 .fa-heart {
   color: red;
@@ -164,3 +143,4 @@ footer {text-align: center;}
   50% {transform: scale(0.7);}
   100% {transform: scale(0.5);}
 }
+/* =========================================== */
