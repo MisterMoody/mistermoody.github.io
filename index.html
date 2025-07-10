@@ -20,25 +20,25 @@
     </header>
     
     <main>
-      <section class="gallery">
-        <h2>Skills Showcase</h2>
-        
-        <div class="skill">
-          <img src="images/rack_main.jpg" alt="Rack Installation" onclick="showGallery('rack')">
-          <p>Rack Installation</p>
-        </div>
-        
-        <div class="skill">
-          <img src="images/fiber_main.jpg" alt="Fiber Termination" onclick="showGallery('fiber')">
-          <p>Fiber Termination</p>
-        </div>
-      </section>
-    </main>
+    <section class="gallery">
+      <h2>Skills Showcase</h2>
 
-    <div id="lightbox" class="hidden">
-      <span onclick="closeGallery()" class="close">&times;</span>
-      <div id="lightbox-images"></div>
-    </div>
+      <div class="skill" onclick="showGallery('rack')">
+        <img src="images/rack_main.jpg" alt="Rack Installation">
+        <p>Rack Installation</p>
+      </div>
+
+      <div class="skill" onclick="showGallery('fiber')">
+        <img src="images/fiber_main.jpg" alt="Fiber Termination">
+        <p>Fiber Termination</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="hidden">
+    <span class="close" onclick="closeGallery()">&times;</span>
+    <div id="lightbox-images"></div>
+  </div>
 
 
     

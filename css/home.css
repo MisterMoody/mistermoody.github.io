@@ -1,9 +1,11 @@
 /*  ============================================= 
-    HOMEPAGE GRID STYLES (index.html) =========*/
-.intro {grid-area: intro; }
-.main-content {grid-area: gallery;}
-footer {grid-area: footer;}
-/*
+    (index.html) ==============================*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
 */
 header {
   text-align: center;
@@ -20,66 +22,63 @@ header {
   gap: 2em;
   padding: 2em;
 }
-/*
-*/
+
 .skill {
   text-align: center;
   cursor: pointer;
 }
-/*
-*/
+
 .skill img {
-  width: 250px;
-  height: 180px;
+  width: 240px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
-/*
-*/
+
 .skill img:hover {
   transform: scale(1.05);
 }
-/*
-*/
-/* Lightbox styles */
+
+/* Lightbox Styles */
 #lightbox {
   position: fixed;
   top: 0;
   left: 0;
+  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  padding: 2em;
+  z-index: 9999;
 }
-/*
-*/
+
 #lightbox-images img {
-  width: 80%;
-  max-width: 600px;
+  max-width: 90%;
+  max-height: 80vh;
   margin: 1em 0;
   border: 4px solid white;
   border-radius: 10px;
 }
-/*
-*/
+
 .close {
-  color: white;
-  font-size: 2em;
   position: absolute;
   top: 20px;
   right: 40px;
+  font-size: 2.5em;
+  color: white;
   cursor: pointer;
 }
-/*
-*/
+
+/* Fix: hidden class should actually hide the element */
 .hidden {
   display: none;
 }
+
 /*
 */
 

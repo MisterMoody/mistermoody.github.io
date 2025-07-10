@@ -1,22 +1,28 @@
 const galleries = {
-  rack: ["images/rack1.jpg", "images/rack2.jpg"],
+  rack: ["images/rack1.jpg", "images/rack2.jpg", "images/rack3.jpg"],
   fiber: ["images/fiber1.jpg", "images/fiber2.jpg"]
 };
 
 function showGallery(skill) {
-  const lightbox = document.getElementById('lightbox');
-  const imageContainer = document.getElementById('lightbox-images');
-  imageContainer.innerHTML = '';
+  const lightbox = document.getElementById("lightbox");
+  const imageContainer = document.getElementById("lightbox-images");
 
-  galleries[skill].forEach(src => {
-    const img = document.createElement('img');
-    img.src = src;
-    imageContainer.appendChild(img);
-  });
+  // Clear existing images
+  imageContainer.innerHTML = "";
 
-  lightbox.classList.remove('hidden');
+  // Add new images
+  if (galleries[skill]) {
+    galleries[skill].forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      imageContainer.appendChild(img);
+    });
+  }
+
+  // Show lightbox
+  lightbox.classList.remove("hidden");
 }
 
 function closeGallery() {
-  document.getElementById('lightbox').classList.add('hidden');
+  document.getElementById("lightbox").classList.add("hidden");
 }
