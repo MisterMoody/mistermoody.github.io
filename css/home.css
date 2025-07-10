@@ -1,20 +1,25 @@
 /*  ============================================= 
     (index.html) ==============================*/
-body {
+
+    body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f4f4f4;
+  background: #f0f0f0;
   color: #333;
 }
-*/
+
 header {
-  text-align: center;
-  background: #2b2b2b;
+  background: #333;
   color: white;
-  padding: 2em 0;
+  padding: 2em;
+  text-align: center;
 }
-/*
-*/
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
 .gallery {
   display: flex;
   justify-content: center;
@@ -29,206 +34,48 @@ header {
 }
 
 .skill img {
-  width: 240px;
+  width: 250px;
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .skill img:hover {
   transform: scale(1.05);
 }
 
-/* Lightbox Styles */
 #lightbox {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
-  z-index: 9999;
+  overflow-y: auto;
+  z-index: 1000;
 }
 
 #lightbox-images img {
   max-width: 90%;
-  max-height: 80vh;
   margin: 1em 0;
-  border: 4px solid white;
+  border: 5px solid white;
   border-radius: 10px;
 }
 
 .close {
+  color: white;
+  font-size: 2em;
   position: absolute;
   top: 20px;
   right: 40px;
-  font-size: 2.5em;
-  color: white;
   cursor: pointer;
 }
 
-/* Fix: hidden class should actually hide the element */
 .hidden {
   display: none;
 }
-
-/*
-*/
-
-
-
-
-
-
-
-
-
-
-
-/*OLD CSS*/
-.intro {
-  margin: 0 auto;
-  width: 95%;
-  max-width: 1000px;
-}
-/**/
-.galleryGrid {
-  margin: 0 0.5em;
-  display: grid;
-  grid-template-rows: auto auto 5vh;
-  grid-template-areas: 
-    "intro"
-    "gallery"
-    "footer";
-}
-.main-content {
-	margin: 0.5em;
-	padding: 0;
-	display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto-fit, 150px);
-  grid-gap: 10px;
-}
-/*DESKTOP Media-Query*/
-@media screen and (min-width: 600px) {
-  .galleryGrid {
-    margin: 0 6.2em; /* 0 1em */
-    grid-template-rows: auto 1fr auto;
-    grid-gap: 8vh;
-  }
-	.main-content {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fit, 1fr);
-	}
-}
-/* =========================================== */
-
-
-/*  ============================================= 
-    HOMEPAGE BASE STYLES (index.html) ======== */
-* {box-sizing: border-box;}
-body {
-  /*background: #838487;*/
-  min-height: 100%;
-  width: 100%;
-  font-size: 1rem;
-  line-height: 1.2;
-	font-family: 'Raleway', sans-serif;
-  margin: 0;
-}
-h1, h2, h3, h4, h5, .card {
-	margin-bottom: 0.25em;
-	text-align: center;
-}
-/**/
-a {
-  color: rgba(10, 9, 9, 0.5);
-  text-decoration: none;
-}
-p {
-	margin: 0.4em 0;
-	text-align: justify;
-}
-/**/
-.btn {
-  display: inline-block;
-  margin: 4px;
-  width: 150px;
-  text-align: center;
-  font-size: 0.85em;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 0.5em;
-  background-color: #ff4d4d;
-  border-radius: 0.35em;
-}
-.btn:hover {
-  color: #000;
-  box-shadow: 2px 2px 20px #fff;
-  transition-duration: .8s; 
-}
-/**/
-.card h1, .card h2 {
-  color: #ff1a1a; 
-  margin: 4px 0;
-}
-.card {
-  margin: 0 auto;
-  padding: 0;
-  border: 1px solid #838487;
-  border-radius: 0.25em;
-  width: 100%;
-  max-height: 100%;
-}
-.card:hover {
-  background-color: black;
-  color: #fff;
-  opacity: 0.7;
-  border: none;
-  box-shadow: 2px 2px 20px red;
-  transition-duration: .8s; 
-}
-.material-icons {
-  color: #ff4d4d; 
-  font-size: 2.42em;
-}
-/**/
-span {margin: 0;}
-/*DESKTOP Media-Query*/
-@media screen and (min-width: 800px) {
-  p {text-align: center;}
-  .btn {padding: 0.75em 1.5em;}
-  .card {
-    height: 150px;
-    margin: 0 auto; 
-    padding: 0;
-    width: 100%;
-  }
-  div.card > .material-icons {margin-top: 4px;}
-}
-/* =========================================== */
-
-
-/*  ============================================= 
-    FOOTER =================================== */
-footer {text-align: center;}
-.fa-heart {
-  color: red;
-  animation: pulse 1.3s ease infinite;
-  padding-top: -50px;  /*Required for Heart Animation*/
-}
-@keyframes pulse {
-  0% {transform: scale(0.5);}
-  50% {transform: scale(0.7);}
-  100% {transform: scale(0.5);}
-}
-/* =========================================== */

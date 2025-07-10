@@ -18,29 +18,26 @@
       <h1>Ray Moody – Layer 1 Smart Hands Tech Portfolio</h1>
       <p><a href="resume.pdf" target="_blank">View Resume (PDF)</a></p>
     </header>
-    
-    <main>
-    <section class="gallery">
-      <h2>Skills Showcase</h2>
+  
 
-      <div class="skill" onclick="showGallery('rack')">
-        <img src="images/rack_main.jpg" alt="Rack Installation">
+  <main>
+    <section class="gallery">
+      <div class="skill" data-skill="rack">
+        <img src="images/rack_main.jpg" alt="Rack Installation" />
         <p>Rack Installation</p>
       </div>
 
-      <div class="skill" onclick="showGallery('fiber')">
-        <img src="images/fiber_main.jpg" alt="Fiber Termination">
+      <div class="skill" data-skill="fiber">
+        <img src="images/fiber_main.jpg" alt="Fiber Termination" />
         <p>Fiber Termination</p>
       </div>
     </section>
   </main>
 
   <div id="lightbox" class="hidden">
-    <span class="close" onclick="closeGallery()">&times;</span>
+    <span class="close">&times;</span>
     <div id="lightbox-images"></div>
   </div>
-
-
     
     <!-- *************************  
     <article class="galleryGrid">

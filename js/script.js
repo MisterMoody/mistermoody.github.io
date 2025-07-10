@@ -1,28 +1,30 @@
 const galleries = {
-  rack: ["images/rack1.jpg", "images/rack2.jpg", "images/rack3.jpg"],
+  rack: ["images/rack1.jpg", "images/rack2.jpg"],
   fiber: ["images/fiber1.jpg", "images/fiber2.jpg"]
 };
 
+document.querySelectorAll('.skill').forEach(el => {
+  el.addEventListener('click', () => {
+    const skill = el.dataset.skill;
+    showGallery(skill);
+  });
+});
+
+document.querySelector('.close').addEventListener('click', closeGallery);
+
 function showGallery(skill) {
-  const lightbox = document.getElementById("lightbox");
-  const imageContainer = document.getElementById("lightbox-images");
+  const container = document.getElementById('lightbox-images');
+  container.innerHTML = ''; // Clear previous
 
-  // Clear existing images
-  imageContainer.innerHTML = "";
+  (galleries[skill] || []).forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    container.appendChild(img);
+  });
 
-  // Add new images
-  if (galleries[skill]) {
-    galleries[skill].forEach(src => {
-      const img = document.createElement("img");
-      img.src = src;
-      imageContainer.appendChild(img);
-    });
-  }
-
-  // Show lightbox
-  lightbox.classList.remove("hidden");
+  document.getElementById('lightbox').classList.remove('hidden');
 }
 
 function closeGallery() {
-  document.getElementById("lightbox").classList.add("hidden");
+  document.getElementById('lightbox').classList.add('hidden');
 }
