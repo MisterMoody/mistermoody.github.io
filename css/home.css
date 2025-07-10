@@ -61,8 +61,8 @@ h1, h2, h3, h4, h5, .card {
 }
 /**/
 a {
-  color: rgba(10, 9, 9, 0.5);
-  text-decoration: none;
+  color: rgba(10, 9, 9, 0.5) !important;
+  text-decoration: none !important;
 }
 p {
 	margin: 0.4em 0;
@@ -148,12 +148,17 @@ footer {text-align: center;}
 /****/
 /*Cabling Styles*/
 /*.cabling {
-  margin: 0 auto;
+  margin: 12px;
   width: 95%;
   max-width: 1000px;
 }*/
 /* Mobile First Base Style: 1 image per row */
-
+    img {
+      margin: 12px 0;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
     .image-row {
       display: flex;
       flex-wrap: wrap;
