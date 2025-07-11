@@ -100,7 +100,54 @@ span {margin: 0;}
   div.card > .material-icons {margin-top: 4px;}
 }
 /* =========================================== */
+/* Portfolio Image Structure */
 
+    .image-thumb {
+      width: 100%;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-thumb:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    .image-caption {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      color: #333;
+    }
+
+    .modal-img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    .image-thumb {
+      width: 100%;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-thumb:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    .image-caption {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      color: #333;
+    }
+
+    .modal-img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
 
 /*  ============================================= 
     FOOTER =================================== */
