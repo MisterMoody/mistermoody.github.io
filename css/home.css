@@ -30,7 +30,8 @@ h1, h2, h3, h4, h5, .card {
 }
 p {
   margin: 0.4em 0;
-  text-emphasis: justify;
+  /*text-emphasis: justify;*/
+  text-align: left;
 }
 /**/
 a {
@@ -138,7 +139,7 @@ span {margin: 0;}
     }
 
     .image-caption {
-      text-align: center;
+      /*text-align: center;*/
       font-weight: 600;
       margin-top: 0.5rem;
       color: #333;
