@@ -13,6 +13,8 @@
     <!-- Cascading stylesheets -->     
     <link href="css/home.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Bootstrap Masonry -->
+     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </head>
   <body>  
     
@@ -24,12 +26,14 @@
         <i class="material-icons bi-tools"></i>
         <i></i>
         <h2>Installation</h2>
-      </div>
         <p>
-          From clean rack installs to precision cable terminations, each project reflects my focus on structure, reliability, and serviceability. This portfolio group demonstrates my ability to both run and termincate CAT6 ethernet cable whilst performing safe, secure and standards-compliant installation of network devices and wireless access points (WAPs) in commercial, retail, and mixed-use environments that contribute directly to network performance and client satisfaction. Every connection tested, every endpoint labeled—because solid infrastructure begins at Layer 1.
+          From clean rack installs to precision cable terminations, each project reflects my focus on structure, reliability, and serviceability. This portfolio group demonstrates my ability to both run and termincate CAT6 ethernet cable whilst performing safe, secure and standards-compliant installation of network devices and wireless access points (WAPs) in commercial and mixed-use environments that contribute directly to network performance and client satisfaction. Every connection tested, every endpoint labeled because solid infrastructure begins at Layer 1.
         </p>
+      </div>
     </div>
-    <div class="row g-3">
+
+    <!-- Masonry Grid -->
+    <div class="row g-3"  data-masonry='{"percentPosition": true }'>
       <!-- Base Image for MODAL #1: CABLE RUN -->
       <div class="col-12 col-md-6 col-xl-4">
         <img src="images/fibercablerun3.jpg" alt="Running Cable" class="image-thumb" data-bs-toggle="modal" data-bs-target="#modal1">
@@ -62,7 +66,7 @@
       </div>
       <!-- Base Image for Modal #7: RETAILER DE-INSTALL-->
       <div class="col-12 col-md-6 col-xl-4">
-        <img src="images/storedeinstall9.jpg" alt="Example Image 5" class="image-thumb"   data-bs-toggle="modal" data-bs-target="#modal7" />
+        <img src="images/storedeinstall2.jpg" alt="Example Image 5" class="image-thumb"   data-bs-toggle="modal" data-bs-target="#modal7" />
         <div class="image-caption">Retailer De-Installation</div>
       </div>
       <!-- Add more images as needed -->
@@ -77,29 +81,29 @@
         <h5 class="modal-title mb-3" id="modal1Label">Running Cable</h5>
         <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
             <div class="row g-3 mb-3">
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-4">
                     <img src="images/cat6cablerun2.jpg" class="modal-img img-fluid" alt="Cat6 Cable Run">
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-4">
                     <img src="images/cat6cablerun3.jpg" class="modal-img img-fluid" alt="Cat6 Cable Run">
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-4">
                     <img src="images/cat6cabletest.jpg" class="modal-img img-fluid" alt="Cable Testing">
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-4">
                     <img src="images/jhook.jpg" class="modal-img img-fluid" alt="J-Hook Installation">
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-4">
                     <img src="images/fibercablerun.jpg" class="modal-img img-fluid" alt="Fiber Cable Run">
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-4">
                     <img src="images/fibercablerun2.jpg" class="modal-img img-fluid" alt="Fiber Cable Run">
                 </div>
             </div>
         </div>
-        <p class="text-start">
+        <!--<p class="text-start">
             All cabling was tested end-to-end for continuity, attenuation, and Power over Ethernet (PoE) compliance using cable testers. Horizontal runs were properly supported with J-hooks spaced every 4–5 feet, in full alignment with NEC 800.24 requirements. Terminations were neatly dressed and clearly labeled at the MDF and IDF to ensure traceability, serviceability, and long-term infrastructure integrity. 
-        </p>
+        </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -137,9 +141,9 @@
             </div>
             </div>
 
-        <p class="text-start">
-            Wireless access points mounted across a variety of surfaces with attention to structural integrity and signal coverage. Ceiling grid and drywall mounts used proper anchors to ensure devices were aligned, plumb with surface and unobstructed for enhanced RF performance. Wood framing installations employed pilot-drilled hardware, while steel beam WAPs were secured using beam clamps. Outdoor units were housed in NEMA-rated enclosures, elevated and spaced in accordance with manufacturer specifications.  Each installation shown is based on pre-surveyed coverage plans and is implemented in accordance with EIA/TIA cabling best practices as well as OSHA ladder safety standards.
-        </p>
+        <!--<p class="text-start">
+            Wireless access points mounted across a variety of surfaces with attention to structural integrity and signal coverage. Ceiling grid and drywall mounts used proper anchors to ensure devices were aligned, plumb with surface and unobstructed for enhanced RF performance. Wood framing installations employed pilot-drilled hardware, while steel beam WAPs were secured using beam clamps. Outdoor units were housed in NEMA-rated enclosures, elevated and spaced in accordance with manufacturer specifications.  Each installation shown is implemented in accordance with EIA/TIA cabling best practices as well as OSHA ladder safety standards.
+        </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -176,9 +180,9 @@
             <img src="images/structuredcabling4.jpg" class="modal-img img-fluid" alt="Rack Setup">
         </div>
         </div>
-            <p class="text-start">
+            <!--<p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-            </p>
+            </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
@@ -203,9 +207,9 @@
                 <img src="images/workstation_pc6.jpg" class="img-fluid modal-img" alt="Workstation Upgrade">
             </div>
             </div>
-            <p class="text-start">
+            <!--<p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-            </p>
+            </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -217,28 +221,28 @@
       <div class="modal-content p-3">
         <h5 class="modal-title mb-3" id="modal5Label">Printer Install</h5>
         <div class="row g-3 mb-3">
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/printerinstall.jpg" class="img-fluid modal-img" alt="Printer Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/printerinstall5.jpg" class="img-fluid modal-img" alt="Printer Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/printerinstall3.jpg" class="img-fluid modal-img" alt="Printer Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/printerinstall4.jpg" class="img-fluid modal-img" alt="Printer Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/printerinstall7.jpg" class="img-fluid modal-img" alt="Printer Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/printerinstall 9.jpg" class="img-fluid modal-img" alt="Printer Install">
             </div>
             </div>
-        <p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue. 
-        </p>
+            <!--<p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
+            </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -248,23 +252,24 @@
   <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content p-3">
-        <h5 class="modal-title mb-3" id="modal6Label">New Office Install</h5><div class="row g-3 mb-3">
-        <div class="col-6 col-lg-3">
-            <img src="images/officeinstall2.jpg" class="img-fluid modal-img" alt="Printer Install">
+        <h5 class="modal-title mb-3" id="modal6Label">New Office Install</h5>
+        <div class="row g-3 mb-3">
+          <div class="col-6">
+              <img src="images/officeinstall2.jpg" class="img-fluid modal-img" alt="Printer Install">
+          </div>
+          <div class="col-6">
+              <img src="images/officeinstall3.jpg" class="img-fluid modal-img" alt="Printer Install">
+          </div>
+          <div class="col-6">
+              <img src="images/officeinstall4.jpg" class="img-fluid modal-img" alt="Printer Install">
+          </div>
+          <div class="col-6">
+              <img src="images/officeinstall5.jpg" class="img-fluid modal-img" alt="Printer Install">
+          </div>
         </div>
-        <div class="col-6 col-lg-3">
-            <img src="images/officeinstall3.jpg" class="img-fluid modal-img" alt="Printer Install">
-        </div>
-        <div class="col-6 col-lg-3">
-            <img src="images/officeinstall4.jpg" class="img-fluid modal-img" alt="Printer Install">
-        </div>
-        <div class="col-6 col-lg-3">
-            <img src="images/officeinstall5.jpg" class="img-fluid modal-img" alt="Printer Install">
-        </div>
-        </div>
-        <p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue. 
-        </p>
+            <!--<p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
+            </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -276,34 +281,25 @@
       <div class="modal-content p-3">
         <h5 class="modal-title mb-3" id="modal7Label">Retailer De-Installation</h5>
         <div class="row g-3 mb-3">
-          <div class="col-6 col-lg-3">
+          <div class="col-6 ">
             <img src="images/storedeinstall.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
           </div>
-          <div class="col-6 col-lg-3">
-            <img src="images/storedeinstall2.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
+          <div class="col-6 ">
+            <img src="images/storedeinstall9.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
             <img src="images/storedeinstall3.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
             <img src="images/storedeinstall4.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
           </div>
-          <div class="col-6 col-lg-3">
-            <img src="images/storedeinstall5.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
-          </div>
-          <div class="col-6 col-lg-3">
-            <img src="images/storedeinstall6.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
-          </div>
-          <div class="col-6 col-lg-3">
-            <img src="images/storedeinstall7.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
-          </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-4">
             <img src="images/storedeinstall8.jpg" class="img-fluid modal-img" alt="Retailer De-Install">
           </div>
         </div>
-        <p class="text-start">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-        </p>
+            <!--<p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
+            </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>

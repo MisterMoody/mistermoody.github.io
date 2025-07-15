@@ -13,6 +13,8 @@
     <!-- Cascading stylesheets -->     
     <link href="css/home.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Bootstrap Masonry -->
+     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </head>
   <body>  
     
@@ -22,10 +24,10 @@
     <div class="row">
         <h1>Networking</h1>
         <p>
-          This installation gallery highlights my expertise in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 and Layer 3 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
+          This gallery highlights my proficiency in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
         </p>
     </div>
-    <div class="row g-3">
+    <div class="row g-3" data-masonry='{"percentPosition": true }'>
       <!-- Base Image for MODAL #1: RACK CONFIGURATION -->
       <div class="col-12 col-md-6 col-xl-4">
         <img src="images/structuredcabling.jpg" alt="Example Image 2" class="image-thumb"  data-bs-toggle="modal" data-bs-target="#modal1" />
@@ -63,24 +65,21 @@
         <h5 class="modal-title mb-3" id="modal1Label">Rack Configuration</h5>
         <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
         <div class="row g-3 mb-3">
-          <div class="col-6 col-lg-3">
-              <img src="images/patchpanel.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/racktroubleshoot.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/racktroubleshoot2.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/racktroubleshoot3.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
         </div>
 
         </div>
-        <p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue. 
-        </p>
+        <!--<p class="text-start">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
+        </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -92,28 +91,28 @@
       <div class="modal-content p-3">
         <h5 class="modal-title mb-3" id="modal2Label">POS Troubleshooting</h5>
         <div class="row g-3 mb-3">
-            <div class="col-6 col-lg-3">
-                <img src="images/pos_install.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-            <div class="col-6 col-lg-3">
-                <img src="images/pos_install2.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/postroubleshoot2.jpg" class="modal-img img-fluid" alt="Access Point Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/postroubleshoot3.jpg" class="modal-img img-fluid" alt="Access Point Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/postroubleshoot4.jpg" class="modal-img img-fluid" alt="Access Point Install">
             </div>
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-4">
                 <img src="images/postroubleshoot5.jpg" class="modal-img img-fluid" alt="Access Point Install">
             </div>
+            <div class="col-6 col-lg-4">
+                <img src="images/pos_install.jpg" class="modal-img img-fluid" alt="Access Point Install">
             </div>
-        <p class="text-start">
+            <div class="col-6 col-lg-4">
+                <img src="images/pos_install2.jpg" class="modal-img img-fluid" alt="Access Point Install">
+            </div>
+          </div>
+          <!--<p class="text-start">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-        </p>
+          </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -125,28 +124,28 @@
       <div class="modal-content p-3">
         <h5 class="modal-title mb-3" id="modal3Label">SD-WAN Troubleshooting</h5>
         <div class="row g-3 mb-3">
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/sdwantroubleshoot.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/sdwantroubleshoot2.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/sdwantroubleshoot3.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/sdwantroubleshoot4.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/sdwantroubleshoot5.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-lg-4">
               <img src="images/sdwantroubleshoot6.jpg" class="modal-img img-fluid" alt="Rack Setup">
           </div>
         </div>
-            <p class="text-start">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-            </p>
+          <!--<p class="text-start">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
+          </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
@@ -172,9 +171,9 @@
             </div>
           </div>
 
-          <p class="text-start">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-            </p>
+          <!--<p class="text-start">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
+          </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
@@ -184,25 +183,11 @@
   <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content p-3">
-        <h5 class="modal-title mb-3" id="modal4Label">Speed Test</h5>
-        <div class="row g-3 mb-3">
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest1.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest3.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest4.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest5.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-          </div>
-
-          <p class="text-start">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-            </p>
+        <h5 class="modal-title mb-3" id="modal4Label">CLI Commands</h5>
+        <p>Coming Soon</p>
+          <!--<p class="text-start">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
+          </p>-->
         <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
