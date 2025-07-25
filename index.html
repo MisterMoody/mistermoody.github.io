@@ -64,16 +64,41 @@
      <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
   </head>
-  <body>    
-    <header>
-        <h1>Layer 1 Smart Hands Field Tech</h1>
-        <!--<p><a href="resume.pdf" target="_blank">View Resume (PDF)</a></p>-->
-    </header>
-    <!-- *************************  -->
+  <body> 
+    
+    <!-- ****CONTAINER WRAPPER*** -->
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      
+      <!-- NAVIGATION Header -->
+      <header class="mb-auto">
+        <div class="d-flex justify-content-between align-items-center">
+          <div><!--LeaveBlank--></div>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link fw-bold py-1 active" aria-current="page" href="#">Home</a>
+            <a class="nav-link py-1" href="fieldtasks.html">Docs</a>
+            <a class="nav-link py-1" href="resume.pdf" target="_blank">Resume</a>
+            <a class="nav-link py-1" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <!-- END of NAV HEADER -->
 
-    <article class="container px-4 px-md-10 py-4">
+      <!--MAIN HERO CONTENT (w/ Image) -->
+      <main class="text-start">
+        <div class="clearfix">
+          <img src="images/structuredcabling.jpg" alt="Hero image" class="img-fluid float-md-end ms-md-4 mt-3" style="max-width: 400px;">
+          <h1 class="display-5 fw-bold">Layer 1 Smart Hands Technician</h1>
+          <p class="text-start py-2 lead text-muted">
+            My career has been a journey grounded in service, structure, and problem-solving. My work in networking and cabling emphasizes precision and planning, ensuring infrastructure that is functional, traceable, and service-ready. From running efficient cable paths and terminating CAT6 to installing network devices and validating wireless coverage, I approach each task with the same diligence I once brought to the classroom: assess, adapt, and deliver with care. This portfolio captures the detail-oriented mindset that accompanies me on field deployments, and is a reflection of my evolution -equal parts educator, technician, and lifelong learner!  Every project represents a commitment to reliable connectivity and professional craftsmanship.
+          </p>
+        </div>
+      </main>
+    <!-- END of MAIN HERO -->
+
+
+
       <!-- BEGINNING ARTICLE-ROW -->
-      <div class="row justify-content-center gx-3 gy-4">    
+      <article class="row justify-content-center gx-3 gy-4">    
         <!-- CERTIFICATIONS --> 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card text-center p-3 h-100">
@@ -125,16 +150,11 @@
             </div>
           </div>
         </div>-->
-      </div>
-<div class="row">
-        <p class="text-start py-2">
-          My career has been a journey of reinvention, grounded in service, structure, and problem-solving. Formerly an educator, I bring a deep understanding of how to translate complexity into clarity. My work in networking and cabling emphasizes precision and planning, ensuring infrastructure that is functional, traceable, and service-ready. From executing efficient cable paths, terminating CAT6, and validating wireless coverage to installing network devices, conducting rack configurations, and documenting  installs, I approach each deployment with the same diligence I once brought to the classroom: assess, adapt, and deliver with care. This portfolio captures the detail-oriented mindset I bring to field deployments, and is a reflection of my evolution -equal parts educator, technician, and lifelong learner!  Every project represents a commitment to reliable connectivity and professional craftsmanship.
-        </p>
-    </div>
-  
+      </article>
     <!-- END OF ARTICLE-ROW -->
-</article>
+
       
+
 
 
     <!-- *************************  -->
@@ -142,8 +162,19 @@
         <span> Made with <i class="fa fa-heart"></i> by </span><a href="http://mistermoody.com" target="_blank">Ray Moody</a>
       </footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </div>
+    <!-- END of CONTAINER WRAPPER -->  
+    <!-- ******END of HTML******  -->
 
-      <script src="js/script.js" defer></script>
+    <!-- ******JAVASCRIPT******  -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Masonry Image-Load Layout -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js" defer></script>
+
   </body>
 </html>
