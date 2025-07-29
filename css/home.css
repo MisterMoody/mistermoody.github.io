@@ -82,6 +82,8 @@ a {
   box-shadow: 2px 2px 12px #ff4d4d;
   transition-duration: .8s; 
 }
+
+
 .material-icons {
   color: #ff4d4d; 
   font-size: 2.42em;
@@ -101,6 +103,11 @@ span {margin: 0;}
   div.card > .material-icons {margin-top: 4px;}
 }
 /* =========================================== */
+
+/* MASONRY GALLERY */
+
+
+
 /* Portfolio Image Structure */
 
     .image-thumb {

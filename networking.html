@@ -4,7 +4,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>502.558.9240</title>
     <!-- Browser Tab Icon -->
-    <link rel="shortcut icon" type="img/m" class="rounded">  
+    <link rel="shortcut icon" type="img/m" class="rounded">    
+    <!-- Schema.org Structured Data for GOOGLE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://mistermoody.github.io/#me",
+          "name": "Ray Moody dba MisterMoody",
+          "jobTitle": "Layer 1 Smart Hands Field Technician",
+          "description": "Field‑based smart hands and cabling technician specializing in Cat6, fiber, AP installs, network rack setups and troubleshooting.",
+          "url": "https://mistermoody.github.io/",
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://mistermoody.github.io/#site",
+          "url": "https://mistermoody.github.io/",
+          "name": "Ray Moody Portfolio",
+          "author": {
+            "@id": "https://mistermoody.github.io/#me"
+          },
+          "inLanguage": "en-US",
+          "description": "Portfolio of Layer 1 Smart Hands Installations, Documentation and Technical Field Services."
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Network Cabling & Smart Hands",
+          "provider": { "@id": "https://mistermoody.github.io/#me" },
+          "description": "Professional installations and troubleshooting of data cabling, access‑points and rack infrastructure."
+        },
+
+        {
+          "@type": "AboutPage",
+          "@id": "https://mistermoody.github.io/#about",
+          "url": "https://mistermoody.github.io/",
+          "isPartOf": {
+            "@id": "https://mistermoody.github.io/#site"
+          },
+          "mainEntity": {
+            "@id": "https://mistermoody.github.io/#me"
+          }
+        }
+      ]
+    }
+    </script>
     <!-- Icon Font CDN -->
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
@@ -18,228 +64,93 @@
   </head>
   <body>  
     
-    
-   <!-- Portfolio Images --> 
-  <main class="container py-4">
-    <div class="row">
-        <h1>Networking</h1>
-        <p>
-          This gallery highlights my proficiency in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
-        </p>
-    </div>
-    <div class="row g-3" data-masonry='{"percentPosition": true }'>
-      <!-- Base Image for MODAL #1: RACK CONFIGURATION -->
-      <div class="col-12 col-md-6 col-xl-4">
-        <img src="images/structuredcabling.jpg" alt="Example Image 2" class="image-thumb"  data-bs-toggle="modal" data-bs-target="#modal1" />
-        <div class="image-caption">Rack Configuration</div>
-      </div>
-      <!-- Base Image for Modal #2: POS TROUBLESHOOTING -->
-      <div class="col-12 col-md-6 col-xl-4">
-        <img src="images/postroubleshoot.jpg" alt="Example Image 3" class="image-thumb"  data-bs-toggle="modal" data-bs-target="#modal2" />
-        <div class="image-caption">POS Troubleshooting</div>
-      </div>
-      <!-- Base Image for Modal #3: SD-WAN TROUBLESHOOTING -->
-      <div class="col-12 col-md-6 col-xl-4">
-        <img src="images/sdwantroubleshoot.jpg" alt="Example Image 4" class="image-thumb"  data-bs-toggle="modal" data-bs-target="#modal3" />
-        <div class="image-caption">SD-WAN Troubleshooting</div>
-      </div>
-      <!-- Base Image for Modal #4: SPEED TEST -->
-      <div class="col-12 col-md-6 col-xl-4">
-        <img src="images/speedtest2.png" alt="Example Image 5" class="image-thumb"   data-bs-toggle="modal" data-bs-target="#modal4" />
-        <div class="image-caption">Speed Test</div>
-      </div>
-      <!-- Base Image for Modal #5: CLI -->
-      <div class="col-12 col-md-6 col-xl-4">
-        <img src="images/static.PNG" alt="Example Image 5" class="image-thumb"   data-bs-toggle="modal" data-bs-target="#modal5" />
-        <div class="image-caption">CLI</div>
-      </div>
-      <!-- Add more images as needed -->
-    </div>
-
-     
-  <!-- Modal Images w/ Description -->
-  <!-- Modal 1: Rack Configuration -->
-  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-3">
-        <h5 class="modal-title mb-3" id="modal1Label">Rack Configuration</h5>
-        <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
-        <div class="row g-3 mb-3">
-          <div class="col-6 col-lg-4">
-              <img src="images/racktroubleshoot.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-4">
-              <img src="images/racktroubleshoot2.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-4">
-              <img src="images/racktroubleshoot3.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-        </div>
-
-        </div>
-        <!--<p class="text-start">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-        </p>-->
-        <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2: POS Troubleshooting -->
-  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-3">
-        <h5 class="modal-title mb-3" id="modal2Label">POS Troubleshooting</h5>
-        <div class="row g-3 mb-3">
-            <div class="col-6 col-lg-4">
-                <img src="images/postroubleshoot2.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-            <div class="col-6 col-lg-4">
-                <img src="images/postroubleshoot3.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-            <div class="col-6 col-lg-4">
-                <img src="images/postroubleshoot4.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-            <div class="col-6 col-lg-4">
-                <img src="images/postroubleshoot5.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-            <div class="col-6 col-lg-4">
-                <img src="images/pos_install.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-            <div class="col-6 col-lg-4">
-                <img src="images/pos_install2.jpg" class="modal-img img-fluid" alt="Access Point Install">
-            </div>
-          </div>
-          <!--<p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-          </p>-->
-        <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3: SD-WAN TROUBLESHOOTING -->
-  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-3">
-        <h5 class="modal-title mb-3" id="modal3Label">SD-WAN Troubleshooting</h5>
-        <div class="row g-3 mb-3">
-          <div class="col-6 col-lg-4">
-              <img src="images/sdwantroubleshoot.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-4">
-              <img src="images/sdwantroubleshoot2.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-4">
-              <img src="images/sdwantroubleshoot3.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-4">
-              <img src="images/sdwantroubleshoot4.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-4">
-              <img src="images/sdwantroubleshoot5.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-          <div class="col-6 col-lg-4">
-              <img src="images/sdwantroubleshoot6.jpg" class="modal-img img-fluid" alt="Rack Setup">
-          </div>
-        </div>
-          <!--<p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-          </p>-->
-        <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
-    </div>
-  </div>
-</div>
   
-  <!-- Modal 4: SPEED TEST -->
-  <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-3">
-        <h5 class="modal-title mb-3" id="modal4Label">Speed Test</h5>
-        <div class="row g-3 mb-3">
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest1.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest3.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest4.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-            <div class="col-6 col-lg-3">
-                <img src="images/speedtest5.png" class="img-fluid modal-img" alt="Workstation Upgrade">
-            </div>
-          </div>
+  <!-- **********************************  -->
+  
 
-          <!--<p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-          </p>-->
-        <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+  <!-- **********************************  -->  
+  <!-- NETWORKING PORTFOLIO ITEMS --> 
+  <main class="container py-4">
 
-  <!-- Modal 5: CLI -->
-  <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-3">
-        <h5 class="modal-title mb-3" id="modal4Label">CLI Commands</h5>
-        <p>Coming Soon</p>
-          <!--<p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ac ipsum ut sollicitudin. Nam aliquam, augue in consequat bibendum, ex lectus viverra lorem, eget pulvinar mauris nisl vitae augue.
-          </p>-->
-        <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-    <!-- ** END of Modal Images w/ Description **  -->
-  <ul class="list-group">
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="32" height="32" class="me-3">
-    <div class="flex-grow-1">
-      <div class="d-flex justify-content-between">
-        <strong>List group item heading</strong>
-        <small class="text-muted">now</small>
-      </div>
-      <p class="mb-0 text-muted">Some placeholder content in a paragraph.</p>
-    </div>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="32" height="32" class="me-3">
-    <div class="flex-grow-1">
-      <div class="d-flex justify-content-between">
-        <strong class="text-muted">Another title here</strong>
-        <small class="text-muted">3d</small>
-      </div>
-      <p class="mb-0 text-muted">
-        Some placeholder content in a paragraph that goes a little longer so it wraps to a new line.
+    <!-- **********************************  -->
+    <!-- Page Introduction -->
+    <div class="row">
+      <h1>Networking</h1>
+      <p>
+        This gallery highlights my proficiency in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
       </p>
     </div>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="32" height="32" class="me-3">
-    <div class="flex-grow-1">
-      <div class="d-flex justify-content-between">
-        <strong class="text-muted">Third heading</strong>
-        <small class="text-muted">1w</small>
-      </div>
-      <p class="mb-0 text-muted">Some placeholder content in a paragraph.</p>
-    </div>
-  </li>
-</ul>
+
+    <section class="mb-4">
+      <h3>Cable Tracing / Toning</h3>
+      <p>Identify where a cable runs or terminates.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Termination</h3>
+      <p>Secure a cable into a keystone jack or patch panel.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Crimping RJ45 Connectors</h3>
+      <p>Attach connectors to UTP cable using TIA/EIA 568A/B standards.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Cable Certification / Testing</h3>
+      <p>Use Fluke or similar tools to validate cable quality and bandwidth.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Loopback Test</h3>
+      <p>Confirm Layer 1 continuity using loopback plugs.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Patch Panel Mapping</h3>
+      <p>Organize and label ports for documentation and troubleshooting.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Visual Inspection</h3>
+      <p>Check for damaged ports, bent pins, cable wear, or poor termination.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Signal Integrity Checks</h3>
+      <p>Validate signal strength and SNR using test equipment.</p>
+    </section>
+
+    <section class="mb-4">
+      <h3>Cable Management</h3>
+      <p>Bundle and route cables to reduce interference and allow serviceability.</p>
+    </section>
 
 
+
+    <!-- **********************************  -->
+    <!-- **********************************  -->
+   
+    <!-- **********************************  -->
+    <!-- **********************************  -->
+    
+    
+    <!-- **********************************  -->
   </main>
 
   
-    <!-- ************************* --> 
-
+    <!-- **********************************  -->
     <footer>
-        <span> Made with <i class="fa fa-heart"></i> by </span><a href="http://mistermoody.com" target="_blank">Ray Moody</a>
-      </footer>
-
+      <span> Made with <i class="fa fa-heart"></i> by </span><a href="http://mistermoody.com" target="_blank">Ray Moody</a>
+    </footer>
+    <!-- **********************************  -->
+      <!-- Bootstrap JS -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap Masonry Image-Load Layout -->
+      <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+      <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
+      <!-- Custom JS -->
       <script src="js/script.js" defer></script>
 
   </body>
