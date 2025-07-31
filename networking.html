@@ -73,24 +73,260 @@
   <main class="container py-4">
 
     <!-- **********************************  -->
-    <!-- Page Introduction -->
     <div class="row">
-      <h1>Networking</h1>
+    <!-- WORKING With IP ADDRESSES -->
+    <section class="mb-4">
+      <h3>Working with IP Addresses</h3>
       <p>
-        This gallery highlights my proficiency in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
+        OBJECTIVE: Confirm modem circuit is live, statically assign IP, and verify passthrough and connectivity.
       </p>
-    </div>
-
-    <section class="mb-4">
-      <h3>Cable Tracing / Toning</h3>
-      <p>Identify where a cable runs or terminates.</p>
+      <!-- Manually Assign Static IP -->
+      <div class="mb-4">
+        <h4 class="text-start text-muted">Manually Assign Static IP</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Plug Patch Cable from Laptop into Modem LAN port (Disable Wi-Fi).
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox" >
+            <label class="form-check-label">
+              Right-Click Windows > Network Connections > Network & Sharing Center
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Right-Click Ethernet > Properties > Internet Protocol Version 4 (TCP/IPv4)
+            </label>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex align-items-start">
+              <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+              <div>
+              <label class="form-check-label" for="check1">
+                Select <i>Use the following IP Address</i> & Modify:
+              </label>
+            <div class="ms-4 mt-2">
+              <div class="row">
+                <div class="col-12 col-md-6">(a) IP Address</div>
+                <div class="col-12 col-md-6">(b) Subnet MASK (SM)</div>
+                <div class="col-12 col-md-6">(c) Default Gateway (GW)</div>
+                <div class="col-12 col-md-6">(d) Preferred & Alternate DNS</div>
+              </div>
+            </div>
+            </div>
+            </div>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Click <i>OK</i> and Close.
+            </label>
+          </li>
+        </ul>
+      </div>
+      <!-- Validate Static IP Passthrough & Reachability -->
+      <div class="mb-4">
+        <h4 class="text-start text-muted">Validate Static IP Passthrough & Reachability</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>ipconfig /all</code> to verify IP Address & Device Stack, Subnet Mask, Gateway, and DNS (<i>Line labeled IPv4 Address is your internal IP address</i>).
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>ping 8.8.8.8</code> to test basic Internet connectivity and check public IP Address in the browser using <a href="https://www.whatismyip.com/" target="_blank">WhatIsMyIP</a> or <a href="https://ifconfig.me/" target="_blank">IPConfig Me</a>).
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>ping ###.###.#.#</code> to validate IP reachability of the specified device (<i>Expected Reply:</i> <code>###.###.#.#: bytes=32 time<1ms TTL=64</code>).
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>ping www.google.com</code> to initiate a DNS lookup and cofirm resolution. 
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              <i>Passthrough PASSes if both PING commands succeed and FAILs when both PINGs returns "Request Timed Out.")
+              When a raw <code>ping</code> to an IP address succeeds, but a <code>ping</code> to a domain name fails, it indicates a DNS server issue.  Check the DNS settings in network configuration or manually set a known-good DNS server (e.g., 8.8.8.8).</i>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <!-- View Routing Info & Detect Gateway Hops (Routing Issues) -->
+      <div class="mb-4">
+        <h4 class="text-start text-muted">View Routing Info & Detect Gateway Hops (Routing Issues)</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>tracert 8.8.8.8</code> to confirm Gateway visible at first Hop (<i>Passthrough 'OK' if IP input is visible</i>).
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>arp -a</code> to confirm MAC address resolution.
+            </label>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>ping www.google.com</code> to initiate a DNS lookup and cofirm resolution. 
+            </label>
+          </li>
+        </ul>
+      </div>
     </section>
-
+    <!-- Perform Speed and Latency Tests -->
     <section class="mb-4">
-      <h3>Termination</h3>
-      <p>Secure a cable into a keystone jack or patch panel.</p>
-    </section>
+      <h3>Perform Speed and Latency Tests</h3>
+      <p>
+        OBJECTIVE: To measure the performance and responsiveness of a network connection by testing download/upload speeds and latency (ping time), in order to assess whether the network meets required service levels, supports intended applications, and to identify potential bandwidth or routing issues.
+      </p>
+      <h4 class="text-start text-muted">Run Speed Test</h4>
+      <div class="mb-4">
+        <ul class="list-group">
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Use an Online Speed Test Tool (e.g., <a href="https://www.speedtest.net/" target="_blank">Speedtest.net</a> or <a href="https://fast.com/" target="_blank">Fast.com</a>) to measure speeds.
+            </label>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex align-items-start">
+              <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+              <div>
+                <label class="form-check-label" for="check1">
+                  Utilize a CLI speedtest to measure speeds:
+                </label>
+                <!-- Sub-checklist -->
+                <ul class="list-unstyled ms-4 mt-2">
+                  <li class="form-check">
+                    <input class="form-check-input" type="checkbox" >
+                    <label class="form-check-label">
+                      Install a reputable CLI speedtest tool (@ <a href="https://www.nextofwindows.com/install-and-test-internet-speed-with-speedtest-cli-command-line" target="_blank">Ookla</a> )
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                      abc
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                      def
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex align-items-start">
+              <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+              <div>
+                <label class="form-check-label" for="check1">
+                  Record & Confirm Speeds meet Provision:
+                </label>
+                <!-- Sub-checklist -->
+                <ul class="list-unstyled ms-4 mt-2">
+                  <li class="form-check">
+                    <input class="form-check-input" type="checkbox" >
+                    <label class="form-check-label">
+                      Download Speed
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                      Upload Speed
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                      Ping ms
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              abc
+            </label>
+          </li>
 
+        </ul>
+      </div>
+      <h4 class="text-start text-muted">Test Network Latency</h4>
+      <div class="mb-4">
+        <ul class="list-group">
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Run <code>ping 8.8.8.8 -n 50</code>
+            </label>
+          </li>
+          <li class="list-group-item">
+          <div class="d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+            <div>
+              <label class="form-check-label" for="check1">
+                Record Average Latency and Packet Loss:
+              </label>
+              <!-- Sub-checklist -->
+              <ul class="list-unstyled ms-4 mt-2">
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" >
+                  <label class="form-check-label">
+                    Minimum Latency
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox">
+                  <label class="form-check-label">
+                    Maximum Latency
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox">
+                  <label class="form-check-label">
+                    Average Round-Trips
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+          <li class="list-group-item d-flex align-items-start">
+            <input class="form-check-input me-3 mt-1" type="checkbox">
+            <label class="form-check-label">
+              Confirm Speeds
+            </label>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <!-- NEW Section -->
     <section class="mb-4">
       <h3>Crimping RJ45 Connectors</h3>
       <p>Attach connectors to UTP cable using TIA/EIA 568A/B standards.</p>
@@ -99,31 +335,6 @@
     <section class="mb-4">
       <h3>Cable Certification / Testing</h3>
       <p>Use Fluke or similar tools to validate cable quality and bandwidth.</p>
-    </section>
-
-    <section class="mb-4">
-      <h3>Loopback Test</h3>
-      <p>Confirm Layer 1 continuity using loopback plugs.</p>
-    </section>
-
-    <section class="mb-4">
-      <h3>Patch Panel Mapping</h3>
-      <p>Organize and label ports for documentation and troubleshooting.</p>
-    </section>
-
-    <section class="mb-4">
-      <h3>Visual Inspection</h3>
-      <p>Check for damaged ports, bent pins, cable wear, or poor termination.</p>
-    </section>
-
-    <section class="mb-4">
-      <h3>Signal Integrity Checks</h3>
-      <p>Validate signal strength and SNR using test equipment.</p>
-    </section>
-
-    <section class="mb-4">
-      <h3>Cable Management</h3>
-      <p>Bundle and route cables to reduce interference and allow serviceability.</p>
     </section>
 
 
