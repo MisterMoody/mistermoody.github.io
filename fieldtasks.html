@@ -88,75 +88,602 @@
         <!-- Page Introduction -->
         <div class="row">
           <h1>Field Tasks</h1>
+          <div class="d-flex justify-content-between align-items-center">
+            <i class="me-3 material-icons bi bi-wifi" alt="WiFi Connectivity"></i>
+            <i class="me-3 material-icons bi bi-speedometer" alt="Speed Test"></i>
+            <i class="me-3 material-icons bi bi-router" alt="Configuration"></i>
+            <i class="me-3 material-icons bi bi-diagram-2" alt="Structured Cabling"></i>
+            <i class="me-3 material-icons bi-tools" alt="Installation"></i>
+          </div>
           <!--<p>
             This gallery highlights my proficiency in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
           </p>-->
         </div>
+        <!-- ******************************** -->
+        <!-- List Group of Portfolio ARTICLES -->
+        <section class="row g-3 mt-3">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              Working with IP Addresses
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modal1">View Detail</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              Perform Speed and Latency Tests
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modal2">View Detail</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              WiFi Connectivity
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modal3">View Detail</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              Wireless Survey
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modal4">View Detail</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              Cable Termination
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modal5">View Detail</a>
+            </li>
+          </ul>
+          <!-- Modal #1: Working with IP Addresses-->
+          <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Working with IP Addresses</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>OBJECTIVE: Confirm modem circuit is live, statically assign IP, and verify passthrough and connectivity.</p>                
+                  <!-- Manually Assign Static IP -->
+                  <div class="mb-4">
+                    <h4 class="text-start text-muted">Manually Assign Static IP</h4>
+                    <ul class="list-group">
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Plug Patch Cable from Laptop into Modem LAN port (Disable Wi-Fi).
+                        </label>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox" >
+                        <label class="form-check-label">
+                          Right-Click Windows > Network Connections > Network & Sharing Center
+                        </label>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Right-Click Ethernet > Properties > Internet Protocol Version 4 (TCP/IPv4)
+                        </label>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                          <label class="form-check-label" for="check1">
+                            Select <i>Use the following IP Address</i> & Modify:
+                          </label>
+                        <div class="ms-4 mt-2">
+                          <div class="row">
+                            <div class="col-12 col-md-6">(a) IP Address</div>
+                            <div class="col-12 col-md-6">(b) Subnet MASK (SM)</div>
+                            <div class="col-12 col-md-6">(c) Default Gateway (GW)</div>
+                            <div class="col-12 col-md-6">(d) Preferred & Alternate DNS</div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Click <i>OK</i> and Close.
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Validate Static IP Passthrough & Reachability -->
+                  <div class="mb-4">
+                    <h4 class="text-start text-muted">Validate Static IP Passthrough & Reachability</h4>
+                    <ul class="list-group">
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ipconfig /all</code> to verify IP Address & Device Stack, Subnet Mask, Gateway, and DNS (<i>Line labeled IPv4 Address is your internal IP address</i>).
+                        </label>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ping 8.8.8.8</code> to test basic Internet connectivity and check public IP Address in the browser using <a href="https://www.whatismyip.com/" target="_blank">WhatIsMyIP</a> or <a href="https://ifconfig.me/" target="_blank">IPConfig Me</a>).
+                        </label>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ping ###.###.#.#</code> to validate IP reachability of the specified device (<i>Expected Reply:</i> <code>###.###.#.#: bytes=32 time<1ms TTL=64</code>).
+                        </label>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ping www.google.com</code> to initiate a DNS lookup and cofirm resolution.  (<i>Passthrough PASSes if both PING commands succeed and FAILs when both PINGs returns "Request Timed Out." When a raw <code>ping</code> to an IP address succeeds, but a <code>ping</code> to a domain name fails, it indicates a DNS server issue.  Check the DNS settings in network configuration or manually set a known-good DNS server (e.g., 8.8.8.8).</i>)
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- View Routing Info & Detect Gateway Hops (Routing Issues) -->
+                  <div class="mb-4">
+                    <h4 class="text-start text-muted">View Routing Info & Detect Gateway Hops (Routing Issues)</h4>
+                    <ul class="list-group">
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>tracert 8.8.8.8</code> to confirm Gateway visible at first Hop (<i>Passthrough 'OK' if IP input is visible</i>).
+                        </label>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>arp -a</code> to confirm MAC address resolution.
+                        </label>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ping www.google.com</code> to initiate a DNS lookup and cofirm resolution. 
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal #2: Perform Speed and Latency Tests -->
+          <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Perform Speed and Latency Tests</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>OBJECTIVE: To measure the performance and responsiveness of a network connection by testing download/upload speeds and latency (ping time), in order to assess whether the network meets required service levels and to identify potential bandwidth or routing issues.</p>
+                  <h4 class="text-start text-muted">Run a Speed Test</h4>            
+                  <div class="mb-4">
+                    <ul class="list-group">
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Use an Online Speed Test Tool (e.g., <a href="https://www.speedtest.net/" target="_blank">Speedtest.net</a> or <a href="https://fast.com/" target="_blank">Fast.com</a>)
+                        </label>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              <label class="form-check-label">
+                                  <a href="https://www.nextofwindows.com/install-and-test-internet-speed-with-speedtest-cli-command-line" target="_blank">Use</a> the <a href="https://www.speedtest.net/apps/cli" target="_blank">Ookla</a> CLI Speedtest tool.
+                                  <img src="images/speedtest.jpg" class="modal-img img-fluid" alt="Speed Test CLI">
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              Record & Confirm Speeds meet Provision:
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled ms-4 mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Download Speed
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Upload Speed
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Latency (Ping ms)
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <div class="container my-4">
+                          <div class="row mb-3">
+                            <div class="col text-center">
+                              <h4 class="text-start text-muted">Common Issues and Suggested Actions</h4>
+                            </div>
+                          </div>
+                          <!-- Row 2 -->
+                          <div class="row mb-2">
+                            <div class="col-12 col-md-3 fw-bold bg-light py-2">
+                              APIPA feature Enabled
+                            </div>
+                            <div class="col-12 col-md-9 bg-white py-2">
+                              Check DHCP, Assign Static IP, or WiFi Handshake
+                            </div>
+                          </div>
+                          <!-- Row 3 -->
+                          <div class="row mb-2">
+                            <div class="col-12 col-md-3 fw-bold bg-light py-2">
+                              Wi-Fi connected, but no Internet
+                            </div>
+                            <div class="col-12 col-md-9 bg-white py-2">
+                              Ping Gateway IP, check DNS settings, or reset router.
+                            </div>
+                          </div>
+                          <!-- Row 4 -->
+                          <div class="row mb-2">
+                            <div class="col-12 col-md-3 fw-bold bg-light py-2">
+                              Slow Speeds
+                            </div>
+                            <div class="col-12 col-md-9 bg-white py-2">
+                              Perform a speed test, check for interference, or reset the modem.
+                            </div>
+                          </div>
+                          <!-- Row 5 -->
+                          <div class="row mb-2">
+                            <div class="col-12 col-md-3 fw-bold bg-light py-2">
+                              DNS Fails, but Ping Succeeds
+                            </div>
+                            <div class="col-12 col-md-9 bg-white py-2">
+                              Set DNS to 8.8.8.8
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="text-start text-muted">Test Network Latency</h4>
+                  <div class="mb-4">
+                    <ul class="list-group">
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ping 8.8.8.8 -n 50</code>
+                        </label>
+                      </li>
+                      <li class="list-group-item">
+                      <div class="d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label" for="check1">
+                            Record Average Latency and Packet Loss:
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled ms-4 mt-2">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                Minimum Latency
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Maximum Latency
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Average Round-Trips
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Confirm Speeds
+                        </label>
+                      </li>
 
-    <!-- **********************************  -->
-    <!-- **********************************  -->
-    <!-- List Group of Portfolio ARTICLES -->
-     <div class="row g-3 mt-3">
-      <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <i class="me-3 material-icons bi bi-wifi" alt="WiFi Connectivity"></i>
-          <div class="flex-grow-1">
-            <div class="d-flex justify-content-between">
-              <p><strong class="text-muted">WiFi Connectivity</strong> (descriptive subtitle that clarifies the topic)</p>
-              <small class="text-muted">08.2025</small>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <i class="me-3 material-icons bi bi-speedometer" alt="Speed Test"></i>
-          <div class="flex-grow-1">
-            <div class="d-flex justify-content-between">
-              <p><strong class="text-muted">Speed Test</strong> (descriptive subtitle that clarifies the topic)</p>
-              <small class="text-muted">04.2025</small>
+          <!-- Modal #3  -->
+          <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">WiFi Connectivity</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  abc
+                </div>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <i class="me-3 material-icons bi-tools" alt="Installation"></i>
-          <div class="flex-grow-1">
-            <div class="d-flex justify-content-between">
-              <p><strong class="text-muted">Installation</strong> (descriptive subtitle that clarifies the topic)</p>
-              <small class="text-muted">02.2025</small>
+          <!-- Modal #4: Wireless Survey -->
+          <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Wireless Survey</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>OBJECTIVE: to perform a comprehensive wireless survey to assess coverage, signal strength, and interference, using Wi-Fi survey planning tools to visualize, analyze, and design a reliable network. This process involves planning, analysis, heat mapping, signal testing, interference detection, troubleshooting, and coverage optimization to ensure optimal wireless performance and identify areas for improvement.</p>
+                  <div class="mb-4">
+                  <!-- Pre-Survey Considerations -->
+                  <div class="mb-4">
+                    <h5 class="text-start text-muted">Pre-Survey Considerations</h5>
+                    <ul class="list-group">
+                      <!-- Software Tools -->
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              Software Tools:
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled ms-4 mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  NetSpot for <i>Heat Mapping & Signal Strength Analysis</i>
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  WiFiman by Ubiquiti for	<i>Network Scanning, Speed Test and Device Discovery</i>
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  WiFi Analyzer for <i>Measures Signal Strength & Identifies Interference</i>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Survey Preparation -->
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              Survey Preparation & Execution:
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled ms-4 mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Import and/or Create a Scaled Floor Plan
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Use the Continuous Survey Mode
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- Analysis & Reporting -->
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              Analysis & Reporting:
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled ms-4 mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Analyze the Collected Data
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Generate a Comprehensive Report including all Specified Parameters
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Use the Network Simulator to Visualize potential improvements
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Use Real-Time Spectrum Analysis to Detect Non-WiFi interference
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Use Security Features to Identify and Locate Rogue APs
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Data Collection -->
+                  <div class="mb-4">
+                    <ul class="list-group">
+                      <!-- Data Collection -->
+                      <h4 class="text-start text-muted">Data Collection</h4>
+                      <li class="list-group-item d-flex align-items-start">
+                        <input class="form-check-input me-3 mt-1" type="checkbox">
+                        <label class="form-check-label">
+                          Walk the entire site (max 6ft gaps between) measuring areas at regular intervals no wider than 6 feet.  Generate a heat map and record signal strength, interference and other standard parameters.
+                        </label>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              Data to Collect:
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled ms-4 mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Measured Primary + Secondary RSSI + Per AP Coverage- 2.4/5.0 GHz
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Measured Channel Utilization (20/40/80 MHz)
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Overlapping Channels
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Co-Channel Interference
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Rouge APs at location + Rouge AP Data Matrix + Rouge Channel Width 2.4/5.0 GHz
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Any Microwave or other thing leaking at 2.4 GHz
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Bluetooth Devices working at 2.4 GHz that could cause channel interference
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Fixed Frequency Devices
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Measured Signal-to-Noise Ratio (SNR)
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Measured AP Load (Number of Clients)
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-3 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              Include the following Data in your AP  Matrix:
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled ms-4 mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Transmit Power per AP
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  SSID/BSSID Per AP
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Convey 5g Signal Strength and Carrier using Phone
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Locate existing MPLS circuit Dmark
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Confirm connection to router
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Check rack space availability
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Test 4G coverage near data rack
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <i class="me-3 material-icons bi bi-router" alt="Configuration"></i>
-          <div class="flex-grow-1">
-            <div class="d-flex justify-content-between">
-              <p><strong class="text-muted">Network Configurations</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus pellentesque eros, et condimentum ligula dignissim et. Nulla ornare sit amet enim sed auctor. Praesent rutrum tristique leo, posuere felis. Suspendisse feugiat velit eget.</p>
-              <small class="text-muted">05.2025</small>
-            </div>
-          </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <i class="me-3 material-icons bi bi-laptop" alt="Remote Access"></i>
-          <div class="flex-grow-1">
-            <div class="d-flex justify-content-between">
-              <p><strong class="text-muted">Remote Access</strong> (descriptive subtitle that clarifies the topic)</p>
-              <small class="text-muted">06.2025</small>
-            </div>
-          </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <i class="me-3 material-icons bi bi-diagram-2" alt="Structured Cabling"></i>
-          <div class="flex-grow-1">
-            <div class="d-flex justify-content-between">
-              <p><strong class="text-muted">Structured Cabling 101</strong> (descriptive subtitle that clarifies the topic)</p>
-              <small class="text-muted">07.2025</small>
-            </div>
-          </div>
-        </li>
-      </ul>  
-     </div> 
+          <!-- Modal #5  -->
+
+        </section>
     <!-- ** End of Portfolio ARTICLES ** -->
-
-
       </main>
     <!-- END of  -->
     </div>
