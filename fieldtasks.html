@@ -92,12 +92,15 @@
             <i class="me-3 material-icons bi bi-wifi" alt="WiFi Connectivity"></i>
             <i class="me-3 material-icons bi bi-speedometer" alt="Speed Test"></i>
             <i class="me-3 material-icons bi bi-router" alt="Configuration"></i>
-            <i class="me-3 material-icons bi bi-diagram-2" alt="Structured Cabling"></i>
+            <i class="me-3 material-icons bi bi-diagram-2" alt="Networking"></i>
             <i class="me-3 material-icons bi-tools" alt="Installation"></i>
           </div>
           <!--<p>
             This gallery highlights my proficiency in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
           </p>-->
+          <p>
+            This page was designed as an operational reference to help me implement best practices while out in the field. 
+          </p>
         </div>
         <!-- ******************************** -->
         <!-- List Group of Portfolio ARTICLES -->
@@ -112,16 +115,12 @@
               <a href="#" data-bs-toggle="modal" data-bs-target="#modal2">View Detail</a>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              WiFi Connectivity
+              Wireless Survey
               <a href="#" data-bs-toggle="modal" data-bs-target="#modal3">View Detail</a>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              Wireless Survey
-              <a href="#" data-bs-toggle="modal" data-bs-target="#modal4">View Detail</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              Cable Termination
-              <a href="#" data-bs-toggle="modal" data-bs-target="#modal5">View Detail</a>
+              Networking 101
+              <a href="networking">View Detail</a>
             </li>
           </ul>
           <!-- Modal #1: Working with IP Addresses-->
@@ -163,13 +162,34 @@
                           <label class="form-check-label" for="check1">
                             Select <i>Use the following IP Address</i> & Modify:
                           </label>
-                        <div class="ms-4 mt-2">
-                          <div class="row">
-                            <div class="col-12 col-md-6">(a) IP Address</div>
-                            <div class="col-12 col-md-6">(b) Subnet MASK (SM)</div>
-                            <div class="col-12 col-md-6">(c) Default Gateway (GW)</div>
-                            <div class="col-12 col-md-6">(d) Preferred & Alternate DNS</div>
-                          </div>
+                        <div class="mt-2">
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-2">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                IP Address
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                               Subnet MASK (SM)
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Default Gateway (GW)
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Preferred & Alternate DNS
+                              </label>
+                            </li>
+                          </ul>
                         </div>
                         </div>
                         </div>
@@ -279,7 +299,7 @@
                               Record & Confirm Speeds meet Provision:
                             </label>
                             <!-- Sub-checklist -->
-                            <ul class="list-unstyled ms-4 mt-2">
+                            <ul class="list-unstyled mt-2">
                               <li class="form-check">
                                 <input class="form-check-input" type="checkbox" >
                                 <label class="form-check-label">
@@ -366,7 +386,7 @@
                             Record Average Latency and Packet Loss:
                           </label>
                           <!-- Sub-checklist -->
-                          <ul class="list-unstyled ms-4 mt-2">
+                          <ul class="list-unstyled mt-2">
                             <li class="form-check">
                               <input class="form-check-input" type="checkbox" >
                               <label class="form-check-label">
@@ -402,22 +422,8 @@
               </div>
             </div>
           </div>
-          <!-- Modal #3  -->
+          <!-- Modal #3: Wireless Survey -->
           <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">WiFi Connectivity</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  abc
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal #4: Wireless Survey -->
-          <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
               <div class="modal-content">
                 <div class="modal-header">
@@ -440,7 +446,7 @@
                               Software Tools:
                             </label>
                             <!-- Sub-checklist -->
-                            <ul class="list-unstyled ms-4 mt-2">
+                            <ul class="list-unstyled mt-2">
                               <li class="form-check">
                                 <input class="form-check-input" type="checkbox" >
                                 <label class="form-check-label">
@@ -472,7 +478,7 @@
                               Survey Preparation & Execution:
                             </label>
                             <!-- Sub-checklist -->
-                            <ul class="list-unstyled ms-4 mt-2">
+                            <ul class="list-unstyled mt-2">
                               <li class="form-check">
                                 <input class="form-check-input" type="checkbox" >
                                 <label class="form-check-label">
@@ -498,7 +504,7 @@
                               Analysis & Reporting:
                             </label>
                             <!-- Sub-checklist -->
-                            <ul class="list-unstyled ms-4 mt-2">
+                            <ul class="list-unstyled mt-2">
                               <li class="form-check">
                                 <input class="form-check-input" type="checkbox" >
                                 <label class="form-check-label">
@@ -554,7 +560,7 @@
                               Data to Collect:
                             </label>
                             <!-- Sub-checklist -->
-                            <ul class="list-unstyled ms-4 mt-2">
+                            <ul class="list-unstyled mt-2">
                               <li class="form-check">
                                 <input class="form-check-input" type="checkbox" >
                                 <label class="form-check-label">
@@ -627,7 +633,7 @@
                               Include the following Data in your AP  Matrix:
                             </label>
                             <!-- Sub-checklist -->
-                            <ul class="list-unstyled ms-4 mt-2">
+                            <ul class="list-unstyled mt-2">
                               <li class="form-check">
                                 <input class="form-check-input" type="checkbox" >
                                 <label class="form-check-label">
@@ -676,6 +682,20 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal #4  Networking 101 -->
+          <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Networking 101</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  abc
                 </div>
               </div>
             </div>
