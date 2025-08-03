@@ -82,137 +82,105 @@
     </div>
     </header>
       <!-- END of NAV HEADER -->
-
+      
       <!-- Networking 101 -->
       <main class="container py-4">
         <h1>Networking 101</h1>
-        <p>This section covers the basics of networking, including key concepts and best practices.</p>
+        <p></p>
+        <section class="row g-3 mt-3">
+        </section>
 
-        <ul class="list-group">
-
-          <!-- 1. What is a Network? -->
-           <div class="mb-4">
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong>What is a Network?</strong>
-            </div>
-            <p class="text-start mb-1">
-              A network is a group of two or more devices that are linked together to share data and resources. Devices on a network can include computers, tablets, smartphones, printers, IP cameras, and more. This inter-connectivity forms the backbone of modern homes and enterprises, allowing for seamless communication and service integration. IoT (Internet of Things) refers to everyday objects that are connected to a network and can send/receive data. Network standards, such as those defined by the IEEE (Institute of Electrical and Electronics Engineers), ensure devices operate reliably and consistently.
-            </p>
-          </li>
-
-           </div>
-
-          <!-- 2. Common Network Types -->
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong>Common Network Types</strong>
-            </div>
-            <ul class="list-group mt-2">
-              <li class="list-group-item"><input class="form-check-input me-1" type="checkbox"> LAN: Local network (e.g., home/office).</li>
-              <li class="list-group-item"><input class="form-check-input me-1" type="checkbox"> WAN: Wide geographical connection.</li>
-              <li class="list-group-item"><input class="form-check-input me-1" type="checkbox"> WLAN: Wireless LAN via Wi-Fi.</li>
-              <li class="list-group-item"><input class="form-check-input me-1" type="checkbox"> VPN: Secure, encrypted remote access.</li>
-              <li class="list-group-item"><input class="form-check-input me-1" type="checkbox"> POLAN: Fiber optics, no electrical power.</li>
-            </ul>
-          </li>
-
-          <!-- 3. Enterprise Networks -->
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong>Enterprise Networks</strong>
-            </div>
-            <p class="text-start mb-1">
-              Enterprise networks are high-performance infrastructures designed to meet the demanding connectivity, security, and scalability requirements of businesses. Unlike home networks, enterprise environments rely on specialized components that provide centralized control, traffic segmentation, and seamless wireless access.
-            </p>
-            <p class="text-start mb-1">
-              One key feature is the use of VLANs (Virtual Local Area Networks), which allow network administrators to logically group devices based on function or department rather than physical location. This segmentation improves performance, enhances security, and simplifies traffic management.
-            </p>
-            <p class="text-start mb-1">
-              Wireless connectivity in enterprise settings is typically managed through a Wireless LAN Controller (WLC), which centrally administers multiple Wireless Access Points (WAPs). This ensures uniform wireless coverage, secure client authentication, smooth roaming, and effective load balancing. For the WLC to properly manage the WAPs, all components must reside on the same physical LAN, allowing real-time coordination and policy enforcement across the wireless infrastructure.
-            </p>
-          </li>
-
-          <!-- 4. Network Connectivity Flow -->
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong>Network Connectivity Flow</strong>
-            </div>
-            <p class="text-start mt-2 text-muted">Device > Patch Panel > Switch > Router > Modem > ISP</p>
-            <p class="text-start mb-1">
-              In a standard wired network, connectivity flows from the end devices such as a computer, phone, or smart appliances to a wall outlet known as a network drop.  Every device has a MAC Address which is unique ID (00:1A:2B:3C:4D:5E) built into the hardware that never changes and helps identify the device on a network. Network drops return to what is called a patch panel, which is used to organize and manage Ethernet cables, typically installed in wiring closets or Intermediate Distribution Frames (IDFs), allowing devices to be patched into a switch or router. Data travels from the panel to a network switch, which enhances network performance by managing the flow of data, and increases security by controlling access to devices on the network. The switch connects to a router, which serves as the gateway between the local network (LAN) and external networks (WAN), assigning IP addresses and directing outbound traffic. The router in turn connects to a modem, which translates the digital signals into a format understood by the Internet Service Provider (ISP), ultimately enabling access to the broader internet.
-            </p> 
-          </li>
-
-          <!-- 5. Protocols & IP Addressing -->
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong>Protocols & IP Addressing</strong>
-            </div>
-            <p class="text-start mb-1">Network communication relies on protocols: structured rules that allow computers and devices to understand each other. When devices are connected using cables (like Ethernet), they follow a specific protocol to organize and send data efficiently across the network. At the core of all internet activity is the TCP/IP suite: Transmission Control Protocol ensures data is sent and received accurately, while Internet Protocol assigns a unique address to every device so information can reach the correct destination.</p>
-            <p class="text-start mb-1">These unique identifiers are called IP addresses, which act like digital street addresses or phone numbers for devices. Most networks today use IPv4 addresses (e.g., <code>192.168.1.101</code>), though a newer format called IPv6 (e.g., <code>2001:0db8::1</code>) provides more room for the growing number of internet-connected devices. Devices are assigned IP addresses automatically through DHCP (Dynamic Host Configuration Protocol), which also provides other network settings like the subnet mask and gateway. To help users access websites more easily, the DNS (Domain Name System) translates domain names (e.g., <code>www.google.com</code>) into IP addresses. On the other hand, NAT (Network Address Translation) enables multiple devices on a private network to share a single public IP address when accessing the internet, an essential function for homes and businesses.</p>
-          </li>
-
-          <!-- 6. Cabling & Transmission Media -->
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong>Network Cabling & Transmission Media</strong>
-            </div> 
-            <p class="text-start mb-1">Modern networks rely on high-performance cabling to move data between devices quickly and reliably. Ethernet cables come in various categories and support different speeds depending on the quality of materials, frequency rating, and design.</p>
-            <p class="text-start mb-1">Ethernet cable standards derive from the Twisted Pair Base-T naming convention, which define the cable's structure and performance characteristics.</p>            
-            <div class="container">
-              <div class="row text-center">
-                <div class="col-3 mb-3">
-                  <strong>10Base</strong><br>
-                  10 Mbps<br>
-                  <span class="text-muted">(Slow)</span>
-                </div>
-                <div class="col-3 mb-3">
-                  <strong>100Base</strong><br>
-                  100 Mbps<br>
-                  <span class="text-muted">(Fast)</span>
-                </div>
-                <div class="col-3 mb-3">
-                  <strong>1000Base</strong><br>
-                  1 Gbps<br>
-                  <span class="text-muted">(Faster)</span>
-                </div>
-                <div class="col-3 mb-3">
-                  <strong>10GBase</strong><br>
-                  10 Gbps<br>
-                  <span class="text-muted">(Fastest)</span>
+        <!-- 1. xyz -->
+        <article class="mb-4">
+          <h5 class="text-start text-muted">abc</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Lead
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        1
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        2
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        3
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        4
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        5
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        6
+                      </label>
+                    </li>
+                    <!-- 2nd Sub-cheklist -->
+                    <li>
+                      <div class="d-flex align-items-start">
+                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label" for="check1">
+                            7
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-2">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                8
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                9
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                10
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <p class="text-start mb-1">Ethernet cables are rated by category (CAT), which defines their frequency range and maximum transmission speed. Actual performance depends on cable length, installation quality, and interference from nearby electrical sources. Higher-frequency cables like CAT 6 and CAT 6e are often shielded to reduce electromagnetic interference (EMI), making them more suitable for high-speed or high-density environments (UTP is standard; STP is used where interference is a concern.).</p>
-            <div class="container mt-4">
-              <div class="row fw-bold bg-light py-2 border">
-                <div class="col-4">Cable Type</div>
-                <div class="col-4">Frequency Bandwidth</div>
-                <div class="col-4">Max Speed</div>
-              </div>
+            </li>
+          </ul>
+          <p class="text-start mb-1">
+            abc
+          </p>
+        </article>
 
-              <div class="row py-2 border-bottom">
-                <div class="col-4"><strong>CAT 5 / 5e</strong></div>
-                <div class="col-4">100 MHz</div>
-                <div class="col-4">Up to 1 Gbps</div>
-              </div>
-
-              <div class="row py-2 border-bottom">
-                <div class="col-4"><strong>CAT 6</strong></div>
-                <div class="col-4">250 MHz</div>
-                <div class="col-4">Up to 10 Gbps (short runs)</div>
-              </div>
-
-              <div class="row py-2 border-bottom">
-                <div class="col-4"><strong>CAT 6e</strong></div>
-                <div class="col-4">600 MHz</div>
-                <div class="col-4">Up to 40 Gbps (very short)</div>
-              </div>
-            </div>
-          </li>
-
-</ul>
 
 
       </main>
