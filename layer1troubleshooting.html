@@ -90,7 +90,7 @@
           Layer 1 troubleshooting refers to diagnosing and resolving issues at the physical layer of the OSI model (the foundation of all network communication), and is the most fundamental step in resolving network issues. Techs are essential in environments where remote administration must be augmented by physical access. Their work ensures the integrity of the physical infrastructure that supports upper-layer network services such as MAC address conflicts and VLAN misconfigurations that occur at the Layer 2 Data Link level, or IP, DHCP or Routing issues at the Layer 3 Network level.
         </p>
         <p class="text-start">
-          Field technicians execute tasks under the remote guidance of network engineers, applying technical acumen with precision. They maintain rigorous attention to detail, uphold meticulous documentation standards, and consistently operate within defined change control and escalation protocols. This article summarizes the practical procedures grounded in network fundamentals learned thus far in the field.
+          Field technicians execute tasks under the remote guidance of network engineers, applying technical acumen with precision. They maintain rigorous attention to detail, uphold meticulous documentation standards, and consistently operate within defined change control and escalation protocols. This article summarizes the practical procedures grounded in network fundamentals that I practice in the field.
         </p>
         <!-- *********************** -->
         <!-- Article Subject Matters -->
@@ -102,37 +102,27 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Testing Equipment & Tools</strong>
+              <strong class="text-muted">Field Preparation</strong>
             </div>
           </li>
           <li class="list-group-item">
             <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Cable Testing Standards</strong>
+              <strong class="text-muted">Inspections: Physical & Visual</strong>
             </div>
           </li>
           <li class="list-group-item">
             <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Visual Inspections</strong>
+              <strong class="text-muted">Network Configuration</strong>
             </div>
           </li>
           <li class="list-group-item">
             <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Physical Inspections</strong>
+              <strong class="text-muted">Cabling Matters</strong>
             </div>
           </li>
           <li class="list-group-item">
             <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Testing</strong>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Cabling</strong>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Escalations</strong>
+              <strong class="text-muted">Escalation Triggers</strong>
             </div>
           </li>
         </ul>
@@ -144,6 +134,46 @@
             <strong class="text-muted">Field Failures to Expect</strong>
           </div>
           <ul class="list-group">
+            <!-- Power Issues -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Power Issues:
+                  </label>
+                  <!--<p class="text-start mb-1"></p>-->
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Inadequate PoE budget on switch: Port won't power on device.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Passive vs. active PoE mismatch: Device expects 802.3af/at, but receives non-standard voltage.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        PoE injector inline but unplugged: Easy to overlook.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Device powers but doesn't boot: Power brownout, wrong power supply (incorrect wattage or polarity).
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Cable-related Failures -->
             <li class="list-group-item">
               <div class="d-flex align-items-start">
                 <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
@@ -188,6 +218,147 @@
                       <input class="form-check-input" type="checkbox">
                       <label class="form-check-label">
                         Cable run through high-voltage conduits: Induced signal noise or safety violation.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Port & Interface Failures -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Port & Interface Failures:
+                  </label>
+                  <!--<p class="text-start mb-1"></p>-->
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Dead switch port: No link light, no connectivity.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Speed/Duplex mismatch (if forced): Interface shows up but performs poorly or intermittently.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Connected to wrong VLAN (trunk vs. access): Especially common when repatching from panel.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Uplink cable plugged into downstream port: Loop risk or no traffic flow.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        WAP plugged into LAN port on another router: Causes double NAT or DHCP conflict.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Environmental Factors -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Environmental Factors:
+                  </label>
+                  <!--<p class="text-start mb-1"></p>-->
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Cable pinched in ceiling tile track or doorframe: Causes intermittent open.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        High heat or condensation in IDF/MDF room: Damages RJ45 or switch hardware.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Rodent damage: Chewed insulation in crawlspaces or drop ceilings.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Improper cable management: Tension on cables leading to pulled terminations or broken jacks.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Loose or unseated keystone or wall jack: Intermittent or no connectivity.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Drop not terminated in IDF: Cable installed, but never punched down or patched.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Legacy Equipment Pitfalls: Old hardware that doesn't support modern standards (e.g., 10/100 Mbps only).
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Testing & Human Error -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Testing & Human Error:
+                  </label>
+                  <!--<p class="text-start mb-1"></p>-->
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Test tone traced to wrong cable: Due to bleed or adjacent wiring.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Inconclusive cable testing results.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Incorrect labeling: Drop IDs don’t match patch panel or switch documentation.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Assuming port is patched without verification: Visual inspection only, no cable trace or test.
                       </label>
                     </li>
                   </ul>
@@ -295,6 +466,951 @@
           </ul>
         </article>
 
+        <!-- 3. Visual Inspection -->
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Visual Inspections</strong>
+          </div>
+          <ul class="list-group">
+            <!-- General -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Are cables cut, frayed, kinked, or improperly terminated?
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Are connectors fully inserted and clicked into place?
+                  </label>
+                </div>
+              </div>
+            </li>
+            <!-- Power Considerations -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Power Considerations:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Verify PoE status from switch or injector.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Identify powered device (PD) startup behavior.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Port & Interface Checks-->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Port & Interface Checks:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Check for link activityon switches and devices (No light: Potential Layer One failure).
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Document port labeling or logical mapping (e.g., on patch panel)
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Confirm switchport availability or provisioning.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Multimeter (for voltage presence in PoE scenarios).
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 4. Physical Inspection -->
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Physical Inspections</strong>
+          </div>
+          <ul class="list-group">
+            <!-- General -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Check cable seating (fully inserted, secure click) and inspect patch cords and connectors for damage or wear (Look for crimped, bent, or coiled cables).
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Verify wall jacks / network drops are live.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Map patch panel > switch > drop > end device.
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 5. Network Configuration & Troubleshooting -->
+        <article class="mb-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Network Configuration & Troubleshooting</strong>
+          </div>
+          <ul class="list-group">
+            <!-- General -->
+            <!-- PoE Verification -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label text-muted" for="check1">
+                    PoE Verification:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Confirm switch port is PoE-enabled.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Use PoE tester to validate proper power output (802.3af/at)
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        If no power, test with alternate known-good PoE port or injector.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Inspect for bad patch cables—especially between patch panel and switch.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Switch Checks -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label text-muted" for="check1">
+                    Switch Checks:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Confirm link/activity LEDs are lit on switch ports and corresponding NIC/device.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Ensure Port Mapping by matching physical ports to network devices using documentation or managed switch interface.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Check Port Status with managed switches using the console to view Interface Status.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Bypass patch panel by connecting a known good cable from switch directly to endpoint.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Use loopback plugs or diagnostics to test switch port transmission and reception.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        If ports appear frozen or non-responsive, restart the switch (last resort, only with proper authorization).
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Inspect for Overheating or Fan Failure, ensuring the switch has adequate ventilation and checking for fan noise or error LEDs.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Patch Panel Checks -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label text-muted" for="check1">
+                    Patch Panel Checks:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Use labeling or tone generator to trace cable from the wall jack to the patch panel.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Verify proper port termination, ensuring each cable is properly punched down and secured into the correct patch panel port.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Confirm patch cords between patch panel and switch are seated properly and undamaged.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Use a basic continuity tester or advanced certifier to verify proper wiring (e.g., T568A/B standard).
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        If tests fail, cut and re-punch or re-crimp ends using proper tools and technique.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          </article>
+          <!---->
+          <!-- Utilize the Device Manager -->
+           <article>
+            <ul class="list-group mb-2">
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Utilize the Device Manager to Diagnose Connectivity Issues:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Open DM using Windows + X (Select Device Manager) or  running <code>devmgmt.msc</code>. 
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Check Device Status and Ascertain Device Network Adapter is Enabled.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Update Drivers to most current version. Uninstall and restart PC so that Windows can automatically reinstall the driver, clearing corrupt or outdated drivers.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Disable <i>"Allow the computer to turn off this device to save power"</i> in the Power Management Tab.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        If no Network Adapter is listed (detected), the hardware may be damaged or not connected properly.  If device status shows Code 10 or Code 43, it is definetly harware failure. 
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            </ul>
+           </article>
+          <!-- Utilize the Command Line -->
+           <article>
+            <ul class="list-group mb-2">
+              <li class="list-group-item">
+                <div class="d-flex align-items-start">
+                  <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                  <div>
+                    <label class="form-check-label text-muted" for="check1">
+                      Utilize the Command-Line:
+                    </label>
+                    <!-- Sub-checklist -->
+                    <ul class="list-unstyled mt-2">
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ipconfig</code> to verify IP Address (IPv4), Routing, Subnet Mask and Default Gateway settings.
+                        </label>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox" >
+                        <label class="form-check-label">
+                          Run <code>ipconfig /all</code> or <code>nslookup google.com /all</code> to verify DNS and Default Route.
+                        </label>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>ping 8.8.8.8</code> to test basic Internet connectivity to the default gateway and other network devices.
+                        </label>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          Run <code>arp -a</code> to view the ARP cache and verify MAC address resolution (Layer 2 connectivity)
+                        </label>
+                      </li>
+                      <!-- Signal/Speed Verification -->
+                      <li>
+                        <div class="d-flex align-items-start mt-3">
+                          <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label text-muted" for="check1">
+                              Verify Signal and Speed:
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Run <code>netsh wlan show interfaces</code> and/or use <a href="https://www.wifianalyer.info" target="_blank">WiFi Analyzer</a> to check signal strength (dBm).
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Confirm SSID is broadcasting and not hidden.
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Verify intended coverage area.
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <div class="container mt-2">
+                        <div class="row">
+                          <div class="col-6 col-md-3 mb-2">
+                            <div class="d-flex align-items-start p-3 border rounded">
+                              <i class="bi bi-reception-4 text-success fs-3 me-3"></i>
+                              <div>
+                                <h6 class="mb-1">-30 to -50</h6>
+                                <p class="mb-0 small">Excellent</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-2">
+                            <div class="d-flex align-items-start p-3 border rounded">
+                              <i class="bi bi-reception-3 text-info fs-3 me-3"></i>
+                              <div>
+                                <h6 class="mb-1">-51 to -65</h6>
+                                <p class="mb-0 small">Good</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-2">
+                            <div class="d-flex align-items-start p-3 border rounded">
+                              <i class="bi bi-reception-2 text-warning fs-3 me-3"></i>
+                              <div>
+                                <h6 class="mb-1">-66 to -75</h6>
+                                <p class="mb-0 small">Troublesome</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-2">
+                            <div class="d-flex align-items-start p-3 border rounded">
+                              <i class="bi bi-reception-1 text-danger fs-3 me-3"></i>
+                              <div>
+                                <h6 class="mb-1">-76 or worse</h6>
+                                <p class="mb-0 small">Unstable/Weak</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Review NIC Configurations -->
+                      <li>
+                        <div class="d-flex align-items-start mt-3">
+                          <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label text-muted" for="check1">
+                              Review NIC Configurations
+                            </label>
+                            <!-- Sub-checklist -->
+                            <ul class="list-unstyled mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  Run <code>ncpa.cpl</code> to confirm NIC configurations.
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  Right-click the network adapter being used, choose Status, then click Details to view IP, gateway, subnet, and more.
+                                </label>
+                              </li>
+                              <!--<li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  10
+                                </label>
+                              </li>-->
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- -->
+                      <!--<li class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          4
+                        </label>
+                      </li>-->
+                      <!-- Blank Tiered-checklist -->
+                      <!--<li>
+                        <div class="d-flex align-items-start">
+                          <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label" for="check1">
+                              7
+                            </label>
+                            <ul class="list-unstyled mt-2">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  8
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  9
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  10
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                          4
+                        </label>
+                      </li>-->
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+           </article>
+          <!-- Using PuTTY & TeamViewer for Remote Access -->
+          <article>
+            <ul class="list-group">
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Join Bridge for Network Engineer Support
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Permit remote access to Network Engineer via Putty or TeamViewer for advanced CLI and diagnostic assistance. Putty is a terminal emulator that a field tech has installed on their on-site laptop that enables network engineers remote access (via Command-Line Interface) to a Server, Switch or Router using an attached serial cable. Putty is typically used to configure IP addresses on a Switch, restart services, check logs, etc. Putty does not necessarily require the Internet as it works over the local Serial or LAN. TeamViewer gives enginners full access to the laptop Graphical User Interface remotely. TV is typically used to (1) install software, (2) troubleshoot graphical apps, and (3) access files.  TV sessions are encrypted and require two-factor auth.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label text-muted" for="check1">
+                    Using PuTTY and Teamviewer for Remote Access 
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                       1. Plug Serial Cable into COM3 of Laptop (Press Windows + X and choose Device Manager to identify port usage).
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        2. Open the PuTTy App.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        3. Select the Serial Connection Type Radio Button
+                      </label>
+                    </li>
+                    <li>
+                      <div class="d-flex align-items-start">
+                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label" for="check1">
+                            4. Configure Serial Settings
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-2">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                a. Enter COM3 port on Serial line (find in Device Manager under Ports).
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                b. Ascertain or Set Speed (baud rate): 9600 or 115200 (common for Cisco devices).
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Run <code>show log</code> to view the ARP cache and verify MAC address resolution (Layer 2 connectivity)
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Run <code>show interfaces</code> to display summary information about each physical port in order to diagnose configurations for errors.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Run <code>show ip interface brief</code> to display a concise summary of all network interfaces, and determine if a port is active or misconfigured.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Run <code>show vlan brief</code> to display a list of all VLANS configured on the switch in order to verify port memberships and troubleshoot inter-VLAN routing and isolation.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Run <code>show mac address-table</code> to display MAC addresses learned by the switch and associated ports, and track where devices are physically connected (also identify duplicate MACs or rogue devices).
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Run <code>running-config</code> to display the current active configuration of the device (RAM).
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        5. Under Save Session, enter CiscoConsole and Save for Future Use.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        6. Click Open to Connect and Access the terminal window or press Enter if prompted.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        7. Provide the engineer with the TeamViewer ID and Password for remote access.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        * Stay available in case the engineer needs you to reboot device, switch cables, or relaunch PuTTY. Do not close PuTTY or unplug the console cable unless directed.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          </article>
+
+         <!-- 8. Cable Matters-->
+          <article class="mb-4 mt-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Cable Matters</strong>
+          </div>
+          <ul class="list-group"> 
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label text-muted" for="check1">
+                    Cabling:
+                  </label>
+                  <!-- General -->
+                  <ul class="list-unstyled mt-0">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        If a cable fails continuity testing, cut and re-terminate or replace entirely. Replace damaged patch cables or wall jacks whenever necessary.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Use appropriate cabling standards (e.g., CAT5e, CAT6) for the environment and application; follow T568B standard when terminating cable.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Use existing cable pathways when possible.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Avoid sharp bends or tightly bundled cables.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Label cables clearly at both ends for easy identification.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Photograph cable runs (and length), terminations, port mapping and cable test results for documentation.
+                      </label>
+                    </li>
+                    <!-- Identify Sources of Interference -->
+                    <li>
+                      <div class="d-flex align-items-start mt-3">
+                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label text-muted" for="check1">
+                            Identify Sources of Interference:
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-0">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                Avoid running cables parallel to power lines or near fluorescent lights. Other sources include bluetooth devices, microwaves, security systems and cordless phones.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Avoid nearby APs on same or adjacent channels mindful of co-channel interference.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Use non-overlapping 2.4 GHz channels: 1, 6, or 11 
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Minimize use of 2.4 GHz in dense deployments, utilize 5 GHz if supported.
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Testing a New Circuit -->
+                    <li>
+                      <div class="d-flex align-items-start mt-3">
+                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label text-muted" for="check1">
+                            Testing a New Circuit:
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-0">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                Use a Cable Tester to verify cable integrity and proper termination.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Check continuity on all 8 wires, and ensure proper wire pairing and no shorts or splits.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Confirm IP address assigned to the device.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Test internet and internal network connectivity.
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- AP Placement & Mounting Best Practices -->
+                    <li>
+                      <div class="d-flex align-items-start mt-3">
+                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label text-muted" for="check1">
+                            AP Placement & Mounting Best Practices:
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-0">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                 Confirm AP is powered (via PoE or adapter); check for status LEDs.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Ensure the Ethernet connection to the AP is live and passing traffic.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Visually inspect for cracked housings, loose antennas, or improperly mounted units.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Confirm AP model matches the planned bracket/mounting system.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Avoid placing APs near HVAC ducts, metal objects, microwave ovens, concrete or surfaces that may cause interference.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Maintain line of sight to high-density user areas when possible.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Confirm minimum spacing of 20–30 feet between APs to avoid channel overlap.
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        2
+                      </label>
+                    </li>
+                  
+                    <!--<li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        2
+                      </label>
+                    </li>-->
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          </article>
+
+
+        <!-- 8. Escalation Triggers -->
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Escalation Triggers</strong>
+          </div>
+          <ul class="list-group">
+            <p class="text-muted mb-1">If any of the following occur, escalate to IT support:</p>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Circuit is active, but no IP assigned.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Suspected switch, router, or modem failure.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Access denied to admin interface.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Port is active but no DHCP/IP response received.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Switch or other upstream hardware failure suspected.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    VLAN tagging, static routing, or firewall configuration required.
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    VLAN or switch-level configuration changes are required.
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>
 
       </main>
       <!-- END of WHAT IS A NETWORK? -->
