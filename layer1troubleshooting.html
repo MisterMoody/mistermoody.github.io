@@ -224,6 +224,45 @@
                 </div>
               </div>
             </li>
+            <!-- Signal Integrity -->
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    Signal Integrity:
+                  </label>
+                  <!--<p class="text-start mb-1"></p>-->
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        No Connectivity: No link light on switch or device, no data flow possibly due to a bad cable.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Intermittent Connectivity: Flapping link lights, data loss, or slow performance due to a loose connector or intereference.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Slow Speeds: Reduced throughput with a high latency/packet loss caused by EMI or high attenuation.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Cross-Talk (attenuation): Signal interference from adjacent cables, causing data corruption.
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
             <!-- Port & Interface Failures -->
             <li class="list-group-item">
               <div class="d-flex align-items-start">
