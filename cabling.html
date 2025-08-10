@@ -129,80 +129,38 @@
           <div class="d-flex justify-content-between align-items-center">
             <strong class="text-muted">Cable Standards</strong>
           </div>
-          <p class="text-start">Structured cabling standards provide a comprehensive framework for designing and implementing cabling systems that ensure performance, reliability, and scalability. These standards cover various aspects of cabling, including cable types, installation practices, testing procedures, and documentation requirements. Adhering to these standards is crucial for maintaining the integrity of the cabling infrastructure and ensuring compatibility with networking equipment.</p>
-          <p class="text-start">In America, the TIA/EIA standard is the set of rules that define how to design, install, and test telecommunications cabling so it's reliable and compatible. For my work, I utilize the Commercial Building Telecommunications Cabling Standard, which is TIA/EIA-568, and I specifically implement the <a href="docs/T568B_FieldSheet.pdf">T568B</a> standard that defines pinout and wiring schemes:</p>
-          <ul class="list-group"> 
-            <li class="list-group-item">
-              <div class="d-flex align-items-start">
-                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
-                <div>
-                  <label class="form-check-label text-muted" for="check1">
-                    Cabling:
-                  </label>
-                  <!-- General -->
-                  <ul class="list-unstyled mt-0">
-                    <li class="form-check">
-                      <input class="form-check-input" type="checkbox">
-                      <label class="form-check-label">
-                        Label cables clearly at both ends for easy identification.
-                      </label>
-                    </li>
-                    <li class="form-check">
-                      <input class="form-check-input" type="checkbox">
-                      <label class="form-check-label">
-                        Photograph cable runs (and length), terminations, port mapping and cable test results for documentation.
-                      </label>
-                    </li>
-                    <!-- Identify Sources of Interference -->
-                    <li>
-                      <div class="d-flex align-items-start mt-3">
-                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
-                        <div>
-                          <label class="form-check-label text-muted" for="check1">
-                            Identify Sources of Interference:
-                          </label>
-                          <!-- Sub-checklist -->
-                          <ul class="list-unstyled mt-0">
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox" >
-                              <label class="form-check-label">
-                                Avoid running cables parallel to power lines or near fluorescent lights. Other sources include bluetooth devices, microwaves, security systems and cordless phones.
-                              </label>
-                            </li>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label">
-                                Avoid nearby APs on same or adjacent channels mindful of co-channel interference.
-                              </label>
-                            </li>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label">
-                                Use non-overlapping 2.4 GHz channels: 1, 6, or 11 
-                              </label>
-                            </li>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label">
-                                Minimize use of 2.4 GHz in dense deployments, utilize 5 GHz if supported.
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  
-                    <!--<li class="form-check">
-                      <input class="form-check-input" type="checkbox" >
-                      <label class="form-check-label">
-                        2
-                      </label>
-                    </li>-->
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <p class="text-start">
+            Structured cabling standards provide a comprehensive framework for designing and implementing cabling systems that ensure performance, reliability, and scalability. These standards cover various aspects of cabling, including cable types, installation practices, testing procedures, and documentation requirements. Adhering to these standards is crucial for maintaining the integrity of the cabling infrastructure and ensuring compatibility with networking equipment.
+          </p>
+          <p class="text-start">
+            In America, the TIA/EIA standard is the set of rules that define how to design, install, and test telecommunications cabling so it's reliable and compatible. For my work, I utilize the Commercial Building Telecommunications Cabling Standard, which is TIA/EIA-568, and I specifically implement the <a href="docs/T568B_FieldSheet.pdf">T568B</a> standard that defines pinout and wiring schemes:
+          </p>
+          <section>
+            <!-- Cabling Complinance Standards -->
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Cabling Compliance Standards for Cable Support, Routing, Conduit Fill, Cable Ratings, Service Loops, Termination and Installation Practices:</strong>
+            </div>
+            <ul class="list-group list-group-flush">
+              <div><i class="bi bi-x-square-fill text-danger"></i> Do not lay cable directly on ceiling tiles or grids. Use J-Hooks, D-Rings, or cable tray.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Maximum distance between supports: 5 ft (1.5 m).</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Run cable perpendicular to electrical wiring.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Maintain at least 12 in (1 ft) clearance from power lines to reduce EMI.</div>
+              <div><i class="bi bi-x-square-fill text-danger"></i> Avoid proximity to EMI sources: transformers, ballasts, motors, fluorescent lights.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> When wall routing is not possible, use conduit or raceway.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Maximum fill for multiple CAT5/CAT6 cables: 40% of conduit capacity.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Use CMP-rated cable (Plenum) in air handling spaces such as drop ceilings.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Use CMR-rated cable (Riser) for vertical shafts between floors.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Ceiling-mounted APs: 10-15 ft service loop.</div>
+              <div><i class="bi bi-x-square-fill  text-danger"></i> Never use zip ties to secure loops (always use velcro).</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Keep cable sheathing within a half-inch of the termination point.</div>
+              <div><i class="bi bi-check-square-fill text-success"></i> Maintain pair twist as close as possible to the termination—max untwist: half-inch.</div>
+              <div><i class="bi bi-x-square-fill  text-danger"></i> Avoid sharp bends (minimum bend radius is 4x cable diameter).</div>
+              <div><i class="bi bi-x-square-fill  text-danger"></i> Do not exceed maximum pull tension (typically 25 lbf for CAT5/6).</div>
+              <div><i class="bi bi-x-square-fill text-danger"></i> Do not kink, crush, or staple through cable.</div>
+            </ul>
+
+
+          </section>
           <ul class="list-group"> 
             <li class="list-group-item">
               <div class="d-flex align-items-start">
