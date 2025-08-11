@@ -135,8 +135,8 @@
           <p class="text-start">
             In America, the TIA/EIA standard is the set of rules that define how to design, install, and test telecommunications cabling so it's reliable and compatible. For my work, I utilize the Commercial Building Telecommunications Cabling Standard, which is TIA/EIA-568, and I specifically implement the <a href="docs/T568B_FieldSheet.pdf">T568B</a> standard that defines pinout and wiring schemes:
           </p>
+          <!-- Cabling Compliance Standards -->
           <section>
-            <!-- Cabling Complinance Standards -->
             <div class="d-flex justify-content-between align-items-center">
               <strong class="text-muted">Cabling Compliance Standards for Cable Support, Routing, Conduit Fill, Cable Ratings, Service Loops, Termination and Installation Practices:</strong>
             </div>
@@ -161,7 +161,250 @@
 
 
           </section>
+        </article>
+
+        
+        <!-- 4. Cabling Troubleshooting -->
+        <article class="mb-4 mt-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Cabling Troubleshooting</strong>
+          </div>
+          <!-- Access Point (AP) Hardware Inspection -->
           <ul class="list-group"> 
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label text-muted" for="check1">
+                    Access Point (AP) Hardware Inspection:
+                  </label>
+                  <ul class="list-unstyled mt-0">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Confirm AP is powered (via PoE or adapter); check for status LEDs.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Ensure the Ethernet connection to the AP is live and passing traffic.
+                      </label>
+                    </li>  
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Visually inspect for cracked housings, loose antennas, or improperly mounted units.
+                      </label>
+                    </li>                   
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- AP Placement & Mounting Best Practices -->
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label  text-muted" for="check1">
+                    AP Placement & Mounting Best Practices:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Mount APs horizontally when ceiling-mounted (per manufacturer guidance).
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" >
+                      <label class="form-check-label">
+                        Maintain line of sight to high-density user areas when possible.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Confirm minimum spacing of 20–30 feet between APs to avoid channel overlap.
+                      </label>
+                    </li>
+                    <!-- 2nd Sub-cheklist -->
+                    <li>
+                      <div class="d-flex align-items-start">
+                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label" for="check1">
+                            Avoid installing near:
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-1">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                Metal fixtures, Electrical panels, fluorescent lights or HVAC ducts (causes interference).
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                Microwave ovens, cordless phones, or wireless cameras.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Concrete or brick walls (severely attenuate signal).
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- Extending & Testing a Circuit -->
+          <ul class="list-group"> 
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label text-muted" for="check1">
+                    Extending & Testing a Circuit:
+                  </label>
+                  <!-- 2nd Tier -->
+                  <ul class="list-unstyled mt-0">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Ensure cables are supported, protected, and routed above obstructions where feasible.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Terminate Cat6 cable according to T568B standard unless otherwise directed, ensuring proper shielding and insulation.
+                      </label>
+                    </li>   
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Label both ends of each cable clearly and secure with Velcro to prevent damage or strain.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Retest all connections for continuity and performance after termination.
+                      </label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Measure total cable length used and document results for project records.
+                      </label>
+                    </li>   
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Use cable tester to verify proper wire pairing and continuity.
+                      </label>
+                    </li> 
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Measure total cable length used and document results for project records. Confirm device link light is active and that an IP address is assigned.
+                      </label>
+                    </li>   
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Test overall internet and internal network connectivity.
+                      </label>
+                    </li>             
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- Escalation Triggers-->
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label  text-muted" for="check1">
+                    Escalation Triggers:
+                  </label>
+                  <!-- Sub-checklist -->
+                  <ul class="list-unstyled mt-2">
+                    <!-- 2nd Sub-cheklist -->
+                    <li>
+                      <div class="d-flex align-items-start">
+                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                        <div>
+                          <label class="form-check-label" for="check1">
+                            If any of the following occur, escalate to network support or client IT::
+                          </label>
+                          <!-- Sub-checklist -->
+                          <ul class="list-unstyled mt-1">
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                               Circuit is active, but has no assigned IP address.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" >
+                              <label class="form-check-label">
+                                Suspected switch, router, or modem failure.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                VLAN tagging, static routing, or firewall configuration required.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Access denied to admin interface.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Port is active but no DHCP/IP response received.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                Switch or other upstream hardware failure suspected.
+                              </label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label">
+                                VLAN or switch-level configuration changes are required.
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!--<ul class="list-group"> 
             <li class="list-group-item">
               <div class="d-flex align-items-start">
                 <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
@@ -169,72 +412,25 @@
                   <label class="form-check-label text-muted" for="check1">
                     Cabling:
                   </label>
-                  <!-- General -->
                   <ul class="list-unstyled mt-0">
                     <li class="form-check">
                       <input class="form-check-input" type="checkbox">
                       <label class="form-check-label">
-                        Label cables clearly at both ends for easy identification.
+                        abc
                       </label>
                     </li>
                     <li class="form-check">
                       <input class="form-check-input" type="checkbox">
                       <label class="form-check-label">
-                        Photograph cable runs (and length), terminations, port mapping and cable test results for documentation.
+                        123
                       </label>
-                    </li>
-                    <!-- Identify Sources of Interference -->
-                    <li>
-                      <div class="d-flex align-items-start mt-3">
-                        <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
-                        <div>
-                          <label class="form-check-label text-muted" for="check1">
-                            Identify Sources of Interference:
-                          </label>
-                          <!-- Sub-checklist -->
-                          <ul class="list-unstyled mt-0">
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox" >
-                              <label class="form-check-label">
-                                Avoid running cables parallel to power lines or near fluorescent lights. Other sources include bluetooth devices, microwaves, security systems and cordless phones.
-                              </label>
-                            </li>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label">
-                                Avoid nearby APs on same or adjacent channels mindful of co-channel interference.
-                              </label>
-                            </li>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label">
-                                Use non-overlapping 2.4 GHz channels: 1, 6, or 11 
-                              </label>
-                            </li>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label">
-                                Minimize use of 2.4 GHz in dense deployments, utilize 5 GHz if supported.
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  
-                    <!--<li class="form-check">
-                      <input class="form-check-input" type="checkbox" >
-                      <label class="form-check-label">
-                        2
-                      </label>
-                    </li>-->
+                    </li>                  
                   </ul>
                 </div>
               </div>
             </li>
-          </ul>
+          </ul>-->
         </article>
-
       </main>
       <!-- END of WHAT IS A NETWORK? -->
 
