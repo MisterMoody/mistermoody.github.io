@@ -94,6 +94,11 @@
         <ul class="list-group mb-4">
           <li class="list-group-item">
             <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Basic PC Troubleshooting</strong>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
               <strong class="text-muted">Power Supply Diagnostic Checks</strong>
             </div>
           </li>
@@ -109,13 +114,82 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Using the Task Manager</strong>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
               <strong class="text-muted">Using the Command Line</strong>
             </div>
           </li>
         </ul>
         <!-- *********************** -->
 
-        <!-- 1. Power Supply Diagnostic Checks -->
+        
+        <!-- 2. Basic PC Troubleshooting-->
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Basic PC Troubleshooting</strong>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="d-flex align-items-start">
+                <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                <div>
+                  <label class="form-check-label" for="check1">
+                    The absence of any display output could be due to a failure to complete POST (Power-On Self-Test). This could also be a software or firmware problem preventing a proper boot.
+                  </label>
+                  <ul class="list-unstyled mt-1">
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label">
+                        Press <code>F2</code>/<code>F10</code><code>DEL</code> or <code>ESC</code> to enter BIOS setup.
+                      </label>
+                    </li>
+                      <li>
+                        <div class="d-flex align-items-start mt-3">
+                          <input class="form-check-input me-2 mt-1" type="checkbox" id="check1">
+                          <div>
+                            <label class="form-check-label text-muted" for="check1">
+                              abc:
+                            </label>
+                            <ul class="list-unstyled mt-1">
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox" >
+                                <label class="form-check-label">
+                                  NO (Short) Beep(s):  Possible PSU, MB or CPU Failure
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  1 (Long) Beep:  System is Booting Normally (Graphics Card Error)
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  2 Beeps: POST Error (RAM or MB) Failure
+                                </label>
+                              </li>
+                              <li class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                  5 Beeps: CPU Failure
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>
+        
+        <!-- 2. Power Supply Diagnostic Checks -->
         <article class="mb-4">
           <div class="d-flex justify-content-between align-items-center">
             <strong class="text-muted">Power Supply Diagnostic Checks</strong>
@@ -166,7 +240,7 @@
           </ul>
         </article>
 
-        <!-- 2. BIOS / Startup Diagnostic Checks -->
+        <!-- 3. BIOS / Startup Diagnostic Checks -->
         <article class="mb-4">
           <div class="d-flex justify-content-between align-items-center">
             <strong class="text-muted">BIOS / Startup Diagnostic Checks</strong>
@@ -241,7 +315,7 @@
           </ul>
         </article>
 
-        <!-- 3. Hardware Diagnostic Checks -->
+        <!-- 4. Hardware Diagnostic Checks -->
         <article class="mb-4">
           <div class="d-flex justify-content-between align-items-center">
             <strong class="text-muted">Hardware Diagnostic Checks</strong>
@@ -411,6 +485,336 @@
           </ul>
         </article>
 
+        <!-- USING THE TASK MANAGER -->
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Using the Task Manager</strong>
+          </div>
+          <p class="text-start">
+            When troubleshooting a Windows PC that is not running as expected, always begin by using the Task Manager, which is a built-in utility that displays programs, processes and system activity running on a PC while offering some managerial control regarding APP usage.  Hold <code>Ctrl + Shift + ESC</code> to access Task Manager.  You can also right-click the task bar or press WIN key + X, and select it from the menu. By default, the task manager opens in simple view, but you can click the more details module to expand results. Once there, you can select the tab that suits your troubleshooting criteria.
+          </p>
+          <!-- -->
+          <!-- Core Concepts of the Task Manager -->
+          <ul class="list-group">
+            <li class="list-group d-flex align-items-start">
+              <div class="container">
+                <div class="row mb-0">
+                  <div class="col text-center">
+                    <h6 class="text-start text-muted">Core Processes-tab Concepts</h6>
+                  </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="row mb-2">
+                  <div class="col-12 col-md-2 fw-bold bg-light py-2">
+                    CPU
+                  </div>
+                  <div class="col-12 col-md-10 bg-white py-2">
+                    Percentage of available processor capacity currently in use. A high sustained percent means the process is occupying significant compute time.
+                  </div>
+                </div>
+                <!-- Row 3 -->
+                <div class="row mb-2">
+                  <div class="col-12 col-md-2 fw-bold bg-light">
+                    Memory
+                  </div>
+                  <div class="col-12 col-md-10 bg-white">
+                    Working set of RAM the process holds. High memory use reduces free RAM and forces paging if demand exceeds physical memory.
+                  </div>
+                </div>
+                <!-- Row 4 -->
+                <div class="row mb-2">
+                  <div class="col-12 col-md-2 fw-bold bg-light">
+                    Disk
+                  </div>
+                  <div class="col-12 col-md-10 bg-white">
+                    I/O activity (reads/writes). High sustained disk activity or long I/O queues cause slow application response and system-wide lag.
+                  </div>
+                </div>
+                <!-- Row 5 -->
+                <div class="row mb-2">
+                  <div class="col-12 col-md-2 fw-bold bg-light">
+                    Network
+                  </div>
+                  <div class="col-12 col-md-10 bg-white">
+                    Bytes per second being sent/received by the process. Unexpected network traffic can indicate background updates, syncs, or malicious activity.
+                  </div>
+                </div>
+                <!-- Row 6 -->
+                <div class="row mb-2">
+                  <div class="col-12 col-md-2 fw-bold bg-light">
+                    GPU
+                  </div>
+                  <div class="col-12 col-md-10 bg-white">
+                    GPU engine and VRAM consumption for compute tasks. High GPU use affects rendering-heavy applications and hardware-accelerated operations.
+                  </div>
+                </div>
+                <!-- Row 7 -->
+                <div class="row mb-2">
+                  <div class="col-12 col-md-2 fw-bold bg-light">
+                    Process State 
+                  </div>
+                  <div class="col-12 col-md-10 bg-white">
+                    Running, Suspended, Not Responding — indicates if the process is actively scheduled, paused for power savings, or unresponsive.
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- -->
+          
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Core Concepts of the Task Manager</strong>
+            </div>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">
+                The <b>CPU</b> measures the percentage of available processor capacity currently in use. Issues occur whenever there is a high sustained percent that is occupying significant compute time.
+                <ul class="ms-4">
+                  <li><b>Metric Origin:</b>> Measured as the percentage of active execution cycles versus available cycles in the CPU clock schedule.</li>
+                  <li><b>Logical vs Physical Cores:</b> Task Manager distinguishes logical processors (via hyper-threading) but aggregates in the main graph unless split view is enabled.</li>
+                  <li><b>Base Speed vs Current Speed:</b> Shows nominal clock frequency versus actual real-time frequency after dynamic scaling (Intel SpeedStep, AMD Cool'n'Quiet).</li>
+                  <li><b>Uptime:</b> Tracks the continuous run time since last system boot -key for diagnosing hangs versus fresh-start problems.</li>
+                  <li><b>Handles / Threads / Processes:</b> Counts objects in use by the OS; spikes can indicate runaway software or leaks.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                The <b>Memory</b> targets the working set of RAM a process holds. High memory use reduces free RAM and forces paging if demand exceeds physical memory.
+                <ul class="ms-4">
+                  <li><b>Physical Memory Usage:</b> Represents allocated RAM pages versus total available capacity.</li>
+                  <li><b>Committed Memory:</b> Sum of RAM in use and virtual memory reserved in the pagefile -if committed memory exceeds physical RAM, paging will occur.</li>
+                  <li><b>Cached Memory:</b> Pages kept in RAM for quick reuse, available to be freed if needed.</li>
+                  <li><b>Hardware Reserved:</b> Portion of memory mapped for device firmware (e.g., GPU VRAM mapping).</li>
+                  <li><b>Page Faults:</b> When required data is not in RAM and must be loaded from storage -visible indirectly through spikes in disk usage during low RAM conditions.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                The <b>Disk</b> reads/writes I/O activity. High sustained disk activity or long I/O queues cause slow application response and system-wide lag.
+                <ul class="ms-4">
+                  <li><b>Activity Measurement:</b> Reports read/write requests per second and transfer rates, derived from the storage driver queue.</li>
+                  <li><b>Active Time (%):</b> Reflects how busy the storage device is servicing I/O requests -high active time with low throughput indicates latency.</li>
+                  <li><b>Response Time (ms):</b> Average delay per read/write -spikes here can indicate mechanical HDD delay, SSD wear, or driver issues.</li>
+                  <li><b>Disk Queue Length:</b> Shows backlog of pending I/O -persistent high queues indicate a bottleneck.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                The <b>Network</b> demonstrates bytes per second being sent/received by the process. Unexpected network traffic can indicate background updates, syncs, or malicious activity.
+                <ul class="ms-4">
+                  <li><b>Throughput:</b> Measured in Mbps (megabits per second) for send and receive directions.</li>
+                  <li><b>Link Speed:</b> Physical connection speed negotiated with the network adapter (e.g., 1 Gbps).</li>
+                  <li><b>Utilization (%):</b> Current bandwidth usage compared to maximum link speed.</li>
+                  <li><b>Packets Sent/Received:</b> Useful for identifying packet loss patterns or network saturation.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                The <b>GPU</b> highlights the GPU engine and VRAM consumption for compute tasks. High GPU use affects rendering-heavy applications and hardware-accelerated operations.
+                <ul class="ms-4">
+                  <li><b>Workload Types:</b> Split into 3D rendering, video encode/decode, and compute workloads.</li>
+                  <li><b>Dedicated vs Shared Memory:</b> VRAM (dedicated) versus RAM borrowed for graphics tasks (shared).</li>
+                  <li><b>Temperature and Clock Speeds:</b> May be displayed depending on driver support -critical for thermal diagnostics.</li>
+                  <li><b>Engine Usage Graphs:</b> Separate timelines for each GPU engine type to pinpoint which workload is driving GPU load.</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <!-- -->
+          <!-- What is the PROCESSES-Tab -->
+          <h6 class="text-start text-muted">The Processes-tab</h6>
+          <section>
+            <div class="row">
+              <!-- Content -->
+              <div class="col-12 col-lg-6">
+                <p class="text-start">
+                  The Processes tab shows every running program and background task and the real-time resources each consumes. Its role is simple: identify which applications or background processes are consuming the most CPU, memory, disk, network, or GPU so you can locate the source of a performance problem. <i>Utilize this tab when you want to end an unresponsive application and manage resource usage.</i> You can sort columns to quickly pinpoint consistently high usage then right-click unresponsive applications to close them.  You would also look here for suspicious processes with unfamiliar names, which may indicate malware or unwanted software.
+                </p>
+              </div>
+              <!-- Image -->
+              <div class="col-12 col-lg-6">
+                <img src="images/tmprocessestab.jpg" alt="Processes" class="img-fluid">
+              </div>
+            </div>
+          </section>
+          <!-- Using the PROCESSES-tab -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Using the Processes-tab</strong>
+            </div>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">
+                <b>Open the Task Manager</b>:  <code>Ctrl + Shift + ESC.</code>
+              </li>
+              <li class="list-group-item">
+                <b>Sort by Resource</b>:
+                <ul class="ms-4">
+                  <li>Sort by CPU if system is slow.</li>
+                  <li>Sort by Memory if APPs are lagging.</li>
+                  <li>Sort by Disk if file operations are slow.</li>
+                  <li>Sort by Network if Internet activity is slow.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <b>Identify the APP that Consumes the MOST and Notate:</b>
+                <ul class="ms-4">
+                  <li>Process Name</li>
+                  <li>User</li>
+                  <li>Process Type</li>
+                  <li>PID</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <b>Heuristics & Safe Thresholds:</b>
+                <ul class="ms-4">
+                  <li><b>CPU:</b> sustained > 70-80% indicates a bottleneck that needs action. </li>
+                  <li><b>Memory:</b> free RAM below ~15-20% signals memory exhaustion.</li>
+                  <li><b>Disk:</b> sustained near 100% active time or long queue lengths indicates I/O bottleneck.</li>
+                  <li><b>Network:</b> unexpected continuous upload/download requires investigation.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <b>Field Challenge</b>:  Open TM, click 'Processes' and sort by CPU => Open web browser with multiple tabs and watch CPU % rise => Then close browser and observe CPS drop.
+              </li>
+            </ol>
+          </section>
+          <!-- -->
+          <!-- -->
+          <!-- What is the PERFORMANCE-Tab -->
+          <h6 class="text-start text-muted">The Performance-tab</h6>
+          <p class="text-start">
+          <section>
+            <div class="row">
+              <!-- Content -->
+              <div class="col-12 col-lg-6">
+                <p class="text-start">
+                  The Performance tab displays real-time telemetry of system hardware activity and is generally used to observe and confirm  CPU, memory, disk and network usage.  It uses resource graphs to visually identify spikes or sustained high loads to quickly ascertain where is the bottleneck why the system is slow.
+                </p>
+              </div>
+              <!-- Image -->
+              <div class="col-12 col-lg-6">
+                <img src="images/tmperformancetab.jpg" alt="Performance" class="img-fluid">
+              </div>
+            </div>
+          </section>
+          <!-- Using the PERFORMANCE-tab -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Using the PERFORMANCE-tab</strong>
+            </div>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">
+                <b>Open the Task Manager</b>: <code>Ctrl + Shift + ESC.</code>
+              </li>
+              <li class="list-group-item">
+                <b>Select a Cateory</b>: (Make a Selection.)
+              </li>
+              <li class="list-group-item">
+                <b>Observe Live Graphs</b>: Look for spikes or constant high usage.
+              </li>
+              <li class="list-group-item">
+                <b>Match Symptoms to Metrics</b>:
+                <ul class="ms-4">
+                  <li>CPU stuck near 100% → processor is the limit.</li>
+                  <li>Memory almost full → system may slow as it uses the page file.</li>
+                  <li>Disk at 100% active time → storage is the choke point.</li>
+                  <li>Network near maximum speed → bandwidth is saturated.</li>
+                  <li>GPU maxed → graphics processing is the limit.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <b>Field Challenge</b>: Open TM, click 'Performance' => Note CPU usage at idle (<10% expected) => Open a large file/run software update and watch CPU, disk and memory graphs respond.
+              </li>
+            </ol>
+          </section>
+          <!-- -->
+          <!-- -->
+          <!-- What is the STARTUP-Tab -->
+          <h6 class="text-start text-muted">The StartUp-tab</h6>
+          <p class="text-start">
+          <section>
+            <div class="row">
+              <!-- Content -->
+              <div class="col-12 col-lg-6">
+                <p class="text-start">
+                  abc
+                </p>
+              </div>
+              <!-- Image -->
+              <div class="col-12 col-lg-6">
+                <img src="images/tmstartuptab.jpg" alt="Performance" class="img-fluid">
+              </div>
+            </div>
+          <!-- -->
+          <!-- -->
+          <!-- What is the DETAILS-Tab -->
+          <h6 class="text-start text-muted">The Details-tab</h6>
+          <p class="text-start">
+          <section>
+            <div class="row">
+              <!-- Content -->
+              <div class="col-12 col-lg-6">
+                <p class="text-start">
+                  abc
+                </p>
+              </div>
+              <!-- Image -->
+              <div class="col-12 col-lg-6">
+                <img src="images/tmdetails.jpg" alt="Performance" class="img-fluid">
+              </div>
+            </div>
+          </section>
+          </section>
+
+        </article>
+
+
+        
+        <!-- Using the XXXX-tab SAMPLE Step-by-Step Numbered List 
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Using the Processes-tab</strong>
+          </div>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">
+              The absence of any display output could be due to a failure to complete POST (Power-On Self-Test). This could also be a software or firmware problem preventing a proper boot.
+              <ul class="ms-4">
+                <li>Press <code>F2</code>, <code>F10</code>, <code>DEL</code>, or <code>ESC</code> to enter BIOS setup.</li>
+                <li>abc
+                </li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              Verify all cables are securely connected to their respective ports.
+              <ul class="ms-4">
+                <li>Ensure the power cable is firmly seated.</li>
+                <li>Check display cable connections on both ends.</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              3
+              <ul class="ms-4">
+                <li>123</li>
+                <li>abc</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              4
+              <ul class="ms-4">
+                <li>123</li>
+                <li>abc</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              5
+              <ul class="ms-4">
+                <li>123</li>
+                <li>abc</li>
+              </ul>
+            </li>
+          </ol>
+          
+        </article>
+        -->
+
+
+        <!-- -->
         <!-- Utilize the Command Line 
         <article>
         <ul class="list-group mb-2">
