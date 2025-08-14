@@ -487,85 +487,31 @@
 
         <!-- USING THE TASK MANAGER -->
         <article class="mb-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <strong class="text-muted">Using the Task Manager</strong>
-          </div>
-          <p class="text-start">
-            When troubleshooting a Windows PC that is not running as expected, always begin by using the Task Manager, which is a built-in utility that displays programs, processes and system activity running on a PC while offering some managerial control regarding APP usage.  Hold <code>Ctrl + Shift + ESC</code> to access Task Manager.  You can also right-click the task bar or press WIN key + X, and select it from the menu. By default, the task manager opens in simple view, but you can click the more details module to expand results. Once there, you can select the tab that suits your troubleshooting criteria.
-          </p>
-          <!-- -->
-          <!-- Core Concepts of the Task Manager -->
-          <ul class="list-group">
-            <li class="list-group d-flex align-items-start">
-              <div class="container">
-                <div class="row mb-0">
-                  <div class="col text-center">
-                    <h6 class="text-start text-muted">Core Processes-tab Concepts</h6>
-                  </div>
-                </div>
-                <!-- Row 2 -->
-                <div class="row mb-2">
-                  <div class="col-12 col-md-2 fw-bold bg-light py-2">
-                    CPU
-                  </div>
-                  <div class="col-12 col-md-10 bg-white py-2">
-                    Percentage of available processor capacity currently in use. A high sustained percent means the process is occupying significant compute time.
-                  </div>
-                </div>
-                <!-- Row 3 -->
-                <div class="row mb-2">
-                  <div class="col-12 col-md-2 fw-bold bg-light">
-                    Memory
-                  </div>
-                  <div class="col-12 col-md-10 bg-white">
-                    Working set of RAM the process holds. High memory use reduces free RAM and forces paging if demand exceeds physical memory.
-                  </div>
-                </div>
-                <!-- Row 4 -->
-                <div class="row mb-2">
-                  <div class="col-12 col-md-2 fw-bold bg-light">
-                    Disk
-                  </div>
-                  <div class="col-12 col-md-10 bg-white">
-                    I/O activity (reads/writes). High sustained disk activity or long I/O queues cause slow application response and system-wide lag.
-                  </div>
-                </div>
-                <!-- Row 5 -->
-                <div class="row mb-2">
-                  <div class="col-12 col-md-2 fw-bold bg-light">
-                    Network
-                  </div>
-                  <div class="col-12 col-md-10 bg-white">
-                    Bytes per second being sent/received by the process. Unexpected network traffic can indicate background updates, syncs, or malicious activity.
-                  </div>
-                </div>
-                <!-- Row 6 -->
-                <div class="row mb-2">
-                  <div class="col-12 col-md-2 fw-bold bg-light">
-                    GPU
-                  </div>
-                  <div class="col-12 col-md-10 bg-white">
-                    GPU engine and VRAM consumption for compute tasks. High GPU use affects rendering-heavy applications and hardware-accelerated operations.
-                  </div>
-                </div>
-                <!-- Row 7 -->
-                <div class="row mb-2">
-                  <div class="col-12 col-md-2 fw-bold bg-light">
-                    Process State 
-                  </div>
-                  <div class="col-12 col-md-10 bg-white">
-                    Running, Suspended, Not Responding — indicates if the process is actively scheduled, paused for power savings, or unresponsive.
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <!-- -->
-          
-          <section class="mb-4">
+          <section>
             <div class="d-flex justify-content-between align-items-center">
-              <strong class="text-muted">Core Concepts of the Task Manager</strong>
+              <strong class="text-muted">Using the Task Manager</strong>
             </div>
+            <p class="text-start">
+              When troubleshooting a Windows PC that is not running as expected, you can utilize the Task Manager, which is a built-in utility that displays programs, processes and system activity running on a PC while offering some managerial control regarding APP usage.  Hold <code>Ctrl + Shift + ESC</code> to access Task Manager.  You can also right-click the task bar or press WIN key + X, and select it from the menu. By default, the task manager opens in simple view, but you can click the more details module to expand results. Once there, you can select the tab that suits your troubleshooting criteria. Once accessed, you can select from a hand-ful of options that are embedded in individual tabs.  The task manager has seven tabs appropriately labeled processes, performance, app history, startup, users, details and services. This article focuses on four of these objectives (ranked in order of priority) for general PC troubleshooting:
+            </p>
+            <div>
+              <ol class="list-group-numbered">
+                <li class="list-group-item">The <label class="text-muted">Processes-tab</label> shows apps and background tasks using the most resources. Troubleshooters can readily spot high resource usage here.
+                </li>
+                <li class="list-group-item">The <label class="text-muted">Performance-tab</label> gives an overview of hardware health and bottlenecks.
+                </li>
+                <li class="list-group-item">When a PC is slow to startup you can use the <label class="text-muted">Startup-tab</label> to view which programs load automatically at boot.
+                </li>
+                <li class="list-group-item">The <label class="text-muted">Details-tab</label> provides technical detail and advanced control. It is often used when you need to further explore the <label class="text-muted">Processes-tab</label>.
+                </li>
+              </ol>
+            </div>
+          </section>
+          <!-- -->          
+          <section class="mb-4">
+            <p class="text-start">
+              There are several core concepts that troubleshooters must be keep in mind when working with the Processes and Performance tabs, as these are the key variables that will help ascertain and resolve specific PC issues.
+            </p>
             <ol class="list-group list-group-numbered">
               <li class="list-group-item">
                 The <b>CPU</b> measures the percentage of available processor capacity currently in use. Issues occur whenever there is a high sustained percent that is occupying significant compute time.
@@ -614,17 +560,28 @@
                   <li><b>Engine Usage Graphs:</b> Separate timelines for each GPU engine type to pinpoint which workload is driving GPU load.</li>
                 </ul>
               </li>
+              <li class="list-group-item">
+                <b>Heuristics & Safe Thresholds:</b>
+                <ul class="ms-4">
+                  <li><b>CPU:</b> sustained > 70-80% indicates a bottleneck that needs action. </li>
+                  <li><b>Memory:</b> free RAM below ~15-20% signals memory exhaustion.</li>
+                  <li><b>Disk:</b> sustained near 100% active time or long queue lengths indicates I/O bottleneck.</li>
+                  <li><b>Network:</b> unexpected continuous upload/download requires investigation.</li>
+                </ul>
+              </li>
             </ol>
           </section>
           <!-- -->
           <!-- What is the PROCESSES-Tab -->
-          <h6 class="text-start text-muted">The Processes-tab</h6>
           <section>
             <div class="row">
               <!-- Content -->
               <div class="col-12 col-lg-6">
                 <p class="text-start">
-                  The Processes tab shows every running program and background task and the real-time resources each consumes. Its role is simple: identify which applications or background processes are consuming the most CPU, memory, disk, network, or GPU so you can locate the source of a performance problem. <i>Utilize this tab when you want to end an unresponsive application and manage resource usage.</i> You can sort columns to quickly pinpoint consistently high usage then right-click unresponsive applications to close them.  You would also look here for suspicious processes with unfamiliar names, which may indicate malware or unwanted software.
+                  The <b>Processes-tab</b> serves as the primary interface for monitoring and managing running applications and system processes in real-time. This tab presents a user-friendly view of system activity by grouping related processes under recognizable application names and displaying their current resource consumption across CPU, memory, disk, network, and GPU usage. Unlike other Task Manager tabs that focus on historical data or system-wide metrics, the Processes tab provides immediate visibility into which specific programs are actively consuming system resources at any given moment. You can sort columns to quickly pinpoint consistently high usage then right-click unresponsive applications to close them. This makes it the go-to tool for identifying performance bottlenecks, terminating unresponsive applications, and detecting suspicious processes with unfamiliar names that may indicate malware or unwanted software running on the system.
+                </p>
+                <p class="text-start">
+                  Its primary functions include real-time resource monitoring, application management and system analysis.  The first displays current CPU, memory, disk, network, and GPU usage for all running processes, sorts processes by resource consumption to identify the heaviest system users, and updates resource metrics continuously to track changing system conditions. The second ends unresponsive applications that have stopped responding to user input and terminates background processes that are consuming excessive resources. The third identifies unfamiliar processes that may indicate malware, monitors background system activity and processes, tracks resource usage patterns, and verifies which applications are running versus what appears in the system tray.
                 </p>
               </div>
               <!-- Image -->
@@ -632,6 +589,26 @@
                 <img src="images/tmprocessestab.jpg" alt="Processes" class="img-fluid">
               </div>
             </div>
+          </section>
+          <!-- Troubleshooting Applications -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Processes-tab Troubleshooting Applications</strong>
+            </div>
+            <ol class="list-group">
+              <li class="list-group-item">
+                <b>Resolving System Slowdowns</b>: When your computer becomes sluggish or unresponsive, sort processes by CPU or memory usage to immediately identify which applications are consuming the most resources. This reveals whether the slowdown stems from a specific program or multiple processes competing for system resources.
+              </li>
+              <li class="list-group-item">
+                <b>Handling Unresponsive Applications</b>: Right-click programs that freeze or stop responding and select "End task" to force closure when normal shutdown methods fail.
+              </li>
+              <li class="list-group-item">
+                <b>Detecting Suspicious Activity</b>: Examine running processes for unfamiliar names, especially those consuming significant resources or network bandwidth. Legitimate system processes typically have recognizable names and publishers, while malware often uses generic or misleading process names.
+              </li>
+              <li class="list-group-item">
+                <b>Managing System Resources</b>: During resource-intensive activities like gaming or video editing, monitor which background processes are competing for CPU, memory, or disk access. Temporarily close unnecessary applications to free up resources for priority tasks.
+              </li>
+            </ol>
           </section>
           <!-- Using the PROCESSES-tab -->
           <section class="mb-4">
@@ -661,15 +638,6 @@
                 </ul>
               </li>
               <li class="list-group-item">
-                <b>Heuristics & Safe Thresholds:</b>
-                <ul class="ms-4">
-                  <li><b>CPU:</b> sustained > 70-80% indicates a bottleneck that needs action. </li>
-                  <li><b>Memory:</b> free RAM below ~15-20% signals memory exhaustion.</li>
-                  <li><b>Disk:</b> sustained near 100% active time or long queue lengths indicates I/O bottleneck.</li>
-                  <li><b>Network:</b> unexpected continuous upload/download requires investigation.</li>
-                </ul>
-              </li>
-              <li class="list-group-item">
                 <b>Field Challenge</b>:  Open TM, click 'Processes' and sort by CPU => Open web browser with multiple tabs and watch CPU % rise => Then close browser and observe CPS drop.
               </li>
             </ol>
@@ -677,14 +645,18 @@
           <!-- -->
           <!-- -->
           <!-- What is the PERFORMANCE-Tab -->
-          <h6 class="text-start text-muted">The Performance-tab</h6>
-          <p class="text-start">
           <section>
             <div class="row">
               <!-- Content -->
               <div class="col-12 col-lg-6">
                 <p class="text-start">
-                  The Performance tab displays real-time telemetry of system hardware activity and is generally used to observe and confirm  CPU, memory, disk and network usage.  It uses resource graphs to visually identify spikes or sustained high loads to quickly ascertain where is the bottleneck why the system is slow.
+                  The <b>Performance-tab</b> provides real-time monitoring and historical graphs of system resources, making it essential for diagnosing hardware bottlenecks and performance issues. Unlike the Processes tab which shows individual applications, the Performance tab reveals overall system health and resource availability. 
+                </p>
+                <p class="text-start">
+                  The graphs display utilization percentages over time rather than absolute capacity, providing context for performance patterns with chart updates in intervals per second. This historical view helps distinguish between temporary spikes and sustained resource pressure that requires intervention.
+                </p>
+                <p class="text-start">
+                  The Performance-tab has two primary functions.  The first is hardware monitoring, providing real-time data on CPU, memory, disk and network resource usage, allowing troubleshooters to identify which hardware component is creating system bottlenecks.  The second function provides system analysis, confirming hardware specifications, detecting background activity (i.e. downloads), and verifying how specific workloads impact different resources.
                 </p>
               </div>
               <!-- Image -->
@@ -692,6 +664,23 @@
                 <img src="images/tmperformancetab.jpg" alt="Performance" class="img-fluid">
               </div>
             </div>
+          </section>
+          <!-- Troubleshooting Applications -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Performance-tab Troubleshooting Applications</strong>
+            </div>
+            <ol class="list-group">
+              <li class="list-group-item">
+                <b>Diagnosing Slowdowns</b>: When your PC becomes sluggish, the Performance tab quickly reveals which resource has reached capacity. Look for components showing sustained high usage (80%+ utilization) or frequent spikes to maximum levels.
+              </li>
+              <li class="list-group-item">
+                <b>Testing Application Impact</b>: Launch programs while monitoring the Performance tab to observe resource consumption patterns. This helps identify whether applications are CPU-intensive, memory-hungry, or demanding on storage systems.
+              </li>
+              <li class="list-group-item">
+                <b>Monitoring Heavy Operations</b>: During resource-intensive tasks like gaming, video editing, or large file transfers, the Performance tab shows real-time impact and helps determine if hardware upgrades are needed.
+              </li>
+            </ol>
           </section>
           <!-- Using the PERFORMANCE-tab -->
           <section class="mb-4">
@@ -703,19 +692,47 @@
                 <b>Open the Task Manager</b>: <code>Ctrl + Shift + ESC.</code>
               </li>
               <li class="list-group-item">
-                <b>Select a Cateory</b>: (Make a Selection.)
+                <b>Select a Cateory</b>: (Make a Selection, observe live graphs and look for spikes or constant high usage.)
               </li>
               <li class="list-group-item">
-                <b>Observe Live Graphs</b>: Look for spikes or constant high usage.
+                Use <b>CPU</b> to visualize utilization %, logical processors, threads and base speed versus actual speed. You can test CPU by:
+                <ul class="ms-4">
+                  <li><label class="text-muted">Forcing a Spike</label> using the command prompt: <code>for /l %x in (1, 1, 50000) do @echo %x >nul</code></li>
+                  <li><label class="text-muted">Prove Dynamic Scaling</label> by watching CPU speed drop to base speed when idle, then spike higher when you start a heavy app (i.e. 7-Zip benchmark).</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                Use <b>Memory</b> to view committed, cached and reserved hardware in-use. You can test Memory by:
+                <ul class="ms-4">
+                  <li><label class="text-muted">Commit Pressure</label>:  Open multiple large browser tabs (YouTube 1080p videos on loop) until committed memory approaches or exceeds physical RAM — watch disk activity as paging begins.</li>
+                  <li><label class="text-muted">Cache Verification</label>: Open a large folder in Explorer (with many thumbnails). Close it. Reopen — notice much faster load due to cached data in RAM.</li>
+                  <li><label class="text-muted">Hardware Reserve Check</label>: Compare installed vs usable RAM in System Information. Hardware reserved stays constant regardless of load.</li>
+                  <li><label class="text-muted">123</label> abc</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                Use <b>Network</b> to visualize utilization %, link speed, throughput and packets. You can test Network by:
+                <ul class="ms-4">
+                  <li><label class="text-muted">Max-Link Saturation</label>: Download a large file from a fast mirror (e.g., Microsoft ISO download) and compare measured Mbps to your ISP's plan.</li>
+                  <li><label class="text-muted">Test Latency</label>: use the command prompt <code>ping 8.8.8.8 -t</code>.</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                Use <b>GPU</b> to see engine load, VRAM usage and dedicated vs. Shared memory. You can test GPU by:
+                <ul class="ms-4">
+                  <li><label class="text-muted">3-D Load</label>: Run Windows built-in “win+G” Xbox Game Bar performance overlay while launching a 3D game or GPU stress tool like FurMark.</li>
+                  <li><label class="text-muted">Video Decode</label>: Open multiple high-res videos in VLC or Chrome. Video Decode engine usage will rise.</li>
+                  <li><label class="text-muted">Shared Memory Usage</label>: On an integrated GPU system, run a 3D app with VRAM-hungry textures, then watch shared GPU memory rise as VRAM maxes.</li>
+                </ul>
               </li>
               <li class="list-group-item">
                 <b>Match Symptoms to Metrics</b>:
                 <ul class="ms-4">
-                  <li>CPU stuck near 100% → processor is the limit.</li>
-                  <li>Memory almost full → system may slow as it uses the page file.</li>
-                  <li>Disk at 100% active time → storage is the choke point.</li>
-                  <li>Network near maximum speed → bandwidth is saturated.</li>
-                  <li>GPU maxed → graphics processing is the limit.</li>
+                  <li>CPU stuck near 100% => processor is the limit.</li>
+                  <li>Memory almost full => system may slow as it uses the page file.</li>
+                  <li>Disk at 100% active time => storage is the choke point.</li>
+                  <li>Network near maximum speed => bandwidth is saturated.</li>
+                  <li>GPU maxed => graphics processing is the limit.</li>
                 </ul>
               </li>
               <li class="list-group-item">
@@ -726,14 +743,15 @@
           <!-- -->
           <!-- -->
           <!-- What is the STARTUP-Tab -->
-          <h6 class="text-start text-muted">The StartUp-tab</h6>
-          <p class="text-start">
-          <section>
+          <section class="mb-4">
             <div class="row">
               <!-- Content -->
               <div class="col-12 col-lg-6">
                 <p class="text-start">
-                  abc
+                  The <b>Startup-tab</b> manages which programs automatically launch when Windows boots, directly impacting system startup time and available resources after login. This tab provides control over startup behavior and measures each program's impact on boot performance. Startup impact ratings reflect actual boot performance data rather than theoretical assessments, providing reliable guidance for optimization decisions.
+                </p>
+                <p class="text-start">
+                  The Startup-tab has two primary functions.  The first is startup program management which allows troubleshooters to view all programs configured to run at Windows startup, enable or disable startup programs without uninstalling them and monitor startup impact ratings (High, Medium, Low, None).  The second function analyzes boot performance, which allows you to measure startup impact based on CPU usage and disk activity during boot, identify programs that significantly delay system readiness, review publisher information, and access program file locations for further investigation.
                 </p>
               </div>
               <!-- Image -->
@@ -741,25 +759,124 @@
                 <img src="images/tmstartuptab.jpg" alt="Performance" class="img-fluid">
               </div>
             </div>
+          </section>
+          <!-- Troubleshooting Applications -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Startup-Tab Troubleshooting Applications</strong>
+            </div>
+            <ol class="list-group">
+              <li class="list-group-item">
+                <b>Resolving Slow Boot Times</b>: When Windows takes excessive time to start, examine programs with "High" startup impact ratings. Disable non-essential applications that consume significant boot resources, particularly those from unfamiliar publishers or programs you rarely use.
+              </li>
+              <li class="list-group-item">
+                <b>Testing Application Impact</b>: Launch programs while monitoring the Performance tab to observe resource consumption patterns. This helps identify whether applications are CPU-intensive, memory-hungry, or demanding on storage systems.
+              </li>
+              <li class="list-group-item">
+                <b>Improving Post-Login Responsiveness</b>: Disable unnecessary applications to free up memory and CPU resources, allowing priority programs to run more efficiently.
+              </li>
+              <li class="list-group-item">
+                <b>Identify Unwanted Software</b>: Look for unfamiliar programs, especially those lacking publisher information or with suspicious names, which could indicate adware or potentially unwanted programs.
+              </li>
+              <li class="list-group-item">
+                <b>Managing System Resources</b>: By controlling startup programs, you can reserve system resources for applications you actively use rather than background processes that provide minimal benefit but consume memory and processing power continuously.
+              </li>
+            </ol>
+          </section>
+          <!-- Using the STARTUP-tab -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Using the STARTUP-tab</strong>
+            </div>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">
+                <b>Open the Task Manager</b>: <code>Ctrl + Shift + ESC.</code>
+              </li>
+              <li class="list-group-item">
+                Review Program List with Name (application or process), Publisher (source/vendor), Status (Enabled/Disabled), and Startup Impact (resource load rating).
+              </li>
+              <li class="list-group-item">
+                Right-click to enable or disable a program.
+              </li>
+              <li class="list-group-item">
+                Restart PC to apply changes.
+              </li>
+              <li class="list-group-item">
+                <b>Field Challenge</b>: Open TM, click Startup => Disable a non-essential program (e.g., Spotify or Zoom auto-start) by right-clicking and choosing Disable. => Restart your PC and time how much faster it becomes usable.
+              </li>
+            </ol>
+          </section>
           <!-- -->
           <!-- -->
           <!-- What is the DETAILS-Tab -->
-          <h6 class="text-start text-muted">The Details-tab</h6>
-          <p class="text-start">
           <section>
             <div class="row">
               <!-- Content -->
               <div class="col-12 col-lg-6">
                 <p class="text-start">
-                  abc
+                  The <b>Details-tab</b>> serves as the technical foundation of Task Manager, providing comprehensive information about every running process with their actual executable names, process IDs, and detailed resource metrics. Unlike the user-friendly Processes tab which groups applications for easy identification, the Details tab reveals the raw technical reality of system operations, showing individual processes as they actually exist in memory. This granular view exposes system services running under generic names like svchost.exe, displays process relationships and dependencies, and provides administrative-level control over process behavior. 
+                </p>
+                <p class="text-start">
+                  The Details-tab has three primary functions: advanced process analysis, technical process management, and system investigation. The first views all processes by their actual executable names (i.e. chrome.exe, svchost.exe), accesses detailed process information including Process ID (PID) and process architecture, monitors resource consumption with precise CPU, memory, and I/O usage metrics, and examines process relationships through process hierarchies. The second ends processes with administrative control, sets process priority levels to influence CPU scheduling, sets processor affinity to restrict processes to specific CPU cores, and creates memory dumps for advanced debugging and analysis.  The third identifies processes by publisher verification, locates suspicious or unsigned executables that may indicate malware, tracks process command line arguments and file locations, and monitors system services.
                 </p>
               </div>
               <!-- Image -->
               <div class="col-12 col-lg-6">
-                <img src="images/tmdetails.jpg" alt="Performance" class="img-fluid">
+                <img src="images/tmdetails.jpg" alt="Details" class="img-fluid">
               </div>
             </div>
           </section>
+          <!-- Troubleshooting Applications -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Details-Tab Troubleshooting Applications</strong>
+            </div>
+            <ol class="list-group">
+              <li class="list-group-item">
+                <b>Malware Detection and Analysis</b>: Reveals actual executable names and file locations that malicious software often disguises. Examine unsigned processes, suspicious file paths, or processes with unusual names that don't match legitimate system components.
+              </li>
+              <li class="list-group-item">
+                <b>Resolving Process-Related Issues</b>: For applications that won't close properly or system processes consuming excessive resources, the Details tab provides precise process control. End specific processes by PID when standard application termination fails, or terminate entire process trees to stop stubborn programs completely.
+              </li>
+              <li class="list-group-item">
+                <b>Resolving Process-Related Issues</b>: For applications that won't close properly or system processes consuming excessive resources, the Details tab provides precise process control. End specific processes by PID when standard application termination fails, or terminate entire process trees to stop stubborn programs completely.
+              </li>
+              <li class="list-group-item">
+                <b>Performance Optimization</b>: Adjust process priorities for critical applications that need more CPU time, or set processor affinity to isolate resource-intensive processes to specific cores. This prevents important system processes from being overwhelmed by demanding applications.
+              </li>
+              <li class="list-group-item">
+                <b>System Service Troubleshooting</b>: Identify which services are consuming system resources by examining their underlying executable files. Many Windows services run under generic process names like svchost.exe, but the Details tab reveals their specific functions and resource usage patterns.
+              </li>
+            </ol>
+          </section>
+          <!-- Using the DETAILS-tab -->
+          <section class="mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="text-muted">Using the DETAILS-tab</strong>
+            </div>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">
+                <b>Open the Task Manager</b>: <code>Ctrl + Shift + ESC.</code>
+              </li>
+              <li class="list-group-item">
+                Review Program List with:
+                <ul class="ms-4">
+                  <li>Name (application or process).</li>
+                  <li>Publisher (source/vendor).</li>
+                  <li>Status (Enabled/Disabled).</li>
+                  <li>Startup Impact (resource load rating).</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                Right-click to enable or disable a program.
+              </li>
+              <li class="list-group-item">
+                Restart PC to apply changes.
+              </li>
+              <li class="list-group-item">
+                <b>Field Challenge</b>: Open TM, click Details => Note the PID of your browser (sort by Name), and end that process.  Optional: Right-click a process, set priority to "High" and observe faster responsiveness.
+              </li>
+            </ol>
           </section>
 
         </article>
