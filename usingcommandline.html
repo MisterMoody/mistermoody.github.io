@@ -67,7 +67,7 @@
   <body> 
     <!-- ************************ -->  
     <!-- ****CONTAINER WRAPPER*** -->
-    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column corner-ribbon">
       
       <!-- NAVIGATION Header -->
       <header class="mx-auto d-block">
@@ -82,41 +82,112 @@
       </div>
       </header>
       <!-- END of NAV HEADER -->
-      
+
       <!-- USING the COMMAND LINE -->
       <main class="container py-4">
-        <h1>Using the Command Line</h1>
-        <p class="text-start">
-          The command line is a text-based interface that allows direct communication with an operating system through typed commands rather than graphical elements like windows and icons. Users input specific text strings that the system interprets as instructions to execute programs, manipulate files, configure settings, or retrieve information. Each command follows a structured syntax consisting of the command name followed by optional parameters and arguments that modify its behavior. This interface provides immediate access to system functions without the overhead of graphical user interfaces, enabling precise control over operations, automation through scripting, and access to tools that may not have graphical equivalents.
-        </p>
-                    <div class="container mt-4">
-                      <div class="row fw-bold bg-light py-2 border">
-                        <div class="col-4">Action</div>
-                        <div class="col-8">Command</div>
-                      </div>
-                      <div class="row py-2 border-bottom">
-                        <div class="col-4"><strong>Ethernet Speed</strong></div>
-                        <div class="col-8">Run <code>ncpa.cpl</code><br>Right-click Network Adapter > Status > Details</div>
-                      </div>
-                      <div class="row py-2 border-bottom">
-                        <div class="col-4"><strong>Configure NIC Card</strong></div>
-                        <div class="col-8">Run <code>devmgmt.msc</code><br>Expand Network Adapters  >  Right-click your network adapter  >  select Properties >  Enter Advanced tab  >  Speed & Duplex  >  Auto Negotiation or Auto  >  OK, reboot</div>
-                      </div>
-                      <div class="row py-2 border-bottom">
-                        <div class="col-4"><strong>NIC Capability</strong></div>
-                        <div class="col-8">Run <code>wmic nic where (NetEnabled=true) get Name,Speed</code></div>
-                      </div>
-                      <div class="row py-2 border-bottom">
-                        <div class="col-4"><strong>Toggle Firewall</strong></div>
-                        <div class="col-8">Run <code>control firewall.cpl</code></div>
-                      </div>
-                    </div>
-        <!-- -->
+        <!-- 1. Command Line Detailed-->
+        <article class="mb-4">
+          <h1>Using the Command Line</h1>
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Introduction</strong>
+          </div>
+          <p class="text-start">
+            The command line is an essential tool for systematic PC troubleshooting. It is a text-based interface that allows direct communication with Windows OS to diagnose and repair PC issues.  Unlike the Task Manager that provides graphical elements to visualize problems, the CLI uses commands that follow a structured syntax consisting of the command name followed by optional parameters and arguments the system interprets as instructions that modify its behavior.                
+          </p>
+          <p class="text-start">
+            At the most fundamental level, a Layer 1 technician's use of the command line is rooted in the need to validate whether a physical pathway can actually carry usable traffic. The concepts at play begin with link state, the confirmation that a network interface card (NIC) is detecting signal on the wire, since a lit port LED alone is not sufficient proof. From there, the technician must verify addressing, whether through DHCP lease assignment or manual static configuration, because the presence or absence of an IP reveals if Layer 2 frames are making it to a DHCP server or peer device. Once an address is in place, packet flow can be tested with simple tools like ping, which confirms not only transmission and reception but also the integrity of the path across the immediate cable and switch segment.
+          </p>
+          <p class="text-start">
+            Equally important are local validation mechanisms such as loopback testing, which isolates the NIC and TCP/IP stack from external dependencies, and resolution and table states, including ARP and routing entries, which can either confirm or obscure whether a physical link is working as intended. The overarching concept is fault domain isolation: separating the potential points of failure into clear categories -NIC vs. port, port vs. cable, local stack vs. remote device. The command line is not being used here to solve higher-level routing or application problems but to establish, in an unambiguous and methodical way, whether the wire, the port, and the interface are capable of basic communication. The commands below help prove whether the port, cable, and interface are physically passing signal.
+          </p>
+        </article>
+
+        <!-- 2. Common Uses of the Command Line -->
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Common Uses of the Command Line</strong>
+          </div>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">
+              <b>Verify NIC configuration</b> -check if the interface has an IP, subnet mask, gateway.
+            </li>
+            <li class="list-group-item">
+              <b>Manually Assign/Test IP</b> -confirm port responsiveness by setting a static IP.
+            </li>
+            <li class="list-group-item">
+              <b>Ping Test</b> -confirm basic reachability across the cable path.
+            </li>
+            <li class="list-group-item">
+              <b>Loopback Test</b> -verify the NIC and TCP/IP stack are functional.
+            </li>
+            <li class="list-group-item">
+              <b>Check Link State</b> -ascertain if interface is up or down.
+            </li>
+            <li class="list-group-item">
+              <b>Flush/Renew DHCP Lease</b> -validate if the switch or modem is passing an IP.
+            </li>
+            <li class="list-group-item">
+              <b>Check ARP/Route Tables</b> -remove stale entries that mask physical connectivity results.
+            </li>
+          </ol>
+          
+        </article>
+        
+        <!-- 3. -->
+        <article class="mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Article Contents</strong>
+            <p class="text-start">
+              Layer 1 Smart Hands Command-Line Workflow
+              a. Utility commands
+              b. CMDs to Access Task Manager
+              c. CMDs to Access System Tools
+              d. CMDs to for System Maintenance 
+            </p>
+            <p class="text-start">
+              <i>See Using the Command Line.doc</i>
+            </p>
+            <p class="text-start">
+              Troubleshooting Guide:
+              1. General PC Troubleshooting
+              2. Network and Connectivity
+              3. Hardware Troubleshooting
+              4. System & Startup Troubleshooting
+              5. Software and Application Troubleshooting
+            </p>
+            <p class="text-start">
+              # Troubleshooting guides deserve independent articles => #2 can be added to this article => #1/#3 can be added to #1 (which has its own article 'PC Troubleshooting') => #4/#5 can be combined and MAYBE ADDED TO #1 
+            </p>
+          </div>
+          </article>
+        <!-- ACTION / CLI COMMAND TABLE -->
+        <div class="container mt-4">
+          <div class="row fw-bold bg-light py-2 border">
+            <div class="col-4">Action</div>
+            <div class="col-8">Command</div>
+          </div>
+          <div class="row py-2 border-bottom ">
+            <div class="col-4"><strong>Ethernet Speed</strong></div>
+            <div class="col-8">Run <code>ncpa.cpl</code><br>Right-click Network Adapter > Status > Details</div>
+          </div>
+          <div class="row py-2 border-bottom">
+            <div class="col-4"><strong>Configure NIC Card</strong></div>
+            <div class="col-8">Run <code>devmgmt.msc</code><br>Expand Network Adapters  >  Right-click your network adapter  >  select Properties >  Enter Advanced tab  >  Speed & Duplex  >  Auto Negotiation or Auto  >  OK, reboot</div>
+          </div>
+          <div class="row py-2 border-bottom">
+            <div class="col-4"><strong>NIC Capability</strong></div>
+            <div class="col-8">Run <code>wmic nic where (NetEnabled=true) get Name,Speed</code></div>
+          </div>
+          <div class="row py-2 border-bottom">
+            <div class="col-4"><strong>Toggle Firewall</strong></div>
+            <div class="col-8">Run <code>control firewall.cpl</code></div>
+          </div>
+        </div>
+        <!-- -->  
       </main>
       <!-- END of USING the COMMAND LINE -->
-
     </div>
-    <!-- *****END of CONTAINER WRAPPER***** -->  
+    <!-- *****END of CONTAINER WRAPPER***** --> 
 
     <!-- FOOTER -->
     <footer>
