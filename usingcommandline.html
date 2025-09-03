@@ -85,7 +85,7 @@
 
       <!-- USING the COMMAND LINE -->
       <main class="container py-4">
-        <!-- 1. Command Line Detailed-->
+        <!-- 1. Introduction / CLI Usage Explained -->
         <article class="mb-4">
           <h1>Using the Command Line</h1>
           <div class="d-flex justify-content-between align-items-center">
@@ -98,91 +98,795 @@
             At the most fundamental level, a Layer 1 technician's use of the command line is rooted in the need to validate whether a physical pathway can actually carry usable traffic. The concepts at play begin with link state, the confirmation that a network interface card (NIC) is detecting signal on the wire, since a lit port LED alone is not sufficient proof. From there, the technician must verify addressing, whether through DHCP lease assignment or manual static configuration, because the presence or absence of an IP reveals if Layer 2 frames are making it to a DHCP server or peer device. Once an address is in place, packet flow can be tested with simple tools like ping, which confirms not only transmission and reception but also the integrity of the path across the immediate cable and switch segment.
           </p>
           <p class="text-start">
-            Equally important are local validation mechanisms such as loopback testing, which isolates the NIC and TCP/IP stack from external dependencies, and resolution and table states, including ARP and routing entries, which can either confirm or obscure whether a physical link is working as intended. The overarching concept is fault domain isolation: separating the potential points of failure into clear categories -NIC vs. port, port vs. cable, local stack vs. remote device. The command line is not being used here to solve higher-level routing or application problems but to establish, in an unambiguous and methodical way, whether the wire, the port, and the interface are capable of basic communication. The commands below help prove whether the port, cable, and interface are physically passing signal.
+            Equally important are local validation mechanisms such as loopback testing, which isolates the NIC and TCP/IP stack from external dependencies, and resolution and table states, including ARP and routing entries, which can either confirm or obscure whether a physical link is working as intended. The overarching concept is fault domain isolation: separating the potential points of failure into clear categories -NIC config vs. port, port vs. cable, local stack vs. remote device. The command line is not being used here to solve higher-level routing or application problems but to establish, in an unambiguous and methodical way, whether the wire, the port, and the interface are capable of basic communication. The commands help prove whether the port, cable, and interface are physically passing signal. Whenever troubleshooting, adhere to the following best practices:
           </p>
+          <div>
+            <ol class="list-group-numbered">
+              <li class="list-group-item">Test Ethernet cable, and ensure power cables and ports are investigated prior to testing
+              </li>
+              <li class="list-group-item">Always run Command Prompt as 'Administrator'
+              </li>
+              <li class="list-group-item">Create backups before making changes
+              </li>
+              <li class="list-group-item">
+                System restore points should be created regularly during normal operation
+              </li>
+              <li class="list-group-item">Restart the computer between major troubleshooting steps
+              </li>
+              <li class="list-group-item">Document all commands used for future reference
+              </li>
+              <li class="list-group-item">Document error messages exactly as they appear
+              </li>
+            </ol>
+          </div>
         </article>
 
-        <!-- 2. Common Uses of the Command Line -->
+        
+        <!-- 2. General PC Troubleshooting -->
         <article class="mb-4">
           <div class="d-flex justify-content-between align-items-center">
-            <strong class="text-muted">Common Uses of the Command Line</strong>
+            <strong class="text-muted">General PC Troubleshooting</strong>
           </div>
+          <p class="text-start">
+            When your computer has problems, built-in command tools can quickly fix common issues. Slow PC performance can be resolved by checking memory usage and scanning for disk errors. Printer connection problems often fix themselves by restarting the print service and testing network communication. No sound? Windows includes automated troubleshooters that detect and repair audio issues. Keyboard, mouse, or display problems typically resolve by restarting specific services and updating drivers. These simple diagnostic steps solve most everyday computer issues without expensive service calls.
+          </p>
           <ol class="list-group list-group-numbered">
-            <li class="list-group-item">
-              <b>Verify NIC configuration</b> -check if the interface has an IP, subnet mask, gateway.
+            <!-- Utility Commands -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Utility Commands</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    List Directories
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>dir</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display DIR Pathways
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>tree</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Change Directories
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>cd.. </code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display Help Info
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>help</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Close Command Prompt
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>exit</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display HTML File Contents
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>type (filename.html)</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Print Spooler
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop spooler</code> -> <code>net start spooler</code>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="list-group-item">
-              <b>Manually Assign/Test IP</b> -confirm port responsiveness by setting a static IP.
+            <!-- Slow Running PC -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Slow Running PC</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Running Processes
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>tasklist</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    End Processes
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>taskkill /programname.exe /f</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Disk Usage
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>dir C:\</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Scan for Disk Errors
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>chkdsk C: /f</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Check System Files
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>sfc /scannow</code>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="list-group-item">
-              <b>Ping Test</b> -confirm basic reachability across the cable path.
+            <!-- Printer Connectivity Issues -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Printer Connectivity Issues</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    View Printer Details
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>devmgmt.msc</code> (Right-click Printers > Properties > Details > Physical Device Object Name)
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Firewall Settings
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>firewall.cpl </code> (Allow File/Printer Sharing)
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Test Printer Connection
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>ping [printer-ip-address]</code>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>telnet [new-printer-IP] 9100</code>
+                  </div>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Printer IP Config
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>arp -a</code> (Look for MAC Address)
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Add Printer IP Address
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>control printers</code> (Add Printer -> TCP/IP address)
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Print Spooler
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop spooler</code> -> <code>net start spooler</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Clear Print Queue
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop spooler
+			del %systemroot%\System32\spool\printers\*.*</code>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="list-group-item">
-              <b>Loopback Test</b> -verify the NIC and TCP/IP stack are functional.
+            <!-- Audio Issues (No Sound) -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Audio Issues (No Sound)</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Run Audio T/S
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>msdt.exe -id AudioPlaybackDiagnostic</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Restart Audio Services
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop audiosrv</code> -> <code>net start audiosrv</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Update Audio Drivers
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>devmgmt.msc</code>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="list-group-item">
-              <b>Check Link State</b> -ascertain if interface is up or down.
+            <!-- Keyboard & Mouse Issues -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Keyboard & Mouse Issues</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Restart HID Services
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop hidserv</code> -> <code>net start hidserv</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Update Device Drivers
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>devmgmt.msc</code>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="list-group-item">
-              <b>Flush/Renew DHCP Lease</b> -validate if the switch or modem is passing an IP.
-            </li>
-            <li class="list-group-item">
-              <b>Check ARP/Route Tables</b> -remove stale entries that mask physical connectivity results.
+            <!-- Display/Resolution Issues -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Display/Resolution Issues</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Display Settings
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>desk.cpl</code> (Select 'Detect')
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Update Graphics Driver
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>devmgmt.msc</code> (Select 'Display Adapters')
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Run DX Diagnostic Tool
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>dxdiag</code> (Select 'Display')
+                  </div>
+                </div>
+              </div>
             </li>
           </ol>
-          
         </article>
-        
-        <!-- 3. -->
+
+        <!-- 2. Advanced PC Troubleshooting -->
         <article class="mb-4">
           <div class="d-flex justify-content-between align-items-center">
-            <strong class="text-muted">Article Contents</strong>
-            <p class="text-start">
-              Layer 1 Smart Hands Command-Line Workflow
-              a. Utility commands
-              b. CMDs to Access Task Manager
-              c. CMDs to Access System Tools
-              d. CMDs to for System Maintenance 
-            </p>
-            <p class="text-start">
-              <i>See Using the Command Line.doc</i>
-            </p>
-            <p class="text-start">
-              Troubleshooting Guide:
-              1. General PC Troubleshooting
-              2. Network and Connectivity
-              3. Hardware Troubleshooting
-              4. System & Startup Troubleshooting
-              5. Software and Application Troubleshooting
-            </p>
-            <p class="text-start">
-              # Troubleshooting guides deserve independent articles => #2 can be added to this article => #1/#3 can be added to #1 (which has its own article 'PC Troubleshooting') => #4/#5 can be combined and MAYBE ADDED TO #1 
-            </p>
+            <strong class="text-muted">Advanced PC Troubleshooting</strong>
           </div>
-          </article>
-        <!-- ACTION / CLI COMMAND TABLE -->
-        <div class="container mt-4">
-          <div class="row fw-bold bg-light py-2 border">
-            <div class="col-4">Action</div>
-            <div class="col-8">Command</div>
+          <p class="text-start">
+            Critical system failures require advanced diagnostic tools beyond basic troubleshooting. Commands like bootrec /rebuildbcd, bcdedit /enum, and safe mode through msconfig can repair damaged boot configurations and startup problems. Windows Update failures often need cache clearing via service stops and automated troubleshooters. System restore using rstrui.exe provides rollback options for severe corruption, while hardware diagnostics through chkdsk /f /r and SMART status checks identify failing components before complete system failure. Event Viewer and advanced system tools like eventvwr.msc and systeminfo reveal configuration conflicts and hardware issues that prevent normal operation.Retry
+          </p>
+          <ol class="list-group list-group-numbered">
+            <!-- System Tools -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>System Tools</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display Logged-In User
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>whoami</code> or <code>hostname</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    User Credentials
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>cmdkey /list</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Windows Version Info
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>winver</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Windows Update Check
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>wuauclt /detectnow</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Verify Software Auth
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>sigverif.exe</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display PC Config
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>systeminfo</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch System Info
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>msinfo32</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch System Config
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>msconfig</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch System Restore
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>rstrui.exe</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch Device Manager
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>devmgmt.msc</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch Disk Manager
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>diskmgmt.msc</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch Services Console
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>services.msc</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch Event Viewer
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>eventvwr.msc</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch Performance Monitor
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>perfmon.msc</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Launch Resource Monitor
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>resmon.exe</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display Run Processes
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>tasklist</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    End Processes
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>taskkill /programname.exe /f</code>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Booting Issues -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Booting Issues</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Try Safe Mode Boot
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>msconfig</code> (Select 'Safe Boot' under Boot options)
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Hard Drive
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>chkdsk C: /f /r</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    System Restore
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>rstrui.exe</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Use Startup Repair
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>bootrec /scanos</code>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>bootrec /rebuildbcd</code>
+                  </div>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Boot Config
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>bcdedit /enum</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Repair Boot Files
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>sfc /scannow /offbootdir=C:\ /offwindir=C:\Windows</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Print Spooler
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop spooler</code> -> <code>net start spooler</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Clear Print Queue
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop spooler
+			del %systemroot%\System32\spool\printers\*.*</code>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Windows Update Failures -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Windows Update Failures</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Clear Update Cache
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net stop wuauserv</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light"></div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>rd /s /q C:\Windows\SoftwareDistribution</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light"></div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>net start wuauserv</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Run Windows Update T/S
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>msdt.exe -id WindowsUpdateDiagnostic</code>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- System Restore & Recovery -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>System Restore & Recovery</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    System Restore Status
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>vssadmin list shadows</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Enable System Protection
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>sysdm.cpl</code> (Configure to Turn On)
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Run System Restore
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>rstrui.exe</code>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Hardware Concerns -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Hardware Concerns</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Disk Health
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>chkdsk C: /f /r</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Run System File Check
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>sfc /scannow</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Disk Space
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>dir C:\</code> (Ensure 15% free space)
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Run System File Check
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>sfc /scannow</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Check SMART Status
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>wmic diskdrive get status</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Logs for Errors
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>eventvwr.msc</code>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </article>
+
+        <!-- 3. Network Troubleshooting -->
+        <article class="mb-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Network Troubleshooting</strong>
           </div>
-          <div class="row py-2 border-bottom ">
-            <div class="col-4"><strong>Ethernet Speed</strong></div>
-            <div class="col-8">Run <code>ncpa.cpl</code><br>Right-click Network Adapter > Status > Details</div>
-          </div>
-          <div class="row py-2 border-bottom">
-            <div class="col-4"><strong>Configure NIC Card</strong></div>
-            <div class="col-8">Run <code>devmgmt.msc</code><br>Expand Network Adapters  >  Right-click your network adapter  >  select Properties >  Enter Advanced tab  >  Speed & Duplex  >  Auto Negotiation or Auto  >  OK, reboot</div>
-          </div>
-          <div class="row py-2 border-bottom">
-            <div class="col-4"><strong>NIC Capability</strong></div>
-            <div class="col-8">Run <code>wmic nic where (NetEnabled=true) get Name,Speed</code></div>
-          </div>
-          <div class="row py-2 border-bottom">
-            <div class="col-4"><strong>Toggle Firewall</strong></div>
-            <div class="col-8">Run <code>control firewall.cpl</code></div>
-          </div>
-        </div>
+          <p class="text-start">
+            Network connectivity problems require systematic testing from basic hardware up through application layers. Start by verifying network adapter capabilities with wmic nic commands and checking connection speeds through ncpa.cpl, then test basic connectivity using ping and tracert to identify where communication breaks down. DNS issues often cause slow browsing despite good connectivity - use nslookup to test DNS performance and ipconfig /flushdns to clear corrupted entries, or switch to alternative DNS servers like 8.8.8.8 for testing. Wi-Fi problems require signal strength analysis through netsh wlan show interface and profile management, while complete network resets using netsh winsock reset and IP configuration renewal can resolve stubborn adapter issues. Layer-by-layer troubleshooting prevents wasted time on complex solutions when simple connectivity or DNS problems are the root cause.
+          </p>
+          <ol class="list-group list-group-numbered">
+            <!-- Ascertain NIC Capability -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>NIC Capability</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Ascertain NIC
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>wmic nic where (NetEnabled=true) get Name,Speed</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Configure NIC
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>devmgmt.msc</code> Expand Network Adapters > Right-click your network adapter > select Properties > Enter Advanced tab > Speed & Duplex > Auto Negotiation or Auto > OK, reboot
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Testing Internet Connectivity (Slow Speed) -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Testing Internet Connectivity (Slow Speed)</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Ethernet Speed
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>ncpa.cpl</code> Right-click Network Adapter > Status > Details
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display Cached IPs
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>arp -a </code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Trace Network Route
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>tracert (Address)</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Validate IP (Test Speed)
+                  </div>
+                  <div class="col-12 col-md-7 bg-white">
+                    <code>ping google.com</code>
+                  <div class="col-12 col-md-7 bg-white">
+                    <code>ping (assigned IP)</code>
+                  </div>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check DNS Performance
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>nslookup (hostname)</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Flush and Reset DNS
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>ipconfig /flushdns</code>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code> netsh int ip reset</code>
+                  </div>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Network Usage
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>resmon.exe</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Network Adapters
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>devmgmt.msc</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Test Diff DNS Server
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>netsh interface ip set dns "Wi-Fi" static 8.8.8.8</code>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Testing Internet Connectivity (Poor Connection) -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Testing Internet Connectivity (Poor Connection)</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Signal Strength
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>netsh wlan show interface</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light py-2">
+                    Display Wi-Fi Adapters
+                  </div>
+                  <div class="col-12 col-md-8 bg-white py-2">
+                    <code>netsh wlan show drivers</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light py-2">
+                    Display Wi-Fi Standards
+                  </div>
+                  <div class="col-12 col-md-8 bg-white py-2">
+                    <code>netsh wlan show wirelesscapabilities</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Display Network Profiles
+                  </div>
+                  <div class="col-12 col-md-7 bg-white">
+                    <code>netsh wlan show profiles</code>
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                    Display Network Details
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>netsh wlan show profile "NetworkName"</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light  ">
+                    Reset Network Adapter
+                  </div>
+                  <div class="col-12 col-md-8 bg-white  ">
+                    <code>netsh winsock reset</code>
+                  <div class="col-12 col-md-8 bg-white  ">
+                    <code> netsh int ip reset</code>
+                  </div>
+                  <div class="col-12 col-md-8 bg-white  ">
+                    <code>ipconfig /release</code>
+                  </div>
+                  <div class="col-12 col-md-8 bg-white  ">
+                    <code>ipconfig /renew</code>
+                  </div>
+                  <div class="col-12 col-md-8 bg-white  ">
+                    <code>ipconfig /flushdns (Restart PC)</code>
+                  </div>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Reset Network Settings
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>netsh winsock reset catalog</code>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>netsh int ipv4 reset reset.log</code>
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>netsh int ipv6 reset reset.log</code>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </article>
         <!-- -->  
       </main>
       <!-- END of USING the COMMAND LINE -->
