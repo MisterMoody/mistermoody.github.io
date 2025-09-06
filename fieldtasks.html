@@ -75,7 +75,7 @@
         <div><!--LeaveBlank--></div>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link  py-1 active" href="index">Home</a>
-          <a class="nav-link  py-1" aria-current="page" href="#">Certs</a>
+          <a class="nav-link  py-1" aria-current="page" href="certifications">Certs</a>
           <a class="nav-link py-1 fw-bold active" href="fieldtasks">Field Tasks</a>
           <a class="nav-link py-1" href="gallery">Gallery</a>
         </nav>
@@ -88,25 +88,25 @@
         <!-- Page Introduction -->
         <div class="row">
           <h1>Field Tasks</h1>
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center mb-4">
             <i class="me-3 material-icons bi bi-wifi" alt="WiFi Connectivity"></i>
             <i class="me-3 material-icons bi bi-speedometer" alt="Speed Test"></i>
             <i class="me-3 material-icons bi bi-router" alt="Configuration"></i>
             <i class="me-3 material-icons bi bi-diagram-2" alt="Networking"></i>
             <i class="me-3 material-icons bi-tools" alt="Installation"></i>
           </div>
-          <!--<p>
-            This gallery highlights my proficiency in network diagnostics, SD-WAN troubleshooting, and Point-of-Sale (POS) system support. From configuring clean rack layouts to verifying uplinks via CLI and validating throughput with speed tests, each task reflects my methodical approach to Layer 1 reliability. Whether isolating a POS drop or stabilizing WAN failover, I deliver clear, tested solutions in dynamic environments. 
-          </p>-->
           <p>
-            This page was designed as an operational reference to help me implement best practices while out in the field. 
+            Built from real client engagements and refined through extensive field experience, this comprehensive troubleshooting compendium represents my daily toolkit as a field technician, reflecting my systematic approach to technical problem resolution while showcasing the practical expertise and problem-solving methodologies that serve as a testament to my field-tested capabilities in enterprise IT support.
           </p>
         </div>
         <!-- ******************************** -->
-        <!-- List Group of Portfolio ARTICLES -->
-        <section class="row g-3 mt-3">
-          <ul class="list-group">
-            <!-- KNOWLEDGE-base -->
+        <!-- List Group of Portfolio ITEMS -->
+        <!-- Articles -->
+        <section class="row g-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Articles</strong>
+          </div>
+          <ul class="list-group mt-0">
             <li class="list-group-item d-flex justify-content-between align-items-start">
               What is a Network?
               <a href="whatisanetwork">View Detail</a>
@@ -123,27 +123,38 @@
               PC Troubleshooting
               <a href="pctroubleshooting">View Detail</a>
             </li>
+          </ul>
+        </section>
+        <!-- Tools -->
+        <section class="row g-3 mt-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Tools</strong>
+          </div>
+          <ul class="list-group mt-0">
             <li class="list-group-item d-flex justify-content-between align-items-start">
               Using the Task Manager
-              <a href="usingtaskmanager.html">View Detail</a>
+              <a href="usingtaskmanager">View Detail</a>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               Using the Command Line (CLI)
-              <a href="usingcommandline.html">View Detail</a>
-            </li>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              Cabling
-              <a href="cabling">View Detail</a>
+              <a href="usingcommandline">View Detail</a>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              Boom & Scissor Lift Troubleshooting
-              <a href="docs/BoomScissorLift.pdf">View Detail</a>
+              Using PuTTY
+              <a href="usingputty">View Detail</a>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              T568B Field Sheet
-              <a href="docs/T568B_FieldSheet.pdf">View Detail</a>
+              Using a Lineman Handset
+              <a href="usinglinemanhandset">View Detail</a>
             </li>
+          </ul>
+        </section>
+        <!-- Quick References-->
+        <section class="row g-3 mt-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">Quick References</strong>
+          </div>
+          <ul class="list-group mt-0">
             <!-- TOOL-base -->
             <li class="list-group-item d-flex justify-content-between align-items-start">
               Working with IP Addresses
@@ -722,7 +733,7 @@
               </div>
             </div>
           </div>
-          <!-- Modal #4  Networking 101 
+          <!-- HIDDEND => Modal #4  Networking 101 
           <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
               <div class="modal-content">
@@ -736,8 +747,27 @@
               </div>
             </div>
           </div>-->
-          <!-- Modal #5  -->
-
+          </div>
+        </section>
+        <!-- PDF References-->
+        <section class="row g-3 mt-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-muted">PDF References</strong>
+          </div>
+          <ul class="list-group mt-0">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              Cabling
+              <a href="cabling">View Detail</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              Boom & Scissor Lift Troubleshooting
+              <a href="docs/BoomScissorLift.pdf">View Detail</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              T568B Field Sheet
+              <a href="docs/T568B_FieldSheet.pdf">View Detail</a>
+            </li>
+          </ul>
         </section>
     <!-- ** End of Portfolio ARTICLES ** -->
       </main>
