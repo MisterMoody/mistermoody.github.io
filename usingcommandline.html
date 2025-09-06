@@ -75,7 +75,7 @@
           <div><!--LeaveBlank--></div>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link  py-1 active" href="index">Home</a>
-            <a class="nav-link  py-1" aria-current="page" href="#">Certs</a>
+            <a class="nav-link  py-1" aria-current="page" href="certifications">Certs</a>
             <a class="nav-link py-1 fw-bold active" href="fieldtasks">Field Tasks</a>
             <a class="nav-link py-1" href="gallery">Gallery</a>
           </nav>
@@ -98,27 +98,8 @@
             At the most fundamental level, a Layer 1 technician's use of the command line is rooted in the need to validate whether a physical pathway can actually carry usable traffic. The concepts at play begin with link state, the confirmation that a network interface card (NIC) is detecting signal on the wire, since a lit port LED alone is not sufficient proof. From there, the technician must verify addressing, whether through DHCP lease assignment or manual static configuration, because the presence or absence of an IP reveals if Layer 2 frames are making it to a DHCP server or peer device. Once an address is in place, packet flow can be tested with simple tools like ping, which confirms not only transmission and reception but also the integrity of the path across the immediate cable and switch segment.
           </p>
           <p class="text-start">
-            Equally important are local validation mechanisms such as loopback testing, which isolates the NIC and TCP/IP stack from external dependencies, and resolution and table states, including ARP and routing entries, which can either confirm or obscure whether a physical link is working as intended. The overarching concept is fault domain isolation: separating the potential points of failure into clear categories -NIC config vs. port, port vs. cable, local stack vs. remote device. The command line is not being used here to solve higher-level routing or application problems but to establish, in an unambiguous and methodical way, whether the wire, the port, and the interface are capable of basic communication. The commands help prove whether the port, cable, and interface are physically passing signal. Whenever troubleshooting, adhere to the following best practices:
+            Equally important are local validation mechanisms such as loopback testing, which isolates the NIC and TCP/IP stack from external dependencies, and resolution and table states, including ARP and routing entries, which can either confirm or obscure whether a physical link is working as intended. The overarching concept is fault domain isolation: separating the potential points of failure into clear categories -NIC config vs. port, port vs. cable, local stack vs. remote device. The command line is not being used here to solve higher-level routing or application problems but to establish, in an unambiguous and methodical way, whether the wire, the port, and the interface are capable of basic communication. The commands help prove whether the port, cable, and interface are physically passing signal.
           </p>
-          <div>
-            <ol class="list-group-numbered">
-              <li class="list-group-item">Test Ethernet cable, and ensure power cables and ports are investigated prior to testing
-              </li>
-              <li class="list-group-item">Always run Command Prompt as 'Administrator'
-              </li>
-              <li class="list-group-item">Create backups before making changes
-              </li>
-              <li class="list-group-item">
-                System restore points should be created regularly during normal operation
-              </li>
-              <li class="list-group-item">Restart the computer between major troubleshooting steps
-              </li>
-              <li class="list-group-item">Document all commands used for future reference
-              </li>
-              <li class="list-group-item">Document error messages exactly as they appear
-              </li>
-            </ol>
-          </div>
         </article>
 
         
@@ -695,11 +676,86 @@
                 </div>
               </div>
             </li>
+            <!-- Software and APP Issues -->
+            <li class="list-group-item d-flex align-items-start">
+              <div class="container">
+                <p class="text-start"><b>Software and APP Issues</b></p>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Clear Browser Cache and Data (Chrome)
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>rd /s /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache"</code> 
+                  </div>
+                  <div class="col-12 col-md-4 bg-light">
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>rd /s /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Code Cache"</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Clear Browser Cache and Data (Explorer)
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>rundll32.exe InetCpl.cpl,ClearMyTracksByProcess 255</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Reset Browser Settings (Chrome)
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>chrome.exe --reset-variation-state</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Browser Extensions (Chrome)
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>chrome.exe --disable-extensions</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check Defaulat Browser Settings
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>appwiz.cpl</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Reset Internet Options
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>inetcpl.cpl</code> 
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Check for Malware
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>msrt.exe</code> -> <code>sfc /scannow</code>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-12 col-md-4 bg-light">
+                    Delete Temporary Files
+                  </div>
+                  <div class="col-12 col-md-8 bg-white">
+                    <code>cleanmgr.exe</code> -> <code>del /q/f/s %TEMP%\*</code>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ol>
         </article>
 
         <!-- 3. Network Troubleshooting -->
-        <article class="mb-2">
+        <article class="mb-4">
           <div class="d-flex justify-content-between align-items-center">
             <strong class="text-muted">Network Troubleshooting</strong>
           </div>
@@ -886,6 +942,39 @@
               </div>
             </li>
           </ol>
+        </article>
+
+        <article class="mb-2">
+          <p class="text-start">
+            When troubleshooting, adhere to these best practices:
+          </p>
+          <div>
+            <ol class="list-group-numbered">
+              <li class="list-group-item">Test basic connectivity first: verify physical connections before software diagnostics.</li>
+              <li class="list-group-item">Test Ethernet cable, and ensure power cables and ports are investigated prior to testing
+              </li>
+              <li class="list-group-item">Always run Command Prompt as 'Administrator'
+              </li>
+              <li class="list-group-item">Close all unnecessary applicationsbefore running system scans or repairs.</li>
+              <li class="list-group-item">Verify user permissions.</li>
+              <li class="list-group-item">Create backups before making changes
+              </li>
+              <li class="list-group-item">Check Windows Update status before troubleshooting.</li>
+              <li class="list-group-item">
+                System restore points should be created regularly during normal operation
+              </li>
+              <li class="list-group-item">Run hardware diagnostics before assuming software issues.</li>
+              <li class="list-group-item">Restart the computer between major troubleshooting steps
+              </li>
+              <li class="list-group-item">Document all commands used for future reference
+              </li>
+              <li class="list-group-item">Document error messages exactly as they appear
+              </li>
+              <li class="list-group-item">Check Event Viewer logs for error patterns and system warnings.</li>
+              <li class="list-group-item">Provide client education on preventive maintenance and basic troubleshooting.</li>
+              <li class="list-group-item">Verify all changes work after final restart.</li>
+            </ol>
+          </div>
         </article>
         <!-- -->  
       </main>
