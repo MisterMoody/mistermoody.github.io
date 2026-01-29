@@ -47,3 +47,35 @@ window.addEventListener('pageshow', function (event) {
   }
 });
 
+// End of file - original script only manages Masonry and modal cleanup.
+
+
+
+// Mark images that are high-resolution enough to benefit from the sharpen filter.
+// This avoids sharpening and upscaling very small images (which would look worse).
+function markSharpenableImages() {
+  var imgs = document.querySelectorAll('.modal-img');
+  imgs.forEach(function(img) {
+    // If image already loaded, naturalWidth is available; otherwise wait for load
+    function checkAndMark() {
+      try {
+        if (img.naturalWidth && img.naturalHeight) {
+          // threshold: only sharpen images >= 1000px width and >= 750px height
+          if (img.naturalWidth >= 1000 && img.naturalHeight >= 750) {
+            img.classList.add('can-sharpen');
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+    if (img.complete) checkAndMark(); else img.addEventListener('load', checkAndMark);
+  });
+}
+
+// Run after DOM content and imagesLoaded have completed — call once now.
+document.addEventListener('DOMContentLoaded', function(){
+  // Defer a tick to allow browser to populate naturalWidth/Height
+  setTimeout(markSharpenableImages, 50);
+});
+

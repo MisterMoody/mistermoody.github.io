@@ -3,7 +3,7 @@
 
     
 
-
+    
 /*
 */
 
@@ -89,6 +89,7 @@ p, {
 }
 
 
+
 .material-icons {
   color: #ff4d4d; 
   font-size: 2.42em;
@@ -127,6 +128,7 @@ span {margin: 0;}
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #dc2626;
         }
+
 
 
         /* Asymmetrical Layout */
@@ -298,8 +300,58 @@ footer {
   padding-top: -50px;  /*Required for Heart Animation*/
 }
 @keyframes pulse {
-  0% {transform: scale(0.5);}
-  50% {transform: scale(0.7);}
+  0% {transform: scale(0.5);} 
+  50% {transform: scale(0.7);} 
+  100% {transform: scale(0.5);} 
+}
+/* =========================================== */
+        @media screen and (min-width: 768px) {
+          /* Visual marker for debugging / future styling */
+          .modal-img.small-upscale { display: block; }
+        }
+        .image-thumb {
+          width: 100%;
+          border-radius: 0.5rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+        }
+
+        .image-thumb:hover {
+          transform: scale(1.03);
+          box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .image-caption {
+          /*text-align: center;*/
+          font-weight: 600;
+          margin-top: 0.5rem;
+          color: #333;
+        }
+
+        .modal-img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+
+    /*  ============================================= 
+        FOOTER =================================== */
+    footer {
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid #e5e5e5;
+        margin: 0 2rem;
+    }
+    .fa-heart {
+      color: red;
+      animation: pulse 1.3s ease infinite;
+      padding-top: -50px;  /*Required for Heart Animation*/
+    }
+    @keyframes pulse {
+      0% {transform: scale(0.5);} 
+      50% {transform: scale(0.7);} 
+      100% {transform: scale(0.5);} 
+    }
+    /* =========================================== */
   100% {transform: scale(0.5);}
 }
 /* =========================================== */
